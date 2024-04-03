@@ -6,7 +6,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 using Data;
 
-public enum BattleState {Won,Lose,PlayerTurn,EnemyTurn,Start};
+public enum BattleState {Won,Lose,PlayerTurn,EnemyTurn,Start,Middle};
 
 public class BattleSetting : MonoBehaviour
 {
@@ -149,7 +149,7 @@ public class BattleSetting : MonoBehaviour
     {
         RemainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
         RemainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
-
+        State = BattleState.Middle;
         if (TurnCount == BattleUnitsList.Count)
         {
             TurnCount = 0;
@@ -240,6 +240,14 @@ public class BattleSetting : MonoBehaviour
             ToBattle();
         }
     }
+
+    IEnumerator Defence()
+    {
+        GameStateText.text = "防御";
+        StartCoroutine(ShowText(1f));
+        yield return new WaitForSeconds(1f);
+        ToBattle();
+    }
     #endregion
 
     #region SetColor
@@ -305,7 +313,8 @@ public class BattleSetting : MonoBehaviour
         if (State != BattleState.PlayerTurn) return;
 
         CurrentActUnit.GetComponent<GivingData>().DamageTakeMultiplier = 0.8f;
-        ToBattle();
+        State = BattleState.Middle;
+        StartCoroutine(Defence());
     }
 
     #endregion

@@ -69,19 +69,6 @@ public class GivingData : MonoBehaviour
     {
         currentHP -= Damage;
         StartCoroutine(FloatingNumber(Damage));
-        if (currentHP <= 0)
-        {
-            isDead = true;
-
-            if (this.gameObject.tag == "PlayerUnit")
-            {
-                this.gameObject.tag = "Untagged";
-            }
-            else if (this.gameObject.tag == "EnemyUnit") 
-            {
-                Destroy(this.gameObject);
-            }
-        }
     }
 
     IEnumerator FloatingNumber(int Damage)
@@ -90,5 +77,19 @@ public class GivingData : MonoBehaviour
         obj.GetComponent<Text>().text = "-" + Damage;
         yield return new WaitForSeconds(2f);
         Destroy(obj);
+        if (currentHP <= 0)
+        {
+            isDead = true;
+
+            if (this.gameObject.tag == "PlayerUnit")
+            {
+                this.gameObject.tag = "Untagged";
+                this.gameObject.GetComponentsInChildren<SpriteRenderer>()[0].color = new Color(255, 255, 255, 0.5f);
+            }
+            else if (this.gameObject.tag == "EnemyUnit")
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 }
