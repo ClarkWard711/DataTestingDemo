@@ -53,7 +53,6 @@ public class BattleSetting : MonoBehaviour
     public Vector3 Position;
     #endregion
     // Start is called before the first frame update
-    //yes
     void Awake()
     {
         if (Instance == null)
