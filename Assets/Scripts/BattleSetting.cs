@@ -371,58 +371,55 @@ public class BattleSetting : MonoBehaviour
                     }
                 }
             }
-            else
+            if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
             {
-                if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+                isKeyboardTouched = true;
+                //增加如果target不存在的检测
+                if (CurrentActUnitTarget == null)
                 {
-                    isKeyboardTouched = true;
-                    //增加如果target不存在的检测
-                    if (CurrentActUnitTarget == null)
+                    CurrentActUnitTarget = enemyUnits[0];
+                }
+                CurrentActUnitTarget.GetComponent<Collider2D>().enabled = false;
+                //TargetChosenRay = new Ray(CurrentActUnitTarget.transform.position, );
+                //TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, Vector2.down);
+                //Debug.Log(TargetHit.collider.gameObject);
+                CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
+
+                if (Input.GetButton("Horizontal"))
+                {
+                    float direction = Input.GetAxisRaw("Horizontal");
+                    TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(direction, 0));
+                    if (TargetHit.collider != null && TargetHit.collider.gameObject.tag == "EnemyUnit")
                     {
-                        CurrentActUnitTarget = enemyUnits[0];
+                        //Debug.Log(TargetHit.collider.gameObject);
+                        CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                        CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+                        CurrentActUnitTarget = TargetHit.collider.gameObject;
                     }
-                    CurrentActUnitTarget.GetComponent<Collider2D>().enabled = false;
-                    //TargetChosenRay = new Ray(CurrentActUnitTarget.transform.position, );
-                    //TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, Vector2.down);
                     //Debug.Log(TargetHit.collider.gameObject);
-                    CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
-
-                    if (Input.GetButton("Horizontal"))
-                    {
-                        float direction = Input.GetAxisRaw("Horizontal");
-                        TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(direction, 0));
-                        if (TargetHit.collider != null && TargetHit.collider.gameObject.tag == "EnemyUnit")
-                        {
-                            //Debug.Log(TargetHit.collider.gameObject);
-                            CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
-                            CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
-                            CurrentActUnitTarget = TargetHit.collider.gameObject;
-                        }
-                        //Debug.Log(TargetHit.collider.gameObject);
-                    }
-
-                    if (Input.GetButton("Vertical"))
-                    {
-                        float direction = Input.GetAxisRaw("Vertical");
-                        TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(0, direction));
-                        if (TargetHit.collider != null && TargetHit.collider.gameObject.tag == "EnemyUnit")
-                        {
-                            //Debug.Log(TargetHit.collider.gameObject);
-                            CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
-                            CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
-                            CurrentActUnitTarget = TargetHit.collider.gameObject;
-                        }
-                        //Debug.Log(TargetHit.collider.gameObject);
-                    }
                 }
-                if (Input.GetKey(KeyCode.Return) && CurrentActUnitTarget != null)
+
+                if (Input.GetButton("Vertical"))
                 {
-                    CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
-                    CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
-                    isWaitForPlayerToChooseUnit = false;
-                    StartCoroutine(DealDamage(3f));
-                    CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                    float direction = Input.GetAxisRaw("Vertical");
+                    TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(0, direction));
+                    if (TargetHit.collider != null && TargetHit.collider.gameObject.tag == "EnemyUnit")
+                    {
+                        //Debug.Log(TargetHit.collider.gameObject);
+                        CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                        CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+                        CurrentActUnitTarget = TargetHit.collider.gameObject;
+                    }
+                    //Debug.Log(TargetHit.collider.gameObject);
                 }
+            }
+            if (Input.GetKey(KeyCode.Return) && CurrentActUnitTarget != null)
+            {
+                CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+                isWaitForPlayerToChooseUnit = false;
+                StartCoroutine(DealDamage(3f));
+                CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
             }
         }
     }
