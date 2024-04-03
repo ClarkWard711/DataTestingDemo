@@ -15,7 +15,7 @@ public class BattleSetting : MonoBehaviour
 
     [SerializeField] AssetReference outerScene;
     //[SerializeField] List<int> SpdList;
-
+    //测试变了没
     public List<GameObject> BattleUnitsList;
     public GameObject[] playerUnits;
     public GameObject[] enemyUnits;
