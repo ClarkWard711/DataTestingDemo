@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="background" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/arts/IMG_9706.JPG?fileID=2800000&amp;guid=8a32875a8158241f3a02521ebfd493f2&amp;type=3#IMG_9706&apos;); -unity-background-scale-mode: scale-and-crop; flex-direction: row-reverse;">
+        <ui:VisualElement name="list" style="flex-basis: 35%; flex-direction: column-reverse;">
+            <ui:VisualElement name="useless" style="flex-basis: 16%;" />
+            <ui:VisualElement name="menuButtonExit" style="flex-basis: 10%;">
+                <ui:Button text="退出游戏" display-tooltip-when-elided="true" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0); -unity-text-align: middle-right; font-size: 60px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="menuButtonSettings" style="flex-basis: 10%; font-size: 60px;">
+                <ui:Button text="选项设置" display-tooltip-when-elided="true" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0); -unity-text-align: middle-right; font-size: 60px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="menuButtonContinue" style="flex-basis: 10%;">
+                <ui:Button text="继续游戏" display-tooltip-when-elided="true" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0); -unity-text-align: middle-right; font-size: 60px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="menuButtonNew" style="flex-basis: 10%;">
+                <ui:Button text="新的游戏" display-tooltip-when-elided="true" name="menuButtonNew" style="flex-grow: 1; background-color: rgba(255, 255, 255, 0); -unity-text-align: middle-right; font-size: 60px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
