@@ -298,8 +298,7 @@ MonoBehaviour:
   isDead: 0
   DamageTakeMultiplier: 1
   DamageDealMultiplier: 1
-  DamagePrefab: {fileID: 5884769366753586431, guid: e86fd9a5c734c4e22a6c737a15bf9bd9,
-    type: 3}
+  DamagePrefab: {fileID: 5884769366753586431, guid: e86fd9a5c734c4e22a6c737a15bf9bd9, type: 3}
   BasePosition: {fileID: 3632537725401346950}
 --- !u!1 &6219407169606312322
 GameObject:
@@ -374,8 +373,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224,
-    type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0

@@ -72,6 +72,15 @@ public class GivingData : MonoBehaviour
         if (currentHP <= 0)
         {
             isDead = true;
+
+            if (this.gameObject.tag == "PlayerUnit")
+            {
+                this.gameObject.tag = "Untagged";
+            }
+            else if (this.gameObject.tag == "EnemyUnit") 
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 

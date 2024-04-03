@@ -101,7 +101,7 @@ public class BattleSetting : MonoBehaviour
             isMoving = true;
             isKeyboardTouched = false;
         }
-        else
+        else if (Input.mousePosition == Position && isKeyboardTouched) 
         {
             isMoving = false;
         }
