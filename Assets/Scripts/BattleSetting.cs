@@ -203,7 +203,12 @@ public class BattleSetting : MonoBehaviour
 
     IEnumerator DealDamage(float time)
     {
-        int Damage = DamageCounting(CurrentActUnit.GetComponent<GivingData>().pa, CurrentActUnitTarget.GetComponent<GivingData>().pd, CurrentActUnitTarget.GetComponent<GivingData>().DamageTakeMultiplier, CurrentActUnit.GetComponent<GivingData>().DamageDealMultiplier);
+        float TargetTakeMultiplier, ActUnitDealMultiplier;
+        int pa = CurrentActUnit.GetComponent<GivingData>().pa;
+        int pd = CurrentActUnitTarget.GetComponent<GivingData>().pd;
+        TargetTakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().DamageTakeMultiplier;
+        ActUnitDealMultiplier = CurrentActUnit.GetComponent<GivingData>().DamageDealMultiplier;
+        int Damage = DamageCounting(pa,pd,TargetTakeMultiplier,ActUnitDealMultiplier);
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         StartCoroutine(ShowText(2f));
