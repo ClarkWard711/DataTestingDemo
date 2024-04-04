@@ -23,6 +23,8 @@ public class GivingData : MonoBehaviour
         //DamageText.transform.
         if (jobData!=null)
         {
+            maxHP = jobData.JobStatsList[jobData.JobLevel - 1].maxHP;
+            maxSP = jobData.JobStatsList[jobData.JobLevel - 1].maxSP;
             currentHP = jobData.currentHP;
             currentSP = jobData.currentSP;
             pa = jobData.JobStatsList[jobData.JobLevel - 1].physicalAttack;

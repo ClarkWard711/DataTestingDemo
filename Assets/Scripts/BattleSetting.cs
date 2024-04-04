@@ -24,16 +24,19 @@ public class BattleSetting : MonoBehaviour
     public GameObject CurrentActUnit;
     public GameObject CurrentActUnitTarget;
     GameObject ShownUnit;
-
+    GameObject CurrentSliderOwner;
     public List<GameObject> PlayerPositionsList;
     public List<GameObject> EnemyPositionsList;
 
     public Text GameStateText;
     //public Button AtkButton;
-
+    public Image Avatar;
     Ray TargetChosenRay;
     RaycastHit2D TargetHit;
     RaycastHit2D[] TargetHitResult;
+
+    public Slider HpSlider;
+    public Slider SpSlider;
 
     public PartyMember PlayerPartyMember;
     public EnemyParty EnemyPartyMember;
@@ -120,6 +123,10 @@ public class BattleSetting : MonoBehaviour
 
         Position = Input.mousePosition;
         ChoosingUnit();
+        if (CurrentSliderOwner != null) 
+        {
+            UpdateSliderChange();
+        }
     }
 
     void ListSort()
@@ -203,6 +210,7 @@ public class BattleSetting : MonoBehaviour
 
     IEnumerator DealDamage(float time)
     {
+        State = BattleState.Middle;
         float TargetTakeMultiplier, ActUnitDealMultiplier;
         int pa = CurrentActUnit.GetComponent<GivingData>().pa;
         int pd = CurrentActUnitTarget.GetComponent<GivingData>().pd;
@@ -292,6 +300,9 @@ public class BattleSetting : MonoBehaviour
             //StartCoroutine(ShowText(2f));
             State = BattleState.PlayerTurn;
             CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
+            Avatar.sprite = CurrentActUnit.GetComponent<GivingData>().jobData.JobAvatarImage;
+            CurrentSliderOwner = CurrentActUnit;
+            UpdateSliderChange();
             StartCoroutine(TurnAction(1f, "你的回合"));
             //GameStateText.text = "选择操作";
             //StartCoroutine(ShowText(2f));
@@ -431,5 +442,13 @@ public class BattleSetting : MonoBehaviour
                 CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
             }
         }
+    }
+
+    public void UpdateSliderChange()
+    {
+        HpSlider.maxValue = CurrentSliderOwner.GetComponent<GivingData>().maxHP;
+        SpSlider.maxValue= CurrentSliderOwner.GetComponent<GivingData>().maxSP;
+        HpSlider.value = CurrentSliderOwner.GetComponent<GivingData>().currentHP;
+        SpSlider.value = CurrentSliderOwner.GetComponent<GivingData>().currentSP;
     }
 }
