@@ -18,6 +18,8 @@ public class CharacterUpgrade : MonoBehaviour
 
     public GameObject emptySlot;
 
+    public GameObject ShowData;
+
     public List<GameObject> PlayerSlotsList = new List<GameObject>();
 
     public bool isPressed, isShowed;
@@ -25,10 +27,10 @@ public class CharacterUpgrade : MonoBehaviour
     
 
     #region ShowPanel
-
+    /*
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             isPressed = true;
         }
@@ -45,16 +47,18 @@ public class CharacterUpgrade : MonoBehaviour
         {
             isShowed = true;
             UpgradePanel.SetActive(true);
+            ShowData.GetComponent<ShowData>().enabled = false;
             isPressed = false;
         }
         else if (isPressed && isShowed)
         {
             isShowed = false;
             UpgradePanel.SetActive(false);
+            ShowData.GetComponent<ShowData>().enabled = true;
             isPressed = false;
         }
     }
-
+    */
     #endregion
 
     void Awake()

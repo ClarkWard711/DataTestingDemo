@@ -32,17 +32,17 @@ public class CharacterPanelUpdate : MonoBehaviour
         jobName.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobName;
         level.text = "等级："+PartyPanel.Instance.PlayerParty.CharacterList[i].JobLevel.ToString();
         currentLevel = PartyPanel.Instance.PlayerParty.CharacterList[i].JobLevel;
-        hp.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].maxHP.ToString();
-        sp.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].maxSP.ToString();
-        pa.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].physicalAttack.ToString();
-        sa.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].soulAttack.ToString();
-        pd.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].physicalDefence.ToString();
-        sd.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].soulDefence.ToString();
-        hit.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].hit.ToString();
-        nim.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].nimbleness.ToString();
-        spd.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].speed.ToString();
-        cri.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].critical.ToString();
-        melee.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].melee.ToString();
-        remote.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel].remote.ToString();
+        hp.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].maxHP.ToString();
+        sp.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].maxSP.ToString();
+        pa.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].physicalAttack.ToString();
+        sa.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].soulAttack.ToString();
+        pd.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].physicalDefence.ToString();
+        sd.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].soulDefence.ToString();
+        hit.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].hit.ToString();
+        nim.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].nimbleness.ToString();
+        spd.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].speed.ToString();
+        cri.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].critical.ToString();
+        melee.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].melee.ToString();
+        remote.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].remote.ToString();
     }
 }

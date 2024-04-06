@@ -57,7 +57,7 @@ public class EnterBattle : MonoBehaviour
     void Awake()
     {
         isPressed = false;
-        GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+        GameObject.Find("Player").SetActive(false);
         Instance = this;
         Load();
         SkillList.SetActive(false);

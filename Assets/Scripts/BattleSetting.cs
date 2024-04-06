@@ -12,7 +12,7 @@ public class BattleSetting : MonoBehaviour
 {
     #region public
     public static BattleSetting Instance;
-
+    GameObject Player;
     [SerializeField] AssetReference outerScene;
     //[SerializeField] List<int> SpdList;
     //测试变了没
@@ -64,7 +64,9 @@ public class BattleSetting : MonoBehaviour
         }
         if (GameObject.Find("Player") != null)
         {
-            GameObject.Find("Player").GetComponent<PlayerController>().enabled = false;
+            Player = GameObject.Find("Player");
+            Player.GetComponentInChildren<Camera>().enabled = false;
+            GameObject.Find("Player").SetActive(false);
         }
 
         //GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = true;
@@ -116,6 +118,10 @@ public class BattleSetting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !isPressed)
         {
             isPressed = true;
+            if (Player != null) 
+            {
+                Player.SetActive(true);
+            }
             //GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = false;
             SceneLoader.LoadAddressableScene(outerScene);
         }
@@ -363,7 +369,7 @@ public class BattleSetting : MonoBehaviour
                 if (TargetHit.collider != null)
                 {
                     //CurrentActUnitTarget = TargetHit.collider.gameObject;
-                    //Debug.Log(TargetHit.collider.gameObject.name);
+                    Debug.Log(TargetHit.collider.gameObject.name);
                     //Debug.Log(TargetChosenRay);
                     if (TargetHit.collider.gameObject.tag == "EnemyUnit")
                     {

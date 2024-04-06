@@ -59,8 +59,8 @@ public class ChoosingCharacter : MonoBehaviour
                 {
                     CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel++;
                     LevelText.text = "等级：" + CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel;
-                    CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].currentHP = CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobStatsList[CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel].maxHP;
-                    CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].currentSP = CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobStatsList[CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel].maxSP;
+                    CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].currentHP = CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobStatsList[CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel-1].maxHP;
+                    CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].currentSP = CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobStatsList[CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel-1].maxSP;
                     PartyPanel.Instance.UpdatePartyPanel();
                 }
             }
@@ -72,8 +72,8 @@ public class ChoosingCharacter : MonoBehaviour
                 {
                     CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel--;
                     LevelText.text = "等级：" + CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel;
-                    CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].currentHP = CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobStatsList[CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel].maxHP;
-                    CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].currentSP = CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobStatsList[CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel].maxSP;
+                    CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].currentHP = CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobStatsList[CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel-1].maxHP;
+                    CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].currentSP = CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobStatsList[CharacterUpgrade.Instance.PlayerParty.CharacterList[ID].JobLevel-1].maxSP;
                     PartyPanel.Instance.UpdatePartyPanel();
                 }
             }

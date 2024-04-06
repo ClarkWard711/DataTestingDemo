@@ -7,27 +7,23 @@ public class ShowData : MonoBehaviour
 {
     public static ShowData Instance;
 
-    public bool isShowed,isShowed1;
-    public bool isPressed,isOPressed;
-    public GameObject DataPanel,PartyPanel;
+    public bool isShowed;
+    public bool isPressed;
+    public GameObject DataPanel, UpgradePanel, PartyPanel;
     //public Text hp, sp, pa, sa, pd, sd, hit, nim, spd, cri, melee, remote;
 
     private void Awake()
     {
         Instance = this;
         isShowed = false;
-        isShowed1 = false;
+        //isShowed1 = false;
     }
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.I)&&!isShowed1)
+        if (Input.GetKeyUp(KeyCode.I))
         {
             isPressed = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.O)&&!isShowed)
-        {
-            isOPressed = true;
         }
     }
 
@@ -38,30 +34,21 @@ public class ShowData : MonoBehaviour
 
     void press()
     {
-        if (isPressed && !isShowed && !isShowed1)
+        if (isPressed && !isShowed)
         {
             isShowed = true;
             DataPanel.SetActive(true);
+            //UpgradePanel.GetComponent<CharacterUpgrade>().enabled = false;
             isPressed = false;
         }
-        else if (isPressed && isShowed && !isShowed1) 
+        else if (isPressed && isShowed) 
         {
             isShowed = false;
             DataPanel.SetActive(false);
-            isPressed = false;
-        }
-
-        if (isOPressed && !isShowed && !isShowed1)
-        {
-            isShowed1 = true;
-            PartyPanel.SetActive(true);
-            isOPressed = false;
-        }
-        else if (isOPressed && !isShowed && isShowed1) 
-        {
-            isShowed1 = false;
+            UpgradePanel.SetActive(false);
             PartyPanel.SetActive(false);
-            isOPressed = false;
+            //UpgradePanel.GetComponent<CharacterUpgrade>().enabled = true;
+            isPressed = false;
         }
     }
 

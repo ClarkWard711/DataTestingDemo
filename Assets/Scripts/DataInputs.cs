@@ -59,7 +59,7 @@ public class DataInputs : MonoBehaviour
 
     void Start()
     {
-        GameObject.Find("Player").GetComponent<PlayerController>().enabled = true;
+        GameObject.Find("Player").GetComponentInChildren<Camera>().enabled = true;
 
         playerCurrentLevel = playerStartLevel;
         playerCurrentSoulLevel = playerStartSoulLevel;
