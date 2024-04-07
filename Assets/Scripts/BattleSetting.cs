@@ -17,6 +17,7 @@ public class BattleSetting : MonoBehaviour
     //[SerializeField] List<int> SpdList;
     //测试变了没
     public List<GameObject> BattleUnitsList;
+    public List<GameObject> BattleUnitsListToBeLaunched;
     public GameObject[] playerUnits;
     public GameObject[] enemyUnits;
     public GameObject[] RemainingEnemyUnits;
@@ -123,6 +124,14 @@ public class BattleSetting : MonoBehaviour
                 Player.SetActive(true);
             }
             //GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = false;
+            SceneLoader.LoadAddressableScene(outerScene);
+        }
+        if (State == BattleState.Won || State == BattleState.Lose)
+        {
+            if (Player != null)
+            {
+                Player.SetActive(true);
+            }
             SceneLoader.LoadAddressableScene(outerScene);
         }
         #endregion
