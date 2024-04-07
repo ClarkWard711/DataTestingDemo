@@ -24,6 +24,7 @@ public class BattleSetting : MonoBehaviour
     public GameObject[] RemainingPlayerUnits;
     public GameObject CurrentActUnit;
     public GameObject CurrentActUnitTarget;
+    public GameObject MovePanel;
     GameObject ShownUnit;
     GameObject CurrentSliderOwner;
     public List<GameObject> PlayerPositionsList;
@@ -35,7 +36,7 @@ public class BattleSetting : MonoBehaviour
     Ray TargetChosenRay;
     RaycastHit2D TargetHit;
     RaycastHit2D[] TargetHitResult;
-
+    
     public Slider HpSlider;
     public Slider SpSlider;
 
@@ -47,7 +48,7 @@ public class BattleSetting : MonoBehaviour
     public bool isPressed = false;
     bool isMoving = false;
     bool isKeyboardTouched = false;
-
+    public bool isMoveFinished = false;
     public BattleState State = BattleState.Start;
 
     int TurnCount;
@@ -126,8 +127,9 @@ public class BattleSetting : MonoBehaviour
             //GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = false;
             SceneLoader.LoadAddressableScene(outerScene);
         }
-        if (State == BattleState.Won || State == BattleState.Lose)
+        if (State == BattleState.Won || State == BattleState.Lose && !isPressed) 
         {
+            isPressed = true;
             if (Player != null)
             {
                 Player.SetActive(true);
@@ -172,7 +174,7 @@ public class BattleSetting : MonoBehaviour
         RemainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
         RemainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
         State = BattleState.Middle;
-        if (TurnCount == BattleUnitsList.Count)
+        /*if (TurnCount == BattleUnitsList.Count)
         {
             TurnCount = 0;
             //Debug.Log("回合结束");
@@ -183,7 +185,18 @@ public class BattleSetting : MonoBehaviour
             }
         }
 
-        TurnCount += 1;
+        TurnCount += 1;*/
+
+        if (BattleUnitsList.Count == 0) 
+        {
+            BattleUnitsList.AddRange<GameObject>(BattleUnitsListToBeLaunched);
+            BattleUnitsListToBeLaunched.Clear();
+            foreach (GameObject unit in BattleUnitsList)
+            {
+                unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
+                unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
+            }
+        }
 
         if (RemainingEnemyUnits.Length == 0)
         {
@@ -201,7 +214,8 @@ public class BattleSetting : MonoBehaviour
         {
             CurrentActUnit = BattleUnitsList[0];
             BattleUnitsList.Remove(CurrentActUnit);
-            BattleUnitsList.Add(CurrentActUnit);
+            //BattleUnitsList.Add(CurrentActUnit);
+            BattleUnitsListToBeLaunched.Add(CurrentActUnit);
 
             if (!CurrentActUnit.GetComponent<GivingData>().isDead)
             {
@@ -216,7 +230,7 @@ public class BattleSetting : MonoBehaviour
     }
 
     #region 协程
-    IEnumerator ShowText(float time)
+    public IEnumerator ShowText(float time)
     {
         SetColorTo1(GameStateText);
         yield return new WaitForSeconds(time);
@@ -270,6 +284,23 @@ public class BattleSetting : MonoBehaviour
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
         ToBattle();
+    }
+
+    IEnumerator Move()
+    {
+        MovePanel.SetActive(true);
+        yield return new WaitUntil(() =>isMoveFinished);
+        
+        MovePanel.SetActive(false);
+
+        if (State != BattleState.PlayerTurn) 
+        {
+            GameStateText.text = "移动";
+            StartCoroutine(ShowText(2f));
+            yield return new WaitForSeconds(2f);
+            ToBattle();
+        }
+        
     }
     #endregion
 
@@ -343,6 +374,16 @@ public class BattleSetting : MonoBehaviour
         StartCoroutine(Defence());
     }
 
+    public void OnMoveButton()
+    {
+        if (State != BattleState.PlayerTurn) return;
+        isWaitForPlayerToChooseUnit = false;
+        CurrentActUnitTarget = null;
+        State = BattleState.Middle;
+        isMoveFinished = false;
+        StartCoroutine(Move());
+        
+    }
     #endregion
 
     int DamageCounting(int atk, int dfs, float TakeMultiplier, float DealMultiplier)
@@ -378,7 +419,7 @@ public class BattleSetting : MonoBehaviour
                 if (TargetHit.collider != null)
                 {
                     //CurrentActUnitTarget = TargetHit.collider.gameObject;
-                    Debug.Log(TargetHit.collider.gameObject.name);
+                    //Debug.Log(TargetHit.collider.gameObject.name);
                     //Debug.Log(TargetChosenRay);
                     if (TargetHit.collider.gameObject.tag == "EnemyUnit")
                     {
