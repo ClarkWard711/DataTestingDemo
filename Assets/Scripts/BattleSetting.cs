@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 using Data;
+using System.Linq;
 
 public enum BattleState {Won,Lose,PlayerTurn,EnemyTurn,Start,Middle};
 
@@ -96,6 +97,8 @@ public class BattleSetting : MonoBehaviour
         {
             BattleUnitsList.Add(EnemyUnit);
         }
+
+        ComparePosition();
         ListSort();
         State = BattleState.Start;
         StartCoroutine(TurnAction(2f, "对战开始"));
@@ -297,6 +300,7 @@ public class BattleSetting : MonoBehaviour
         {
             GameStateText.text = "移动";
             StartCoroutine(ShowText(2f));
+            ComparePosition();
             yield return new WaitForSeconds(2f);
             ToBattle();
         }
@@ -506,5 +510,43 @@ public class BattleSetting : MonoBehaviour
         SpSlider.maxValue= CurrentSliderOwner.GetComponent<GivingData>().maxSP;
         HpSlider.value = CurrentSliderOwner.GetComponent<GivingData>().currentHP;
         SpSlider.value = CurrentSliderOwner.GetComponent<GivingData>().currentSP;
+    }
+
+    public void ComparePosition()
+    {
+        for (int i = 0; i < PlayerPositionsList.Count; i++) 
+        {
+            if (PlayerPositionsList[i].transform.childCount != 0)
+            {
+                if (i < 3)
+                {
+                    GameObject Character = PlayerPositionsList[i].transform.GetChild(0).gameObject;
+                    List<Buff> BuffList = Character.GetComponent<GivingData>().BuffList;
+                    if (BuffList.Contains(Character.GetComponent<GivingData>().Melee))
+                    {
+                        continue;
+                    }
+                    else if(BuffList.Contains(Character.GetComponent<GivingData>().Remote))
+                    {
+                        BuffList.Remove(Character.GetComponent<GivingData>().Remote);
+                    }
+                    BuffList.Add(Character.GetComponent<GivingData>().Melee);
+                }
+                else
+                {
+                    GameObject Character = PlayerPositionsList[i].transform.GetChild(0).gameObject;
+                    List<Buff> BuffList = Character.GetComponent<GivingData>().BuffList;
+                    if (BuffList.Contains(Character.GetComponent<GivingData>().Remote))
+                    {
+                        continue;
+                    }
+                    else if (BuffList.Contains(Character.GetComponent<GivingData>().Melee))
+                    {
+                        BuffList.Remove(Character.GetComponent<GivingData>().Melee);
+                    }
+                    BuffList.Add(Character.GetComponent<GivingData>().Remote);
+                }
+            }
+        }
     }
 }

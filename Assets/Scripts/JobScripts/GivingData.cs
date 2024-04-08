@@ -18,6 +18,9 @@ public class GivingData : MonoBehaviour
     public GameObject DamagePrefab;
     public GameObject BasePosition;
     //public Canvas DamageCanvas;
+    public List<Buff> BuffList;
+    public Buff Melee, Remote;
+
     void Awake()
     {
         //DamageText.transform.
@@ -58,6 +61,18 @@ public class GivingData : MonoBehaviour
         {
             isDead = true;
         }
+        Melee.BuffName = "Melee";
+        Melee.Multiplier = melee / 100;
+        Melee.BuffKind = Buff.Kind.eternal;
+        Melee.BuffTarget = Buff.target.self;
+        Melee.Impact = Buff.impactOnMultiplier.deal;
+        Melee.Effect = Buff.effect.neutral;
+        Remote.BuffName = "Remote";
+        Remote.Multiplier = remote / 100;
+        Remote.BuffKind = Buff.Kind.eternal;
+        Remote.BuffTarget = Buff.target.self;
+        Remote.Impact = Buff.impactOnMultiplier.deal;
+        Remote.Effect = Buff.effect.neutral;
     }
     void FixedUpdate()
     {
