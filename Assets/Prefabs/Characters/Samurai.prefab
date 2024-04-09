@@ -199,6 +199,25 @@ MonoBehaviour:
   DamageDealMultiplier: 1
   DamagePrefab: {fileID: 5884769366753586431, guid: e86fd9a5c734c4e22a6c737a15bf9bd9, type: 3}
   BasePosition: {fileID: 4814512438032998286}
+  BuffList: []
+  Melee:
+    isTriggered: 0
+    Impact: 0
+    BuffKind: 0
+    BuffTarget: 0
+    Effect: 0
+    TurnLast: 0
+    quantity: 0
+    Multiplier: 0
+  Remote:
+    isTriggered: 0
+    Impact: 0
+    BuffKind: 0
+    BuffTarget: 0
+    Effect: 0
+    TurnLast: 0
+    quantity: 0
+    Multiplier: 0
 --- !u!1 &7171845885740267359
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +250,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8274025646562264901}
-  - {fileID: 5436688408304980568}
+  - {fileID: 3673370839987904907}
   m_Father: {fileID: 8204687774162429403}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -385,7 +404,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &6031669299411399706
+--- !u!1001 &3043407886883145673
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -422,11 +441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1785171512228783682, guid: 73bb13d0c61b74c88b4ec1ee23c0a29e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2.0183
+      value: 1.7785
       objectReference: {fileID: 0}
     - target: {fileID: 1785171512228783682, guid: 73bb13d0c61b74c88b4ec1ee23c0a29e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.4996
+      value: 0.4113
       objectReference: {fileID: 0}
     - target: {fileID: 1785171512228783682, guid: 73bb13d0c61b74c88b4ec1ee23c0a29e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -458,11 +477,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1785171512228783682, guid: 73bb13d0c61b74c88b4ec1ee23c0a29e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.22569998
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 1785171512228783682, guid: 73bb13d0c61b74c88b4ec1ee23c0a29e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.46
+      value: -1.461
       objectReference: {fileID: 0}
     - target: {fileID: 1785171512228783682, guid: 73bb13d0c61b74c88b4ec1ee23c0a29e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -494,8 +513,8 @@ PrefabInstance:
       objectReference: {fileID: 6186125200142139887}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73bb13d0c61b74c88b4ec1ee23c0a29e, type: 3}
---- !u!224 &5436688408304980568 stripped
+--- !u!224 &3673370839987904907 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1785171512228783682, guid: 73bb13d0c61b74c88b4ec1ee23c0a29e, type: 3}
-  m_PrefabInstance: {fileID: 6031669299411399706}
+  m_PrefabInstance: {fileID: 3043407886883145673}
   m_PrefabAsset: {fileID: 0}
