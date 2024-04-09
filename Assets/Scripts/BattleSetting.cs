@@ -36,7 +36,7 @@ public class BattleSetting : MonoBehaviour
     public Image Avatar;
     Ray TargetChosenRay;
     RaycastHit2D TargetHit;
-    RaycastHit2D[] TargetHitResult;
+    //RaycastHit2D[] TargetHitResult;
     
     public Slider HpSlider;
     public Slider SpSlider;
@@ -52,11 +52,13 @@ public class BattleSetting : MonoBehaviour
     public bool isMoveFinished = false;
     public BattleState State = BattleState.Start;
 
-    int TurnCount;
+    //int TurnCount;
 
     float alpha;
     //float DamageMultiplier = 1f;
     public Vector3 Position;
+
+    //public Buff Defencing;
     #endregion
     // Start is called before the first frame update
     void Awake()
@@ -97,7 +99,6 @@ public class BattleSetting : MonoBehaviour
         {
             BattleUnitsList.Add(EnemyUnit);
         }
-
         ComparePosition();
         ListSort();
         State = BattleState.Start;
@@ -177,28 +178,10 @@ public class BattleSetting : MonoBehaviour
         RemainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
         RemainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
         State = BattleState.Middle;
-        /*if (TurnCount == BattleUnitsList.Count)
-        {
-            TurnCount = 0;
-            //Debug.Log("回合结束");
-            foreach (GameObject unit in BattleUnitsList)
-            {
-                unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
-                unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
-            }
-        }
-
-        TurnCount += 1;*/
 
         if (BattleUnitsList.Count == 0) 
         {
-            BattleUnitsList.AddRange<GameObject>(BattleUnitsListToBeLaunched);
-            BattleUnitsListToBeLaunched.Clear();
-            foreach (GameObject unit in BattleUnitsList)
-            {
-                unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
-                unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
-            }
+            TurnSettle();
         }
 
         if (RemainingEnemyUnits.Length == 0)
@@ -372,8 +355,10 @@ public class BattleSetting : MonoBehaviour
     public void OnDefButton()
     {
         if (State != BattleState.PlayerTurn) return;
-
-        CurrentActUnit.GetComponent<GivingData>().DamageTakeMultiplier = 0.8f;
+        Buff defencing = new Buff();
+        GiveDefence(defencing);
+        CurrentActUnit.GetComponent<GivingData>().BuffList.Add(defencing);
+        CheckBuffList(CurrentActUnit);
         State = BattleState.Middle;
         StartCoroutine(Defence());
     }
@@ -511,7 +496,9 @@ public class BattleSetting : MonoBehaviour
         HpSlider.value = CurrentSliderOwner.GetComponent<GivingData>().currentHP;
         SpSlider.value = CurrentSliderOwner.GetComponent<GivingData>().currentSP;
     }
-
+    /// <summary>
+    /// 检测玩家角色在前排还是后排的函数
+    /// </summary>
     public void ComparePosition()
     {
         for (int i = 0; i < PlayerPositionsList.Count; i++) 
@@ -548,5 +535,68 @@ public class BattleSetting : MonoBehaviour
                 }
             }
         }
+    }
+    /// <summary>
+    /// 每个回合结束/开始时进行的操作（目前只有buff的检测和移除） 
+    /// </summary>
+    void TurnSettle()
+    {
+        BattleUnitsList.AddRange<GameObject>(BattleUnitsListToBeLaunched);
+        BattleUnitsListToBeLaunched.Clear();
+        foreach (GameObject unit in BattleUnitsList)
+        {
+            List<Buff> BuffList = new List<Buff>();
+            BuffList = unit.GetComponent<GivingData>().BuffList;
+
+            foreach (Buff buff in BuffList)
+            {
+                if (buff.BuffKind == Buff.Kind.turnLessen) 
+                {
+                    buff.TurnLast--;
+                }
+
+                if (buff.TurnLast == 0 && buff.BuffKind == Buff.Kind.turnLessen)  
+                {
+                    buff.isTriggered = false;
+                }
+            }
+            BuffList.RemoveAll(buff => buff.isTriggered == false);
+            CheckBuffList(unit);
+            //unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
+            //unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
+        }
+    }
+    /// <summary>
+    /// 将buff效果作用在倍率上的函数（有新buff进入list时调用函数使buff即时有效）
+    /// </summary>
+    void CheckBuffList(GameObject unit)
+    {
+        unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
+        unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
+
+        List<Buff> BuffList = unit.GetComponent<GivingData>().BuffList;
+
+        foreach (Buff buff in BuffList)
+        {
+            if (buff.Impact == Buff.impactOnMultiplier.take) 
+            {
+                unit.GetComponent<GivingData>().DamageTakeMultiplier *= buff.Multiplier;
+            }
+            else if(buff.Impact == Buff.impactOnMultiplier.deal)
+            {
+                unit.GetComponent<GivingData>().DamageDealMultiplier *= buff.Multiplier;
+            }
+        }
+    }
+
+    void GiveDefence(Buff Defencing)
+    {
+        Defencing.isTriggered = true;
+        Defencing.BuffKind = Buff.Kind.turnLessen;
+        Defencing.TurnLast = 1;
+        Defencing.Effect = Buff.effect.neutral;
+        Defencing.Multiplier = 0.8f;
+        Defencing.Impact = Buff.impactOnMultiplier.take;
+
     }
 }

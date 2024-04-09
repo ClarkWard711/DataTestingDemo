@@ -61,13 +61,13 @@ public class GivingData : MonoBehaviour
         {
             isDead = true;
         }
-        Melee.BuffName = "Melee";
+        Melee.isTriggered = true;
         Melee.Multiplier = melee / 100;
         Melee.BuffKind = Buff.Kind.eternal;
         Melee.BuffTarget = Buff.target.self;
         Melee.Impact = Buff.impactOnMultiplier.deal;
         Melee.Effect = Buff.effect.neutral;
-        Remote.BuffName = "Remote";
+        Remote.isTriggered = true;
         Remote.Multiplier = remote / 100;
         Remote.BuffKind = Buff.Kind.eternal;
         Remote.BuffTarget = Buff.target.self;

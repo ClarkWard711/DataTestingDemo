@@ -14,98 +14,98 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Frog
   jobInitialLevel: 1
+  currentHP: 120
   enemyLevel: 1
-  JobPrefab: {fileID: 1460912350467585319, guid: 6e9ee63760d5c4ab9b35ee5977998624,
-    type: 3}
+  JobPrefab: {fileID: 1460912350467585319, guid: 6e9ee63760d5c4ab9b35ee5977998624, type: 3}
   dataFile: {fileID: 4900000, guid: 8c0baab37681d47eba63a40337331f7c, type: 3}
   enemyStatsList:
   - maxHP: 120
-    physicalAtk: 50
-    physicalDfs: 30
+    physicalAtk: 30
+    physicalDfs: 20
     soulAtk: 32
-    soulDfs: 20
-    miss: 16
-    hit: 10
+    soulDfs: 16
+    miss: 10
+    hit: 5
     speed: 150
     AntiCri: 50
   - maxHP: 140
-    physicalAtk: 60
-    physicalDfs: 35
+    physicalAtk: 35
+    physicalDfs: 23
     soulAtk: 36
-    soulDfs: 23
-    miss: 18
-    hit: 20
-    speed: 202
+    soulDfs: 18
+    miss: 11
+    hit: 5
+    speed: 157
     AntiCri: 52
   - maxHP: 160
-    physicalAtk: 70
-    physicalDfs: 40
+    physicalAtk: 40
+    physicalDfs: 26
     soulAtk: 40
-    soulDfs: 26
-    miss: 20
-    hit: 30
-    speed: 254
+    soulDfs: 20
+    miss: 12
+    hit: 5
+    speed: 164
     AntiCri: 54
   - maxHP: 180
-    physicalAtk: 80
-    physicalDfs: 45
+    physicalAtk: 45
+    physicalDfs: 29
     soulAtk: 44
-    soulDfs: 29
-    miss: 22
-    hit: 40
-    speed: 306
+    soulDfs: 22
+    miss: 13
+    hit: 5
+    speed: 171
     AntiCri: 56
   - maxHP: 200
-    physicalAtk: 90
-    physicalDfs: 50
+    physicalAtk: 50
+    physicalDfs: 32
     soulAtk: 48
-    soulDfs: 32
-    miss: 24
-    hit: 50
-    speed: 358
+    soulDfs: 24
+    miss: 14
+    hit: 5
+    speed: 178
     AntiCri: 58
   - maxHP: 220
-    physicalAtk: 100
-    physicalDfs: 55
+    physicalAtk: 55
+    physicalDfs: 35
     soulAtk: 52
-    soulDfs: 35
-    miss: 26
-    hit: 60
-    speed: 410
+    soulDfs: 26
+    miss: 15
+    hit: 5
+    speed: 185
     AntiCri: 60
   - maxHP: 240
-    physicalAtk: 110
-    physicalDfs: 60
+    physicalAtk: 60
+    physicalDfs: 38
     soulAtk: 56
-    soulDfs: 38
-    miss: 28
-    hit: 70
-    speed: 462
+    soulDfs: 28
+    miss: 16
+    hit: 5
+    speed: 192
     AntiCri: 62
   - maxHP: 260
-    physicalAtk: 120
-    physicalDfs: 65
+    physicalAtk: 65
+    physicalDfs: 41
     soulAtk: 60
-    soulDfs: 41
-    miss: 30
-    hit: 80
-    speed: 514
+    soulDfs: 30
+    miss: 17
+    hit: 5
+    speed: 199
     AntiCri: 64
   - maxHP: 280
-    physicalAtk: 130
-    physicalDfs: 70
+    physicalAtk: 70
+    physicalDfs: 44
     soulAtk: 64
-    soulDfs: 44
-    miss: 32
-    hit: 90
-    speed: 566
+    soulDfs: 32
+    miss: 18
+    hit: 5
+    speed: 206
     AntiCri: 66
   - maxHP: 300
-    physicalAtk: 140
-    physicalDfs: 75
+    physicalAtk: 75
+    physicalDfs: 47
     soulAtk: 68
-    soulDfs: 47
-    miss: 34
-    hit: 100
-    speed: 618
+    soulDfs: 34
+    miss: 19
+    hit: 5
+    speed: 213
     AntiCri: 68

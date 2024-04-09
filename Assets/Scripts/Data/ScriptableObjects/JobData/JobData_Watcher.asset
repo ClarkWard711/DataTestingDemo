@@ -20,8 +20,7 @@ MonoBehaviour:
   currentSP: 50
   jobLevel: 1
   SkillsID: 00000000000000000000000000000000
-  JobPrefab: {fileID: 6186125200142139887, guid: cf50f0bb3edd442f5b251b738be56e5a,
-    type: 3}
+  JobPrefab: {fileID: 6186125200142139887, guid: cf50f0bb3edd442f5b251b738be56e5a, type: 3}
   dataFile: {fileID: 4900000, guid: 8c0baab37681d47eba63a40337331f7c, type: 3}
   jobStatsList:
   - maxHP: 120
@@ -34,8 +33,8 @@ MonoBehaviour:
     nimbleness: 5
     speed: 150
     critical: 50
-    melee: 15
-    remote: 12
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000
   - maxHP: 140
@@ -44,12 +43,12 @@ MonoBehaviour:
     soulAttack: 36
     physicalDefence: 23
     soulDefence: 18
-    hit: 20
+    hit: 11
     nimbleness: 5
-    speed: 202
+    speed: 157
     critical: 52
-    melee: 18
-    remote: 16
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000
   - maxHP: 160
@@ -58,12 +57,12 @@ MonoBehaviour:
     soulAttack: 40
     physicalDefence: 26
     soulDefence: 20
-    hit: 30
+    hit: 12
     nimbleness: 5
-    speed: 254
+    speed: 164
     critical: 54
-    melee: 21
-    remote: 20
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000
   - maxHP: 180
@@ -72,12 +71,12 @@ MonoBehaviour:
     soulAttack: 44
     physicalDefence: 29
     soulDefence: 22
-    hit: 40
+    hit: 13
     nimbleness: 5
-    speed: 306
+    speed: 171
     critical: 56
-    melee: 24
-    remote: 24
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000
   - maxHP: 200
@@ -86,12 +85,12 @@ MonoBehaviour:
     soulAttack: 48
     physicalDefence: 32
     soulDefence: 24
-    hit: 50
+    hit: 14
     nimbleness: 5
-    speed: 358
+    speed: 178
     critical: 58
-    melee: 27
-    remote: 28
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000
   - maxHP: 220
@@ -100,12 +99,12 @@ MonoBehaviour:
     soulAttack: 52
     physicalDefence: 35
     soulDefence: 26
-    hit: 60
+    hit: 15
     nimbleness: 5
-    speed: 410
+    speed: 185
     critical: 60
-    melee: 30
-    remote: 32
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000
   - maxHP: 240
@@ -114,12 +113,12 @@ MonoBehaviour:
     soulAttack: 56
     physicalDefence: 38
     soulDefence: 28
-    hit: 70
+    hit: 16
     nimbleness: 5
-    speed: 462
+    speed: 192
     critical: 62
-    melee: 33
-    remote: 36
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000
   - maxHP: 260
@@ -128,12 +127,12 @@ MonoBehaviour:
     soulAttack: 60
     physicalDefence: 41
     soulDefence: 30
-    hit: 80
+    hit: 17
     nimbleness: 5
-    speed: 514
+    speed: 199
     critical: 64
-    melee: 36
-    remote: 40
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000
   - maxHP: 280
@@ -142,12 +141,12 @@ MonoBehaviour:
     soulAttack: 64
     physicalDefence: 44
     soulDefence: 32
-    hit: 90
+    hit: 18
     nimbleness: 5
-    speed: 566
+    speed: 206
     critical: 66
-    melee: 39
-    remote: 44
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000
   - maxHP: 300
@@ -156,11 +155,11 @@ MonoBehaviour:
     soulAttack: 68
     physicalDefence: 47
     soulDefence: 34
-    hit: 100
+    hit: 19
     nimbleness: 5
-    speed: 618
+    speed: 213
     critical: 68
-    melee: 42
-    remote: 48
+    melee: 100
+    remote: 100
     expPerLevel: 100
     sxpPerLevel: 1000

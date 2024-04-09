@@ -4,7 +4,6 @@ using UnityEngine;
 [System.Serializable]
 public class Buff 
 {
-    public string BuffName;
     public bool isTriggered;
     public enum Kind {accumulable,turnLessen,eternal};
     public enum target {ally,enemy,all,self};
