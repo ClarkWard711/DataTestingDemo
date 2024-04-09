@@ -16,4 +16,15 @@ public class Buff
     public int TurnLast;
     public int quantity;
     public float Multiplier;
+    public Buff(Buff buff)
+    {
+        isTriggered = buff.isTriggered;
+        BuffKind = buff.BuffKind;
+        Impact = buff.Impact;
+        BuffTarget = buff.BuffTarget;
+        Effect = buff.Effect;
+        TurnLast = buff.TurnLast;
+        quantity = buff.quantity;
+        Multiplier = buff.Multiplier;
+    }
 }

@@ -58,7 +58,7 @@ public class BattleSetting : MonoBehaviour
     //float DamageMultiplier = 1f;
     public Vector3 Position;
 
-    //public Buff Defencing;
+    public Buff Defencing;
     #endregion
     // Start is called before the first frame update
     void Awake()
@@ -99,6 +99,12 @@ public class BattleSetting : MonoBehaviour
         {
             BattleUnitsList.Add(EnemyUnit);
         }
+        Defencing.isTriggered = true;
+        Defencing.BuffKind = Buff.Kind.turnLessen;
+        Defencing.TurnLast = 1;
+        Defencing.Effect = Buff.effect.neutral;
+        Defencing.Multiplier = 0.8f;
+        Defencing.Impact = Buff.impactOnMultiplier.take;
         ComparePosition();
         ListSort();
         State = BattleState.Start;
@@ -355,8 +361,7 @@ public class BattleSetting : MonoBehaviour
     public void OnDefButton()
     {
         if (State != BattleState.PlayerTurn) return;
-        Buff defencing = new Buff();
-        GiveDefence(defencing);
+        Buff defencing = new Buff(Defencing);
         CurrentActUnit.GetComponent<GivingData>().BuffList.Add(defencing);
         CheckBuffList(CurrentActUnit);
         State = BattleState.Middle;
@@ -488,7 +493,9 @@ public class BattleSetting : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// 更新血条的函数
+    /// </summary>
     public void UpdateSliderChange()
     {
         HpSlider.maxValue = CurrentSliderOwner.GetComponent<GivingData>().maxHP;
@@ -587,16 +594,5 @@ public class BattleSetting : MonoBehaviour
                 unit.GetComponent<GivingData>().DamageDealMultiplier *= buff.Multiplier;
             }
         }
-    }
-
-    void GiveDefence(Buff Defencing)
-    {
-        Defencing.isTriggered = true;
-        Defencing.BuffKind = Buff.Kind.turnLessen;
-        Defencing.TurnLast = 1;
-        Defencing.Effect = Buff.effect.neutral;
-        Defencing.Multiplier = 0.8f;
-        Defencing.Impact = Buff.impactOnMultiplier.take;
-
     }
 }
