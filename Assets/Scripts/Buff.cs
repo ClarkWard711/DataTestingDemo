@@ -27,4 +27,17 @@ public class Buff
         quantity = buff.quantity;
         Multiplier = buff.Multiplier;
     }
+    public Buff(bool istriggerd,impactOnMultiplier impact,Kind buffkind,target bufftarget,effect effect,int turnLast,int Quantity,float multiplier)
+    {
+        isTriggered = istriggerd;
+        Impact = impact;
+        BuffKind = buffkind;
+        BuffTarget = bufftarget;
+        Effect = effect;
+        TurnLast = turnLast;
+        quantity = Quantity;
+        Multiplier = multiplier;
+    }
+    public static Buff Defencing = new Buff(true, impactOnMultiplier.take, Kind.turnLessen, target.self, effect.neutral, 1,0,0.8f);
+    public static Buff Charging = new Buff(true, impactOnMultiplier.deal, Kind.turnLessen, target.self, effect.neutral, 2, 0, 2f);
 }

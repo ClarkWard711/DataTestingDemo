@@ -31,6 +31,10 @@ public class BattleSetting : MonoBehaviour
     public List<GameObject> PlayerPositionsList;
     public List<GameObject> EnemyPositionsList;
 
+    public GameObject SkillList;
+    bool isTextShowed = false;
+    List<int> SkillID = new List<int>();
+
     public Text GameStateText;
     //public Button AtkButton;
     public Image Avatar;
@@ -58,7 +62,7 @@ public class BattleSetting : MonoBehaviour
     //float DamageMultiplier = 1f;
     public Vector3 Position;
 
-    public Buff Defencing;
+    public Buff Defencing,Charging;
     #endregion
     // Start is called before the first frame update
     void Awake()
@@ -99,12 +103,9 @@ public class BattleSetting : MonoBehaviour
         {
             BattleUnitsList.Add(EnemyUnit);
         }
-        Defencing.isTriggered = true;
-        Defencing.BuffKind = Buff.Kind.turnLessen;
-        Defencing.TurnLast = 1;
-        Defencing.Effect = Buff.effect.neutral;
-        Defencing.Multiplier = 0.8f;
-        Defencing.Impact = Buff.impactOnMultiplier.take;
+
+        Defencing = new Buff(Buff.Defencing);
+        Charging = new Buff(Buff.Charging);
         ComparePosition();
         ListSort();
         State = BattleState.Start;
@@ -270,9 +271,9 @@ public class BattleSetting : MonoBehaviour
         }
     }
 
-    IEnumerator Defence()
+    IEnumerator ShowActionText(string Action)
     {
-        GameStateText.text = "防御";
+        GameStateText.text = Action;
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
         ToBattle();
@@ -325,27 +326,15 @@ public class BattleSetting : MonoBehaviour
 
         if (CurrentActUnit.tag == "EnemyUnit")
         {
-            //GameStateText.text = "敌方回合";
-            //StartCoroutine(ShowText(2f));
             State = BattleState.EnemyTurn;
-            //int TargetIndex = Random.Range(0, RemainingPlayerUnits.Length);
-            //CurrentActUnitTarget = RemainingPlayerUnits[TargetIndex];
-            //StartCoroutine(DealDamage(3f));
             StartCoroutine(TurnAction(1f, "敌方回合"));
         }
         else
         {
-            //GameStateText.text = "你的回合";
-            //StartCoroutine(ShowText(2f));
             State = BattleState.PlayerTurn;
             CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
-            Avatar.sprite = CurrentActUnit.GetComponent<GivingData>().jobData.JobAvatarImage;
-            CurrentSliderOwner = CurrentActUnit;
-            UpdateSliderChange();
+            UpdateUIPanel();
             StartCoroutine(TurnAction(1f, "你的回合"));
-            //GameStateText.text = "选择操作";
-            //StartCoroutine(ShowText(2f));
-            //isWaitForPlayerToChooseAction = true;
         }
     }
 
@@ -365,7 +354,7 @@ public class BattleSetting : MonoBehaviour
         CurrentActUnit.GetComponent<GivingData>().BuffList.Add(defencing);
         CheckBuffList(CurrentActUnit);
         State = BattleState.Middle;
-        StartCoroutine(Defence());
+        StartCoroutine(ShowActionText("防御"));
     }
 
     public void OnMoveButton()
@@ -377,6 +366,30 @@ public class BattleSetting : MonoBehaviour
         isMoveFinished = false;
         StartCoroutine(Move());
         
+    }
+
+    public void OnChargeButton()
+    {
+        if (State != BattleState.PlayerTurn) return;
+        Buff charging = new Buff(Charging);
+        CurrentActUnit.GetComponent<GivingData>().BuffList.Add(charging);
+        CheckBuffList(CurrentActUnit);
+        State = BattleState.Middle;
+        StartCoroutine(ShowActionText("蓄力"));
+    }
+
+    public void OnSKillButton()
+    {
+        if (!isTextShowed)
+        {
+            SkillList.SetActive(true);
+            isTextShowed = true;
+        }
+        else
+        {
+            SkillList.SetActive(false);
+            isTextShowed = false;
+        }
     }
     #endregion
 
@@ -594,5 +607,16 @@ public class BattleSetting : MonoBehaviour
                 unit.GetComponent<GivingData>().DamageDealMultiplier *= buff.Multiplier;
             }
         }
+    }
+    /// <summary>
+    /// 更新右侧ui界面
+    /// </summary>
+    void UpdateUIPanel()
+    {
+        Avatar.sprite = CurrentActUnit.GetComponent<GivingData>().jobData.JobAvatarImage;
+        CurrentSliderOwner = CurrentActUnit;
+        SkillID.Clear();
+        SkillID.AddRange<int>(CurrentActUnit.GetComponent<GivingData>().jobData.SkillsID);
+        UpdateSliderChange();
     }
 }
