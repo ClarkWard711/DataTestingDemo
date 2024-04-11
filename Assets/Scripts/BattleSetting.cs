@@ -33,6 +33,8 @@ public class BattleSetting : MonoBehaviour
 
     public GameObject SkillList;
     bool isTextShowed = false;
+    //bool isBasicShowed = false;
+    //bool isAdvancedShowed = false;
     List<int> SkillID = new List<int>();
 
     public Text GameStateText;
@@ -391,6 +393,38 @@ public class BattleSetting : MonoBehaviour
             isTextShowed = false;
         }
     }
+    /*
+    public void OnBasicButton()
+    {
+        if (!isBasicShowed)
+        {
+            BasicSkill.SetActive(true);
+            OnSKillButton();
+            OnSKillButton();
+            isBasicShowed = true;
+        }
+        else
+        {
+            BasicSkill.SetActive(false);
+            OnSKillButton();
+            OnSKillButton();
+            isBasicShowed = false;
+        }
+    }
+
+    public void OnAdvancedButton()
+    {
+        if (!isAdvancedShowed)
+        {
+            AdvancedSkill.SetActive(true);
+            isAdvancedShowed = true;
+        }
+        else
+        {
+            AdvancedSkill.SetActive(false);
+            isAdvancedShowed = false;
+        }
+    }*/
     #endregion
 
     int DamageCounting(int atk, int dfs, float TakeMultiplier, float DealMultiplier)
