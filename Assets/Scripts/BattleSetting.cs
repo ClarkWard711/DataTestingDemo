@@ -17,54 +17,57 @@ public class BattleSetting : MonoBehaviour
     [SerializeField] AssetReference outerScene;
     //[SerializeField] List<int> SpdList;
     //测试变了没
-    public List<GameObject> BattleUnitsList;
-    public List<GameObject> BattleUnitsListToBeLaunched;
-    public GameObject[] playerUnits;
-    public GameObject[] enemyUnits;
-    public GameObject[] RemainingEnemyUnits;
-    public GameObject[] RemainingPlayerUnits;
-    public GameObject CurrentActUnit;
-    public GameObject CurrentActUnitTarget;
-    public GameObject MovePanel;
-    GameObject ShownUnit;
-    GameObject CurrentSliderOwner;
-    public List<GameObject> PlayerPositionsList;
-    public List<GameObject> EnemyPositionsList;
+    public List<GameObject> BattleUnitsList;//战斗单位
+    public List<GameObject> BattleUnitsListToBeLaunched;//第二战斗单位
+    public GameObject[] playerUnits;//玩家单位
+    public GameObject[] enemyUnits;//敌方单位
+    public GameObject[] RemainingEnemyUnits;//剩余敌人单位
+    public GameObject[] RemainingPlayerUnits;//剩余玩家单位
+    public GameObject CurrentActUnit;//当前行动角色
+    public GameObject CurrentActUnitTarget;//当前行动角色的目标
+    public GameObject MovePanel;//移动选择的panel
+    GameObject ShownUnit;//ui展示的单位
+    GameObject CurrentSliderOwner;//ui显示单位的slider
+    public List<GameObject> PlayerPositionsList;//我方位置
+    public List<GameObject> EnemyPositionsList;//敌方位置
 
-    public GameObject SkillList;
-    bool isTextShowed = false;
-    //bool isBasicShowed = false;
-    //bool isAdvancedShowed = false;
-    List<int> SkillID = new List<int>();
+    public GameObject SkillList;//基础进阶技能显示
+    bool isTextShowed = false;//基础进阶是否显示
+    public GameObject BasicPanel, AdvancedPanel;//基础技能和进阶技能的panel
+    bool isBasicShowed = false;//基础技能是否显示
+    bool isAdvancedShowed = false;//进阶技能是否显示
+    List<int> SkillID = new List<int>();//技能ID
 
-    public Text GameStateText;
+    public Text GameStateText;//对战状态文本
     //public Button AtkButton;
-    public Image Avatar;
-    Ray TargetChosenRay;
-    RaycastHit2D TargetHit;
+    public Image Avatar;//ui显示头像
+    Ray TargetChosenRay;//选择激光
+    RaycastHit2D TargetHit;//选择激光目标
     //RaycastHit2D[] TargetHitResult;
     
-    public Slider HpSlider;
-    public Slider SpSlider;
+    public Slider HpSlider;//血条
+    public Slider SpSlider;//蓝条
 
-    public PartyMember PlayerPartyMember;
-    public EnemyParty EnemyPartyMember;
+    public PartyMember PlayerPartyMember;//我方队伍角色
+    public EnemyParty EnemyPartyMember;//敌方队伍角色
 
-    public bool isWaitForPlayerToChooseAction = false;
-    public bool isWaitForPlayerToChooseUnit = false;
-    public bool isPressed = false;
-    bool isMoving = false;
-    bool isKeyboardTouched = false;
-    public bool isMoveFinished = false;
-    public BattleState State = BattleState.Start;
+    public bool isWaitForPlayerToChooseAction = false;//等待玩家选择操作
+    public bool isWaitForPlayerToChooseUnit = false;//等待玩家选择单位
+    public bool isPressed = false;//回主世界是否按下
+    bool isMoving = false;//鼠标有没有在移动
+    bool isKeyboardTouched = false;//键盘有没有碰 用于键盘操控ui
+    public bool isMoveFinished = false;//移动完了没 用于前后排tag
+    public BattleState State = BattleState.Start;//战斗进度状态
 
+
+    bool isChooseFinished = false;//玩家选完了没
     //int TurnCount;
 
-    float alpha;
+    float alpha;//颜色透明度
     //float DamageMultiplier = 1f;
     public Vector3 Position;
 
-    public Buff Defencing,Charging;
+    public Buff Defencing,Charging;//防御 蓄力
     #endregion
     // Start is called before the first frame update
     void Awake()
@@ -273,7 +276,7 @@ public class BattleSetting : MonoBehaviour
         }
     }
 
-    IEnumerator ShowActionText(string Action)
+    public IEnumerator ShowActionText(string Action)
     {
         GameStateText.text = Action;
         StartCoroutine(ShowText(1f));
@@ -297,6 +300,12 @@ public class BattleSetting : MonoBehaviour
             ToBattle();
         }
         
+    }
+
+    IEnumerator Attack()
+    {
+        yield return new WaitUntil(() => isChooseFinished);
+        StartCoroutine(DealDamage(3f));
     }
     #endregion
 
@@ -347,6 +356,7 @@ public class BattleSetting : MonoBehaviour
         if (State != BattleState.PlayerTurn) return;
 
         isWaitForPlayerToChooseUnit = true;
+        StartCoroutine(Attack());
     }
 
     public void OnDefButton()
@@ -393,21 +403,19 @@ public class BattleSetting : MonoBehaviour
             isTextShowed = false;
         }
     }
-    /*
+    
     public void OnBasicButton()
     {
         if (!isBasicShowed)
         {
-            BasicSkill.SetActive(true);
-            OnSKillButton();
-            OnSKillButton();
+            BasicPanel.SetActive(true);
+            AdvancedPanel.SetActive(false);
             isBasicShowed = true;
+            isAdvancedShowed = false;
         }
         else
         {
-            BasicSkill.SetActive(false);
-            OnSKillButton();
-            OnSKillButton();
+            BasicPanel.SetActive(false);
             isBasicShowed = false;
         }
     }
@@ -416,15 +424,17 @@ public class BattleSetting : MonoBehaviour
     {
         if (!isAdvancedShowed)
         {
-            AdvancedSkill.SetActive(true);
+            AdvancedPanel.SetActive(true);
+            BasicPanel.SetActive(false);
             isAdvancedShowed = true;
+            isBasicShowed = false;
         }
         else
         {
-            AdvancedSkill.SetActive(false);
+            AdvancedPanel.SetActive(false);
             isAdvancedShowed = false;
         }
-    }*/
+    }
     #endregion
 
     int DamageCounting(int atk, int dfs, float TakeMultiplier, float DealMultiplier)
@@ -475,7 +485,8 @@ public class BattleSetting : MonoBehaviour
                         //CurrentActUnitTarget = TargetHit.collider.gameObject;
                         ShownUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                         isWaitForPlayerToChooseUnit = false;
-                        StartCoroutine(DealDamage(3f));
+                        //StartCoroutine(DealDamage(3f));
+                        isChooseFinished = true;
                         CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                     }
 
@@ -535,7 +546,8 @@ public class BattleSetting : MonoBehaviour
                 CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                 CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
                 isWaitForPlayerToChooseUnit = false;
-                StartCoroutine(DealDamage(3f));
+                //StartCoroutine(DealDamage(3f));
+                isChooseFinished = true;
                 CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
             }
         }
@@ -623,7 +635,7 @@ public class BattleSetting : MonoBehaviour
     /// <summary>
     /// 将buff效果作用在倍率上的函数（有新buff进入list时调用函数使buff即时有效）
     /// </summary>
-    void CheckBuffList(GameObject unit)
+    public void CheckBuffList(GameObject unit)
     {
         unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
         unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;

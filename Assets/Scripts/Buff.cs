@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class Buff 
 {
+    public string BuffName;
     public bool isTriggered;
     public enum Kind {accumulable,turnLessen,eternal};
     public enum target {ally,enemy,all,self};
@@ -27,8 +28,9 @@ public class Buff
         quantity = buff.quantity;
         Multiplier = buff.Multiplier;
     }
-    public Buff(bool istriggerd,impactOnMultiplier impact,Kind buffkind,target bufftarget,effect effect,int turnLast,int Quantity,float multiplier)
+    public Buff(string Name, bool istriggerd, impactOnMultiplier impact, Kind buffkind, target bufftarget, effect effect, int turnLast, int Quantity, float multiplier)
     {
+        BuffName = Name;
         isTriggered = istriggerd;
         Impact = impact;
         BuffKind = buffkind;
@@ -38,6 +40,6 @@ public class Buff
         quantity = Quantity;
         Multiplier = multiplier;
     }
-    public static Buff Defencing = new Buff(true, impactOnMultiplier.take, Kind.turnLessen, target.self, effect.neutral, 1,0,0.8f);
-    public static Buff Charging = new Buff(true, impactOnMultiplier.deal, Kind.turnLessen, target.self, effect.neutral, 2, 0, 2f);
+    public static Buff Defencing = new Buff("防御",true, impactOnMultiplier.take, Kind.turnLessen, target.self, effect.neutral, 1, 0, 0.8f);
+    public static Buff Charging = new Buff("蓄力",true, impactOnMultiplier.deal, Kind.turnLessen, target.self, effect.neutral, 2, 0, 2f);
 }
