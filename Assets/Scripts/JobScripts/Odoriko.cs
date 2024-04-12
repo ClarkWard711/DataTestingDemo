@@ -40,12 +40,14 @@ public class Odoriko : MonoBehaviour
     }
     
     //public Buff buff = new Buff(OdorikoBuff.Moonlight);
-    public Button[] SkillButton;
+    public Button[] BasicSkillButton;
+    public Button[] AdvancedSkillButton;
     bool MoonSpReduce = false, SunSpReduce = false;
-    float SpMultiplier;
+    public float SpCostMultiplier = 1f;
     void Awake()
     {
-        SkillButton = BattleSetting.Instance.SkillList.GetComponentsInChildren<Button>();
+        BasicSkillButton = BattleSetting.Instance.BasicPanel.GetComponentsInChildren<Button>();
+        AdvancedSkillButton = BattleSetting.Instance.AdvancedPanel.GetComponentsInChildren<Button>();
         //SkillButton[0].onClick.AddListener(() => Moonlight(BattleSetting.Instance.CurrentActUnit));
         //buff.skillKind = OdorikoBuff.SkillKind.Moon;
         //Buff Test = new Buff(buff);
@@ -62,12 +64,12 @@ public class Odoriko : MonoBehaviour
         if (unit.GetComponent<GivingData>().BuffList.Exists(Buff => Buff.BuffName == "蓄力")) 
         {
             MoonSpReduce = true;
-            SpMultiplier = 0.8f;
+            SpCostMultiplier = 0.8f;
         }
         else
         {
             MoonSpReduce = true;
-            SpMultiplier = 0.9f;
+            SpCostMultiplier = 0.9f;
         }
         BattleSetting.Instance.State = BattleState.Middle;
         StartCoroutine(BattleSetting.Instance.ShowActionText("月光"));
@@ -76,18 +78,28 @@ public class Odoriko : MonoBehaviour
     void SunSpot(GameObject unit)
     {
         if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
+        
+        BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
+        StartCoroutine(SunSpot());
+    }
+    IEnumerator SunSpot()
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         SunSpCost();
-        if (unit.GetComponent<GivingData>().BuffList.Exists(Buff => Buff.BuffName == "蓄力"))
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().BuffList.Exists(Buff => Buff.BuffName == "蓄力"))
         {
             SunSpReduce = true;
-            SpMultiplier = 0.8f;
+            SpCostMultiplier = 0.8f;
         }
         else
         {
             SunSpReduce = true;
-            SpMultiplier = 0.9f;
+            SpCostMultiplier = 0.9f;
         }
-
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.GameStateText.text = "日斑";
+        StartCoroutine(BattleSetting.Instance.ShowText(1f));
+        StartCoroutine(BattleSetting.Instance.DealDamage(3f));
     }
 
     void MoonSpCost()
@@ -98,7 +110,7 @@ public class Odoriko : MonoBehaviour
         }
         else
         {
-            SpMultiplier = 1f;
+            SpCostMultiplier = 1f;
         }
     }
 
@@ -110,8 +122,7 @@ public class Odoriko : MonoBehaviour
         }
         else
         {
-            SpMultiplier = 1f;
+            SpCostMultiplier = 1f;
         }
     }
-    
 }

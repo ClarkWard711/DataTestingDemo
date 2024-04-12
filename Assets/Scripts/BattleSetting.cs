@@ -60,7 +60,7 @@ public class BattleSetting : MonoBehaviour
     public BattleState State = BattleState.Start;//战斗进度状态
 
 
-    bool isChooseFinished = false;//玩家选完了没
+    public bool isChooseFinished = false;//玩家选完了没
     //int TurnCount;
 
     float alpha;//颜色透明度
@@ -235,7 +235,7 @@ public class BattleSetting : MonoBehaviour
         SetColorTo0(GameStateText);
     }
 
-    IEnumerator DealDamage(float time)
+    public IEnumerator DealDamage(float time)
     {
         State = BattleState.Middle;
         float TargetTakeMultiplier, ActUnitDealMultiplier;
@@ -305,6 +305,7 @@ public class BattleSetting : MonoBehaviour
     IEnumerator Attack()
     {
         yield return new WaitUntil(() => isChooseFinished);
+        isChooseFinished = false;
         StartCoroutine(DealDamage(3f));
     }
     #endregion
