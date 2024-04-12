@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 78756681}
   - component: {fileID: 78756680}
   - component: {fileID: 78756679}
+  - component: {fileID: 78756682}
   m_Layer: 5
   m_Name: Action (3)
   m_TagString: Untagged
@@ -397,19 +398,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 78756680}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1791494663}
-        m_TargetAssemblyTypeName: BattleSetting, Assembly-CSharp
-        m_MethodName: OnAtkButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &78756680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +437,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78756677}
   m_CullTransparentMesh: 1
+--- !u!114 &78756682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78756677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9abb151a7491408d94f69e0076ee1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextPanelPrefab: {fileID: 8133074738698572043, guid: b9d1014a3cb914d1fba76a46cd46c182, type: 3}
+  TextPanel: {fileID: 0}
+  canvas: {fileID: 1787674354}
 --- !u!1 &115484153
 GameObject:
   m_ObjectHideFlags: 0
@@ -4257,6 +4261,7 @@ GameObject:
   - component: {fileID: 692714549}
   - component: {fileID: 692714548}
   - component: {fileID: 692714547}
+  - component: {fileID: 692714550}
   m_Layer: 5
   m_Name: Action (1)
   m_TagString: Untagged
@@ -4328,19 +4333,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 692714548}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1791494663}
-        m_TargetAssemblyTypeName: BattleSetting, Assembly-CSharp
-        m_MethodName: OnAtkButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &692714548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4379,6 +4372,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692714545}
   m_CullTransparentMesh: 1
+--- !u!114 &692714550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692714545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9abb151a7491408d94f69e0076ee1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextPanelPrefab: {fileID: 8133074738698572043, guid: b9d1014a3cb914d1fba76a46cd46c182, type: 3}
+  TextPanel: {fileID: 0}
+  canvas: {fileID: 1787674354}
 --- !u!1 &719754971
 GameObject:
   m_ObjectHideFlags: 0
@@ -4551,6 +4559,7 @@ GameObject:
   - component: {fileID: 722765370}
   - component: {fileID: 722765369}
   - component: {fileID: 722765368}
+  - component: {fileID: 722765371}
   m_Layer: 5
   m_Name: Action
   m_TagString: Untagged
@@ -4622,19 +4631,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 722765369}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1791494663}
-        m_TargetAssemblyTypeName: BattleSetting, Assembly-CSharp
-        m_MethodName: OnAtkButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &722765369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4673,6 +4670,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722765366}
   m_CullTransparentMesh: 1
+--- !u!114 &722765371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722765366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9abb151a7491408d94f69e0076ee1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextPanelPrefab: {fileID: 8133074738698572043, guid: b9d1014a3cb914d1fba76a46cd46c182, type: 3}
+  TextPanel: {fileID: 0}
+  canvas: {fileID: 1787674354}
 --- !u!1 &745558779
 GameObject:
   m_ObjectHideFlags: 0
@@ -4793,7 +4805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 194.54181, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 374, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &812863217
@@ -5285,6 +5297,7 @@ GameObject:
   - component: {fileID: 956026642}
   - component: {fileID: 956026641}
   - component: {fileID: 956026640}
+  - component: {fileID: 956026643}
   m_Layer: 5
   m_Name: Action (2)
   m_TagString: Untagged
@@ -5356,19 +5369,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 956026641}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1791494663}
-        m_TargetAssemblyTypeName: BattleSetting, Assembly-CSharp
-        m_MethodName: OnAtkButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &956026641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5407,6 +5408,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956026638}
   m_CullTransparentMesh: 1
+--- !u!114 &956026643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956026638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9abb151a7491408d94f69e0076ee1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextPanelPrefab: {fileID: 8133074738698572043, guid: b9d1014a3cb914d1fba76a46cd46c182, type: 3}
+  TextPanel: {fileID: 0}
+  canvas: {fileID: 1787674354}
 --- !u!1 &963868592
 GameObject:
   m_ObjectHideFlags: 0
@@ -7606,6 +7622,7 @@ GameObject:
   - component: {fileID: 1682411217}
   - component: {fileID: 1682411216}
   - component: {fileID: 1682411215}
+  - component: {fileID: 1682411218}
   m_Layer: 5
   m_Name: Action (1)
   m_TagString: Untagged
@@ -7677,19 +7694,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1682411216}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1791494663}
-        m_TargetAssemblyTypeName: BattleSetting, Assembly-CSharp
-        m_MethodName: OnAtkButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1682411216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7728,6 +7733,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1682411213}
   m_CullTransparentMesh: 1
+--- !u!114 &1682411218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682411213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9abb151a7491408d94f69e0076ee1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextPanelPrefab: {fileID: 8133074738698572043, guid: b9d1014a3cb914d1fba76a46cd46c182, type: 3}
+  TextPanel: {fileID: 0}
+  canvas: {fileID: 1787674354}
 --- !u!1 &1728840206
 GameObject:
   m_ObjectHideFlags: 0
@@ -7969,7 +7989,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -8068,8 +8088,10 @@ MonoBehaviour:
   isPressed: 0
   isMoveFinished: 0
   State: 4
+  isChooseFinished: 0
   Position: {x: 0, y: 0, z: 0}
   Defencing:
+    BuffName: 
     isTriggered: 0
     Impact: 0
     BuffKind: 0
@@ -8079,6 +8101,7 @@ MonoBehaviour:
     quantity: 0
     Multiplier: 0
   Charging:
+    BuffName: 
     isTriggered: 0
     Impact: 0
     BuffKind: 0
@@ -8603,6 +8626,7 @@ GameObject:
   - component: {fileID: 2052972900}
   - component: {fileID: 2052972899}
   - component: {fileID: 2052972898}
+  - component: {fileID: 2052972901}
   m_Layer: 5
   m_Name: Action
   m_TagString: Untagged
@@ -8674,19 +8698,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2052972899}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1791494663}
-        m_TargetAssemblyTypeName: BattleSetting, Assembly-CSharp
-        m_MethodName: OnAtkButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2052972899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8725,6 +8737,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052972896}
   m_CullTransparentMesh: 1
+--- !u!114 &2052972901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052972896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9abb151a7491408d94f69e0076ee1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextPanelPrefab: {fileID: 8133074738698572043, guid: b9d1014a3cb914d1fba76a46cd46c182, type: 3}
+  TextPanel: {fileID: 0}
+  canvas: {fileID: 1787674354}
 --- !u!1 &2054455718
 GameObject:
   m_ObjectHideFlags: 0
