@@ -8,7 +8,7 @@ public class Buff
     public bool isTriggered;
     public enum Kind {accumulable,turnLessen,eternal};
     public enum target {ally,enemy,all,self};
-    public enum impactOnMultiplier {take,deal};
+    public enum impactOnMultiplier {PhysicalTake,PhysicalDeal,SoulTake,SoulDeal,AllDeal,AllTake};
     public enum effect {good,bad,neutral};
     public impactOnMultiplier Impact;
     public Kind BuffKind;
@@ -40,6 +40,11 @@ public class Buff
         quantity = Quantity;
         Multiplier = multiplier;
     }
-    public static Buff Defencing = new Buff("防御",true, impactOnMultiplier.take, Kind.turnLessen, target.self, effect.neutral, 1, 0, 0.8f);
-    public static Buff Charging = new Buff("蓄力",true, impactOnMultiplier.deal, Kind.turnLessen, target.self, effect.neutral, 2, 0, 2f);
+
+    public virtual void ApplyBuffEffect()
+    {
+
+    }
+    public static Buff Defencing = new Buff("防御",true, impactOnMultiplier.PhysicalTake, Kind.turnLessen, target.self, effect.neutral, 1, 0, 0.8f);
+    public static Buff Charging = new Buff("蓄力",true, impactOnMultiplier.PhysicalDeal, Kind.turnLessen, target.self, effect.neutral, 2, 0, 2f);
 }

@@ -23,11 +23,11 @@ public class Odoriko : MonoBehaviour
             Multiplier = buff.Multiplier;
         }
 
-        public OdorikoBuff(string Name,bool istriggerd, impactOnMultiplier impact, Kind buffkind, target bufftarget, effect effect, int turnLast, int Quantity, float multiplier,SkillKind skillkind) : base(Name,istriggerd, impact, buffkind, bufftarget, effect, turnLast, Quantity, multiplier)
+        public OdorikoBuff(string Name,bool istriggered, impactOnMultiplier impact, Kind buffkind, target bufftarget, effect effect, int turnLast, int Quantity, float multiplier,SkillKind skillkind) : base(Name,istriggered, impact, buffkind, bufftarget, effect, turnLast, Quantity, multiplier)
         {
             BuffName = Name;
             skillKind = skillkind;
-            isTriggered = istriggerd;
+            isTriggered = istriggered;
             Impact = impact;
             BuffKind = buffkind;
             BuffTarget = bufftarget;

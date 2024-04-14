@@ -12,8 +12,10 @@ public class GivingData : MonoBehaviour
     public bool isDead = false;
     //public Text DamageText;
     bool isFinished;
-    public float DamageTakeMultiplier = 1f;
-    public float DamageDealMultiplier = 1f;
+    public float PhysicalDamageTakeMultiplier = 1f;
+    public float PhysicalDamageDealMultiplier = 1f;
+    public float SoulDamageTakeMultiplier = 1f;
+    public float SoulDamageDealMultiplier = 1f;
     //public GameObject Unit;
     public GameObject DamagePrefab;
     public GameObject BasePosition;
@@ -65,13 +67,13 @@ public class GivingData : MonoBehaviour
         Melee.Multiplier = melee / 100;
         Melee.BuffKind = Buff.Kind.eternal;
         Melee.BuffTarget = Buff.target.self;
-        Melee.Impact = Buff.impactOnMultiplier.deal;
+        Melee.Impact = Buff.impactOnMultiplier.AllDeal;
         Melee.Effect = Buff.effect.neutral;
         Remote.isTriggered = true;
         Remote.Multiplier = remote / 100;
         Remote.BuffKind = Buff.Kind.eternal;
         Remote.BuffTarget = Buff.target.self;
-        Remote.Impact = Buff.impactOnMultiplier.deal;
+        Remote.Impact = Buff.impactOnMultiplier.AllDeal;
         Remote.Effect = Buff.effect.neutral;
     }
     void FixedUpdate()

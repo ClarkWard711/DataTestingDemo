@@ -241,8 +241,8 @@ public class BattleSetting : MonoBehaviour
         float TargetTakeMultiplier, ActUnitDealMultiplier;
         int pa = CurrentActUnit.GetComponent<GivingData>().pa;
         int pd = CurrentActUnitTarget.GetComponent<GivingData>().pd;
-        TargetTakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().DamageTakeMultiplier;
-        ActUnitDealMultiplier = CurrentActUnit.GetComponent<GivingData>().DamageDealMultiplier;
+        TargetTakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().PhysicalDamageTakeMultiplier;
+        ActUnitDealMultiplier = CurrentActUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
         int Damage = DamageCounting(pa,pd,TargetTakeMultiplier,ActUnitDealMultiplier);
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
@@ -638,20 +638,40 @@ public class BattleSetting : MonoBehaviour
     /// </summary>
     public void CheckBuffList(GameObject unit)
     {
-        unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
-        unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
+        unit.GetComponent<GivingData>().PhysicalDamageDealMultiplier = 1f;
+        unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier = 1f;
+        unit.GetComponent<GivingData>().SoulDamageDealMultiplier = 1f;
+        unit.GetComponent<GivingData>().SoulDamageTakeMultiplier = 1f;
 
         List<Buff> BuffList = unit.GetComponent<GivingData>().BuffList;
 
         foreach (Buff buff in BuffList)
         {
-            if (buff.Impact == Buff.impactOnMultiplier.take) 
+            if (buff.Impact == Buff.impactOnMultiplier.PhysicalTake) 
             {
-                unit.GetComponent<GivingData>().DamageTakeMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier *= buff.Multiplier;
             }
-            else if(buff.Impact == Buff.impactOnMultiplier.deal)
+            else if(buff.Impact == Buff.impactOnMultiplier.PhysicalDeal)
             {
-                unit.GetComponent<GivingData>().DamageDealMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().PhysicalDamageDealMultiplier *= buff.Multiplier;
+            }
+            else if (buff.Impact == Buff.impactOnMultiplier.SoulTake)
+            {
+                unit.GetComponent<GivingData>().SoulDamageTakeMultiplier *= buff.Multiplier;
+            }
+            else if (buff.Impact == Buff.impactOnMultiplier.SoulDeal)
+            {
+                unit.GetComponent<GivingData>().SoulDamageDealMultiplier *= buff.Multiplier;
+            }
+            else if (buff.Impact == Buff.impactOnMultiplier.AllDeal)
+            {
+                unit.GetComponent<GivingData>().SoulDamageDealMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().PhysicalDamageDealMultiplier *= buff.Multiplier;
+            }
+            else if (buff.Impact == Buff.impactOnMultiplier.AllTake)
+            {
+                unit.GetComponent<GivingData>().SoulDamageTakeMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier *= buff.Multiplier;
             }
         }
     }

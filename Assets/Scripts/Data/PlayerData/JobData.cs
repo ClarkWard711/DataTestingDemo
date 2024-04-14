@@ -93,7 +93,7 @@ namespace Data
             {
                 for (int i = 0; i < 4; i++)
                 {
-                    SkillsID.Add(0);
+                    SkillsID.Add(-1);
                 }
             }
         }
