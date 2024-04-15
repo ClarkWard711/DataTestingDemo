@@ -65,7 +65,7 @@ public class OdorikoHolder : JobSkillHolder
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         SpCounter(SpCost, odoSkillKind);
-        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().BuffList.Exists(Buff => Buff.BuffName == "蓄力"))
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "蓄力"))
         {
             SunSpReduce = true;
             SpCostMultiplier = 0.8f;

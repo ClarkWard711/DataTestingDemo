@@ -20,9 +20,7 @@ public class GivingData : MonoBehaviour
     public GameObject DamagePrefab;
     public GameObject BasePosition;
     //public Canvas DamageCanvas;
-    public List<Buff> BuffList;
-    public Buff Melee, Remote;
-
+    public List<Tag> tagList = new List<Tag>();
     void Awake()
     {
         //DamageText.transform.
@@ -63,18 +61,7 @@ public class GivingData : MonoBehaviour
         {
             isDead = true;
         }
-        Melee.isTriggered = true;
-        Melee.Multiplier = melee / 100;
-        Melee.BuffKind = Buff.Kind.eternal;
-        Melee.BuffTarget = Buff.target.self;
-        Melee.Impact = Buff.impactOnMultiplier.AllDeal;
-        Melee.Effect = Buff.effect.neutral;
-        Remote.isTriggered = true;
-        Remote.Multiplier = remote / 100;
-        Remote.BuffKind = Buff.Kind.eternal;
-        Remote.BuffTarget = Buff.target.self;
-        Remote.Impact = Buff.impactOnMultiplier.AllDeal;
-        Remote.Effect = Buff.effect.neutral;
+        
     }
     void FixedUpdate()
     {
@@ -110,5 +97,34 @@ public class GivingData : MonoBehaviour
                 this.gameObject.SetActive(false);
             }
         }
+    }
+
+    public void AddTagToCharacter(Tag tag)
+    {
+        if (tag.name == "Remote") 
+        {
+            Tag newTag0 = Instantiate(tag);
+            newTag0.Multiplier = remote / 100;
+            tagList.Add(newTag0);
+            return;
+        }
+        if (tag.name == "Melee")
+        {
+            Tag newTag0 = Instantiate(tag);
+            newTag0.Multiplier = melee / 100;
+            tagList.Add(newTag0);
+            return;
+        }
+        foreach (Tag existingTag in tagList)
+        {
+            if (existingTag.GetType() == tag.GetType())
+            {
+                existingTag.TurnLast += existingTag.TurnAdd;
+                return;
+            }
+        }
+
+        Tag newTag = Instantiate(tag);
+        tagList.Add(newTag);
     }
 }

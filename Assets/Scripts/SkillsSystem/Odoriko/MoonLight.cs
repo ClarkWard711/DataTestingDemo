@@ -10,11 +10,9 @@ public class MoonLight : OdorikoSkill
         if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
 
         OdorikoHolder.Instance.SpCounter(SpCost,odoSkillKind);
-        Buff defencing = new Buff(BattleSetting.Instance.Defencing);
-        unit.GetComponent<GivingData>().BuffList.Add(defencing);
-        BattleSetting.Instance.CheckBuffList(unit);
-        defencing.TurnLast++;
-        if (unit.GetComponent<GivingData>().BuffList.Exists(Buff => Buff.BuffName == "蓄力"))
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Defense.CreateInstance<Defense>());
+        BattleSetting.Instance.CheckTagList(unit);
+        if (unit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging")) 
         {
             OdorikoHolder.Instance.MoonSpReduce = true;
             OdorikoHolder.Instance.SpCostMultiplier = 0.8f;

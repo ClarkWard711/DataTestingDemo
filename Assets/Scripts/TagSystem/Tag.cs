@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tag : ScriptableObject
+public abstract class Tag : ScriptableObject
 {
     //基础信息
     public int ID;
@@ -17,13 +17,12 @@ public class Tag : ScriptableObject
     public target BuffTarget;
     public effect Effect;
     public int TurnAdd;//增加多少回合
+    public int TurnLast;//还有多少个回合
     public int quantity;//积累多少个
     public float Multiplier;//倍率
 
     //回调点
-    public TagModule OnCreate;
-    public TagModule Remove;
-    public TagModule OnHit;
-    public TagModule OnBeHurt;
+    public abstract void OnTurnEndCallback();
 
+    public abstract void OnActionEndCallback();
 }

@@ -148,7 +148,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8204687774162429403}
   - component: {fileID: 8534877053516288429}
-  - component: {fileID: 8571055140114251205}
   - component: {fileID: 7604421398388884893}
   - component: {fileID: 526661332721932270}
   m_Layer: 0
@@ -227,19 +226,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8571055140114251205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6186125200142139887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80ef398da9700464e9af2750cd72448b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  KnightData: {fileID: 11400000, guid: 25a4385607c2c408da76ef4063b5ad1f, type: 2}
 --- !u!61 &7604421398388884893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -297,29 +283,13 @@ MonoBehaviour:
   miss: 0
   AntiCri: 0
   isDead: 0
-  DamageTakeMultiplier: 1
-  DamageDealMultiplier: 1
+  PhysicalDamageTakeMultiplier: 1
+  PhysicalDamageDealMultiplier: 1
+  SoulDamageTakeMultiplier: 1
+  SoulDamageDealMultiplier: 1
   DamagePrefab: {fileID: 5884769366753586431, guid: e86fd9a5c734c4e22a6c737a15bf9bd9, type: 3}
   BasePosition: {fileID: 3632537725401346950}
-  BuffList: []
-  Melee:
-    isTriggered: 0
-    Impact: 0
-    BuffKind: 0
-    BuffTarget: 0
-    Effect: 0
-    TurnLast: 0
-    quantity: 0
-    Multiplier: 0
-  Remote:
-    isTriggered: 0
-    Impact: 0
-    BuffKind: 0
-    BuffTarget: 0
-    Effect: 0
-    TurnLast: 0
-    quantity: 0
-    Multiplier: 0
+  tagList: []
 --- !u!1 &6219407169606312322
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 using Data;
 using System.Linq;
+using UnityEngine.TextCore.Text;
 
 public enum BattleState {Won,Lose,PlayerTurn,EnemyTurn,Start,Middle};
 
@@ -67,7 +68,6 @@ public class BattleSetting : MonoBehaviour
     //float DamageMultiplier = 1f;
     public Vector3 Position;
 
-    public Buff Defencing,Charging;//防御 蓄力
     #endregion
     // Start is called before the first frame update
     void Awake()
@@ -109,8 +109,6 @@ public class BattleSetting : MonoBehaviour
             BattleUnitsList.Add(EnemyUnit);
         }
 
-        Defencing = new Buff(Buff.Defencing);
-        Charging = new Buff(Buff.Charging);
         ComparePosition();
         ListSort();
         State = BattleState.Start;
@@ -363,9 +361,8 @@ public class BattleSetting : MonoBehaviour
     public void OnDefButton()
     {
         if (State != BattleState.PlayerTurn) return;
-        Buff defencing = new Buff(Defencing);
-        CurrentActUnit.GetComponent<GivingData>().BuffList.Add(defencing);
-        CheckBuffList(CurrentActUnit);
+        CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Defense.CreateInstance<Defense>());
+        CheckTagList(CurrentActUnit);
         State = BattleState.Middle;
         StartCoroutine(ShowActionText("防御"));
     }
@@ -384,9 +381,8 @@ public class BattleSetting : MonoBehaviour
     public void OnChargeButton()
     {
         if (State != BattleState.PlayerTurn) return;
-        Buff charging = new Buff(Charging);
-        CurrentActUnit.GetComponent<GivingData>().BuffList.Add(charging);
-        CheckBuffList(CurrentActUnit);
+        CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
+        CheckTagList(CurrentActUnit);
         State = BattleState.Middle;
         StartCoroutine(ShowActionText("蓄力"));
     }
@@ -575,30 +571,30 @@ public class BattleSetting : MonoBehaviour
                 if (i < 3)
                 {
                     GameObject Character = PlayerPositionsList[i].transform.GetChild(0).gameObject;
-                    List<Buff> BuffList = Character.GetComponent<GivingData>().BuffList;
-                    if (BuffList.Contains(Character.GetComponent<GivingData>().Melee))
+                    List<Tag> TagList = Character.GetComponent<GivingData>().tagList;
+                    if (TagList.Exists(tag => tag.TagName == "Melee"))
                     {
                         continue;
                     }
-                    else if(BuffList.Contains(Character.GetComponent<GivingData>().Remote))
+                    else if(TagList.Exists(tag => tag.TagName == "Remote"))
                     {
-                        BuffList.Remove(Character.GetComponent<GivingData>().Remote);
+                        TagList.Remove(TagList.Find(tag => tag.TagName == "Remote"));
                     }
-                    BuffList.Add(Character.GetComponent<GivingData>().Melee);
+                    Character.GetComponent<GivingData>().AddTagToCharacter(Melee.CreateInstance<Melee>());
                 }
                 else
                 {
                     GameObject Character = PlayerPositionsList[i].transform.GetChild(0).gameObject;
-                    List<Buff> BuffList = Character.GetComponent<GivingData>().BuffList;
-                    if (BuffList.Contains(Character.GetComponent<GivingData>().Remote))
+                    List<Tag> TagList = Character.GetComponent<GivingData>().tagList;
+                    if (TagList.Exists(tag => tag.TagName == "Remote"))
                     {
                         continue;
                     }
-                    else if (BuffList.Contains(Character.GetComponent<GivingData>().Melee))
+                    else if (TagList.Exists(tag => tag.TagName == "Melee"))
                     {
-                        BuffList.Remove(Character.GetComponent<GivingData>().Melee);
+                        TagList.Remove(TagList.Find(tag => tag.TagName == "Melee"));
                     }
-                    BuffList.Add(Character.GetComponent<GivingData>().Remote);
+                    Character.GetComponent<GivingData>().AddTagToCharacter(Remote.CreateInstance<Remote>());
                 }
             }
         }
@@ -612,23 +608,18 @@ public class BattleSetting : MonoBehaviour
         BattleUnitsListToBeLaunched.Clear();
         foreach (GameObject unit in BattleUnitsList)
         {
-            List<Buff> BuffList = new List<Buff>();
-            BuffList = unit.GetComponent<GivingData>().BuffList;
+            List<Tag> TagList = new List<Tag>();
+            TagList = unit.GetComponent<GivingData>().tagList;
 
-            foreach (Buff buff in BuffList)
+            foreach (Tag tag in TagList)
             {
-                if (buff.BuffKind == Buff.Kind.turnLessen) 
+                if (tag.TagKind == Tag.Kind.turnLessen) 
                 {
-                    buff.TurnLast--;
-                }
-
-                if (buff.TurnLast == 0 && buff.BuffKind == Buff.Kind.turnLessen)  
-                {
-                    buff.isTriggered = false;
+                    tag.TurnLast--;
                 }
             }
-            BuffList.RemoveAll(buff => buff.isTriggered == false);
-            CheckBuffList(unit);
+            TagList.RemoveAll(tag => tag.TurnLast == 0 && tag.TagKind == Tag.Kind.turnLessen);
+            CheckTagList(unit);
             //unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
             //unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
         }
@@ -636,42 +627,42 @@ public class BattleSetting : MonoBehaviour
     /// <summary>
     /// 将buff效果作用在倍率上的函数（有新buff进入list时调用函数使buff即时有效）
     /// </summary>
-    public void CheckBuffList(GameObject unit)
+    public void CheckTagList(GameObject unit)
     {
         unit.GetComponent<GivingData>().PhysicalDamageDealMultiplier = 1f;
         unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier = 1f;
         unit.GetComponent<GivingData>().SoulDamageDealMultiplier = 1f;
         unit.GetComponent<GivingData>().SoulDamageTakeMultiplier = 1f;
 
-        List<Buff> BuffList = unit.GetComponent<GivingData>().BuffList;
+        List<Tag> TagList = unit.GetComponent<GivingData>().tagList;
 
-        foreach (Buff buff in BuffList)
+        foreach (Tag tag in TagList)
         {
-            if (buff.Impact == Buff.impactOnMultiplier.PhysicalTake) 
+            if (tag.Impact == Tag.impactOnMultiplier.PhysicalTake) 
             {
-                unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier *= tag.Multiplier;
             }
-            else if(buff.Impact == Buff.impactOnMultiplier.PhysicalDeal)
+            else if(tag.Impact == Tag.impactOnMultiplier.PhysicalDeal)
             {
-                unit.GetComponent<GivingData>().PhysicalDamageDealMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().PhysicalDamageDealMultiplier *= tag.Multiplier;
             }
-            else if (buff.Impact == Buff.impactOnMultiplier.SoulTake)
+            else if (tag.Impact == Tag.impactOnMultiplier.SoulTake)
             {
-                unit.GetComponent<GivingData>().SoulDamageTakeMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().SoulDamageTakeMultiplier *= tag.Multiplier;
             }
-            else if (buff.Impact == Buff.impactOnMultiplier.SoulDeal)
+            else if (tag.Impact == Tag.impactOnMultiplier.SoulDeal)
             {
-                unit.GetComponent<GivingData>().SoulDamageDealMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().SoulDamageDealMultiplier *= tag.Multiplier;
             }
-            else if (buff.Impact == Buff.impactOnMultiplier.AllDeal)
+            else if (tag.Impact == Tag.impactOnMultiplier.AllDeal)
             {
-                unit.GetComponent<GivingData>().SoulDamageDealMultiplier *= buff.Multiplier;
-                unit.GetComponent<GivingData>().PhysicalDamageDealMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().SoulDamageDealMultiplier *= tag.Multiplier;
+                unit.GetComponent<GivingData>().PhysicalDamageDealMultiplier *= tag.Multiplier;
             }
-            else if (buff.Impact == Buff.impactOnMultiplier.AllTake)
+            else if (tag.Impact == Tag.impactOnMultiplier.AllTake)
             {
-                unit.GetComponent<GivingData>().SoulDamageTakeMultiplier *= buff.Multiplier;
-                unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier *= buff.Multiplier;
+                unit.GetComponent<GivingData>().SoulDamageTakeMultiplier *= tag.Multiplier;
+                unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier *= tag.Multiplier;
             }
         }
     }
