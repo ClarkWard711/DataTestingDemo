@@ -141,7 +141,7 @@ public class BattleSetting : MonoBehaviour
             //GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = false;
             SceneLoader.LoadAddressableScene(outerScene);
         }
-        if (State == BattleState.Won || State == BattleState.Lose && !isPressed) 
+        if ((State == BattleState.Won || State == BattleState.Lose) && !isPressed) 
         {
             isPressed = true;
             if (Player != null)
@@ -191,7 +191,7 @@ public class BattleSetting : MonoBehaviour
 
         if (BattleUnitsList.Count == 0) 
         {
-            TurnSettle();
+            StartCoroutine(EndTurn());
         }
 
         if (RemainingEnemyUnits.Length == 0)
@@ -305,6 +305,43 @@ public class BattleSetting : MonoBehaviour
         yield return new WaitUntil(() => isChooseFinished);
         isChooseFinished = false;
         StartCoroutine(DealDamage(3f));
+    }
+    /// <summary>
+    /// 一整个回合结束之后的tag进行操作
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator EndTurn()
+    {
+        BattleUnitsList.AddRange<GameObject>(BattleUnitsListToBeLaunched);
+        BattleUnitsListToBeLaunched.Clear();
+        foreach (GameObject character in BattleUnitsList)
+        {
+            foreach (var tag in character.GetComponent<GivingData>().tagList)
+            {
+                var method = tag.GetType().GetMethod("OnTurnEndCallback");
+                if (method.DeclaringType == typeof(Tag))
+                {
+                    // Tag does not override OnTurnEndCallback, so skip to the next tag
+                    continue;
+                }
+                tag.OnTurnEndCallback();
+
+                yield return StartCoroutine(DelayedCallback(2f));
+            }
+        }
+        TurnSettle();
+    }
+    /// <summary>
+    /// 跟EndTurn绑定的在tag进行操作之后
+    /// </summary>
+    /// <param name="delay"></param>
+    /// <returns></returns>
+    IEnumerator DelayedCallback(float delay)
+    {
+        Debug.Log("delaying");
+        yield return new WaitForSeconds(delay);
+        Debug.Log("delay Finished");
+        // 在这里执行需要延迟的后续操作
     }
     #endregion
 
@@ -604,8 +641,6 @@ public class BattleSetting : MonoBehaviour
     /// </summary>
     void TurnSettle()
     {
-        BattleUnitsList.AddRange<GameObject>(BattleUnitsListToBeLaunched);
-        BattleUnitsListToBeLaunched.Clear();
         foreach (GameObject unit in BattleUnitsList)
         {
             List<Tag> TagList = new List<Tag>();

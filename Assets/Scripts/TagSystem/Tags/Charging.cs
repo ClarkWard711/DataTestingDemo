@@ -15,14 +15,4 @@ public class Charging : Tag
         Effect = effect.neutral;
         TurnLast = 2;
     }
-
-    public override void OnActionEndCallback()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void OnTurnEndCallback()
-    {
-        throw new System.NotImplementedException();
-    }
 }

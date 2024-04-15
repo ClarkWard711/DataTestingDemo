@@ -22,7 +22,13 @@ public abstract class Tag : ScriptableObject
     public float Multiplier;//倍率
 
     //回调点
-    public abstract void OnTurnEndCallback();
+    public virtual void OnTurnEndCallback()
+    {
 
-    public abstract void OnActionEndCallback();
+    }
+
+    public virtual void OnActionEndCallback()
+    {
+
+    }
 }

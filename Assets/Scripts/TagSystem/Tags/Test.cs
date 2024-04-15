@@ -65,9 +65,14 @@ public class Test : MonoBehaviour
         {
             foreach (var tag in character.GetComponent<GivingData>().tagList)
             {
+                var method = tag.GetType().GetMethod("OnTurnEndCallback");
+                if (method.DeclaringType == typeof(Tag))
+                {
+                    // Tag does not override OnTurnEndCallback, so skip to the next tag
+                    continue;
+                }
                 tag.OnTurnEndCallback();
 
-                
                 yield return StartCoroutine(DelayedCallback(2f));
             }
         }

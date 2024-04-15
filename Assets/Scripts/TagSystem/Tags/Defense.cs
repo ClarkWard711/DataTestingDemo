@@ -15,14 +15,4 @@ public class Defense : Tag
         Effect = effect.neutral;
         TurnLast = 1;
     }
-
-    public override void OnTurnEndCallback()
-    {
-        Debug.Log("防御效果展示");
-    }
-
-    public override void OnActionEndCallback()
-    {
-        throw new System.NotImplementedException();
-    }
 }

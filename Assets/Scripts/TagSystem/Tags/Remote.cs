@@ -13,14 +13,4 @@ public class Remote : Tag
         BuffTarget = target.self;
         Effect = effect.neutral;
     }
-
-    public override void OnActionEndCallback()
-    {
-        
-    }
-
-    public override void OnTurnEndCallback()
-    {
-        Debug.Log("Remote效果展示");
-    }
 }

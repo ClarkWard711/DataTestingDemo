@@ -13,14 +13,5 @@ public class Melee : Tag
         BuffTarget = target.self;
         Effect = effect.neutral;
     }
-
-    public override void OnActionEndCallback()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public override void OnTurnEndCallback()
-    {
-        throw new System.NotImplementedException();
-    }
+    
 }
