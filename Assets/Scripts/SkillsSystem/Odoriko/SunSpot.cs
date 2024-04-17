@@ -4,6 +4,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = ("Skill/OdorikoSkill/Moonlight"), fileName = ("SunSpot"))]
 public class SunSpot : OdorikoSkill
 {
+    public SunSpot()
+    {
+        odoSkillKind = OdoSkillKind.Sun;
+        DealMultiplier = 0.9f;
+    }
     public override void Apply(GameObject unit)
     {
         if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;

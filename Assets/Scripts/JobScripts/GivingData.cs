@@ -106,6 +106,7 @@ public class GivingData : MonoBehaviour
             Tag newTag0 = Instantiate(tag);
             newTag0.Multiplier = remote / 100;
             tagList.Add(newTag0);
+            BattleSetting.Instance.CheckTagList(this.gameObject);
             return;
         }
         if (tag.name == "Melee")
@@ -113,6 +114,7 @@ public class GivingData : MonoBehaviour
             Tag newTag0 = Instantiate(tag);
             newTag0.Multiplier = melee / 100;
             tagList.Add(newTag0);
+            BattleSetting.Instance.CheckTagList(this.gameObject);
             return;
         }
         foreach (Tag existingTag in tagList)
@@ -126,5 +128,6 @@ public class GivingData : MonoBehaviour
 
         Tag newTag = Instantiate(tag);
         tagList.Add(newTag);
+        BattleSetting.Instance.CheckTagList(this.gameObject);
     }
 }

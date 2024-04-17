@@ -4,9 +4,14 @@ using UnityEngine;
 [CreateAssetMenu(menuName = ("Skill/OdorikoSkill/Moonlight"), fileName = ("MoonLight"))]
 public class MoonLight : OdorikoSkill
 {
+    public MoonLight()
+    {
+        odoSkillKind = OdoSkillKind.Moon;
+    }
     
     public override void Apply(GameObject unit)
     {
+        
         if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
 
         OdorikoHolder.Instance.SpCounter(SpCost,odoSkillKind);

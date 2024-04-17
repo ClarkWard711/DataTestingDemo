@@ -69,7 +69,7 @@ public class BattleSetting : MonoBehaviour
     public Vector3 Position;
 
     #endregion
-    // Start is called before the first frame update
+
     void Awake()
     {
         if (Instance == null)
@@ -110,7 +110,7 @@ public class BattleSetting : MonoBehaviour
         }
 
         ComparePosition();
-        ListSort();
+        BattleUnitsList.Sort((x, y) => x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
         State = BattleState.Start;
         StartCoroutine(TurnAction(2f, "对战开始"));
     }
@@ -160,8 +160,9 @@ public class BattleSetting : MonoBehaviour
         }
     }
 
-    void ListSort()
+    /*void ListSort()
     {
+        BattleUnitsList.Sort((x, y) => x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
         var temp = BattleUnitsList[0];
         //var temp = enemyUnits[1].GetComponent<Enemy>().EnemyData.EnemyStatsList[enemyUnits[1].GetComponent<Enemy>().EnemyData.EnemyLevel].speed;
         for (int i = 0; i < BattleUnitsList.Count - 1; i++)
@@ -181,7 +182,7 @@ public class BattleSetting : MonoBehaviour
             BattleUnitsList[i] = BattleUnitsList[MaxIndex];
             BattleUnitsList[MaxIndex] = temp;
         }
-    }
+    }*/
 
     void ToBattle()
     {
@@ -242,6 +243,7 @@ public class BattleSetting : MonoBehaviour
         TargetTakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().PhysicalDamageTakeMultiplier;
         ActUnitDealMultiplier = CurrentActUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
         int Damage = DamageCounting(pa,pd,TargetTakeMultiplier,ActUnitDealMultiplier);
+        //加入分配伤害检测
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         StartCoroutine(ShowText(2f));
@@ -470,12 +472,34 @@ public class BattleSetting : MonoBehaviour
         }
     }
     #endregion
-
+    /// <summary>
+    /// 伤害计算
+    /// </summary>
+    /// <param name="atk"></param>
+    /// <param name="dfs"></param>
+    /// <param name="TakeMultiplier"></param>
+    /// <param name="DealMultiplier"></param>
+    /// <returns></returns>
     int DamageCounting(int atk, int dfs, float TakeMultiplier, float DealMultiplier)
     {
         int baseDamage;
-        baseDamage = Mathf.CeilToInt(Mathf.CeilToInt((atk * atk) / (atk + dfs)) * TakeMultiplier * DealMultiplier);
-        return baseDamage;
+        int finalDamage;
+        baseDamage = Mathf.CeilToInt((atk * atk) / (atk + dfs));
+        //技能和tag对伤害的影响 还有分配 有待完善
+        finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
+        return finalDamage;
+    }
+    /// <summary>
+    /// 命中概率计算
+    /// </summary>
+    /// <returns></returns>
+    float HitChanceCounting()
+    {
+        float HitChance;
+        HitChance = CurrentActUnit.GetComponent<GivingData>().hit / CurrentActUnitTarget.GetComponent<GivingData>().miss;
+        //加入技能或者其他tag对命中率的检测
+        //CurrentActUnit.GetComponent<GivingData>().tagList
+        return HitChance;
     }
 
     void ChoosingUnit()
@@ -618,6 +642,7 @@ public class BattleSetting : MonoBehaviour
                         TagList.Remove(TagList.Find(tag => tag.TagName == "Remote"));
                     }
                     Character.GetComponent<GivingData>().AddTagToCharacter(Melee.CreateInstance<Melee>());
+                    CheckTagList(Character);
                 }
                 else
                 {
@@ -632,6 +657,7 @@ public class BattleSetting : MonoBehaviour
                         TagList.Remove(TagList.Find(tag => tag.TagName == "Melee"));
                     }
                     Character.GetComponent<GivingData>().AddTagToCharacter(Remote.CreateInstance<Remote>());
+                    CheckTagList(Character);
                 }
             }
         }
@@ -711,5 +737,21 @@ public class BattleSetting : MonoBehaviour
         SkillID.Clear();
         SkillID.AddRange<int>(CurrentActUnit.GetComponent<GivingData>().jobData.SkillsID);
         UpdateSliderChange();
+    }
+    /// <summary>
+    /// 检测是否命中
+    /// </summary>
+    /// <returns></returns>
+    bool CheckHit()
+    {
+        float Hit = Random.Range(0, 1);
+        if (HitChanceCounting() <= Hit)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
