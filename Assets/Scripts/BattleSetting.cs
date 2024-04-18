@@ -608,6 +608,19 @@ public class BattleSetting : MonoBehaviour
                 isChooseFinished = true;
                 CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
             }
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                if (CurrentActUnitTarget != null)
+                {
+                    CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+                    CurrentActUnitTarget = null;
+                }
+                isWaitForPlayerToChooseUnit = false;
+                StopAllCoroutines();
+                State = BattleState.PlayerTurn;
+            }
         }
     }
     /// <summary>

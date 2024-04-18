@@ -15,5 +15,4 @@ public class Charging : Tag
         Effect = effect.neutral;
         TurnLast = 2;
     }
-
 }

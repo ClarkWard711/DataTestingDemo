@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = ("Skill/OdorikoSkill/Moonlight"), fileName = ("SunSpot"))]
+[CreateAssetMenu(menuName = ("Skill/OdorikoSkill/SunSpot"), fileName = ("SunSpot"))]
 public class SunSpot : OdorikoSkill
 {
     public SunSpot()
     {
+        SpCost = 5;
         odoSkillKind = OdoSkillKind.Sun;
         DealMultiplier = 0.9f;
     }
     public override void Apply(GameObject unit)
     {
         if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
-
+        base.Apply(unit);
         BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
-        OdorikoHolder.Instance.sunSpotCoroutine(SpCost,odoSkillKind);
+        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.sunSpot(SpCost, odoSkillKind));
     }
     /*IEnumerator sunSpot()
     {

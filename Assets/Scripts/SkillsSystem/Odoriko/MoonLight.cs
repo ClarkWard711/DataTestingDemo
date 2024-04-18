@@ -6,6 +6,7 @@ public class MoonLight : OdorikoSkill
 {
     public MoonLight()
     {
+        SpCost = 5;
         odoSkillKind = OdoSkillKind.Moon;
     }
     
@@ -13,7 +14,8 @@ public class MoonLight : OdorikoSkill
     {
         
         if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
-
+        base.Apply(unit);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Moon);
         OdorikoHolder.Instance.SpCounter(SpCost,odoSkillKind);
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Defense.CreateInstance<Defense>());
         BattleSetting.Instance.CheckTagList(unit);
@@ -28,7 +30,7 @@ public class MoonLight : OdorikoSkill
             OdorikoHolder.Instance.SpCostMultiplier = 0.9f;
         }
         BattleSetting.Instance.State = BattleState.Middle;
-        //StartCoroutine(BattleSetting.Instance.ShowActionText("月光"));
-        
+        OdorikoHolder.Instance.CoroutineStart(BattleSetting.Instance.ShowActionText("月光"));
+
     }
 }

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class OdorikoHolder : JobSkillHolder
 {
     public static OdorikoHolder Instance;
     public bool MoonSpReduce = false, SunSpReduce = false;
     public float SpCostMultiplier = 1f;
-
+    bool LastTurnSun = false, LastTurnMoon = false;
     void Awake()
     {
         if (Instance == null)
@@ -56,16 +57,48 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= Mathf.CeilToInt(SpCost * SpCostMultiplier);
     }
 
-    public void sunSpotCoroutine(int SpCost,OdoSkillKind odoSkillKind)
+    public void DanceStepCheck(OdoSkillKind skillKind)
     {
-        StartCoroutine(sunSpot(SpCost,odoSkillKind));
+        if (skillKind == OdoSkillKind.Moon && BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+        {
+            if (LastTurnSun)
+            {
+                LastTurnMoon = true;
+                LastTurnSun = false;
+                BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
+                BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "Charging").TurnLast--;
+            }
+            else
+            {
+                LastTurnMoon = true;
+            }
+        }
+        else if (skillKind == OdoSkillKind.Sun && BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee")) 
+        {
+            if (LastTurnMoon)
+            {
+                LastTurnSun = true;
+                LastTurnMoon = false;
+                BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
+                BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "Charging").TurnLast--;
+            }
+            else
+            {
+                LastTurnSun = true;
+            }
+        }
+        else
+        {
+            LastTurnMoon = false;
+            LastTurnSun = false;
+        }
     }
 
-    IEnumerator sunSpot(int SpCost,OdoSkillKind odoSkillKind)
+    public IEnumerator sunSpot(int SpCost,OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         SpCounter(SpCost, odoSkillKind);
-        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "蓄力"))
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
             SunSpReduce = true;
             SpCostMultiplier = 0.8f;
@@ -79,5 +112,42 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.GameStateText.text = "日斑";
         StartCoroutine(BattleSetting.Instance.ShowText(1f));
         StartCoroutine(BattleSetting.Instance.DealDamage(3f));
+    }
+
+    public IEnumerator scarletMoon()
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
+            {
+                if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee")) 
+                {
+                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee")) 
+                    {
+                        enemy.GetComponent<GivingData>().AddTagToCharacter(ScarletMoon.CreateInstance<ScarletMoon>());
+                    }
+                }
+                else
+                {
+                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+                    {
+                        enemy.GetComponent<GivingData>().AddTagToCharacter(ScarletMoon.CreateInstance<ScarletMoon>());
+                    }
+                }
+            }
+            StartCoroutine(BattleSetting.Instance.ShowActionText("绯色月夜"));
+        }
+        else
+        {
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(ScarletMoon.CreateInstance<ScarletMoon>());
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放绯色月夜"));
+        }
+    }
+
+    public void CoroutineStart(IEnumerator enumerator)
+    {
+        StartCoroutine(enumerator);
     }
 }

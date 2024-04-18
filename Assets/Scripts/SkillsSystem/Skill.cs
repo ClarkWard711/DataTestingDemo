@@ -11,8 +11,10 @@ public class Skill : ScriptableObject
     public int TurnCooldown;
     public float DealMultiplier;
     public string SkillName;
+    public string Description;
     public virtual void Apply(GameObject unit)
     {
-
+        BattleSetting.Instance.BasicPanel.SetActive(false);
+        BattleSetting.Instance.BasicPanel.SetActive(false);
     }
 }

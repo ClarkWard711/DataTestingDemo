@@ -19,7 +19,7 @@ public abstract class Tag : ScriptableObject
     public int TurnAdd;//增加多少回合
     public int TurnLast;//还有多少个回合
     public int quantity;//积累多少个
-    public float Multiplier;//倍率
+    public float Multiplier = 1f;//倍率
 
     //回调点
     public virtual void OnTurnEndCallback()
