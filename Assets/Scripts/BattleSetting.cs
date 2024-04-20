@@ -184,7 +184,7 @@ public class BattleSetting : MonoBehaviour
         }
     }*/
 
-    void ToBattle()
+    public void ToBattle()
     {
         RemainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
         RemainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
@@ -249,8 +249,7 @@ public class BattleSetting : MonoBehaviour
         StartCoroutine(ShowText(2f));
         CurrentActUnitTarget = null;
         yield return new WaitForSeconds(time);
-
-        ToBattle();
+        CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
     }
 
     IEnumerator TurnAction(float time, string text)
@@ -281,7 +280,7 @@ public class BattleSetting : MonoBehaviour
         GameStateText.text = Action;
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
-        ToBattle();
+        CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
     }
 
     IEnumerator Move()
@@ -334,11 +333,11 @@ public class BattleSetting : MonoBehaviour
         TurnSettle();
     }
     /// <summary>
-    /// 跟EndTurn绑定的在tag进行操作之后
+    /// 跟EndTurn和ActionEndCallBack绑定的在tag进行操作之后
     /// </summary>
     /// <param name="delay"></param>
     /// <returns></returns>
-    IEnumerator DelayedCallback(float delay)
+    public IEnumerator DelayedCallback(float delay)
     {
         Debug.Log("delaying");
         yield return new WaitForSeconds(delay);
@@ -501,7 +500,9 @@ public class BattleSetting : MonoBehaviour
         //CurrentActUnit.GetComponent<GivingData>().tagList
         return HitChance;
     }
-
+    /// <summary>
+    /// 鼠标选择角色
+    /// </summary>
     void ChoosingUnit()
     {
         if (isWaitForPlayerToChooseUnit)

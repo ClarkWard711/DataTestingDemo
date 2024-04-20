@@ -45,4 +45,25 @@ public class JobSkillHolder : MonoBehaviour
     {
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
     }*/
+    public virtual void ActionEndCallback()
+    {
+        StartCoroutine(ActionEnd());
+        BattleSetting.Instance.ToBattle();
+    }
+
+    IEnumerator ActionEnd()
+    {
+        foreach (var tag in BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList)
+        {
+            var method = tag.GetType().GetMethod("OnActionEndCallback");
+            if (method.DeclaringType == typeof(Tag))
+            {
+                // Tag does not override OnTurnEndCallback, so skip to the next tag
+                continue;
+            }
+            tag.OnTurnEndCallback();
+
+            yield return StartCoroutine(BattleSetting.Instance.DelayedCallback(2f));
+        }
+    }
 }

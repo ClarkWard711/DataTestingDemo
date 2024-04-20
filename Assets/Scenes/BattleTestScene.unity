@@ -8090,26 +8090,6 @@ MonoBehaviour:
   State: 4
   isChooseFinished: 0
   Position: {x: 0, y: 0, z: 0}
-  Defencing:
-    BuffName: 
-    isTriggered: 0
-    Impact: 0
-    BuffKind: 0
-    BuffTarget: 0
-    Effect: 0
-    TurnLast: 0
-    quantity: 0
-    Multiplier: 0
-  Charging:
-    BuffName: 
-    isTriggered: 0
-    Impact: 0
-    BuffKind: 0
-    BuffTarget: 0
-    Effect: 0
-    TurnLast: 0
-    quantity: 0
-    Multiplier: 0
 --- !u!4 &1791494664
 Transform:
   m_ObjectHideFlags: 0

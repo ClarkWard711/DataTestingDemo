@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 8534877053516288429}
   - component: {fileID: 7604421398388884893}
   - component: {fileID: 8198263244501911101}
+  - component: {fileID: -57377472485038440}
   m_Layer: 0
   m_Name: Samurai
   m_TagString: PlayerUnit
@@ -188,6 +189,24 @@ MonoBehaviour:
   DamagePrefab: {fileID: 5884769366753586431, guid: e86fd9a5c734c4e22a6c737a15bf9bd9, type: 3}
   BasePosition: {fileID: 4814512438032998286}
   tagList: []
+--- !u!114 &-57377472485038440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186125200142139887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621d21cc5f1094cd295862468f1be72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JobSkill: {fileID: 0}
+  jobData: {fileID: 0}
+  BasicSkillButton: []
+  AdvancedSkillButton: []
+  BasicSkillText: []
+  AdvancedSkillText: []
 --- !u!1 &7171845885740267359
 GameObject:
   m_ObjectHideFlags: 0

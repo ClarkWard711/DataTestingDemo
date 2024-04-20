@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 874787726152884837}
   - component: {fileID: 874787726152884836}
   - component: {fileID: 874787726152884841}
+  - component: {fileID: 7854271965489162172}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: EnemyUnit
@@ -133,29 +134,13 @@ MonoBehaviour:
   miss: 0
   AntiCri: 0
   isDead: 0
-  DamageTakeMultiplier: 1
-  DamageDealMultiplier: 1
+  PhysicalDamageTakeMultiplier: 1
+  PhysicalDamageDealMultiplier: 1
+  SoulDamageTakeMultiplier: 1
+  SoulDamageDealMultiplier: 1
   DamagePrefab: {fileID: 5884769366753586431, guid: e86fd9a5c734c4e22a6c737a15bf9bd9, type: 3}
   BasePosition: {fileID: 1248337450635113236}
-  BuffList: []
-  Melee:
-    isTriggered: 0
-    Impact: 0
-    BuffKind: 0
-    BuffTarget: 0
-    Effect: 0
-    TurnLast: 0
-    quantity: 0
-    Multiplier: 0
-  Remote:
-    isTriggered: 0
-    Impact: 0
-    BuffKind: 0
-    BuffTarget: 0
-    Effect: 0
-    TurnLast: 0
-    quantity: 0
-    Multiplier: 0
+  tagList: []
 --- !u!61 &874787726152884841
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,6 +167,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.5184426, y: 4.057576}
   m_EdgeRadius: 0
+--- !u!114 &7854271965489162172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874787726152884840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621d21cc5f1094cd295862468f1be72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JobSkill: {fileID: 0}
+  jobData: {fileID: 0}
+  BasicSkillButton: []
+  AdvancedSkillButton: []
+  BasicSkillText: []
+  AdvancedSkillText: []
 --- !u!1 &1248337450635113236
 GameObject:
   m_ObjectHideFlags: 0

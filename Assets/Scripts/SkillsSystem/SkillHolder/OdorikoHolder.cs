@@ -8,7 +8,7 @@ public class OdorikoHolder : JobSkillHolder
     public static OdorikoHolder Instance;
     public bool MoonSpReduce = false, SunSpReduce = false;
     public float SpCostMultiplier = 1f;
-    bool LastTurnSun = false, LastTurnMoon = false;
+    bool LastTurnSun = false, LastTurnMoon = false, usedSkill = false;
     void Awake()
     {
         if (Instance == null)
@@ -59,6 +59,7 @@ public class OdorikoHolder : JobSkillHolder
 
     public void DanceStepCheck(OdoSkillKind skillKind)
     {
+        usedSkill = true;
         if (skillKind == OdoSkillKind.Moon && BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
         {
             if (LastTurnSun)
@@ -149,5 +150,16 @@ public class OdorikoHolder : JobSkillHolder
     public void CoroutineStart(IEnumerator enumerator)
     {
         StartCoroutine(enumerator);
+    }
+
+    public override void ActionEndCallback()
+    {
+        if (!usedSkill)
+        {
+            LastTurnMoon = false;
+            LastTurnSun = false;
+        }
+        usedSkill = false;
+        base.ActionEndCallback();
     }
 }

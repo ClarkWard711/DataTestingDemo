@@ -1,0 +1,6141 @@
+fileFormatVersion: 2
+guid: 9186111b4a8934ccab3800e3e981ae8c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 477
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178bce5b6eebd49958ae9e2109449c9e
+      internalID: -1149856062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 477
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90faf4335245c48d189fedcd28836b08
+      internalID: -1985378849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 477
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0d8f45719a843078286e126ed1fa66
+      internalID: -1765953003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_3
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920001b59f70a4788b2baf14a730cbc1
+      internalID: 1388977038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_4
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 477
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f1a85c79e8346adae2d6b94b6a0dc5
+      internalID: 2035607985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_5
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 477
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98a2a1c32d564f9182e10b436f1e5e5
+      internalID: -1449540349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_6
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 477
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6764e28577a9d4ade8dc4424b6ff49ff
+      internalID: -1215754412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 477
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738f310f682844fad8112571cc772278
+      internalID: -1578127400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_8
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dda367c850e4fed9a15646ff0bb1f1
+      internalID: -1052781907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_9
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 477
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe12e33e7b3254add964c26ce6e462e4
+      internalID: 199505963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 480
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a68c64b07ebdc44a0b06e9893b4db875
+      internalID: -837161458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_11
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 480
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af7db1355b954510bbb92627ec06408
+      internalID: 499589871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_12
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 476
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499e949e60c694f8ca78fe76ecb7d120
+      internalID: -845543312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_13
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 476
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f36848607854f458677dd41613b2bf
+      internalID: 77743208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_14
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 477
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeceed7639ec84a90a99c266035d308a
+      internalID: -364499491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_15
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca934e604de84e6db99785ee246c2dc
+      internalID: 619183839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_16
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 477
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747c5771167f246d189b0c0d771f9590
+      internalID: 926324448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_17
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c6906726f164ed99aa37ede2a84ed2
+      internalID: -2133729769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_18
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff2cde7469ec4ad1bd8e2c4c2b9bb6d
+      internalID: -1602407388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_19
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5179787f3e33e4694b440ffb5d705f53
+      internalID: 432789683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_20
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50364e54b447d46aca11fcb5229540f0
+      internalID: -384234508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_21
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e7c007dfb844c10a82c8fe307d0966
+      internalID: -2088815079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_22
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455d36d424ada42cdbe1b455d2a9b7f2
+      internalID: -1431551238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_23
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 477
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928c0b694bec6481fb7d4c066956382d
+      internalID: -600698628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 450
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004b0df634dd542e8843f61eec6fed06
+      internalID: 1338766061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_25
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 450
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9dd3690b14542ac8c454b2fc6beea3
+      internalID: -212709396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_26
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 450
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f44ef18a1ab4016bc31cede51fb005
+      internalID: 39878885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_27
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 450
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e9dc3917d9c4ab0b9e944ae2430686
+      internalID: 1034336788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_28
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 450
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0bf02c1f1834dd58d312f88c523dc2
+      internalID: 2070405855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_29
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 450
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3083cfde1fd094171a06cbdeacbb4791
+      internalID: 444980921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_30
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 450
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2cd5e055f7f4fb2a948b1065a79284
+      internalID: -1195760830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_31
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 450
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e45b1d771424700af093507ad3169b
+      internalID: 1454598921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_32
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 442
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca2f2860570840b397a8aa99a6e0cce
+      internalID: -762807028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 437
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f12bfc8eaca2418cb7cc3b583beca63
+      internalID: 618321399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_34
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 445
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b4912bf309041aea885c69fd834dc1
+      internalID: -1528115554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_35
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 446
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea5b4176a1fa4ca5b2925af5a8a51e1
+      internalID: 669105473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_36
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 446
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb939d92f421542149fe79f8fda87bc5
+      internalID: -171937134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_37
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 445
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af87b8d9bd6b84af5aa717c949afd181
+      internalID: -395972572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_38
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 443
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3c525839dfb4263b8bddf5dc2c48a9
+      internalID: -833581813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_39
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 441
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f8a03d43e5f4b04b1f1cc43f06f6a2
+      internalID: -854314340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_40
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 442
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f37ac111db949ea83e9d5a4fb060c3
+      internalID: 827987922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_41
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 437
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07698518dcfbb4166b01ac0923447df1
+      internalID: 1609210129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_42
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 445
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b836a8576064a06ab2372196827f51
+      internalID: 1402516817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_43
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 407
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6addbf1d8ae394876b15ac81c4d86e88
+      internalID: 446420500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_44
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 407
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f89be73bf5e45678f0922e71c607b7
+      internalID: 1098413102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_45
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 406
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5145f555aacae4bef8813b79497b29cd
+      internalID: 1582130340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_46
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 404
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb80299b0a474924b0fd3df0257f4f6
+      internalID: -1439089690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_47
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 402
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a9b5e5eeab34de1ab90eca8d97131b
+      internalID: -1756438997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_48
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 403
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868b1d67769c54b0bad34bef5ebbf5c3
+      internalID: -266597555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_49
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 404
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c138a109ecf348b58ce9beffcb7572e
+      internalID: 476497317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_50
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 404
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59eed4d352e940508b8adc10fff99bc
+      internalID: 26922797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_51
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 403
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e354c4f0f863346c9bad137be57942a7
+      internalID: -1235144990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_52
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 402
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0044840e3f7ad4f41b136516f7845560
+      internalID: -444928943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_53
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 403
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e676736247a4fe5886811b07bfbafa
+      internalID: 60381074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_54
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 369
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ac5d036860d45f89b0ec54a8c2f1be
+      internalID: -282357160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_55
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 369
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540a983f4e2b04f87bec177496069856
+      internalID: -1488431369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_56
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 368
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b993c070d2ac24d6b80ce3e5f3e6fbf4
+      internalID: 774432242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_57
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 367
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2754a25b948e24847bd5c1e6cba44ad2
+      internalID: -1222851860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_58
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 368
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471d00f14eec5444ea664e8fca0492ee
+      internalID: 126233978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_59
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 369
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74aa0cecde01e4ca89d6965655d88994
+      internalID: -32458245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_60
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 369
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd14c0731159a434aac3d6791b926859
+      internalID: 1629467403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_61
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 369
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a2928e74eec49bc8d495f941301e3c
+      internalID: -171536874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_62
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 369
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebe3e2cecc3d44262a1d723519681873
+      internalID: 1815826769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_63
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 368
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5711f2741e1745858a70c1acc70f331
+      internalID: 1596461262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_64
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 367
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2672cc11a05742118396ac07d496de7
+      internalID: 334457301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_65
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 368
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f2aa4f4d95f349739437686625feda8
+      internalID: -2022731724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_66
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 369
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044d33d94bea547a680d2671649a6d7a
+      internalID: -1166952388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_67
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 369
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c7fac33b9fb461092f03d4652a5ef7
+      internalID: -2105563025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_68
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 369
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cc2a4b440d64020b99a826ec18860b
+      internalID: 73076615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_69
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 369
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f17625bcaff243efb1d52da62e650d3
+      internalID: 1011607132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_70
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 368
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0cbb85d4a1f421cb8c6200f693fa0c
+      internalID: -457196101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_71
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 367
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839c58185a77b4931a030003b41c1af3
+      internalID: -133197229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_72
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 333
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52af6e526c1724312a3b0f9d744f3e9e
+      internalID: 423473474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_73
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 334
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e720f4312ff4a9887128fb1d384757
+      internalID: 485781609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_74
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 334
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd909cfafcd124cc7828bf5a7ada0ff9
+      internalID: 57792039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_75
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 333
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf36228bef4e4acf88c73c049ee341c
+      internalID: -1475023956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_76
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 332
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fb15f6f94a94212b6141ee00b10310
+      internalID: -589704802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_77
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 333
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f30e116eee1e41849ec032b15339dd2
+      internalID: -995233970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_78
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 334
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9791ea59768db4fb1b864b47f85016a7
+      internalID: 821363808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_79
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 334
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7623149881440f4bcd6dbff5d695f2
+      internalID: -803422207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_80
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 333
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ff189c9d05d450cbc5ad3fa9519ca0
+      internalID: -1872909389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_81
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 335
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c518a3de4830b47ddbfd0ea50b679311
+      internalID: -1093543167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_82
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 335
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffc08c16695d4e129004f18af7cd1bf
+      internalID: 1797020460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_83
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 332
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2776266fce2f94886afbcb06fd72aa16
+      internalID: 591923319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_84
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 332
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069dbbd70806b426eaadc6349d9944e9
+      internalID: 1227875887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_85
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 332
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9117010e9875e42c0b067ac244a54e44
+      internalID: 1643451960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_86
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 332
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b6659ba5e024b2fbe965c4d872c3d4
+      internalID: 68314297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_87
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 332
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f63e5e975894bfab76b7d772e6d539
+      internalID: 713691861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_88
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 332
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6187420d8f0e94e058e3f4d1f1b855a6
+      internalID: -1438031440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_89
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 332
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c863f8ac18645699a5129256d1ef88
+      internalID: -2012160588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_90
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 297
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6686e05ac9fdc4ca9a4d7a6a94171a78
+      internalID: 486618254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_91
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 297
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c480197eb81ff44e3a78a8136ae278e7
+      internalID: 650403342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_92
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 297
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9e8282bfc8e4b6ebd5542ee6b24a57
+      internalID: 2120740519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_93
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 296
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326b59e57b2ff4d9e9f0161af84c4403
+      internalID: 1953018457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_94
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 297
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f7920f8c81c4892b5f105a231287a4
+      internalID: 1535653819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_95
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 297
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234d42903d4374a1897443774cd73ffa
+      internalID: -1416768835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_96
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 296
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7cc2f0ac4eba4e48ae73478aecfa82a
+      internalID: -1028763121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_97
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 297
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d67658aab9f8f44e2aea12bca1555bf7
+      internalID: 1848900658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_98
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 297
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6258b0b1798ab49bb97353c4103f092a
+      internalID: -816770521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_99
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 297
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f8c9d8fed6f445f9c4cca9f4a5fd34
+      internalID: 1614928424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_100
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 297
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0255408dc9a249429c5d83f2559b6f4
+      internalID: -1270197231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_101
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 297
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620be6b7eb61d4897bf89574f23f29c3
+      internalID: -726978860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_102
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 297
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0d231f12d01472dab7c03b255198c2
+      internalID: -158788517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_103
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 297
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f69e1c300df4e63803b38647d50e6b
+      internalID: 762162682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_104
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 297
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3510f49bccdc648e5a13ce9dc2980243
+      internalID: 1030955646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_105
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 297
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1a2470829c74a61b3056156d9126df
+      internalID: -574977529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_106
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 297
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550659a15ff1c48d3b5e4f89bdf27b43
+      internalID: 1900798560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_107
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 297
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398fbff147a2b4792b42bb6795e6685f
+      internalID: 1194503496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_108
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 297
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9716d35a7bb70426a9fb3dd87e94a8af
+      internalID: 2067464023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_109
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 298
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b4b49f78af4b43f688a8ea39e4fc169
+      internalID: -1457042418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_110
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 262
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59e6a47d417a4e86837f62d610c5542
+      internalID: 1129989319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_111
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 283
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cc01133e49942448a6f60ed5ae41a7
+      internalID: -975828164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_112
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 283
+        width: 31
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe5e0735156c4c7dbc500848c5735e7
+      internalID: 682589851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_113
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 262
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2cbd8aeaa63a42329cb3631940fb5af
+      internalID: 1520711678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_114
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 262
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977d066ca13664fae939e673b526bb69
+      internalID: 948444178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_115
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44eefda9583249f7b828e2011c5fd03
+      internalID: 1588591573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_116
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5c0fda0062846b59272b1e8ded2cc3
+      internalID: -2003169559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_117
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf96021bd71ef418b8accbd6a51d38d2
+      internalID: -1321568697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_118
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0631afa328bf4281a9eb854b01d1b69
+      internalID: -1944699060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_119
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e532f35b81cf4058816be21face1259
+      internalID: 1340488186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_120
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 263
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a9905419f0d43cbae76721f3faa8c3
+      internalID: 566822322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_121
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 261
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29311b369aa043f2885920229188522
+      internalID: -1129592632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_122
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 261
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62df6f3d0548347a28c16aa49ad2ee4c
+      internalID: -1567945347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_123
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 261
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ce791f1ee9846049f8ac0d8c855399
+      internalID: 1512488911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_124
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 261
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2438409e1c4a84188a540754a78ea505
+      internalID: -21964943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_125
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 261
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be687fb88d9d459bad974df431c1c8f
+      internalID: -872199770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_126
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 261
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d62b5c0a6ad4edc983b8a8cbe981e5
+      internalID: -857276922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_127
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 261
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938cdc622e59841b1b34f674b310a5e5
+      internalID: 1675728601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_128
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 261
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbebed35de1a44822807208742daa217
+      internalID: 1187941770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_129
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 261
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d39496a30b5c4926a9befdaec47ff36
+      internalID: 1372674393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_130
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 263
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5de656791944506b9d5a204b39b415
+      internalID: 741765470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_131
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 228
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ccc212716b143e1af0250c06587737
+      internalID: 55159201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_132
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 226
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfeecc93c21c141de9d4ce407241f81e
+      internalID: 404158322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_133
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 226
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede7b303794e94fc298ac56b705e6039
+      internalID: -1612142908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_134
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 226
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86c7c1db20de745d3a3d4b9839aec889
+      internalID: 1117104638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_135
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 226
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1434a3c33ce3c40aa8d43cb62246f06e
+      internalID: -553367506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_136
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 226
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3679e8d38ca17467f9bfe465eceabf2d
+      internalID: 1232012450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_137
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 226
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49be6526f359c471eb32f766ef0d3779
+      internalID: 2004622643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_138
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 226
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ede9f5e85d24405a937da88c2cdb44
+      internalID: 702788012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_139
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 226
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ef6de2fbe0f4e5fb505984a011776c
+      internalID: 1246777330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_140
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 226
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fc1e72c60424ce58050d0275d1eb1c
+      internalID: -653303040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_141
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 226
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9799259f24800437eb09efaa00030d24
+      internalID: 1501668417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_142
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 226
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff267e0c430646c3901d6bdbe60a520
+      internalID: 1144782269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_143
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 226
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f3f58c3151f4a88ab5872e717f97f3
+      internalID: -1073688756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_144
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 226
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c4456e54e764b62bb0a54681b2e978
+      internalID: -399767741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_145
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 226
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b80b20f04e049d8ba4760475f9e02c
+      internalID: -1935609619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_146
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 226
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4653e6d14dd0477a9309ea3db5b735c
+      internalID: -583371049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_147
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 226
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf1c75f16387415f8d6c99e75e12e5e
+      internalID: -1564051419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_148
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 226
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc40ddc114f104090835ef7e38353e4a
+      internalID: -706682223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_149
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 226
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88810084f1c5413ba3c54fd1024b4ad
+      internalID: 1513271174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_150
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 226
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdb82089c0984c6f89a3ca92b5ad967
+      internalID: -1685920128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_151
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 226
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36496349936cc4e32a97ce34568c2849
+      internalID: 768694865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_152
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 226
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c158796e7f4472ebb9a904ae7847c2
+      internalID: -1087616751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_153
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 227
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc739e8ad503f411384ec27333413019
+      internalID: 2011006408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_154
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 227
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6115ee5510c284614b5c456cb82c204a
+      internalID: -1329021328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_155
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096feac8610a64f24bcffaba9d74cd5a
+      internalID: -1395787477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_156
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 192
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797f72dd9d0944c96a4334e86fc1018c
+      internalID: 774944010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_157
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 192
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f7ea66a71e14076b67c92113e4f1e3
+      internalID: -1904898977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_158
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 192
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f223f7466fc9459faef517b0f3c4d20
+      internalID: 1914327629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_159
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 191
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d4ab0e9417284c5fb4e59c44692ae8b
+      internalID: 864663454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_160
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 191
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18bc10d1965346a78e62f3df9b1291a
+      internalID: -1199425319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_161
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 191
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6772ce1d9125e4979b46c05aafd92f10
+      internalID: -1348951200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_162
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 191
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7760d062120cd40b6936d84d20a9059c
+      internalID: -1087187802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_163
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 191
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c660194efc89344da85d7f3cc2103158
+      internalID: 1301674709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_164
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 191
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a1927ec7dbc24405aa28c9a5ec0a2fa
+      internalID: 1130277029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_165
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 191
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 191abe3ca2a9149eba9e58818d7ae431
+      internalID: 469367032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_166
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 191
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2195bb4884e44f7ab25b89c8e404be1
+      internalID: -223323037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_167
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 208
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09662f5c295bd4a93a2c9dcfdf715d0d
+      internalID: 441015896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_168
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 208
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920f4fa5ca9874925b6a86dd059de36a
+      internalID: 1484241856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_169
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 191
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6fac251b2ba4574969d9a4d20d0687
+      internalID: -154330422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_170
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 191
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f92335b74e3b468495f38723d65cbec
+      internalID: 1665759557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_171
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 198
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93700c60f9694d5ab62b7d929e5424f
+      internalID: 1342832786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_172
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 198
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346be01c5a2c04a089ffe8e5126ba0e0
+      internalID: -1464482565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_173
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 198
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7134c4e5b964bbdb21d51e7534c1a5
+      internalID: 958334479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_174
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 198
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3af4f5b336d43a9b518fabe628f709
+      internalID: -560542480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_175
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 198
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b14b0d358ea1484e81e350eed0513f6
+      internalID: -1492462409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_176
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 163
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e687d2cf7ad47a6b32a954d52d930e
+      internalID: -702765666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_177
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 163
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c266fa93ab549a09dd97723dc7aa38
+      internalID: -1956958898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_178
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 163
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb64f3d39630408aa7b04b1caff1009
+      internalID: 264545970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_179
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 163
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39a297cce4184d1b85ea516fadcebcc
+      internalID: -1200646010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_180
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 164
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578304f5d8f8b48a9bfcaefa7510e591
+      internalID: 803264806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_181
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 164
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0db01e5c57a442eab86205a7f532dc
+      internalID: -936187832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_182
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 163
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bfe9368685b4441b1d7cd939e995e1
+      internalID: -561504735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_183
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 164
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c2250311c9d4996a7a9294f0a2ad48
+      internalID: 389282297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_184
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 164
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b17d8390d2b7479ebf087307d541719
+      internalID: -1824448492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_185
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 156
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f82de8f19670443fb4465d94bb16153
+      internalID: 243345014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_186
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 156
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a1211e016cb4c489bd0be52d1688e2
+      internalID: 498900522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_187
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 156
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c373f9e5237db407384266ee738a6e10
+      internalID: 930947798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_188
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 156
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f764b73e041470187cc8ec38120e64
+      internalID: 100230560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_189
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 163
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2738e0e11434c80ba0bc20b328657c
+      internalID: -2105561096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_190
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 163
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b379149e9f6dc4e31a36b239001fd4ae
+      internalID: 1748617507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_191
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 163
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72de319521e0345fdab768a4e95bd019
+      internalID: 1861192070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_192
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 163
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ce9051eaf4840cbab910fafe8d77dd
+      internalID: -630993530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_193
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 165
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73488e844bc4b44588fb9f06c7b912cb
+      internalID: -1933703357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_194
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 165
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f4f8e16f5314c95b474c47470d3bfb
+      internalID: -210226352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_195
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 159
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be50694538ec4452aada4ff8d5a9626c
+      internalID: -1105489917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_196
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 159
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb3965f6d9644b69bb0f7e720b87a5a
+      internalID: -1179287680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_197
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 163
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0343770721dcf4f4987f560a3a5bc5e5
+      internalID: 1146090228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_198
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 163
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44cc9c5575694a3d9f3fcdac0f23130
+      internalID: -564203182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_199
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 158
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fc7eab37ab64d869a68d6adc3cc901
+      internalID: -1468626886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_200
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 123
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86cf0f9709d73425bb0283449576cdc2
+      internalID: -1238177090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_201
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 124
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c38c8a1e3124f71b48f2b71cfcd5f9
+      internalID: 820141224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_202
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 122
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 766271277e7ce4d41879fd763d047679
+      internalID: -1217421286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_203
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 121
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb56abf16ce554236b5e98c7dcb1ae25
+      internalID: 64376534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_204
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 124
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fbe9e90080ab43f8b2ee7d0e796b400
+      internalID: 1490178357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_205
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 122
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87b894854e6a443b8ece425e00cc6e1
+      internalID: 41468549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_206
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 121
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fbdf2b5175745209d156495eb0ecd1
+      internalID: 559738766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_207
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 124
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2f487d306284ad4ad036239861e843
+      internalID: 716800512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_208
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 123
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29172c2b7bc9c455cbe4bfd90de3bc1c
+      internalID: -491315183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_209
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 122
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8d1a2f2e18040f7bbcb18f37e02441
+      internalID: 1644625524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_210
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 124
+        width: 17
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0eeb3206f1242eca131fca8a9a368a
+      internalID: 1596366089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_211
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 123
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448211999eba54309984cfe394a64582
+      internalID: 877506089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_212
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 122
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e1e2259d127f496db3a1b302c848cc6
+      internalID: -1355636117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_213
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 121
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628b7aa45592a4b6cb2aa2b199d51a77
+      internalID: 1025793150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_214
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 121
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ce4598a90a248c7b90f77a8bac6d18
+      internalID: 2121610836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_215
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 120
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f4b33f04d044ae28d1d281d9bd0d56
+      internalID: -1570040268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_216
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 122
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff2468f98a0447408b07f3fdbc0e53f
+      internalID: 1503514629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_217
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 122
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f038e7b2208409abdc4a609754f378
+      internalID: -34260338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_218
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 121
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4baee6649d0384a8d8a378abb120363a
+      internalID: -1040047649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_219
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 121
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ab92b173b714ddf935f13939b43c1d
+      internalID: -454803588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_220
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 121
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee3d4bb0a57546a9b8c90a8c30644b2
+      internalID: -1297853823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_221
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 120
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc5e2d917a13b44d682a1b0d015031b9
+      internalID: 1507202976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_222
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 122
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b767c6dbe1c44955991276ef021b731
+      internalID: 1023120596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_223
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 122
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a997f27bc3c68484d9f380e45017a6cb
+      internalID: 212666250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_224
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 85
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd51f14cfc13b457989bf83d96cddb5b
+      internalID: -1325200084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_225
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 87
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6d2bba2f1384134b59c9bbbb40cd13
+      internalID: -1144711430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_226
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 85
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ff54da21dad47b381296be4f7c0fd7
+      internalID: 1270395619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_227
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 84
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134c8f88f528d42abb53a171cb292e35
+      internalID: 1693345713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_228
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 87
+        width: 19
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d1e4014cfc24f2682df22fa55d6922
+      internalID: -1805106752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_229
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 85
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3564055b7f9f1467b9ca8e6543ecbaa1
+      internalID: 1394533291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_230
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 84
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d62689830e87470c986cc43dd8b63e3
+      internalID: 576809221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_231
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 87
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8775e52a9f140e28cb86c54065ba44
+      internalID: -1177505151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_232
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 86
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a442972434fab430ea3c9db9ef6c87d0
+      internalID: 823034937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_233
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 85
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d14c8af480c941549f70a401c80cec6
+      internalID: -1225954789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_234
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 87
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c21a80d6a8164e4b884eaec05c19cfb
+      internalID: 2075461316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_235
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 86
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d828fbe596f8f4c089e3a3c553c0ba25
+      internalID: 1837951565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_236
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 85
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e48bafd401de4cb0be696385a4b50b5
+      internalID: -607646853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_237
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 85
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b973c78f453524ea9b27d4f925ceb3cb
+      internalID: -886823572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_238
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 85
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1500c944f64245509f4118c816cd7a3
+      internalID: -1646731760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_239
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 84
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad696559ab76a43169aefa9b9df38cf3
+      internalID: -319254433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_240
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 86
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64927b5c0c7f450283656a809c96db9
+      internalID: -1510189932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_241
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 86
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95e91d82717d4df09be9306480fc4c1
+      internalID: -1170537376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_242
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 85
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65196cc650d1d4507bdb67223d26aa5d
+      internalID: -763429029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_243
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 85
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9997fe34121174623ab8e2d78f4e3523
+      internalID: -1150766029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_244
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 85
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c8f797bd399426a8322715e286bc05
+      internalID: -1822657171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_245
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 84
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1a644c051494f7fbb832989bdee4b6
+      internalID: 1955404333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_246
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 86
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1549bf782b1974ccab9c8ae47dedce56
+      internalID: -145229358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_247
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 86
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86814cf21c854db09f5a06db82b3786
+      internalID: 441526783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_248
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 85
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb3c47fc186140d9839c8a29e6614bd
+      internalID: 214075705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_249
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9418fcdd65e4c98aa4a1c78995accc
+      internalID: -1593468411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_250
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 49
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14afbd252dd7b47f0ad3d8dea19eb518
+      internalID: 753346189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_251
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 49
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeea6f78add724ee7a6ed2dc9c9151f1
+      internalID: 1577033786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_252
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c456c28b9478042b6a896ea4c36428b8
+      internalID: 1808630263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_253
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 49
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8d9dc79be7e45028a2f7581952a88e
+      internalID: 336923658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_254
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 49
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2129828a05a4ea0b53444544dd2db0
+      internalID: -420633553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_255
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42172b7710304f709ae1484afaf6fc4
+      internalID: 1990821252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_256
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 49
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b742907c0b6346f7a3e35d5adecaf09
+      internalID: 1321656761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_257
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 49
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18acd0b380a6f45198d0c70c48bf5436
+      internalID: -1973245396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_258
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f94164ff0d9f462b92067e15011897e
+      internalID: 867764440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_259
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 49
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d70944bc4c6468cb26e3d0e9251a93
+      internalID: -1431213661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_260
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 49
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc881c2e3ca7749f1b2ee0b701621740
+      internalID: 461941721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_261
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 50
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782ec35508fa9408395562ac0c3cba9f
+      internalID: -340926628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_262
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0ab1ad8dce846d08858da687bffcbe
+      internalID: 1117645473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_263
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e5b25c130694441989dfec516eaf53
+      internalID: -885432302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_264
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 50
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45cdd1800638c4766ba8fba88e3a7726
+      internalID: 2128493074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_265
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e92d3f8650e64edd9971424056d23d6
+      internalID: 1130910539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_266
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9746f1416949e4497b49bb6fde601a03
+      internalID: 524528845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_267
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 50
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df5353919dc446ca9eebb470b4def31
+      internalID: 688450744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_268
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25340a6b3949c421bb25ecc8a229a46f
+      internalID: -2032266772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_269
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d412a0af28495467ca5c7ca1ef5bfad1
+      internalID: -1726200167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_270
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 50
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc099104e7ca40939674249d568e08d
+      internalID: 472796818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_271
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0a9ef5bdcf748839bca6a0fbf7130d
+      internalID: 1796022978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Primrose Dancer Base_272
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 49
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159eb2db56ee8493193a3b28fdabddd2
+      internalID: 1826376234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_104: 1030955646
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_207: 716800512
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_22: -1431551238
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_252: 1808630263
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_221: 1507202976
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_166: -223323037
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_206: 559738766
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_141: 1501668417
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_65: -2022731724
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_72: 423473474
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_97: 1848900658
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_118: -1944699060
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_74: 57792039
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_102: -158788517
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_172: -1464482565
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_164: 1130277029
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_253: 336923658
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_53: 60381074
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_128: 1187941770
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_130: 741765470
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_146: -583371049
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_159: 864663454
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_238: -1646731760
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_174: -560542480
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_85: 1643451960
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_259: -1431213661
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_214: 2121610836
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_246: -145229358
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_155: -1395787477
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_133: -1612142908
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_41: 1609210129
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_44: 1098413102
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_191: 1861192070
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_36: -171937134
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_188: 100230560
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_179: -1200646010
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_193: -1933703357
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_115: 1588591573
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_120: 566822322
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_202: -1217421286
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_12: -845543312
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_68: 73076615
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_215: -1570040268
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_32: -762807028
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_56: 774432242
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_271: 1796022978
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_119: 1340488186
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_8: -1052781907
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_42: 1402516817
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_39: -854314340
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_95: -1416768835
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_136: 1232012450
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_186: 498900522
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_208: -491315183
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_248: 214075705
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_229: 1394533291
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_176: -702765666
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_23: -600698628
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_6: -1215754412
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_211: 877506089
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_43: 446420500
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_63: 1596461262
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_28: 2070405855
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_247: 441526783
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_26: 39878885
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_269: -1726200167
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_198: -564203182
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_30: -1195760830
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_13: 77743208
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_178: 264545970
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_217: -34260338
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_170: 1665759557
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_78: 821363808
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_205: 41468549
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_177: -1956958898
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_219: -454803588
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_201: 820141224
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_237: -886823572
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_210: 1596366089
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_139: 1246777330
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_195: -1105489917
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_236: -607646853
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_64: 334457301
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_142: 1144782269
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_153: 2011006408
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_268: -2032266772
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_167: 441015896
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_29: 444980921
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_99: 1614928424
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_45: 1582130340
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_105: -574977529
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_258: 867764440
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_131: 55159201
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_187: 930947798
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_37: -395972572
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_231: -1177505151
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_0: -1149856062
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_47: -1756438997
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_267: 688450744
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_67: -2105563025
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_152: -1087616751
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_171: 1342832786
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_163: 1301674709
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_9: 199505963
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_106: 1900798560
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_60: 1629467403
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_112: 682589851
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_194: -210226352
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_80: -1872909389
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_14: -364499491
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_108: 2067464023
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_19: 432789683
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_189: -2105561096
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_61: -171536874
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_251: 1577033786
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_230: 576809221
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_249: -1593468411
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_129: 1372674393
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_76: -589704802
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_11: 499589871
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_134: 1117104638
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_88: -1438031440
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_132: 404158322
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_265: 1130910539
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_266: 524528845
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_137: 2004622643
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_270: 472796818
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_62: 1815826769
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_49: 476497317
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_126: -857276922
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_156: 774944010
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_86: 68314297
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_185: 243345014
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_225: -1144711430
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_255: 1990821252
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_158: 1914327629
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_16: 926324448
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_52: -444928943
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_165: 469367032
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_209: 1644625524
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_175: -1492462409
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_7: -1578127400
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_24: 1338766061
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_77: -995233970
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_218: -1040047649
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_89: -2012160588
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_71: -133197229
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_18: -1602407388
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_232: 823034937
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_83: 591923319
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_240: -1510189932
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_190: 1748617507
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_264: 2128493074
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_114: 948444178
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_261: -340926628
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_242: -763429029
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_109: -1457042418
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_226: 1270395619
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_33: 618321399
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_123: 1512488911
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_25: -212709396
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_96: -1028763121
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_145: -1935609619
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_192: -630993530
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_79: -803422207
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_58: 126233978
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_103: 762162682
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_38: -833581813
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_107: 1194503496
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_34: -1528115554
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_101: -726978860
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_224: -1325200084
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_257: -1973245396
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_94: 1535653819
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_98: -816770521
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_140: -653303040
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_222: 1023120596
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_81: -1093543167
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_183: 389282297
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_184: -1824448492
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_260: 461941721
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_54: -282357160
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_263: -885432302
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_4: 2035607985
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_150: -1685920128
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_113: 1520711678
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_21: -2088815079
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_228: -1805106752
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_233: -1225954789
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_27: 1034336788
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_2: -1765953003
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_182: -561504735
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_84: 1227875887
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_17: -2133729769
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_148: -706682223
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_48: -266597555
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_100: -1270197231
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_147: -1564051419
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_180: 803264806
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_149: 1513271174
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_157: -1904898977
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_127: 1675728601
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_212: -1355636117
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_35: 669105473
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_91: 650403342
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_69: 1011607132
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_220: -1297853823
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_241: -1170537376
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_203: 64376534
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_135: -553367506
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_51: -1235144990
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_168: 1484241856
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_162: -1087187802
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_82: 1797020460
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_216: 1503514629
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_110: 1129989319
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_173: 958334479
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_73: 485781609
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_75: -1475023956
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_20: -384234508
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_125: -872199770
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_151: 768694865
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_244: -1822657171
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_197: 1146090228
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_234: 2075461316
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_196: -1179287680
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_121: -1129592632
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_160: -1199425319
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_254: -420633553
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_55: -1488431369
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_57: -1222851860
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_3: 1388977038
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_10: -837161458
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_169: -154330422
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_250: 753346189
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_223: 212666250
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_138: 702788012
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_5: -1449540349
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_70: -457196101
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_116: -2003169559
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_50: 26922797
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_239: -319254433
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_200: -1238177090
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_111: -975828164
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_235: 1837951565
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_161: -1348951200
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_144: -399767741
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_245: 1955404333
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_87: 713691861
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_31: 1454598921
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_204: 1490178357
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_46: -1439089690
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_181: -936187832
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_199: -1468626886
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_40: 827987922
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_227: 1693345713
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_117: -1321568697
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_1: -1985378849
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_243: -1150766029
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_272: 1826376234
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_256: 1321656761
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_262: 1117645473
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_122: -1567945347
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_59: -32458245
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_15: 619183839
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_124: -21964943
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_143: -1073688756
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_154: -1329021328
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_213: 1025793150
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_92: 2120740519
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_66: -1166952388
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_93: 1953018457
+      Nintendo Switch - Octopath Traveler - Primrose Dancer Base_90: 486618254
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

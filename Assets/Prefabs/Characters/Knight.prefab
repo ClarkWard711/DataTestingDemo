@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 8534877053516288429}
   - component: {fileID: 7604421398388884893}
   - component: {fileID: 526661332721932270}
+  - component: {fileID: 2846782133118011589}
   m_Layer: 0
   m_Name: Knight
   m_TagString: PlayerUnit
@@ -290,6 +291,24 @@ MonoBehaviour:
   DamagePrefab: {fileID: 5884769366753586431, guid: e86fd9a5c734c4e22a6c737a15bf9bd9, type: 3}
   BasePosition: {fileID: 3632537725401346950}
   tagList: []
+--- !u!114 &2846782133118011589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6186125200142139887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621d21cc5f1094cd295862468f1be72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JobSkill: {fileID: 0}
+  jobData: {fileID: 0}
+  BasicSkillButton: []
+  AdvancedSkillButton: []
+  BasicSkillText: []
+  AdvancedSkillText: []
 --- !u!1 &6219407169606312322
 GameObject:
   m_ObjectHideFlags: 0
