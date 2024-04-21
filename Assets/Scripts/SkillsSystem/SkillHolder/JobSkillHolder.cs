@@ -51,6 +51,11 @@ public class JobSkillHolder : MonoBehaviour
         BattleSetting.Instance.ToBattle();
     }
 
+    public void CoroutineStart(IEnumerator enumerator)
+    {
+        StartCoroutine(enumerator);
+    }
+
     IEnumerator ActionEnd()
     {
         foreach (var tag in BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList)

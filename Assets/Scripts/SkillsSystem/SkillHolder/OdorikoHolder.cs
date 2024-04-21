@@ -35,7 +35,6 @@ public class OdorikoHolder : JobSkillHolder
         if (MoonSpReduce)
         {
             MoonSpReduce = false;
-            
         }
         else
         {
@@ -115,10 +114,11 @@ public class OdorikoHolder : JobSkillHolder
         StartCoroutine(BattleSetting.Instance.DealDamage(3f));
     }
 
-    public IEnumerator scarletMoon()
+    public IEnumerator scarletMoon(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+        SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
             foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
@@ -145,11 +145,6 @@ public class OdorikoHolder : JobSkillHolder
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(ScarletMoon.CreateInstance<ScarletMoon>());
             StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放绯色月夜"));
         }
-    }
-
-    public void CoroutineStart(IEnumerator enumerator)
-    {
-        StartCoroutine(enumerator);
     }
 
     public override void ActionEndCallback()

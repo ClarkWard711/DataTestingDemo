@@ -7,7 +7,7 @@ public class ScarletMoonNight : OdorikoSkill
     public ScarletMoonNight()
     {
         odoSkillKind = OdoSkillKind.Moon;
-
+        SpCost = 8;
     }
 
     public override void Apply(GameObject unit)
@@ -16,6 +16,6 @@ public class ScarletMoonNight : OdorikoSkill
         base.Apply(unit);
         BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
         BattleSetting.Instance.State = BattleState.Middle;
-        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.scarletMoon());
+        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.scarletMoon(SpCost,odoSkillKind));
     }
 }
