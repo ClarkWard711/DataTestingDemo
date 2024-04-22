@@ -117,7 +117,7 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator scarletMoon(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
-        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
@@ -144,6 +144,39 @@ public class OdorikoHolder : JobSkillHolder
         {
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(ScarletMoon.CreateInstance<ScarletMoon>());
             StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放绯色月夜"));
+        }
+    }
+
+    public IEnumerator fullMoon(int SpCost, OdoSkillKind odoSkillKind)
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Moon);
+        SpCounter(SpCost, odoSkillKind);
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            foreach (GameObject player in BattleSetting.Instance.RemainingPlayerUnits)
+            {
+                if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                {
+                    if (player.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                    {
+                        player.GetComponent<GivingData>().AddTagToCharacter(FullMoonTag.CreateInstance<FullMoonTag>());
+                    }
+                }
+                else
+                {
+                    if (player.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+                    {
+                        player.GetComponent<GivingData>().AddTagToCharacter(FullMoonTag.CreateInstance<FullMoonTag>());
+                    }
+                }
+            }
+            StartCoroutine(BattleSetting.Instance.ShowActionText("盈月"));
+        }
+        else
+        {
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(FullMoonTag.CreateInstance<FullMoonTag>());
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放盈月"));
         }
     }
 

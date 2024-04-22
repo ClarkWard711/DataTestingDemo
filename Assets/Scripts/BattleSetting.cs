@@ -54,6 +54,7 @@ public class BattleSetting : MonoBehaviour
 
     public bool isWaitForPlayerToChooseAction = false;//等待玩家选择操作
     public bool isWaitForPlayerToChooseUnit = false;//等待玩家选择单位
+    public bool isWaitForPlayerToChooseAlly = false;//等待玩家选择友方
     public bool isPressed = false;//回主世界是否按下
     bool isMoving = false;//鼠标有没有在移动
     bool isKeyboardTouched = false;//键盘有没有碰 用于键盘操控ui
@@ -153,7 +154,8 @@ public class BattleSetting : MonoBehaviour
         #endregion
 
         Position = Input.mousePosition;
-        ChoosingUnit();
+        ChoosingEnemy();
+        ChoosingAlly();
         if (CurrentSliderOwner != null) 
         {
             UpdateSliderChange();
@@ -503,7 +505,7 @@ public class BattleSetting : MonoBehaviour
     /// <summary>
     /// 鼠标选择角色
     /// </summary>
-    void ChoosingUnit()
+    void ChoosingEnemy()
     {
         if (isWaitForPlayerToChooseUnit)
         {
@@ -624,6 +626,127 @@ public class BattleSetting : MonoBehaviour
             }
         }
     }
+    void ChoosingAlly()
+    {
+        if (isWaitForPlayerToChooseAlly)
+        {
+            if (isMoving && !isKeyboardTouched)
+            {
+                if (CurrentActUnitTarget != null)
+                {
+                    CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+                }
+                isKeyboardTouched = false;
+                TargetChosenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+                //Debug.Log(TargetChosenRay);
+                TargetHit = Physics2D.Raycast(TargetChosenRay.origin, Vector2.down);
+                if (ShownUnit != null)
+                {
+                    if (TargetHit.collider == null || TargetHit.collider.gameObject != ShownUnit)
+                    {
+                        //Debug.Log("移出collider");
+                        //Debug.Log("变没了1");
+                        ShownUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                    }
+                }
+                if (TargetHit.collider != null)
+                {
+                    //CurrentActUnitTarget = TargetHit.collider.gameObject;
+                    //Debug.Log(TargetHit.collider.gameObject.name);
+                    //Debug.Log(TargetChosenRay);
+                    if (TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    {
+                        CurrentActUnitTarget = TargetHit.collider.gameObject;
+                        ShownUnit = TargetHit.collider.gameObject;
+                        //Debug.Log("变了");
+                        TargetHit.collider.gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
+                    }
+
+                    if (Input.GetMouseButtonDown(0) && TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    {
+                        //CurrentActUnitTarget = TargetHit.collider.gameObject;
+                        ShownUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                        isWaitForPlayerToChooseAlly = false;
+                        //StartCoroutine(DealDamage(3f));
+                        isChooseFinished = true;
+                        CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                    }
+
+                    if (Input.GetKey(KeyCode.Return) && TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    {
+                        CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                        isWaitForPlayerToChooseAlly = false;
+                        StartCoroutine(DealDamage(3f));
+                        CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                    }
+                }
+            }
+            if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+            {
+                isKeyboardTouched = true;
+                //增加如果target不存在的检测
+                if (CurrentActUnitTarget == null)
+                {
+                    CurrentActUnitTarget = playerUnits[0];
+                }
+                CurrentActUnitTarget.GetComponent<Collider2D>().enabled = false;
+                //TargetChosenRay = new Ray(CurrentActUnitTarget.transform.position, );
+                //TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, Vector2.down);
+                //Debug.Log(TargetHit.collider.gameObject);
+                CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
+
+                if (Input.GetButton("Horizontal"))
+                {
+                    float direction = Input.GetAxisRaw("Horizontal");
+                    TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(direction, 0));
+                    if (TargetHit.collider != null && TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    {
+                        //Debug.Log(TargetHit.collider.gameObject);
+                        CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                        CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+                        CurrentActUnitTarget = TargetHit.collider.gameObject;
+                    }
+                    //Debug.Log(TargetHit.collider.gameObject);
+                }
+
+                if (Input.GetButton("Vertical"))
+                {
+                    float direction = Input.GetAxisRaw("Vertical");
+                    TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(0, direction));
+                    if (TargetHit.collider != null && TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    {
+                        //Debug.Log(TargetHit.collider.gameObject);
+                        CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                        CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+                        CurrentActUnitTarget = TargetHit.collider.gameObject;
+                    }
+                    //Debug.Log(TargetHit.collider.gameObject);
+                }
+            }
+            if (Input.GetKey(KeyCode.Return) && CurrentActUnitTarget != null)
+            {
+                CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+                isWaitForPlayerToChooseAlly= false;
+                //StartCoroutine(DealDamage(3f));
+                isChooseFinished = true;
+                CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+            }
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+                if (CurrentActUnitTarget != null)
+                {
+                    CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+                    CurrentActUnitTarget = null;
+                }
+                isWaitForPlayerToChooseAlly = false;
+                StopAllCoroutines();
+                State = BattleState.PlayerTurn;
+            }
+        }
+    }
     /// <summary>
     /// 更新血条的函数
     /// </summary>
@@ -639,6 +762,7 @@ public class BattleSetting : MonoBehaviour
     /// </summary>
     public void ComparePosition()
     {
+        //完善敌方位置的tag添加
         for (int i = 0; i < PlayerPositionsList.Count; i++) 
         {
             if (PlayerPositionsList[i].transform.childCount != 0)

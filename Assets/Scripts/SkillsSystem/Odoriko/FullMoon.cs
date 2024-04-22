@@ -14,5 +14,8 @@ public class FullMoon : OdorikoSkill
     {
         if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
         base.Apply(unit);
+        BattleSetting.Instance.isWaitForPlayerToChooseAlly = true;
+        BattleSetting.Instance.State = BattleState.Middle;
+        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.fullMoon(SpCost, odoSkillKind));
     }
 }
