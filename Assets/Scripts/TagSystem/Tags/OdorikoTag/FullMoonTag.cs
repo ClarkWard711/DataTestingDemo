@@ -14,5 +14,13 @@ public class FullMoonTag : OdorikoTag
         Effect = effect.good;
         BuffTarget = target.ally;
         Impact = impactOnMultiplier.AllDeal;
+        OnHit += RestoreSp;
+    }
+
+    public void RestoreSp()
+    {
+        int deltaTemp;
+        deltaTemp = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP * 0.1f);
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().CoroutineStart(BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().FloatingSP(deltaTemp));
     }
 }

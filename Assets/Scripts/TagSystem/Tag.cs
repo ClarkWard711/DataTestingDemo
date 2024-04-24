@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Tag : ScriptableObject
 {
@@ -31,4 +32,6 @@ public abstract class Tag : ScriptableObject
     {
 
     }
+    //命中前后回调点
+    public UnityAction OnHit, BeforeHit;
 }

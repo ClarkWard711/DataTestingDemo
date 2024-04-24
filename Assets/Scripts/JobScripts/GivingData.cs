@@ -18,6 +18,7 @@ public class GivingData : MonoBehaviour
     public float SoulDamageDealMultiplier = 1f;
     //public GameObject Unit;
     public GameObject DamagePrefab;
+    public GameObject SpPrefab;
     public GameObject BasePosition;
     //public Canvas DamageCanvas;
     public List<Tag> tagList = new List<Tag>();
@@ -99,6 +100,26 @@ public class GivingData : MonoBehaviour
         }
     }
 
+    public IEnumerator FloatingSP(int deltaTemp)
+    {
+        int temp;
+        temp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;
+        
+        if (temp + deltaTemp >= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP)
+        {
+            deltaTemp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP - BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP;
+        }
+        else
+        {
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP += deltaTemp;
+        }
+        GameObject obj = Instantiate(SpPrefab, BasePosition.transform);
+        obj.GetComponent<Text>().text = "+" + deltaTemp;
+        yield return new WaitForSeconds(2f);
+        Destroy(obj);
+    }
+
     public void AddTagToCharacter(Tag tag)
     {
         if (tag.name == "Remote") 
@@ -129,5 +150,10 @@ public class GivingData : MonoBehaviour
         Tag newTag = Instantiate(tag);
         tagList.Add(newTag);
         BattleSetting.Instance.CheckTagList(this.gameObject);
+    }
+
+    public void CoroutineStart(IEnumerator enumerator)
+    {
+        StartCoroutine(enumerator);
     }
 }

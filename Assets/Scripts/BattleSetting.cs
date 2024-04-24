@@ -249,6 +249,7 @@ public class BattleSetting : MonoBehaviour
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         StartCoroutine(ShowText(2f));
+        //加入命中后判定
         CurrentActUnitTarget = null;
         yield return new WaitForSeconds(time);
         CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
@@ -309,6 +310,8 @@ public class BattleSetting : MonoBehaviour
         isChooseFinished = false;
         StartCoroutine(DealDamage(3f));
     }
+
+    //IEnumerator 
     /// <summary>
     /// 一整个回合结束之后的tag进行操作
     /// </summary>
@@ -373,7 +376,6 @@ public class BattleSetting : MonoBehaviour
 
     void FindTarget()
     {
-
         if (CurrentActUnit.tag == "EnemyUnit")
         {
             State = BattleState.EnemyTurn;
@@ -891,5 +893,10 @@ public class BattleSetting : MonoBehaviour
         {
             return false;
         }
+    }
+    //检测是否暴击
+    bool CheckCri()
+    {
+        return false;
     }
 }
