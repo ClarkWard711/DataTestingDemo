@@ -5,8 +5,8 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 using Data;
-using System.Linq;
-using UnityEngine.TextCore.Text;
+using UnityEngine.Events;
+
 
 public enum BattleState {Won,Lose,PlayerTurn,EnemyTurn,Start,Middle};
 
@@ -63,7 +63,7 @@ public class BattleSetting : MonoBehaviour
 
 
     public bool isChooseFinished = false;//玩家选完了没
-    //int TurnCount;
+    public bool isCri;
 
     float alpha;//颜色透明度
     //float DamageMultiplier = 1f;
@@ -246,10 +246,34 @@ public class BattleSetting : MonoBehaviour
         ActUnitDealMultiplier = CurrentActUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
         int Damage = DamageCounting(pa,pd,TargetTakeMultiplier,ActUnitDealMultiplier);
         //加入分配伤害检测
+        /*if (CheckHit())
+        {
+            isCri = CheckCri();
+            //命中检测成功回调
+            StartCoroutine(BeforeHit());
+            if (isCri)
+            {
+                Damage = Mathf.CeilToInt(Damage * 1.5f);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
+                GameStateText.text = "对" + CurrentActUnitTarget.name + "造成暴击伤害" + Damage;
+                StartCoroutine(ShowText(2f));
+            }
+            else
+            {
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
+                GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
+                StartCoroutine(ShowText(2f));
+            }
+        }
+        else
+        {
+            GameStateText.text = "Miss";
+            StartCoroutine(ShowText(2f));
+        }*/
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         StartCoroutine(ShowText(2f));
-        //加入命中后判定
+        StartCoroutine(OnHit());
         CurrentActUnitTarget = null;
         yield return new WaitForSeconds(time);
         CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
@@ -310,8 +334,44 @@ public class BattleSetting : MonoBehaviour
         isChooseFinished = false;
         StartCoroutine(DealDamage(3f));
     }
+    /// <summary>
+    /// 命中检测成功后的回调
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator BeforeHit()
+    {
+        foreach (Tag tag in CurrentActUnit.GetComponent<GivingData>().tagList)
+        {
+            UnityAction BeforeHit;
+            BeforeHit = tag.BeforeHit;
+            if (BeforeHit == null)
+            {
+                continue;
+            }
+            BeforeHit.Invoke();
 
-    //IEnumerator 
+            yield return null;
+        }
+    }
+    /// <summary>
+    /// 在命中之后回调的操作
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator OnHit()
+    {
+        foreach (Tag tag in CurrentActUnit.GetComponent<GivingData>().tagList)
+        {
+            UnityAction OnHit;
+            OnHit = tag.OnHit;
+            if (OnHit == null) 
+            {
+                continue;
+            }
+            OnHit.Invoke();
+
+            yield return StartCoroutine(DelayedCallback(2f));
+        }
+    }
     /// <summary>
     /// 一整个回合结束之后的tag进行操作
     /// </summary>
@@ -503,6 +563,16 @@ public class BattleSetting : MonoBehaviour
         //加入技能或者其他tag对命中率的检测
         //CurrentActUnit.GetComponent<GivingData>().tagList
         return HitChance;
+    }
+    /// <summary>
+    /// 暴击概率计算
+    /// </summary>
+    /// <returns></returns>
+    float CriChanceCounting()
+    {
+        float CriChance;
+        CriChance = CurrentActUnit.GetComponent<GivingData>().cri / CurrentActUnitTarget.GetComponent<GivingData>().AntiCri;
+        return CriChance;
     }
     /// <summary>
     /// 鼠标选择角色
@@ -894,9 +964,21 @@ public class BattleSetting : MonoBehaviour
             return false;
         }
     }
-    //检测是否暴击
+    /// <summary>
+    /// 检测是否暴击
+    /// </summary>
+    /// <returns></returns>
     bool CheckCri()
     {
-        return false;
+        float Cri = Random.Range(0, 1);
+        if (CriChanceCounting() <= Cri) 
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
+
 }

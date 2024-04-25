@@ -14,5 +14,11 @@ public class ScarletMoon : OdorikoTag
         Effect = effect.bad;
         BuffTarget = target.enemy;
         Impact = impactOnMultiplier.AllTake;
+        BeforeHit += MustCri;
+    }
+
+    public void MustCri()
+    {
+        BattleSetting.Instance.isCri = true;
     }
 }
