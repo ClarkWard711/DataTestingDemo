@@ -19,6 +19,7 @@ public class GivingData : MonoBehaviour
     //public GameObject Unit;
     public GameObject DamagePrefab;
     public GameObject SpPrefab;
+    public GameObject HpPrefab;
     public GameObject BasePosition;
     //public Canvas DamageCanvas;
     public List<Tag> tagList = new List<Tag>();
@@ -115,6 +116,26 @@ public class GivingData : MonoBehaviour
             BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP += deltaTemp;
         }
         GameObject obj = Instantiate(SpPrefab, BasePosition.transform);
+        obj.GetComponent<Text>().text = "+" + deltaTemp;
+        yield return new WaitForSeconds(2f);
+        Destroy(obj);
+    }
+
+    public IEnumerator FloatingHP(int deltaTemp)
+    {
+        int temp;
+        temp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentHP;
+
+        if (temp + deltaTemp >= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxHP)
+        {
+            deltaTemp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxHP - BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentHP;
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentHP = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxHP;
+        }
+        else
+        {
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentHP += deltaTemp;
+        }
+        GameObject obj = Instantiate(HpPrefab, BasePosition.transform);
         obj.GetComponent<Text>().text = "+" + deltaTemp;
         yield return new WaitForSeconds(2f);
         Destroy(obj);

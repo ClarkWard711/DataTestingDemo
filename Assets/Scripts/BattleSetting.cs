@@ -575,7 +575,7 @@ public class BattleSetting : MonoBehaviour
         return CriChance;
     }
     /// <summary>
-    /// 鼠标选择角色
+    /// 鼠标选择敌方
     /// </summary>
     void ChoosingEnemy()
     {
@@ -698,6 +698,9 @@ public class BattleSetting : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// 鼠标选择友方
+    /// </summary>
     void ChoosingAlly()
     {
         if (isWaitForPlayerToChooseAlly)
