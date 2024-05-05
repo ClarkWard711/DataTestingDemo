@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = ("Skill/OdorikoSkill/FullMoon"), fileName = ("FullMoon"))]
-public class FullMoon : OdorikoSkill
+[CreateAssetMenu(menuName = ("Skill/OdorikoSkill/MoonBless"), fileName = ("MoonBless"))]
+
+public class MoonBless : OdorikoSkill
 {
-    public FullMoon()
+    public MoonBless()
     {
-        SpCost = 12;
+        SpCost = 10;
         odoSkillKind = OdoSkillKind.Moon;
     }
 
@@ -16,6 +17,6 @@ public class FullMoon : OdorikoSkill
         base.Apply(unit);
         BattleSetting.Instance.isWaitForPlayerToChooseAlly = true;
         BattleSetting.Instance.State = BattleState.Middle;
-        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.fullMoon(SpCost, odoSkillKind));
+        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.moonBless(SpCost, odoSkillKind));
     }
 }
