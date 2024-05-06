@@ -246,6 +246,26 @@ public class OdorikoHolder : JobSkillHolder
         }
     }
 
+    public IEnumerator moonErode(int SpCost, OdoSkillKind odoSkillKind)
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Moon);
+        SpCounter(SpCost, odoSkillKind);
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
+            {
+                enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErode.CreateInstance<MoonErodeTag>());
+            }
+            StartCoroutine(BattleSetting.Instance.ShowActionText("月蚀"));
+        }
+        else
+        {
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonErode.CreateInstance<MoonErodeTag>());
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放月蚀"));
+        }
+    }
+
     public override void ActionEndCallback()
     {
         if (!usedSkill)
