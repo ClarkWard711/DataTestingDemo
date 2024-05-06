@@ -26,6 +26,7 @@ public class BattleSetting : MonoBehaviour
     public GameObject[] RemainingPlayerUnits;//剩余玩家单位
     public GameObject CurrentActUnit;//当前行动角色
     public GameObject CurrentActUnitTarget;//当前行动角色的目标
+    public GameObject CurrentEndTurnUnit;//当前执行回合结束角色
     public GameObject MovePanel;//移动选择的panel
     GameObject ShownUnit;//ui展示的单位
     GameObject CurrentSliderOwner;//ui显示单位的slider
@@ -382,6 +383,7 @@ public class BattleSetting : MonoBehaviour
         BattleUnitsListToBeLaunched.Clear();
         foreach (GameObject character in BattleUnitsList)
         {
+            CurrentEndTurnUnit = character;
             foreach (var tag in character.GetComponent<GivingData>().tagList)
             {
                 var method = tag.GetType().GetMethod("OnTurnEndCallback");
@@ -395,6 +397,7 @@ public class BattleSetting : MonoBehaviour
                 yield return StartCoroutine(DelayedCallback(2f));
             }
         }
+        CurrentEndTurnUnit = null;
         TurnSettle();
     }
     /// <summary>

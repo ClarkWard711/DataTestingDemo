@@ -12,9 +12,10 @@ public class Skill : ScriptableObject
     public float DealMultiplier;
     public string SkillName;
     public string Description;
+    public float HitRevise;
     public virtual void Apply(GameObject unit)
     {
         BattleSetting.Instance.BasicPanel.SetActive(false);
-        BattleSetting.Instance.BasicPanel.SetActive(false);
+        BattleSetting.Instance.AdvancedPanel.SetActive(false);
     }
 }

@@ -18,6 +18,19 @@ public class MoonBlessTag : OdorikoTag
 
     public override void OnTurnEndCallback()
     {
-        //删除负面buff
+        // 只能删除一些bad的tag 例如永久的则无法删除
+        List<Tag> badTags = new List<Tag>();
+        foreach (Tag tag in BattleSetting.Instance.CurrentEndTurnUnit.GetComponent<GivingData>().tagList)
+        {
+            if (tag.Effect == effect.bad)
+            {
+                badTags.Add(tag);
+            }
+        }
+        if (badTags.Count > 0)
+        {
+            int randomIndex = Random.Range(0, badTags.Count);
+            BattleSetting.Instance.CurrentEndTurnUnit.GetComponent<GivingData>().tagList.RemoveAt(randomIndex);
+        }
     }
 }
