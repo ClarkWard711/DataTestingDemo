@@ -20,6 +20,8 @@ public class MoonErodeTag : OdorikoTag
     public void CounterAttack()
     {
         //我方反击
-        //BattleSetting.Instance.CurrentActUnitTarget
+        GameObject temp;
+        temp = BattleSetting.Instance.CurrentActUnitTarget;
+
     }
 }
