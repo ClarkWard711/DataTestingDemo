@@ -4805,7 +4805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 194.54181, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 374, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &812863217
@@ -8059,6 +8059,7 @@ MonoBehaviour:
   RemainingPlayerUnits: []
   CurrentActUnit: {fileID: 0}
   CurrentActUnitTarget: {fileID: 0}
+  CurrentEndTurnUnit: {fileID: 0}
   MovePanel: {fileID: 1211205237}
   PlayerPositionsList:
   - {fileID: 301349847}
@@ -8085,10 +8086,12 @@ MonoBehaviour:
   EnemyPartyMember: {fileID: 11400000, guid: 4edaf5ec0552a42c7baf5553b4e6dcf5, type: 2}
   isWaitForPlayerToChooseAction: 0
   isWaitForPlayerToChooseUnit: 0
+  isWaitForPlayerToChooseAlly: 0
   isPressed: 0
   isMoveFinished: 0
   State: 4
   isChooseFinished: 0
+  isCri: 0
   Position: {x: 0, y: 0, z: 0}
 --- !u!4 &1791494664
 Transform:

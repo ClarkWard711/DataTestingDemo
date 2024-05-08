@@ -16,6 +16,7 @@ public class ChangePanel : MonoBehaviour
         else
         {
             ChangePagePanel.SetActive(false);
+            CharacterUpgrade.Instance.isShowed = false;
         }
     }
 
@@ -24,6 +25,7 @@ public class ChangePanel : MonoBehaviour
         PartyPanel.SetActive(true);
         UpgradePanel.SetActive(false);
         DataPanel.SetActive(false);
+        CharacterUpgrade.Instance.isShowed = false;
     }
 
     public void Data()
@@ -31,6 +33,7 @@ public class ChangePanel : MonoBehaviour
         PartyPanel.SetActive(false);
         UpgradePanel.SetActive(false);
         DataPanel.SetActive(true);
+        CharacterUpgrade.Instance.isShowed = false;
     }
 
     public void Upgrade()
@@ -38,5 +41,6 @@ public class ChangePanel : MonoBehaviour
         PartyPanel.SetActive(false);
         UpgradePanel.SetActive(true);
         DataPanel.SetActive(false);
+        CharacterUpgrade.Instance.isShowed = true;
     }
 }
