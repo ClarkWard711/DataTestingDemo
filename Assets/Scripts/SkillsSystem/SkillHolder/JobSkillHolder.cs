@@ -70,5 +70,6 @@ public class JobSkillHolder : MonoBehaviour
 
             yield return StartCoroutine(BattleSetting.Instance.DelayedCallback(2f));
         }
+        BattleSetting.Instance.isActionEnding = false;
     }
 }

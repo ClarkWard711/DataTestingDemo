@@ -65,6 +65,7 @@ public class BattleSetting : MonoBehaviour
 
     public bool isChooseFinished = false;//玩家选完了没
     public bool isCri;
+    public bool isActionEnding = false;
 
     float alpha;//颜色透明度
     //float DamageMultiplier = 1f;
@@ -277,7 +278,12 @@ public class BattleSetting : MonoBehaviour
         StartCoroutine(OnHit());
         CurrentActUnitTarget = null;
         yield return new WaitForSeconds(time);
-        CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
+        if (!isActionEnding)
+        {
+            isActionEnding = true;
+            CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
+        }
+        
     }
 
     IEnumerator TurnAction(float time, string text)

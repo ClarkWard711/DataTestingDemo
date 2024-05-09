@@ -24,5 +24,8 @@ public class MoonErodeTag : OdorikoTag
         temp = BattleSetting.Instance.CurrentActUnitTarget;
         BattleSetting.Instance.CurrentActUnitTarget = BattleSetting.Instance.CurrentActUnit;
         BattleSetting.Instance.CurrentActUnit = temp;
+        OdorikoHolder.Instance.StartCoroutine(BattleSetting.Instance.DealDamage(2f));
+        BattleSetting.Instance.CurrentActUnit = BattleSetting.Instance.CurrentActUnitTarget;
+        BattleSetting.Instance.CurrentActUnitTarget = temp;
     }
 }
