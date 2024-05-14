@@ -278,12 +278,7 @@ public class BattleSetting : MonoBehaviour
         StartCoroutine(OnHit());
         CurrentActUnitTarget = null;
         yield return new WaitForSeconds(time);
-        if (!isActionEnding)
-        {
-            isActionEnding = true;
-            CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
-        }
-        
+
     }
 
     IEnumerator TurnAction(float time, string text)
@@ -959,6 +954,17 @@ public class BattleSetting : MonoBehaviour
         SkillID.Clear();
         SkillID.AddRange<int>(CurrentActUnit.GetComponent<GivingData>().jobData.SkillsID);
         UpdateSliderChange();
+    }
+    /// <summary>
+    /// 回合结束回调
+    /// </summary>
+    public void ActionEnd()
+    {
+        if (!isActionEnding)
+        {
+            isActionEnding = true;
+            CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
+        }
     }
     /// <summary>
     /// 检测是否命中

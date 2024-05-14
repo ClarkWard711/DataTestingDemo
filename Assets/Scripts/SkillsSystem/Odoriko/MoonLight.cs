@@ -31,6 +31,6 @@ public class MoonLight : OdorikoSkill
         }
         BattleSetting.Instance.State = BattleState.Middle;
         OdorikoHolder.Instance.CoroutineStart(BattleSetting.Instance.ShowActionText("月光"));
-
+        BattleSetting.Instance.ActionEnd();
     }
 }
