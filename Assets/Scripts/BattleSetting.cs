@@ -278,7 +278,7 @@ public class BattleSetting : MonoBehaviour
         StartCoroutine(OnHit());
         CurrentActUnitTarget = null;
         yield return new WaitForSeconds(time);
-
+        ActionEnd();
     }
 
     IEnumerator TurnAction(float time, string text)
@@ -309,7 +309,7 @@ public class BattleSetting : MonoBehaviour
         GameStateText.text = Action;
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
-        CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
+        ActionEnd();
     }
 
     IEnumerator Move()
@@ -960,6 +960,9 @@ public class BattleSetting : MonoBehaviour
     /// </summary>
     public void ActionEnd()
     {
+        isWaitForPlayerToChooseUnit = false;
+        isWaitForPlayerToChooseAlly = false;
+        CurrentActUnitTarget = null;
         if (!isActionEnding)
         {
             isActionEnding = true;
