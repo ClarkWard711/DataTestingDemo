@@ -241,12 +241,11 @@ public class BattleSetting : MonoBehaviour
     public IEnumerator DealDamage(float time)
     {
         State = BattleState.Middle;
-        float TargetTakeMultiplier, ActUnitDealMultiplier;
+        AttackType ActAttakeType;
         int pa = CurrentActUnit.GetComponent<GivingData>().pa;
         int pd = CurrentActUnitTarget.GetComponent<GivingData>().pd;
-        TargetTakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().PhysicalDamageTakeMultiplier;
-        ActUnitDealMultiplier = CurrentActUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
-        int Damage = DamageCounting(pa,pd,TargetTakeMultiplier,ActUnitDealMultiplier);
+        ActAttakeType = CurrentActUnit.GetComponent<GivingData>().attackType;
+        int Damage = DamageCounting(pa,pd,ActAttakeType);
         //加入分配伤害检测
         /*if (CheckHit())
         {
@@ -276,8 +275,10 @@ public class BattleSetting : MonoBehaviour
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         StartCoroutine(ShowText(2f));
         StartCoroutine(OnHit());
+        StartCoroutine(BeingHit());
         CurrentActUnitTarget = null;
         yield return new WaitForSeconds(time);
+        CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
         ActionEnd();
     }
 
@@ -334,6 +335,7 @@ public class BattleSetting : MonoBehaviour
     {
         yield return new WaitUntil(() => isChooseFinished);
         isChooseFinished = false;
+        CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
         StartCoroutine(DealDamage(3f));
     }
     /// <summary>
@@ -370,6 +372,25 @@ public class BattleSetting : MonoBehaviour
                 continue;
             }
             OnHit.Invoke();
+
+            yield return StartCoroutine(DelayedCallback(2f));
+        }
+    }
+    /// <summary>
+    /// 被攻击方被命中后的回调
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator BeingHit()
+    {
+        foreach (Tag tag in CurrentActUnitTarget.GetComponent<GivingData>().tagList)
+        {
+            UnityAction BeingHit;
+            BeingHit = tag.BeingHit;
+            if (BeingHit == null)
+            {
+                continue;
+            }
+            BeingHit.Invoke();
 
             yield return StartCoroutine(DelayedCallback(2f));
         }
@@ -547,12 +568,23 @@ public class BattleSetting : MonoBehaviour
     /// <param name="TakeMultiplier"></param>
     /// <param name="DealMultiplier"></param>
     /// <returns></returns>
-    int DamageCounting(int atk, int dfs, float TakeMultiplier, float DealMultiplier)
+    int DamageCounting(int atk, int dfs, AttackType attackType)
     {
         int baseDamage;
         int finalDamage;
         baseDamage = Mathf.CeilToInt((atk * atk) / (atk + dfs));
+        float TakeMultiplier = 1f, DealMultiplier = 1f;
         //技能和tag对伤害的影响 还有分配 有待完善
+        if (attackType == AttackType.Physical)
+        {
+            TakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().PhysicalDamageTakeMultiplier;
+            DealMultiplier = CurrentActUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
+        }
+        else if (attackType == AttackType.Soul)
+        {
+            TakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().SoulDamageTakeMultiplier;
+            DealMultiplier = CurrentActUnit.GetComponent<GivingData>().SoulDamageDealMultiplier;
+        }
         finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
         return finalDamage;
     }

@@ -14,6 +14,12 @@ public class MoonPrologTag : OdorikoTag
         Effect = effect.bad;
         BuffTarget = target.enemy;
         Impact = impactOnMultiplier.AllDeal;
-        Multiplier = 0.7f;
+        conditionMultiplier = 0.7f;
+        BeingHit += DealDamage;
+    }
+
+    public void DealDamage()
+    {
+
     }
 }

@@ -4,11 +4,13 @@ using Data;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum AttackType { Physical, Soul, Null};
 public class GivingData : MonoBehaviour
 {
     public JobData jobData;
     public EnemyData EnemyData;
     public int Speed,currentHP,currentSP,pa,sa,pd,sd,hit,nim,cri,melee,remote,maxHP,maxSP,miss,AntiCri;
+    public AttackType attackType = AttackType.Null;
     public bool isDead = false;
     //public Text DamageText;
     bool isFinished;

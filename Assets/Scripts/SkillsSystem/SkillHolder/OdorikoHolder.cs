@@ -280,7 +280,7 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonProlog.CreateInstance<MoonPrologTag>());
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
-            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Find(Tag => Tag.TagName == "MoonProlog").Multiplier = 1.5f;
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Find(Tag => Tag.TagName == "MoonProlog").conditionMultiplier = 1.5f;
         }
         StartCoroutine(BattleSetting.Instance.ShowActionText("月：序曲"));
         BattleSetting.Instance.ActionEnd();

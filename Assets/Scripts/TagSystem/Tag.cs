@@ -21,7 +21,7 @@ public abstract class Tag : ScriptableObject
     public int TurnLast;//还有多少个回合
     public int quantity;//积累多少个
     public float Multiplier = 1f;//倍率
-
+    public float conditionMultiplier = 1f;
     //回调点
     public virtual void OnTurnEndCallback()
     {
@@ -33,5 +33,5 @@ public abstract class Tag : ScriptableObject
 
     }
     //命中前后回调点
-    public UnityAction OnHit, BeforeHit;
+    public UnityAction OnHit, BeforeHit,BeingHit;
 }
