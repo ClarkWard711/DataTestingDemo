@@ -20,6 +20,14 @@ public class MoonPrologTag : OdorikoTag
 
     public void DealDamage()
     {
-
+        int damage;
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType == AttackType.Physical) 
+        {
+            damage = BattleSetting.Instance.DamageCounting(AttackType.Soul);
+        }
+        else
+        {
+            damage = BattleSetting.Instance.DamageCounting(AttackType.Physical);
+        }
     }
 }
