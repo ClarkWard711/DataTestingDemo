@@ -280,6 +280,16 @@ public class BattleSetting : MonoBehaviour
         ActionEnd();
     }
 
+    public IEnumerator DealDamageBonus(int Damage)
+    {
+        State = BattleState.Middle;
+        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
+        GameStateText.text = "对" + CurrentActUnitTarget.name + "造成追击伤害" + Damage;
+        StartCoroutine(ShowText(1f));
+        CurrentActUnitTarget = null;
+        yield return new WaitForSeconds(1f);
+    }
+
     IEnumerator TurnAction(float time, string text)
     {
         GameStateText.text = text;
@@ -371,7 +381,7 @@ public class BattleSetting : MonoBehaviour
             }
             OnHit.Invoke();
 
-            yield return StartCoroutine(DelayedCallback(2f));
+            yield return StartCoroutine(DelayedCallback(1f));
         }
     }
     /// <summary>
@@ -390,7 +400,7 @@ public class BattleSetting : MonoBehaviour
             }
             BeingHit.Invoke();
 
-            yield return StartCoroutine(DelayedCallback(2f));
+            yield return StartCoroutine(DelayedCallback(1f));
         }
     }
     /// <summary>

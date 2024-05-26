@@ -294,6 +294,7 @@ public class OdorikoHolder : JobSkillHolder
             LastTurnSun = false;
         }
         usedSkill = false;
+        //换位置
         base.ActionEndCallback();
     }
 }
