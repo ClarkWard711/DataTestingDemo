@@ -24,140 +24,60 @@ public class PositionControl : MonoBehaviour
 
     public void Button1()
     {
-        if (BattleSetting.Instance.PlayerPositionsList[0].transform.childCount != 0)  
-        {
-            if (BattleSetting.Instance.CurrentActUnit == BattleSetting.Instance.PlayerPositionsList[0].transform.GetChild(0).gameObject)
-            {
-                
-                return;
-            }
-            else
-            {
-                BattleSetting.Instance.PlayerPositionsList[0].transform.GetChild(0).gameObject.transform.SetParent(BattleSetting.Instance.CurrentActUnit.transform.parent, false);
-                BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[0].transform, false);
-                BattleSetting.Instance.isMoveFinished = true;
-            }
-        }
-        else
-        {
-            BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[0].transform, false);
-            BattleSetting.Instance.isMoveFinished = true;
-        }
+        PositionControlCore(0);
+        BattleSetting.Instance.CheckPositionID();
     }
     public void Button2()
     {
-        if (BattleSetting.Instance.PlayerPositionsList[1].transform.childCount != 0)
-        {
-            if (BattleSetting.Instance.CurrentActUnit == BattleSetting.Instance.PlayerPositionsList[1].transform.GetChild(0).gameObject)
-            {
-                
-                return;
-            }
-            else
-            {
-                BattleSetting.Instance.PlayerPositionsList[1].transform.GetChild(0).gameObject.transform.SetParent(BattleSetting.Instance.CurrentActUnit.transform.parent, false);
-                BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[1].transform, false);
-                BattleSetting.Instance.isMoveFinished = true;
-            }
-        }
-        else
-        {
-            BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[1].transform, false);
-            BattleSetting.Instance.isMoveFinished = true;
-        }
+        PositionControlCore(1);
+        BattleSetting.Instance.CheckPositionID();
     }
     public void Button3()
     {
-        if (BattleSetting.Instance.PlayerPositionsList[2].transform.childCount != 0)
-        {
-            if (BattleSetting.Instance.CurrentActUnit == BattleSetting.Instance.PlayerPositionsList[2].transform.GetChild(0).gameObject)
-            {
-                
-                return;
-            }
-            else
-            {
-                BattleSetting.Instance.PlayerPositionsList[2].transform.GetChild(0).gameObject.transform.SetParent(BattleSetting.Instance.CurrentActUnit.transform.parent, false);
-                BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[2].transform, false);
-                BattleSetting.Instance.isMoveFinished = true;
-            }
-        }
-        else
-        {
-            BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[2].transform, false);
-            BattleSetting.Instance.isMoveFinished = true;
-        }
+        PositionControlCore(2);
+        BattleSetting.Instance.CheckPositionID();
     }
     public void Button4()
     {
-        if (BattleSetting.Instance.PlayerPositionsList[3].transform.childCount != 0)
-        {
-            if (BattleSetting.Instance.CurrentActUnit == BattleSetting.Instance.PlayerPositionsList[3].transform.GetChild(0).gameObject)
-            {
-                
-                return;
-            }
-            else
-            {
-                BattleSetting.Instance.PlayerPositionsList[3].transform.GetChild(0).gameObject.transform.SetParent(BattleSetting.Instance.CurrentActUnit.transform.parent, false);
-                BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[3].transform, false);
-                BattleSetting.Instance.isMoveFinished = true;
-            }
-        }
-        else
-        {
-            BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[3].transform, false);
-            BattleSetting.Instance.isMoveFinished = true;
-        }
+        PositionControlCore(3);
+        BattleSetting.Instance.CheckPositionID();
     }
     public void Button5()
     {
-        if (BattleSetting.Instance.PlayerPositionsList[4].transform.childCount != 0)
-        {
-            if (BattleSetting.Instance.CurrentActUnit == BattleSetting.Instance.PlayerPositionsList[4].transform.GetChild(0).gameObject)
-            {
-                
-                return;
-            }
-            else
-            {
-                BattleSetting.Instance.PlayerPositionsList[4].transform.GetChild(0).gameObject.transform.SetParent(BattleSetting.Instance.CurrentActUnit.transform.parent, false);
-                BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[4].transform, false);
-                BattleSetting.Instance.isMoveFinished = true;
-            }
-        }
-        else
-        {
-            BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[4].transform, false);
-            BattleSetting.Instance.isMoveFinished = true;
-        }
+        PositionControlCore(4);
+        BattleSetting.Instance.CheckPositionID();
     }
     public void Button6()
     {
-        if (BattleSetting.Instance.PlayerPositionsList[5].transform.childCount != 0)
-        {
-            if (BattleSetting.Instance.CurrentActUnit == BattleSetting.Instance.PlayerPositionsList[5].transform.GetChild(0).gameObject)
-            {
-                
-                return;
-            }
-            else
-            {
-                BattleSetting.Instance.PlayerPositionsList[5].transform.GetChild(0).gameObject.transform.SetParent(BattleSetting.Instance.CurrentActUnit.transform.parent, false);
-                BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[5].transform, false);
-                BattleSetting.Instance.isMoveFinished = true;
-            }
-        }
-        else
-        {
-            BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[5].transform, false);
-            BattleSetting.Instance.isMoveFinished = true;
-        }
+        PositionControlCore(5);
+        BattleSetting.Instance.CheckPositionID();
     }
 
     void BackToAction()
     {
         BattleSetting.Instance.State = BattleState.PlayerTurn;
         BattleSetting.Instance.isMoveFinished = true;
+    }
+
+    void PositionControlCore(int i)
+    {
+        if (BattleSetting.Instance.PlayerPositionsList[i].transform.childCount != 0)
+        {
+            if (BattleSetting.Instance.CurrentActUnit == BattleSetting.Instance.PlayerPositionsList[i].transform.GetChild(0).gameObject)
+            {
+                return;
+            }
+            else
+            {
+                BattleSetting.Instance.PlayerPositionsList[i].transform.GetChild(0).gameObject.transform.SetParent(BattleSetting.Instance.CurrentActUnit.transform.parent, false);
+                BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[i].transform, false);
+                BattleSetting.Instance.isMoveFinished = true;
+            }
+        }
+        else
+        {
+            BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[i].transform, false);
+            BattleSetting.Instance.isMoveFinished = true;
+        }
     }
 }

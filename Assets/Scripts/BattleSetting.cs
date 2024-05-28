@@ -111,7 +111,7 @@ public class BattleSetting : MonoBehaviour
         {
             BattleUnitsList.Add(EnemyUnit);
         }
-
+        CheckPositionID();
         ComparePosition();
         BattleUnitsList.Sort((x, y) => x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
         State = BattleState.Start;
@@ -928,6 +928,26 @@ public class BattleSetting : MonoBehaviour
                     Character.GetComponent<GivingData>().AddTagToCharacter(Remote.CreateInstance<Remote>());
                     CheckTagList(Character);
                 }
+            }
+        }
+    }
+    /// <summary>
+    /// 更换位置id
+    /// </summary>
+    public void CheckPositionID()
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            if (BattleSetting.Instance.PlayerPositionsList[i].transform.childCount != 0)
+            {
+                BattleSetting.Instance.PlayerPositionsList[i].transform.GetChild(0).gameObject.GetComponent<GivingData>().positionID = i;
+            }
+        }
+        for (int i = 0; i < 6; i++)
+        {
+            if (BattleSetting.Instance.EnemyPositionsList[i].transform.childCount != 0)
+            {
+                BattleSetting.Instance.EnemyPositionsList[i].transform.GetChild(0).gameObject.GetComponent<GivingData>().positionID = i;
             }
         }
     }

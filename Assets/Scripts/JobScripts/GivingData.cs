@@ -10,6 +10,7 @@ public class GivingData : MonoBehaviour
     public JobData jobData;
     public EnemyData EnemyData;
     public int Speed,currentHP,currentSP,pa,sa,pd,sd,hit,nim,cri,melee,remote,maxHP,maxSP,miss,AntiCri;
+    public int positionID;
     public AttackType attackType = AttackType.Null;
     public bool isDead = false;
     //public Text DamageText;
