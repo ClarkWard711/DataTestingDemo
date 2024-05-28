@@ -5,6 +5,15 @@ using UnityEngine;
 public class PositionControl : MonoBehaviour
 {
     bool isPressed;
+    public static PositionControl Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !isPressed)
@@ -59,7 +68,7 @@ public class PositionControl : MonoBehaviour
         BattleSetting.Instance.isMoveFinished = true;
     }
 
-    void PositionControlCore(int i)
+    public void PositionControlCore(int i)
     {
         if (BattleSetting.Instance.PlayerPositionsList[i].transform.childCount != 0)
         {

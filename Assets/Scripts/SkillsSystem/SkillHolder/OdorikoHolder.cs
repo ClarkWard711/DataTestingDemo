@@ -8,7 +8,7 @@ public class OdorikoHolder : JobSkillHolder
     public static OdorikoHolder Instance;
     public bool MoonSpReduce = false, SunSpReduce = false;
     public float SpCostMultiplier = 1f;
-    bool LastTurnSun = false, LastTurnMoon = false, usedSkill = false;
+    public bool LastTurnSun = false, LastTurnMoon = false, usedSkill = false;
 
     void Awake()
     {
@@ -98,6 +98,7 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator sunSpot(int SpCost,OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
         SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
@@ -295,6 +296,15 @@ public class OdorikoHolder : JobSkillHolder
         }
         usedSkill = false;
         //换位置
+        int i = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().positionID;
+        if (i>2)
+        {
+            PositionControl.Instance.PositionControlCore(i + 3);
+        }
+        else
+        {
+            PositionControl.Instance.PositionControlCore(i - 3);
+        }
         base.ActionEndCallback();
     }
 }
