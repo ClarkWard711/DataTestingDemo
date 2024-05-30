@@ -261,13 +261,13 @@ public class OdorikoHolder : JobSkillHolder
         {
             foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
             {
-                enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErode.CreateInstance<MoonErodeTag>());
+                enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
             }
             StartCoroutine(BattleSetting.Instance.ShowActionText("月蚀"));
         }
         else
         {
-            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonErode.CreateInstance<MoonErodeTag>());
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
             StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放月蚀"));
         }
         BattleSetting.Instance.ActionEnd();
@@ -278,12 +278,33 @@ public class OdorikoHolder : JobSkillHolder
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
-        BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonProlog.CreateInstance<MoonPrologTag>());
+        BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonPrologTag.CreateInstance<MoonPrologTag>());
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Find(Tag => Tag.TagName == "MoonProlog").conditionMultiplier = 1.5f;
         }
         StartCoroutine(BattleSetting.Instance.ShowActionText("月：序曲"));
+        BattleSetting.Instance.ActionEnd();
+    }
+
+    public IEnumerator moonDuke(int SpCost, OdoSkillKind odoSkillKind)
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Moon);
+        SpCounter(SpCost, odoSkillKind);
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
+            {
+                enemy.GetComponent<GivingData>().AddTagToCharacter(MoonDukeTag.CreateInstance<MoonDukeTag>());
+            }
+            StartCoroutine(BattleSetting.Instance.ShowActionText("爵月"));
+        }
+        else
+        {
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonDukeTag.CreateInstance<MoonDukeTag>());
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放爵月"));
+        }
         BattleSetting.Instance.ActionEnd();
     }
 

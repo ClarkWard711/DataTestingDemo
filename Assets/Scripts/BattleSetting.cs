@@ -290,6 +290,16 @@ public class BattleSetting : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
+    public IEnumerator DealCounterDamage(int Damage)
+    {
+        State = BattleState.Middle;
+        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
+        GameStateText.text = "对" + CurrentActUnitTarget.name + "造成反击伤害" + Damage;
+        StartCoroutine(ShowText(1f));
+        CurrentActUnitTarget = null;
+        yield return new WaitForSeconds(1f);
+    }
+
     IEnumerator TurnAction(float time, string text)
     {
         GameStateText.text = text;
@@ -599,6 +609,43 @@ public class BattleSetting : MonoBehaviour
             dfs = CurrentActUnitTarget.GetComponent<GivingData>().sd;
             TakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().SoulDamageTakeMultiplier;
             DealMultiplier = CurrentActUnit.GetComponent<GivingData>().SoulDamageDealMultiplier;
+            baseDamage = Mathf.CeilToInt((atk * atk) / (atk + dfs));
+            finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
+            return finalDamage;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    /// <summary>
+    /// 通过输入单位来计算伤害
+    /// </summary>
+    /// <param name="attackType"></param>
+    /// <returns></returns>
+    public int DamageCountingByUnit(GameObject AtkUnit, GameObject DfsUnit, AttackType attackType)
+    {
+        int baseDamage;
+        int finalDamage;
+        int atk, dfs;
+        float TakeMultiplier = 1f, DealMultiplier = 1f;
+        //技能和tag对伤害的影响 还有分配 有待完善
+        if (attackType == AttackType.Physical)
+        {
+            atk = AtkUnit.GetComponent<GivingData>().pa;
+            dfs = DfsUnit.GetComponent<GivingData>().pd;
+            TakeMultiplier = DfsUnit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier;
+            DealMultiplier = AtkUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
+            baseDamage = Mathf.CeilToInt((atk * atk) / (atk + dfs));
+            finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
+            return finalDamage;
+        }
+        else if (attackType == AttackType.Soul)
+        {
+            atk = AtkUnit.GetComponent<GivingData>().sa;
+            dfs = DfsUnit.GetComponent<GivingData>().sd;
+            TakeMultiplier = DfsUnit.GetComponent<GivingData>().SoulDamageTakeMultiplier;
+            DealMultiplier = AtkUnit.GetComponent<GivingData>().SoulDamageDealMultiplier;
             baseDamage = Mathf.CeilToInt((atk * atk) / (atk + dfs));
             finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
             return finalDamage;

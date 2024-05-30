@@ -14,18 +14,18 @@ public class MoonErodeTag : OdorikoTag
         Effect = effect.bad;
         BuffTarget = target.enemy;
         Impact = impactOnMultiplier.AllDeal;
+        conditionMultiplier = 0.5f;
         OnHit += CounterAttack;
     }
 
     public void CounterAttack()
     {
         //我方反击
-        GameObject temp;
-        temp = BattleSetting.Instance.CurrentActUnitTarget;
-        BattleSetting.Instance.CurrentActUnitTarget = BattleSetting.Instance.CurrentActUnit;
-        BattleSetting.Instance.CurrentActUnit = temp;
-        OdorikoHolder.Instance.StartCoroutine(BattleSetting.Instance.DealDamage(2f));
-        BattleSetting.Instance.CurrentActUnit = BattleSetting.Instance.CurrentActUnitTarget;
-        BattleSetting.Instance.CurrentActUnitTarget = temp;
+        GameObject AtkUnit,DfsUnit;
+        AtkUnit = BattleSetting.Instance.CurrentActUnitTarget;
+        DfsUnit = BattleSetting.Instance.CurrentActUnit;
+        int damage = BattleSetting.Instance.DamageCountingByUnit(AtkUnit,DfsUnit,AttackType.Physical);
+        damage = Mathf.CeilToInt(damage * 0.5f);
+        OdorikoHolder.Instance.StartCoroutine(BattleSetting.Instance.DealCounterDamage(damage));
     }
 }

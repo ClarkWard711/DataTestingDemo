@@ -29,7 +29,7 @@ public class MoonPrologTag : OdorikoTag
         {
             damage = BattleSetting.Instance.DamageCounting(AttackType.Physical);
         }
-        damage = Mathf.CeilToInt(damage * conditionMultiplier);
+        damage = Mathf.CeilToInt(damage * BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(Tag => Tag.TagName == "MoonProlog").conditionMultiplier);
         BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealDamageBonus(damage));
     }
 }
