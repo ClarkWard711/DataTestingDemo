@@ -294,10 +294,8 @@ public class OdorikoHolder : JobSkillHolder
         SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
-            foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
-            {
-                enemy.GetComponent<GivingData>().AddTagToCharacter(MoonDukeTag.CreateInstance<MoonDukeTag>());
-            }
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonDukeTag.CreateInstance<MoonDukeTag>());
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Find(Tag => Tag.TagName == "MoonDuke").TurnLast += 2;
             StartCoroutine(BattleSetting.Instance.ShowActionText("爵月"));
         }
         else
