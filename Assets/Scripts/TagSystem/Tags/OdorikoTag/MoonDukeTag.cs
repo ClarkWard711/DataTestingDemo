@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoonDukeTag : OdorikoTag
 {
+    public int DamageToSelf;
     public MoonDukeTag()
     {
         odoTagKind = OdoTagKind.Moon;
@@ -14,5 +15,13 @@ public class MoonDukeTag : OdorikoTag
         Effect = effect.bad;
         BuffTarget = target.enemy;
         Impact = impactOnMultiplier.AllDeal;
+        BeforeHit += DealToSelf;
+    }
+
+    public void DealToSelf()
+    {
+        int Damage = BattleSetting.Instance.DamageCounting(BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType);
+        BattleSetting.Instance.TempDamage = Mathf.CeilToInt(Damage * 0.75f);
+        DamageToSelf = Mathf.CeilToInt(Damage * 0.25f);
     }
 }

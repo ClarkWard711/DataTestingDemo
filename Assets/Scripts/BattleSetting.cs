@@ -70,7 +70,7 @@ public class BattleSetting : MonoBehaviour
     float alpha;//颜色透明度
     //float DamageMultiplier = 1f;
     public Vector3 Position;
-
+    public int TempDamage;
     #endregion
 
     void Awake()
@@ -249,16 +249,20 @@ public class BattleSetting : MonoBehaviour
         {
             isCri = CheckCri();
             //命中检测成功回调
-            StartCoroutine(BeforeHit());
             if (isCri)
             {
-                Damage = Mathf.CeilToInt(Damage * 1.5f);
+                TempDamage = Mathf.CeilToInt(Damage * 1.5f);
+                Damage = TempDamage;
+                StartCoroutine(BeforeHit());
+                Damage = TempDamage;
                 CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成暴击伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }
             else
             {
+                StartCoroutine(BeforeHit());
+                Damage = TempDamage;
                 CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
                 StartCoroutine(ShowText(2f));
