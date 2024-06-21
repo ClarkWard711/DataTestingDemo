@@ -261,6 +261,7 @@ public class BattleSetting : MonoBehaviour
             }
             else
             {
+                TempDamage = Damage;
                 StartCoroutine(BeforeHit());
                 Damage = TempDamage;
                 CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
@@ -1085,6 +1086,7 @@ public class BattleSetting : MonoBehaviour
     {
         isWaitForPlayerToChooseUnit = false;
         isWaitForPlayerToChooseAlly = false;
+        CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
         CurrentActUnitTarget = null;
         if (!isActionEnding)
         {
