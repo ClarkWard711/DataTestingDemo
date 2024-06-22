@@ -317,6 +317,18 @@ public class OdorikoHolder : JobSkillHolder
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            SunFinaleTag Tag = SunFinaleTag.CreateInstance<SunFinaleTag>();
+            Tag.isCharged = true;
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Tag);
+        }
+        else
+        {
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(SunFinaleTag.CreateInstance<SunFinaleTag>());
+        }
+        StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放日：终曲"));
+        BattleSetting.Instance.ActionEnd();
     }
     #endregion
     public override void ActionEndCallback()
