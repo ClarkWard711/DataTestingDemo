@@ -118,6 +118,8 @@ public class OdorikoHolder : JobSkillHolder
         StartCoroutine(BattleSetting.Instance.DealDamage(3f));
     }
     #endregion
+
+    #region Advanced
     public IEnumerator scarletMoon(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
@@ -311,6 +313,12 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.ActionEnd();
     }
 
+    public IEnumerator sunFinale(int Spcost,OdoSkillKind odoSkillKind)
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+    }
+    #endregion
     public override void ActionEndCallback()
     {
         if (!usedSkill)

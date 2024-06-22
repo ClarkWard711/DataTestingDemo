@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = ("Skill/OdorikoSkill/MoonProlog"), fileName = ("MoonProlog"))]
+[CreateAssetMenu(menuName = ("Skill/OdorikoSkill/SunFinale"), fileName = ("SunFinale"))]
 
-public class MoonProlog : OdorikoSkill
+public class SunFinale : OdorikoSkill
 {
-    public MoonProlog()
+    public SunFinale()
     {
-        odoSkillKind = OdoSkillKind.Moon;
-        SpCost = 15;
+        odoSkillKind = OdoSkillKind.Sun;
+        SpCost = 10;
     }
 
     public override void Apply(GameObject unit)
@@ -17,6 +17,6 @@ public class MoonProlog : OdorikoSkill
         base.Apply(unit);
         BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
         BattleSetting.Instance.State = BattleState.Middle;
-        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.moonProlog(SpCost, odoSkillKind));
+        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.sunFinale(SpCost, odoSkillKind));
     }
 }
