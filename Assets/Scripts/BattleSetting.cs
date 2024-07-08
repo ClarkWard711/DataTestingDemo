@@ -315,6 +315,7 @@ public class BattleSetting : MonoBehaviour
         {
             int TargetIndex = Random.Range(0, RemainingPlayerUnits.Length);
             CurrentActUnitTarget = RemainingPlayerUnits[TargetIndex];
+            CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
             StartCoroutine(DealDamage(3f));
         }
         else if (State == BattleState.PlayerTurn)
