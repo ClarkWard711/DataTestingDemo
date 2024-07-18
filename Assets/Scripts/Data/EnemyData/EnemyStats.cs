@@ -9,9 +9,12 @@ public class EnemyStats
     public int physicalDfs;
     public int soulAtk;
     public int soulDfs;
-    public int miss;
+    public int nim;
     public int hit;
     public int speed;
     public int AntiCri;
-    
+    public int melee;
+    public int remote;
+    public int PhysicalAntiDizziness;
+    public int SoulAntiDizziness;
 }

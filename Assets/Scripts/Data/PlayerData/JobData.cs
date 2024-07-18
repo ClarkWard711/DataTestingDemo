@@ -79,6 +79,8 @@ namespace Data
                 currentLevelStats.remote = int.Parse(statsValues[11]);
                 currentLevelStats.expPerLevel = int.Parse(statsValues[12]);
                 currentLevelStats.sxpPerLevel = int.Parse(statsValues[13]);
+                //currentLevelStats.PhysicalDizziness = int.Parse(statsValues[14]);
+                //currentLevelStats.SoulDizziness = int.Parse(statsValues[15]);
                 
                 jobStatsList.Add(currentLevelStats);
             }

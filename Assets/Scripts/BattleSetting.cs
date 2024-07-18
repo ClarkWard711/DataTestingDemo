@@ -668,7 +668,7 @@ public class BattleSetting : MonoBehaviour
     float HitChanceCounting()
     {
         float HitChance;
-        HitChance = CurrentActUnit.GetComponent<GivingData>().hit / CurrentActUnitTarget.GetComponent<GivingData>().miss;
+        HitChance = CurrentActUnit.GetComponent<GivingData>().hit / (CurrentActUnit.GetComponent<GivingData>().hit + CurrentActUnitTarget.GetComponent<GivingData>().nim);
         //加入技能或者其他tag对命中率的检测
         //CurrentActUnit.GetComponent<GivingData>().tagList
         return HitChance;

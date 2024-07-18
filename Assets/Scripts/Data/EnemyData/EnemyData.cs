@@ -60,10 +60,14 @@ public class EnemyData : ScriptableObject
             currentLevelStats.physicalDfs = int.Parse(statsValues[4]);
             currentLevelStats.soulAtk = int.Parse(statsValues[3]);
             currentLevelStats.soulDfs = int.Parse(statsValues[5]);
-            currentLevelStats.miss = int.Parse(statsValues[6]);
+            currentLevelStats.nim = int.Parse(statsValues[6]);
             currentLevelStats.hit = int.Parse(statsValues[7]);
             currentLevelStats.speed = int.Parse(statsValues[8]);
             currentLevelStats.AntiCri = int.Parse(statsValues[9]);
+            //currentLevelStats.melee = int.Parse(statsValues[10]);
+            //currentLevelStats.remote = int.Parse(statsValues[11]);
+            //currentLevelStats.PhysicalAntiDizziness = int.Parse(statsValues[12]);
+            //currentLevelStats.SoulAntiDizziness = int.Parse(statsValues[13]);
 
             enemyStatsList.Add(currentLevelStats);
         }

@@ -18,4 +18,6 @@ public class JobStats
     public int remote;
     public int expPerLevel;
     public int sxpPerLevel;
+    public int PhysicalDizziness;
+    public int SoulDizziness;
 }

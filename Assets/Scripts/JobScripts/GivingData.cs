@@ -9,7 +9,7 @@ public class GivingData : MonoBehaviour
 {
     public JobData jobData;
     public EnemyData EnemyData;
-    public int Speed,currentHP,currentSP,pa,sa,pd,sd,hit,nim,cri,melee,remote,maxHP,maxSP,miss,AntiCri;
+    public int Speed, currentHP, currentSP, pa, sa, pd, sd, hit, nim, cri, melee, remote, maxHP, maxSP, AntiCri, physicalDizziness, soulDizziness, pAntiDizziness, sAntiDizziness;
     public int positionID;
     public AttackType attackType = AttackType.Null;
     public bool isDead = false;
@@ -45,7 +45,8 @@ public class GivingData : MonoBehaviour
             Speed = jobData.JobStatsList[jobData.JobLevel-1].speed;
             melee = jobData.JobStatsList[jobData.JobLevel - 1].melee;
             remote = jobData.JobStatsList[jobData.JobLevel - 1].remote;
-
+            physicalDizziness= jobData.JobStatsList[jobData.JobLevel - 1].PhysicalDizziness;
+            soulDizziness= jobData.JobStatsList[jobData.JobLevel - 1].SoulDizziness;
         }
         else
         {
@@ -55,10 +56,12 @@ public class GivingData : MonoBehaviour
             sa = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].soulAtk;
             pd = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].physicalDfs;
             sd = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].soulDfs;
-            miss = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].miss;
+            nim = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].nim;
             hit = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].hit;
             Speed = EnemyData.EnemyStatsList[EnemyData.EnemyLevel-1].speed;
             AntiCri = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].AntiCri;
+            pAntiDizziness= EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].PhysicalAntiDizziness;
+            sAntiDizziness= EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].SoulAntiDizziness;
             melee = 100;
             remote = 100;
         }

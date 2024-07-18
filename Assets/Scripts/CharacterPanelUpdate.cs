@@ -8,7 +8,7 @@ public class CharacterPanelUpdate : MonoBehaviour
     public static CharacterPanelUpdate Instance;
     public int currentLevel;
     public Image CharacterAvatar;
-    public Text jobName,level, hp, sp, pa, sa, pd, sd, hit, nim, spd, cri, melee, remote;
+    public Text jobName, level, hp, sp, pa, sa, pd, sd, hit, nim, spd, cri, melee, remote, physicalDizziness, soulDizziness;
     public GameObject playerSlot;
     // Start is called before the first frame update
     void Awake()
@@ -44,5 +44,7 @@ public class CharacterPanelUpdate : MonoBehaviour
         cri.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].critical.ToString();
         melee.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].melee.ToString();
         remote.text = PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel-1].remote.ToString();
+        physicalDizziness.text=PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel - 1].PhysicalDizziness.ToString();
+        soulDizziness.text= PartyPanel.Instance.PlayerParty.CharacterList[i].JobStatsList[currentLevel - 1].SoulDizziness.ToString();
     }
 }
