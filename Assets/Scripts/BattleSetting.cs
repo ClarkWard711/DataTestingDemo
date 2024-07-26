@@ -113,7 +113,7 @@ public class BattleSetting : MonoBehaviour
         }
         CheckPositionID();
         ComparePosition();
-        BattleUnitsList.Sort((x, y) => x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
+        BattleUnitsList.Sort((x, y) => -x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
         State = BattleState.Start;
         StartCoroutine(TurnAction(2f, "对战开始"));
     }
