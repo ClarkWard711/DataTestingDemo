@@ -330,6 +330,29 @@ public class OdorikoHolder : JobSkillHolder
         StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放日：终曲"));
         BattleSetting.Instance.ActionEnd();
     }
+
+    public IEnumerator sunReverse(int Spcost, OdoSkillKind odoSkillKind)
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            SunFinaleTag Tag = SunFinaleTag.CreateInstance<SunFinaleTag>();
+            Tag.isCharged = true;
+            Tag.AtkUnit = BattleSetting.Instance.CurrentActUnit;
+            Tag.DfsUnit = BattleSetting.Instance.CurrentActUnitTarget;
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Tag);
+        }
+        else
+        {
+            SunFinaleTag Tag = SunFinaleTag.CreateInstance<SunFinaleTag>();
+            Tag.AtkUnit = BattleSetting.Instance.CurrentActUnit;
+            Tag.DfsUnit = BattleSetting.Instance.CurrentActUnitTarget;
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Tag);
+        }
+        StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放日：终曲"));
+        BattleSetting.Instance.ActionEnd();
+    }
     #endregion
     public override void ActionEndCallback()
     {

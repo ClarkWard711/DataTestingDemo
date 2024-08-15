@@ -21,7 +21,8 @@ public class SunFinaleTag : OdorikoTag
 
     public override void OnTurnEndCallback()
     {
-        int damage;
-        damage = BattleSetting.Instance.DamageCountingByUnit(AtkUnit, DfsUnit, AttackType.Physical);
+        int physicalDamage,soulDamage;
+        physicalDamage = Mathf.CeilToInt(0.8f * BattleSetting.Instance.DamageCountingByUnit(AtkUnit, DfsUnit, AttackType.Physical));
+        soulDamage = Mathf.CeilToInt(0.8f * BattleSetting.Instance.DamageCountingByUnit(AtkUnit, DfsUnit, AttackType.Soul));
     }
 }
