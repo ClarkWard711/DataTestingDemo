@@ -66,6 +66,7 @@ public class BattleSetting : MonoBehaviour
     public bool isChooseFinished = false;//玩家选完了没
     public bool isCri;
     public bool isActionEnding = false;
+    public bool isTurnEnding = false;
 
     float alpha;//颜色透明度
     //float DamageMultiplier = 1f;
@@ -274,9 +275,10 @@ public class BattleSetting : MonoBehaviour
             GameStateText.text = "Miss";
             StartCoroutine(ShowText(2f));
         }*/
-        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
+        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttakeType);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         StartCoroutine(ShowText(2f));
+        //受击回调
         StartCoroutine(OnHit());
         StartCoroutine(BeingHit());
         CurrentActUnitTarget = null;
@@ -285,20 +287,20 @@ public class BattleSetting : MonoBehaviour
         ActionEnd();
     }
 
-    public IEnumerator DealDamageBonus(int Damage)
+    public IEnumerator DealDamageBonus(int Damage,AttackType attackType)
     {
         State = BattleState.Middle;
-        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
+        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成追击伤害" + Damage;
         StartCoroutine(ShowText(1f));
         CurrentActUnitTarget = null;
         yield return new WaitForSeconds(1f);
     }
 
-    public IEnumerator DealCounterDamage(int Damage)
+    public IEnumerator DealCounterDamage(int Damage,AttackType attackType)
     {
         State = BattleState.Middle;
-        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
+        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成反击伤害" + Damage;
         StartCoroutine(ShowText(1f));
         CurrentActUnitTarget = null;
@@ -425,6 +427,7 @@ public class BattleSetting : MonoBehaviour
     /// <returns></returns>
     IEnumerator EndTurn()
     {
+        isTurnEnding = true;
         BattleUnitsList.AddRange<GameObject>(BattleUnitsListToBeLaunched);
         BattleUnitsListToBeLaunched.Clear();
         foreach (GameObject character in BattleUnitsList)
@@ -458,9 +461,20 @@ public class BattleSetting : MonoBehaviour
         Debug.Log("delay Finished");
         // 在这里执行需要延迟的后续操作
     }
+
+    public IEnumerator MethodActivateDelay(UnityAction action,float delay)
+    {
+        action?.Invoke();
+        Debug.Log("delaying");
+        yield return new WaitForSeconds(delay);
+        Debug.Log("delay Finished");
+        // 在这里执行需要延迟的后续操作
+    }
     #endregion
 
     #region SetColor
+    //todo:设置不同颜色 
+
     void SetColorTo0(Text text)
     {
         text.color = new Color(text.color.r, text.color.g, text.color.b, 0);
@@ -1022,7 +1036,9 @@ public class BattleSetting : MonoBehaviour
                 }
             }
             TagList.RemoveAll(tag => tag.TurnLast == 0 && tag.TagKind == Tag.Kind.turnLessen);
+            TagList.RemoveAll(tag => tag.quantity == 0 && tag.TagKind == Tag.Kind.accumulable);
             CheckTagList(unit);
+            isTurnEnding = false;
             //unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
             //unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
         }
@@ -1081,7 +1097,7 @@ public class BattleSetting : MonoBehaviour
         UpdateSliderChange();
     }
     /// <summary>
-    /// 回合结束回调
+    /// 行动结束回调
     /// </summary>
     public void ActionEnd()
     {
@@ -1127,5 +1143,17 @@ public class BattleSetting : MonoBehaviour
             return false;
         }
     }
-
+    /// <summary>
+    /// 执行一些其他情况的伤害
+    /// </summary>
+    /// <param name="Damage"></param>
+    /// <param name="atkUnit"></param>
+    /// <param name="dfsUnit"></param>
+    public void DealDamageExtra(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType)
+    {
+        dfsUnit.GetComponent<GivingData>().takeDamage(Damage, attackType);
+        //GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
+        //StartCoroutine(ShowText(2f));
+        CurrentActUnitTarget = null;
+    }
 }

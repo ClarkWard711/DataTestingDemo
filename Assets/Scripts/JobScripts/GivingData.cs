@@ -79,13 +79,13 @@ public class GivingData : MonoBehaviour
             //Debug.Log("变没了2");
         }
     }
-    public void takeDamage(int Damage)
+    public void takeDamage(int Damage,AttackType attackType)
     {
         currentHP -= Damage;
-        StartCoroutine(FloatingNumber(Damage));
+        StartCoroutine(FloatingNumber(Damage, attackType));
     }
 
-    IEnumerator FloatingNumber(int Damage)
+    IEnumerator FloatingNumber(int Damage, AttackType attackType)
     {
         GameObject obj = Instantiate(DamagePrefab, BasePosition.transform);
         obj.GetComponent<Text>().text = "-" + Damage;
@@ -169,7 +169,17 @@ public class GivingData : MonoBehaviour
         {
             if (existingTag.GetType() == tag.GetType())
             {
-                existingTag.TurnLast += existingTag.TurnAdd;
+                switch (existingTag.TagKind)
+                {
+                    case Tag.Kind.turnLessen:
+                        existingTag.TurnLast += existingTag.TurnAdd;
+                        break;
+                    case Tag.Kind.accumulable:
+                        existingTag.quantity += existingTag.quantity;
+                        break;
+                    default:
+                        break;
+                }
                 return;
             }
         }

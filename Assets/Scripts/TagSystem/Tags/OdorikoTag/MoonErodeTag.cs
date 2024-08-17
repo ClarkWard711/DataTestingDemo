@@ -26,6 +26,6 @@ public class MoonErodeTag : OdorikoTag
         DfsUnit = BattleSetting.Instance.CurrentActUnit;
         int damage = BattleSetting.Instance.DamageCountingByUnit(AtkUnit,DfsUnit,AttackType.Physical);
         damage = Mathf.CeilToInt(damage * 0.5f);
-        OdorikoHolder.Instance.StartCoroutine(BattleSetting.Instance.DealCounterDamage(damage));
+        OdorikoHolder.Instance.StartCoroutine(BattleSetting.Instance.DealCounterDamage(damage, AttackType.Physical));
     }
 }

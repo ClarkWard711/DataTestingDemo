@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoonDukeTag : OdorikoTag
 {
     public int DamageToSelf;
+    private AttackType attackType;
     public MoonDukeTag()
     {
         odoTagKind = OdoTagKind.Moon;
@@ -22,6 +23,7 @@ public class MoonDukeTag : OdorikoTag
     public void DamageDistribute()
     {
         int Damage = BattleSetting.Instance.DamageCounting(BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType);
+        attackType = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType;
         BattleSetting.Instance.TempDamage = Mathf.CeilToInt(Damage * 0.75f);
         DamageToSelf = Mathf.CeilToInt(Damage * 0.25f);
         
@@ -29,6 +31,6 @@ public class MoonDukeTag : OdorikoTag
 
     public void DealToSelf()
     {
-        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().takeDamage(DamageToSelf);
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().takeDamage(DamageToSelf, attackType);
     }
 }
