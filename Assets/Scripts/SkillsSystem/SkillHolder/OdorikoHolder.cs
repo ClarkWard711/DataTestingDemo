@@ -331,7 +331,7 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.ActionEnd();
     }
 
-    public IEnumerator sunReverse(int Spcost, OdoSkillKind odoSkillKind)
+    /*public IEnumerator sunReverse(int Spcost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
@@ -352,7 +352,7 @@ public class OdorikoHolder : JobSkillHolder
         }
         StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放日：终曲"));
         BattleSetting.Instance.ActionEnd();
-    }
+    }*/
     #endregion
     public override void ActionEndCallback()
     {

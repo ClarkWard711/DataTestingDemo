@@ -20,5 +20,15 @@ public class SunReverse : OdorikoSkill
         //OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.sunReverse(SpCost, odoSkillKind));
         OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
         OdorikoHolder.Instance.SpCounter(SpCost, odoSkillKind);
+
+        foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
+        {
+            var odorikoTagList = enemy.GetComponent<GivingData>().tagList.FindAll(tag => tag is OdorikoTag);
+
+            if (odorikoTagList.Count == 0)
+            {
+                continue;
+            }
+        }
     }
 }

@@ -36,15 +36,7 @@ public class SunFinaleTag : OdorikoTag
                 {
                     continue;
                 }
-
-                for (int i = 0; i < odorikoTagList.Count; i++)
-                {
-                    var tag = odorikoTagList[i] as OdorikoTag;
-                    if (tag.odoTagKind == OdoTagKind.Moon)
-                    {
-                        containMoonCount++;
-                    }
-                }
+                containMoonCount++;
             }
 
             foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
@@ -55,30 +47,19 @@ public class SunFinaleTag : OdorikoTag
                 {
                     continue;
                 }
-
-                for (int i = 0; i < odorikoTagList.Count; i++)
-                {
-                    var tag = odorikoTagList[i] as OdorikoTag;
-                    if (tag.odoTagKind == OdoTagKind.Moon)
-                    {
-                        containMoonCount++;
-                    }
-                }
+                containMoonCount++;
             }
 
             containMoonCount = Mathf.RoundToInt(containMoonCount / 2);
 
-            for (int i = 0; i < containMoonCount; i++)
+            if (isCharged)
             {
-                if (isCharged)
-                {
-                    BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical), 0.1f));
-                    BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(soulDamage, AtkUnit, DfsUnit, AttackType.Soul), 0.1f));
-                }
-                else
-                {
-                    BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical), 0.1f));
-                }
+                BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical), 0.1f, containMoonCount));
+                BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(soulDamage, AtkUnit, DfsUnit, AttackType.Soul), 0.1f, containMoonCount));
+            }
+            else
+            {
+                BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical), 0.1f, containMoonCount));
             }
         }
 

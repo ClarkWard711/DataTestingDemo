@@ -462,13 +462,16 @@ public class BattleSetting : MonoBehaviour
         // 在这里执行需要延迟的后续操作
     }
 
-    public IEnumerator MethodActivateDelay(UnityAction action,float delay)
+    public IEnumerator MethodActivateDelay(UnityAction action,float delay,int time)
     {
-        action?.Invoke();
-        Debug.Log("delaying");
-        yield return new WaitForSeconds(delay);
-        Debug.Log("delay Finished");
-        // 在这里执行需要延迟的后续操作
+        for (int i = 0; i < time; i++)
+        {
+            action?.Invoke();
+            Debug.Log("delaying");
+            yield return new WaitForSeconds(delay);
+            Debug.Log("delay Finished");
+            // 在这里执行需要延迟的后续操作
+        }
     }
     #endregion
 
@@ -508,6 +511,7 @@ public class BattleSetting : MonoBehaviour
         {
             State = BattleState.PlayerTurn;
             CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
+            CheckSP();
             UpdateUIPanel();
             StartCoroutine(TurnAction(1f, "你的回合"));
         }
@@ -1155,5 +1159,12 @@ public class BattleSetting : MonoBehaviour
         //GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         //StartCoroutine(ShowText(2f));
         CurrentActUnitTarget = null;
+    }
+    /// <summary>
+    /// 检测技能sp是否足够
+    /// </summary>
+    private void CheckSP()
+    {
+
     }
 }
