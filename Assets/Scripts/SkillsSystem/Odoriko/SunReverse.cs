@@ -20,15 +20,25 @@ public class SunReverse : OdorikoSkill
         //OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.sunReverse(SpCost, odoSkillKind));
         OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
         OdorikoHolder.Instance.SpCounter(SpCost, odoSkillKind);
-
+        List<GameObject> EnemiesToBeAttacked = new();
         foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
         {
-            var odorikoTagList = enemy.GetComponent<GivingData>().tagList.FindAll(tag => tag is OdorikoTag);
-
-            if (odorikoTagList.Count == 0)
+            if (enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag))
             {
-                continue;
+                EnemiesToBeAttacked.Add(enemy);
             }
+        }
+
+        foreach (var enemy in EnemiesToBeAttacked)
+        {
+            var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical);
+
+            if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+            {
+                damage = Mathf.CeilToInt(1.25f * damage);
+            }
+
+            BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical);
         }
     }
 }

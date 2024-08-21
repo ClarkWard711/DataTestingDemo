@@ -30,24 +30,18 @@ public class SunFinaleTag : OdorikoTag
 
             foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
             {
-                var odorikoTagList = enemy.GetComponent<GivingData>().tagList.FindAll(tag => tag is OdorikoTag);
-
-                if (odorikoTagList.Count == 0)
+                if (enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag))
                 {
-                    continue;
+                    containMoonCount++;
                 }
-                containMoonCount++;
             }
 
             foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
             {
-                var odorikoTagList = player.GetComponent<GivingData>().tagList.FindAll(tag => tag is OdorikoTag);
-
-                if (odorikoTagList.Count == 0)
+                if (player.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag))
                 {
-                    continue;
+                    containMoonCount++;
                 }
-                containMoonCount++;
             }
 
             containMoonCount = Mathf.RoundToInt(containMoonCount / 2);
