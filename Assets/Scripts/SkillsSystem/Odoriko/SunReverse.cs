@@ -37,6 +37,10 @@ public class SunReverse : OdorikoSkill
                 if (tag.TagKind == Tag.Kind.turnLessen)
                 {
                     tag.TurnLast++;
+                    if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+                    {
+                        tag.TurnLast++;
+                    }
                 }
             }
         }
