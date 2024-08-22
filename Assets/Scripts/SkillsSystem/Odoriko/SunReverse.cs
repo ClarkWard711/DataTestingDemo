@@ -29,6 +29,18 @@ public class SunReverse : OdorikoSkill
             }
         }
 
+        foreach (var player in BattleSetting.Instance.RemainingPlayerUnits) 
+        {
+            List<Tag> odorikoTags = player.GetComponent<GivingData>().tagList.FindAll(tag => tag is OdorikoTag);
+            foreach(var tag in odorikoTags)
+            {
+                if (tag.TagKind == Tag.Kind.turnLessen)
+                {
+                    tag.TurnLast++;
+                }
+            }
+        }
+
         foreach (var enemy in EnemiesToBeAttacked)
         {
             var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical);
