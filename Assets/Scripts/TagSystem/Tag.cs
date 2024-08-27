@@ -32,11 +32,6 @@ public abstract class Tag : ScriptableObject
     {
 
     }
-
-    public virtual void BeforeActionApplied(UnityAction method)
-    {
-
-    }
     //命中前后回调点
     public UnityAction OnHit, BeforeHit, BeingHit;
 }
