@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SunProtection : MonoBehaviour
+public class SunProtection : OdorikoSkill
 {
-    // Start is called before the first frame update
-    void Start()
+    public SunProtection()
     {
-        
+        SpCost = 15;
+        odoSkillKind = OdoSkillKind.Sun;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Apply(GameObject unit)
     {
-        
+        if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
+        base.Apply(unit);
+        BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
+        BattleSetting.Instance.State = BattleState.Middle;
+        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.sunProtection(SpCost, odoSkillKind));
     }
 }

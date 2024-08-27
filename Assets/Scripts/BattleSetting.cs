@@ -1039,8 +1039,8 @@ public class BattleSetting : MonoBehaviour
                     tag.TurnLast--;
                 }
             }
-            TagList.RemoveAll(tag => tag.TurnLast == 0 && tag.TagKind == Tag.Kind.turnLessen);
-            TagList.RemoveAll(tag => tag.quantity == 0 && tag.TagKind == Tag.Kind.accumulable);
+            TagList.RemoveAll(tag => tag.TurnLast <= 0 && tag.TagKind == Tag.Kind.turnLessen);
+            TagList.RemoveAll(tag => tag.quantity <= 0 && tag.TagKind == Tag.Kind.accumulable);
             CheckTagList(unit);
             isTurnEnding = false;
             //unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
@@ -1155,6 +1155,10 @@ public class BattleSetting : MonoBehaviour
     /// <param name="dfsUnit"></param>
     public void DealDamageExtra(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType)
     {
+        if (Damage == -1) 
+        {
+            Damage = DamageCountingByUnit(atkUnit, dfsUnit, attackType);
+        }
         dfsUnit.GetComponent<GivingData>().takeDamage(Damage, attackType);
         //GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         //StartCoroutine(ShowText(2f));

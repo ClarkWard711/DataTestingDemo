@@ -17,7 +17,7 @@ public class MoonLight : OdorikoSkill
         base.Apply(unit);
         OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Moon);
         OdorikoHolder.Instance.SpCounter(SpCost,odoSkillKind);
-        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Defense.CreateInstance<Defense>());
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(MoonlightTag.CreateInstance<MoonlightTag>());
         BattleSetting.Instance.CheckTagList(unit);
         if (unit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging")) 
         {
@@ -31,6 +31,13 @@ public class MoonLight : OdorikoSkill
         }
         BattleSetting.Instance.State = BattleState.Middle;
         OdorikoHolder.Instance.CoroutineStart(BattleSetting.Instance.ShowActionText("月光"));
+
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "SunProtectionTag"))
+        {
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.RemoveAll(Tag => Tag.TagName == "SunProtectionTag");
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(MoonlightTag.CreateInstance<MoonlightTag>());
+            //到时动画播两遍
+        }
         BattleSetting.Instance.ActionEnd();
     }
 }
