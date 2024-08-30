@@ -193,4 +193,12 @@ public class GivingData : MonoBehaviour
     {
         StartCoroutine(enumerator);
     }
+
+    /// <summary>
+    /// 检测技能sp是否足够
+    /// </summary>
+    public void CheckSP()
+    {
+
+    }
 }

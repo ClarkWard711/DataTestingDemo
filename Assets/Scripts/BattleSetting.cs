@@ -461,7 +461,13 @@ public class BattleSetting : MonoBehaviour
         Debug.Log("delay Finished");
         // 在这里执行需要延迟的后续操作
     }
-
+    /// <summary>
+    /// 重复执行某一方法并产生延迟
+    /// </summary>
+    /// <param name="action"></param>
+    /// <param name="delay"></param>
+    /// <param name="time"></param>
+    /// <returns></returns>
     public IEnumerator MethodActivateDelay(UnityAction action,float delay,int time)
     {
         for (int i = 0; i < time; i++)
@@ -511,7 +517,7 @@ public class BattleSetting : MonoBehaviour
         {
             State = BattleState.PlayerTurn;
             CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
-            CheckSP();
+            CurrentActUnit.GetComponent<GivingData>().CheckSP();
             UpdateUIPanel();
             StartCoroutine(TurnAction(1f, "你的回合"));
         }

@@ -30,7 +30,7 @@ public class SunFinaleTag : OdorikoTag
 
             foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
             {
-                if (enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag))
+                if (enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon))
                 {
                     containMoonCount++;
                 }
@@ -38,7 +38,7 @@ public class SunFinaleTag : OdorikoTag
 
             foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
             {
-                if (player.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag))
+                if (player.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon))
                 {
                     containMoonCount++;
                 }

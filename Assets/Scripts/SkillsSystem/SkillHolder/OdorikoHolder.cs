@@ -115,7 +115,7 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.GameStateText.text = "日斑";
         StartCoroutine(BattleSetting.Instance.ShowText(1f));
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
-        StartCoroutine(BattleSetting.Instance.DealDamage(3f));
+        StartCoroutine(BattleSetting.Instance.DealDamage(2f));
     }
     #endregion
 
@@ -516,6 +516,52 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.ActionEnd();
     }
 
+    public IEnumerator sunReverse(int Spcost,OdoSkillKind odoSkillKind)
+    {
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+        OdorikoHolder.Instance.SpCounter(Spcost, odoSkillKind);
+        List<GameObject> EnemiesToBeAttacked = new();
+        foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
+        {
+            if (enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon))
+            {
+                EnemiesToBeAttacked.Add(enemy);
+            }
+        }
+
+        foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+        {
+            List<Tag> odorikoTags = player.GetComponent<GivingData>().tagList.FindAll(tag => tag is OdorikoTag && ((OdorikoTag)tag).odoTagKind == OdorikoTag.OdoTagKind.Moon);
+            foreach (var tag in odorikoTags)
+            {
+                if (tag.TagKind == Tag.Kind.turnLessen)
+                {
+                    tag.TurnLast++;
+                    if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+                    {
+                        tag.TurnLast++;
+                    }
+                }
+            }
+        }
+
+        foreach (var enemy in EnemiesToBeAttacked)
+        {
+            var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical);
+
+            if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+            {
+                damage = Mathf.CeilToInt(1.25f * damage);
+            }
+            
+            BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical);
+        }
+
+        StartCoroutine(BattleSetting.Instance.ShowActionText("释放日溯"));
+        yield return new WaitForSeconds(2f);
+        BattleSetting.Instance.ActionEnd();
+    }
+
     public IEnumerator sunProtection(int Spcost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
@@ -535,6 +581,64 @@ public class OdorikoHolder : JobSkillHolder
         }
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(SunProtectionTag.CreateInstance<SunProtectionTag>());
         StartCoroutine(BattleSetting.Instance.ShowActionText("释放日护"));
+        yield return new WaitForSeconds(1f);
+        BattleSetting.Instance.ActionEnd();
+    }
+
+    public IEnumerator sunCurse(int Spcost, OdoSkillKind odoSkillKind)
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+
+        var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+        damage = Mathf.CeilToInt(1.5f * damage);
+        BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+
+        var moonEnemyList = new List<GameObject>();
+        foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
+        {
+            if (enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon)) 
+            {
+                moonEnemyList.Add(enemy);
+            }
+        }
+
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            if (moonEnemyList.Count > 1)
+            {
+                var enemy = moonEnemyList[Random.Range(0, moonEnemyList.Count)];
+                var tagList = enemy.GetComponent<GivingData>().tagList.FindAll(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon);
+                moonEnemyList.Remove(enemy);
+                var tag = tagList[Random.Range(0, tagList.Count)];
+                BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+
+                var secondEnemy = moonEnemyList[Random.Range(0, moonEnemyList.Count)];
+                var secondTagList = secondEnemy.GetComponent<GivingData>().tagList.FindAll(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon);
+                var secondTag = secondTagList[Random.Range(0, secondTagList.Count)];
+                BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(secondTag);
+            }
+            else
+            {
+                if (moonEnemyList.Count != 0)
+                {
+                    var tagList = moonEnemyList[Random.Range(0, moonEnemyList.Count)].GetComponent<GivingData>().tagList.FindAll(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon);
+                    var tag = tagList[Random.Range(0, tagList.Count)];
+                    BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+                }
+            }
+        }
+        else
+        {
+            if (moonEnemyList.Count != 0)
+            {
+                var tagList = moonEnemyList[Random.Range(0, moonEnemyList.Count)].GetComponent<GivingData>().tagList.FindAll(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon);
+                var tag = tagList[Random.Range(0, tagList.Count)];
+                BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+            }
+        }
+
+        StartCoroutine(BattleSetting.Instance.ShowActionText("释放日呪"));
         yield return new WaitForSeconds(1f);
         BattleSetting.Instance.ActionEnd();
     }

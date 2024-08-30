@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = ("Skill/OdorikoSkill/SunReverse"), fileName = ("SunReverse"))]
-
-public class SunReverse : OdorikoSkill
+public class SunCurse : OdorikoSkill
 {
-    public SunReverse()
+    public SunCurse()
     {
         SpCost = 18;
         odoSkillKind = OdoSkillKind.Sun;
@@ -16,7 +14,8 @@ public class SunReverse : OdorikoSkill
     {
         if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
         base.Apply(unit);
+        BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
         BattleSetting.Instance.State = BattleState.Middle;
-        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.sunReverse(SpCost, odoSkillKind));
+        OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.sunCurse(SpCost, odoSkillKind));
     }
 }
