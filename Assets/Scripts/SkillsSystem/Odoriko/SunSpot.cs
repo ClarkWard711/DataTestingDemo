@@ -14,6 +14,7 @@ public class SunSpot : OdorikoSkill
     {
         if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
         base.Apply(unit);
+        BattleSetting.Instance.State = BattleState.Middle;
         BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
         OdorikoHolder.Instance.CoroutineStart(OdorikoHolder.Instance.sunSpot(SpCost, odoSkillKind));
     }

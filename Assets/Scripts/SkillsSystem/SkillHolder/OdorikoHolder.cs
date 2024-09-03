@@ -643,6 +643,29 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.ActionEnd();
     }
 
+    public IEnumerator sunRhythm(int Spcost, OdoSkillKind odoSkillKind)
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+
+        var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+        damage = Mathf.CeilToInt(1.5f * damage);
+        BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+
+        }
+        else
+        {
+
+        }
+
+        StartCoroutine(BattleSetting.Instance.ShowActionText("释放日之律动"));
+        yield return new WaitForSeconds(1f);
+        BattleSetting.Instance.ActionEnd();
+    }
+
     /*public IEnumerator sunReverse(int Spcost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
