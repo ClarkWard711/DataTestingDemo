@@ -8,7 +8,7 @@ public class SunProtectionTag : OdorikoTag
     public SunProtectionTag()
     {
         odoTagKind = OdoTagKind.Sun;
-        TagName = "SunProtectionTag";
+        TagName = "SunProtection";
         TagKind = Kind.trigger;
         Effect = effect.good;
         BuffTarget = target.ally;

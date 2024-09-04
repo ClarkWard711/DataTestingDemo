@@ -9,7 +9,7 @@ public class SunFinaleTag : OdorikoTag
     public SunFinaleTag()
     {
         odoTagKind = OdoTagKind.Sun;
-        TagName = "SunFinaleTag";
+        TagName = "SunFinale";
         TagKind = Kind.accumulable;
         quantity = 1;
         Effect = effect.bad;

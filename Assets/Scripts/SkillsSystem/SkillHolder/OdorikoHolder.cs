@@ -649,16 +649,19 @@ public class OdorikoHolder : JobSkillHolder
         OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
 
         var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
-        damage = Mathf.CeilToInt(1.5f * damage);
         BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
-
+            SunRhythmAdvancedTag tag = SunRhythmAdvancedTag.CreateInstance<SunRhythmAdvancedTag>();
+            tag.atkUnit = BattleSetting.Instance.CurrentActUnit;
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
         }
         else
         {
-
+            SunRhythmTag tag = SunRhythmTag.CreateInstance<SunRhythmTag>();
+            tag.atkUnit = BattleSetting.Instance.CurrentActUnit;
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
         }
 
         StartCoroutine(BattleSetting.Instance.ShowActionText("释放日之律动"));

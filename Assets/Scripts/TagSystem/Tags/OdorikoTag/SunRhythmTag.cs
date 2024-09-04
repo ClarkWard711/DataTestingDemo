@@ -2,17 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SunRhythmTag : MonoBehaviour
+public class SunRhythmTag : OdorikoTag
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject atkUnit;
+    public SunRhythmTag()
     {
-        
+        odoTagKind = OdoTagKind.Moon;
+        TagName = "SunRhythm";
+        TagKind = Kind.turnLessen;
+        TurnAdd = 3;
+        TurnLast = 3;
+        Effect = effect.bad;
+        BuffTarget = target.enemy;
+        Impact = impactOnMultiplier.AllDeal;
+        conditionMultiplier = 0.25f;
+        BeingHit += DealDamage;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DealDamage()
     {
-        
+        int damage = Mathf.CeilToInt(conditionMultiplier * BattleSetting.Instance.DamageCountingByUnit(atkUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical));
+        BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealDamageBonus(damage, AttackType.Physical));
     }
 }

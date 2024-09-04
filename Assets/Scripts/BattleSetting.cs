@@ -293,7 +293,6 @@ public class BattleSetting : MonoBehaviour
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成追击伤害" + Damage;
         StartCoroutine(ShowText(1f));
-        CurrentActUnitTarget = null;
         yield return new WaitForSeconds(1f);
     }
 
@@ -303,7 +302,6 @@ public class BattleSetting : MonoBehaviour
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成反击伤害" + Damage;
         StartCoroutine(ShowText(1f));
-        CurrentActUnitTarget = null;
         yield return new WaitForSeconds(1f);
     }
 
