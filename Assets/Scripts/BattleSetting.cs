@@ -1159,6 +1159,7 @@ public class BattleSetting : MonoBehaviour
     /// <param name="dfsUnit"></param>
     public void DealDamageExtra(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType)
     {
+        //todo: add callback
         if (Damage == -1) 
         {
             Damage = DamageCountingByUnit(atkUnit, dfsUnit, attackType);
