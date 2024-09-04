@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[CreateAssetMenu(menuName = ("Skill/OdorikoSkill/SunRhythm"), fileName = ("SunRhythm"))]
 public class SunRhythm : OdorikoSkill
 {
     public SunRhythm()

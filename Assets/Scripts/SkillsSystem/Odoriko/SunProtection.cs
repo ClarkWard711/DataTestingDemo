@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[CreateAssetMenu(menuName = ("Skill/OdorikoSkill/SunProtection"), fileName = ("SunProtection"))]
 public class SunProtection : OdorikoSkill
 {
     public SunProtection()

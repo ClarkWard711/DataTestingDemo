@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22cb1e3e7d387473ea7610f7bcee6133, type: 3}
+  m_Name: SkillContainer_Odoriko
+  m_EditorClassIdentifier: 
+  SkillList:
+  - {fileID: 11400000, guid: 93040eabe6f8449138a3fde32d3cc08d, type: 2}
+  - {fileID: 11400000, guid: 642a7f06856684d1a80300b51fbb5a41, type: 2}
+  - {fileID: 11400000, guid: b2764388d7dde42c3be088d9511d18c2, type: 2}
+  - {fileID: 11400000, guid: a27246eff76d94ca29659acaef8365ca, type: 2}
+  - {fileID: 11400000, guid: 0d4d0361db5774fc5bf4dfea20f6ce4c, type: 2}
+  - {fileID: 11400000, guid: b96495cfe2cff4de4b2bd543fc65d2f0, type: 2}
+  - {fileID: 11400000, guid: 753dc759338a247d2a2a46bf01cb6873, type: 2}
+  - {fileID: 11400000, guid: de28930c328d143d28df76a360119083, type: 2}
+  - {fileID: 11400000, guid: 679c503a34e144f20b79a064c7b4ea14, type: 2}
+  - {fileID: 11400000, guid: 31410c9d93e584e648181024d1d35923, type: 2}
+  - {fileID: 11400000, guid: e0684786d12d64703902f37cd1846d26, type: 2}
+  - {fileID: 11400000, guid: fab4fb70db2424bcaa5ca1a443bbc50a, type: 2}
+  - {fileID: 11400000, guid: afd73ee41bade4f808705c8eddb88e6d, type: 2}
+  - {fileID: 11400000, guid: b812fefdcdb5a4f7aa286866e6042185, type: 2}
+  - {fileID: 11400000, guid: 38c41b9a73c96476791c46ea8c5e1142, type: 2}
+  - {fileID: 11400000, guid: 0beef398be9d540acba3bff7cfa68a61, type: 2}

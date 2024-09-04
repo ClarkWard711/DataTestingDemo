@@ -13,7 +13,7 @@ public class JobSkillHolder : MonoBehaviour
     public Button[] AdvancedSkillButton;
     public Text[] BasicSkillText;
     public Text[] AdvancedSkillText;
-    void Awake()
+    public virtual void Awake()
     {
         BasicSkillButton = BattleSetting.Instance.BasicPanel.GetComponentsInChildren<Button>();
         AdvancedSkillButton = BattleSetting.Instance.AdvancedPanel.GetComponentsInChildren<Button>();

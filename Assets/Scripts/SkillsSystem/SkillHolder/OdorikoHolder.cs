@@ -10,8 +10,9 @@ public class OdorikoHolder : JobSkillHolder
     public float SpCostMultiplier = 1f;
     public bool LastTurnSun = false, LastTurnMoon = false, usedSkill = false;
 
-    void Awake()
+    public override void Awake()
     {
+        base.Awake();
         if (Instance == null)
         {
             Instance = this;

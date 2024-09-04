@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7e991e330fb432e9b1ddc44c0defa4, type: 3}
+  m_Name: JobData_Odoriko
+  m_EditorClassIdentifier: 
+  jobAvatarImage: {fileID: 21300000, guid: f47091b22dc58405a846664231ea4a79, type: 3}
+  jobName: Odoriko
+  jobInitialLevel: 1
+  jobIndex: 1
+  currentHP: 120
+  currentSP: 50
+  jobLevel: 1
+  SkillsID: 00000000000000000000000000000000
+  JobPrefab: {fileID: 1749416364117990524, guid: 83dbd5385707445259a45123a0e61e67, type: 3}
+  dataFile: {fileID: 4900000, guid: 8c0baab37681d47eba63a40337331f7c, type: 3}
+  jobStatsList:
+  - maxHP: 120
+    maxSP: 50
+    physicalAttack: 30
+    soulAttack: 32
+    physicalDefence: 20
+    soulDefence: 16
+    hit: 10
+    nimbleness: 5
+    speed: 150
+    critical: 50
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
+  - maxHP: 140
+    maxSP: 60
+    physicalAttack: 35
+    soulAttack: 36
+    physicalDefence: 23
+    soulDefence: 18
+    hit: 11
+    nimbleness: 5
+    speed: 157
+    critical: 52
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
+  - maxHP: 160
+    maxSP: 70
+    physicalAttack: 40
+    soulAttack: 40
+    physicalDefence: 26
+    soulDefence: 20
+    hit: 12
+    nimbleness: 5
+    speed: 164
+    critical: 54
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
+  - maxHP: 180
+    maxSP: 80
+    physicalAttack: 45
+    soulAttack: 44
+    physicalDefence: 29
+    soulDefence: 22
+    hit: 13
+    nimbleness: 5
+    speed: 171
+    critical: 56
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
+  - maxHP: 200
+    maxSP: 90
+    physicalAttack: 50
+    soulAttack: 48
+    physicalDefence: 32
+    soulDefence: 24
+    hit: 14
+    nimbleness: 5
+    speed: 178
+    critical: 58
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
+  - maxHP: 220
+    maxSP: 100
+    physicalAttack: 55
+    soulAttack: 52
+    physicalDefence: 35
+    soulDefence: 26
+    hit: 15
+    nimbleness: 5
+    speed: 185
+    critical: 60
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
+  - maxHP: 240
+    maxSP: 110
+    physicalAttack: 60
+    soulAttack: 56
+    physicalDefence: 38
+    soulDefence: 28
+    hit: 16
+    nimbleness: 5
+    speed: 192
+    critical: 62
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
+  - maxHP: 260
+    maxSP: 120
+    physicalAttack: 65
+    soulAttack: 60
+    physicalDefence: 41
+    soulDefence: 30
+    hit: 17
+    nimbleness: 5
+    speed: 199
+    critical: 64
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
+  - maxHP: 280
+    maxSP: 130
+    physicalAttack: 70
+    soulAttack: 64
+    physicalDefence: 44
+    soulDefence: 32
+    hit: 18
+    nimbleness: 5
+    speed: 206
+    critical: 66
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
+  - maxHP: 300
+    maxSP: 140
+    physicalAttack: 75
+    soulAttack: 68
+    physicalDefence: 47
+    soulDefence: 34
+    hit: 19
+    nimbleness: 5
+    speed: 213
+    critical: 68
+    melee: 100
+    remote: 100
+    expPerLevel: 100
+    sxpPerLevel: 1000
+    PhysicalDizziness: 0
+    SoulDizziness: 0
