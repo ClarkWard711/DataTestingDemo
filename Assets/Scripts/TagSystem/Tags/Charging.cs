@@ -8,7 +8,7 @@ public class Charging : Tag
     {
         TagName = "Charging";
         Impact = impactOnMultiplier.AllDeal;
-        Multiplier = 2f;
+        Multiplier = 1f;
         TurnAdd = 2;
         TagKind = Kind.turnLessen;
         BuffTarget = target.self;

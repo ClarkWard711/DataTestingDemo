@@ -36,8 +36,8 @@ public class BattleSetting : MonoBehaviour
     public GameObject SkillList;//基础进阶技能显示
     bool isTextShowed = false;//基础进阶是否显示
     public GameObject BasicPanel, AdvancedPanel;//基础技能和进阶技能的panel
-    bool isBasicShowed = false;//基础技能是否显示
-    bool isAdvancedShowed = false;//进阶技能是否显示
+    public bool isBasicShowed = false;//基础技能是否显示
+    public bool isAdvancedShowed = false;//进阶技能是否显示
     List<int> SkillID = new List<int>();//技能ID
 
     public Text GameStateText;//对战状态文本
@@ -53,7 +53,7 @@ public class BattleSetting : MonoBehaviour
     public PartyMember PlayerPartyMember;//我方队伍角色
     public EnemyParty EnemyPartyMember;//敌方队伍角色
 
-    public bool isWaitForPlayerToChooseAction = false;//等待玩家选择操作
+    //public bool isWaitForPlayerToChooseAction = false;//等待玩家选择操作
     public bool isWaitForPlayerToChooseUnit = false;//等待玩家选择单位
     public bool isWaitForPlayerToChooseAlly = false;//等待玩家选择友方
     public bool isPressed = false;//回主世界是否按下
@@ -67,6 +67,8 @@ public class BattleSetting : MonoBehaviour
     public bool isCri;
     public bool isActionEnding = false;
     public bool isTurnEnding = false;
+    public bool canChangeAction = false;
+    bool isNormalAttack = false;
 
     float alpha;//颜色透明度
     //float DamageMultiplier = 1f;
@@ -191,6 +193,7 @@ public class BattleSetting : MonoBehaviour
 
     public void ToBattle()
     {
+        //Debug.Log(1);
         RemainingEnemyUnits = GameObject.FindGameObjectsWithTag("EnemyUnit");
         RemainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
         State = BattleState.Middle;
@@ -245,6 +248,10 @@ public class BattleSetting : MonoBehaviour
         AttackType ActAttakeType;
         ActAttakeType = CurrentActUnit.GetComponent<GivingData>().attackType;
         int Damage = DamageCounting(ActAttakeType);
+        if (CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging") && isNormalAttack) 
+        {
+            Damage = Mathf.CeilToInt(2f * Damage);
+        }
         //加入分配伤害检测
         /*if (CheckHit())
         {
@@ -284,6 +291,7 @@ public class BattleSetting : MonoBehaviour
         CurrentActUnitTarget = null;
         yield return new WaitForSeconds(time);
         CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
+        isNormalAttack = false;
         ActionEnd();
     }
 
@@ -334,14 +342,14 @@ public class BattleSetting : MonoBehaviour
         GameStateText.text = Action;
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
-        ActionEnd();
     }
 
     IEnumerator Move()
     {
         MovePanel.SetActive(true);
         yield return new WaitUntil(() =>isMoveFinished);
-        
+        canChangeAction = false;
+
         MovePanel.SetActive(false);
 
         if (State != BattleState.PlayerTurn) 
@@ -358,7 +366,9 @@ public class BattleSetting : MonoBehaviour
     IEnumerator Attack()
     {
         yield return new WaitUntil(() => isChooseFinished);
+        canChangeAction = false;
         isChooseFinished = false;
+        isNormalAttack = true;
         CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
         StartCoroutine(DealDamage(3f));
     }
@@ -525,15 +535,18 @@ public class BattleSetting : MonoBehaviour
 
     public void OnAtkButton()
     {
+        CheckCanChangeAction();
         if (State != BattleState.PlayerTurn) return;
-
+        canChangeAction = true;
         isWaitForPlayerToChooseUnit = true;
         StartCoroutine(Attack());
     }
 
     public void OnDefButton()
     {
+        CheckCanChangeAction();
         if (State != BattleState.PlayerTurn) return;
+        canChangeAction = false;
         CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Defense.CreateInstance<Defense>());
         CheckTagList(CurrentActUnit);
         State = BattleState.Middle;
@@ -542,7 +555,9 @@ public class BattleSetting : MonoBehaviour
 
     public void OnMoveButton()
     {
+        CheckCanChangeAction();
         if (State != BattleState.PlayerTurn) return;
+        canChangeAction = true;
         isWaitForPlayerToChooseUnit = false;
         CurrentActUnitTarget = null;
         State = BattleState.Middle;
@@ -553,7 +568,9 @@ public class BattleSetting : MonoBehaviour
 
     public void OnChargeButton()
     {
+        CheckCanChangeAction();
         if (State != BattleState.PlayerTurn) return;
+        canChangeAction = false;
         CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
         CheckTagList(CurrentActUnit);
         State = BattleState.Middle;
@@ -571,6 +588,18 @@ public class BattleSetting : MonoBehaviour
         {
             SkillList.SetActive(false);
             isTextShowed = false;
+        }
+
+        if (isBasicShowed)
+        {
+            BasicPanel.SetActive(false);
+            isBasicShowed = false;
+        }
+
+        if (isAdvancedShowed)
+        {
+            AdvancedPanel.SetActive(false);
+            isAdvancedShowed = false;
         }
     }
     
@@ -606,6 +635,7 @@ public class BattleSetting : MonoBehaviour
         }
     }
     #endregion
+
     /// <summary>
     /// 伤害计算
     /// </summary>
@@ -1005,6 +1035,43 @@ public class BattleSetting : MonoBehaviour
                 }
             }
         }
+
+        for (int i = 0; i < EnemyPositionsList.Count; i++)
+        {
+            if (EnemyPositionsList[i].transform.childCount != 0)
+            {
+                if (i < 3)
+                {
+                    GameObject Character = EnemyPositionsList[i].transform.GetChild(0).gameObject;
+                    List<Tag> TagList = Character.GetComponent<GivingData>().tagList;
+                    if (TagList.Exists(tag => tag.TagName == "Melee"))
+                    {
+                        continue;
+                    }
+                    else if (TagList.Exists(tag => tag.TagName == "Remote"))
+                    {
+                        TagList.Remove(TagList.Find(tag => tag.TagName == "Remote"));
+                    }
+                    Character.GetComponent<GivingData>().AddTagToCharacter(Melee.CreateInstance<Melee>());
+                    CheckTagList(Character);
+                }
+                else
+                {
+                    GameObject Character = EnemyPositionsList[i].transform.GetChild(0).gameObject;
+                    List<Tag> TagList = Character.GetComponent<GivingData>().tagList;
+                    if (TagList.Exists(tag => tag.TagName == "Remote"))
+                    {
+                        continue;
+                    }
+                    else if (TagList.Exists(tag => tag.TagName == "Melee"))
+                    {
+                        TagList.Remove(TagList.Find(tag => tag.TagName == "Melee"));
+                    }
+                    Character.GetComponent<GivingData>().AddTagToCharacter(Remote.CreateInstance<Remote>());
+                    CheckTagList(Character);
+                }
+            }
+        }
     }
     /// <summary>
     /// 更换位置id
@@ -1103,6 +1170,7 @@ public class BattleSetting : MonoBehaviour
         SkillID.Clear();
         SkillID.AddRange<int>(CurrentActUnit.GetComponent<GivingData>().jobData.SkillsID);
         UpdateSliderChange();
+        CurrentActUnit.GetComponent<JobSkillHolder>().AddSkillToButton();
     }
     /// <summary>
     /// 行动结束回调
@@ -1175,5 +1243,19 @@ public class BattleSetting : MonoBehaviour
     private void CheckSP()
     {
 
+    }
+
+    public void CheckCanChangeAction()
+    {
+        if (canChangeAction)
+        {
+            State = BattleState.PlayerTurn;
+            StopAllCoroutines();
+            isWaitForPlayerToChooseAlly = false;
+            isWaitForPlayerToChooseUnit = false;
+            isMoveFinished = true;
+            MovePanel.SetActive(false);
+            CurrentActUnit.GetComponent<JobSkillHolder>().StopAllCoroutines();
+        }
     }
 }

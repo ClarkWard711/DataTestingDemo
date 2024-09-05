@@ -111,7 +111,7 @@ public class GivingData : MonoBehaviour
     {
         int temp;
         temp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;
-        
+        Debug.Log(1);
         if (temp + deltaTemp >= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP)
         {
             deltaTemp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP - BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;

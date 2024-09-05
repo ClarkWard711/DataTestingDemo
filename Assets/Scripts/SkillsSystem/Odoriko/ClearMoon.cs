@@ -12,7 +12,6 @@ public class ClearMoon : OdorikoSkill
 
     public override void Apply(GameObject unit)
     {
-        if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
         base.Apply(unit);
         BattleSetting.Instance.isWaitForPlayerToChooseAlly = true;
         BattleSetting.Instance.State = BattleState.Middle;

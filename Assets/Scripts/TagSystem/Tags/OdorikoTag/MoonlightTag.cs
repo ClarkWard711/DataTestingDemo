@@ -13,7 +13,7 @@ public class MoonlightTag : OdorikoTag
         TurnAdd = 2;
         Effect = effect.good;
         BuffTarget = target.ally;
-        Impact = impactOnMultiplier.AllDeal;
+        Impact = impactOnMultiplier.PhysicalDeal;
         Multiplier = 1.2f;
     }
 }

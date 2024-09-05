@@ -13,7 +13,6 @@ public class MoonDuke : OdorikoSkill
 
     public override void Apply(GameObject unit)
     {
-        if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
         base.Apply(unit);
         BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
         BattleSetting.Instance.State = BattleState.Middle;

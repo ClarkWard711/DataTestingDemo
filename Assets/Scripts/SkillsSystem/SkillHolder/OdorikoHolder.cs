@@ -97,11 +97,12 @@ public class OdorikoHolder : JobSkillHolder
     }
 
     #region 基础
-    public IEnumerator sunSpot(int SpCost,OdoSkillKind odoSkillKind)
+    public IEnumerator moonLight(int SpCost, OdoSkillKind odoSkillKind)
     {
-        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
-        OdorikoHolder.Instance.DanceStepCheck(OdoSkillKind.Sun);
+        DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(MoonlightTag.CreateInstance<MoonlightTag>());
+        BattleSetting.Instance.CheckTagList(BattleSetting.Instance.CurrentActUnit);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
             SunSpReduce = true;
@@ -112,9 +113,40 @@ public class OdorikoHolder : JobSkillHolder
             SunSpReduce = true;
             SpCostMultiplier = 0.9f;
         }
+        BattleSetting.Instance.State = BattleState.Middle;
+        StartCoroutine(BattleSetting.Instance.ShowActionText("月光"));
+
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "SunProtectionTag"))
+        {
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.RemoveAll(Tag => Tag.TagName == "SunProtectionTag");
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(MoonlightTag.CreateInstance<MoonlightTag>());
+            //到时动画播两遍
+        }
+        BattleSetting.Instance.canChangeAction = false;
+        yield return new WaitForSeconds(1f);
+        BattleSetting.Instance.ActionEnd();
+    }
+
+    public IEnumerator sunSpot(int SpCost,OdoSkillKind odoSkillKind)
+    {
+        yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.canChangeAction = false;
+        DanceStepCheck(OdoSkillKind.Sun);
+        SpCounter(SpCost, odoSkillKind);
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            MoonSpReduce = true;
+            SpCostMultiplier = 0.8f;
+        }
+        else
+        {
+            MoonSpReduce = true;
+            SpCostMultiplier = 0.9f;
+        }
         BattleSetting.Instance.isChooseFinished = false;
         BattleSetting.Instance.GameStateText.text = "日斑";
         StartCoroutine(BattleSetting.Instance.ShowText(1f));
+        yield return new WaitForSeconds(1f);
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
         StartCoroutine(BattleSetting.Instance.DealDamage(2f));
     }
@@ -124,6 +156,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator scarletMoon(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
 
@@ -147,11 +181,13 @@ public class OdorikoHolder : JobSkillHolder
                 }
             }
             StartCoroutine(BattleSetting.Instance.ShowActionText("绯色月夜"));
+            yield return new WaitForSeconds(1f);
         }
         else
         {
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(ScarletMoon.CreateInstance<ScarletMoon>());
-            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放绯色月夜"));
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放绯色月夜"));
+            yield return new WaitForSeconds(1f);
         }
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "SunProtectionTag"))
@@ -182,7 +218,8 @@ public class OdorikoHolder : JobSkillHolder
             else
             {
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(ScarletMoon.CreateInstance<ScarletMoon>());
-                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放绯色月夜"));
+                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放绯色月夜"));
+                yield return new WaitForSeconds(1f);
             }
         }
         BattleSetting.Instance.ActionEnd();
@@ -191,6 +228,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator fullMoon(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
 
@@ -214,11 +253,13 @@ public class OdorikoHolder : JobSkillHolder
                 }
             }
             StartCoroutine(BattleSetting.Instance.ShowActionText("盈月"));
+            yield return new WaitForSeconds(1f);
         }
         else
         {
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(FullMoonTag.CreateInstance<FullMoonTag>());
-            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放盈月"));
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放盈月"));
+            yield return new WaitForSeconds(1f);
         }
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "SunProtectionTag"))
@@ -245,11 +286,13 @@ public class OdorikoHolder : JobSkillHolder
                     }
                 }
                 StartCoroutine(BattleSetting.Instance.ShowActionText("盈月"));
+                yield return new WaitForSeconds(1f);
             }
             else
             {
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(FullMoonTag.CreateInstance<FullMoonTag>());
-                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放盈月"));
+                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放盈月"));
+                yield return new WaitForSeconds(1f);
             }
         }
         BattleSetting.Instance.ActionEnd();
@@ -258,6 +301,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator clearMoon(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
@@ -280,11 +325,13 @@ public class OdorikoHolder : JobSkillHolder
                 }
             }
             StartCoroutine(BattleSetting.Instance.ShowActionText("清月"));
+            yield return new WaitForSeconds(1f);
         }
         else
         {
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(FullMoonTag.CreateInstance<ClearMoonTag>());
-            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "清月"));
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "清月"));
+            yield return new WaitForSeconds(1f);
         }
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "SunProtectionTag"))
@@ -311,11 +358,13 @@ public class OdorikoHolder : JobSkillHolder
                     }
                 }
                 StartCoroutine(BattleSetting.Instance.ShowActionText("清月"));
+                yield return new WaitForSeconds(1f);
             }
             else
             {
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(FullMoonTag.CreateInstance<ClearMoonTag>());
-                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "清月"));
+                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "清月"));
+                yield return new WaitForSeconds(1f);
             }
         }
         BattleSetting.Instance.ActionEnd();
@@ -324,6 +373,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator moonBless(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
 
@@ -347,11 +398,13 @@ public class OdorikoHolder : JobSkillHolder
                 }
             }
             StartCoroutine(BattleSetting.Instance.ShowActionText("月佑"));
+            yield return new WaitForSeconds(1f);
         }
         else
         {
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonBlessTag.CreateInstance<MoonBlessTag>());
-            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放月佑"));
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月佑"));
+            yield return new WaitForSeconds(1f);
         }
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "SunProtectionTag"))
@@ -378,11 +431,13 @@ public class OdorikoHolder : JobSkillHolder
                     }
                 }
                 StartCoroutine(BattleSetting.Instance.ShowActionText("月佑"));
+                yield return new WaitForSeconds(1f);
             }
             else
             {
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonBlessTag.CreateInstance<MoonBlessTag>());
-                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放月佑"));
+                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月佑"));
+                yield return new WaitForSeconds(1f);
             }
         }
         BattleSetting.Instance.ActionEnd();
@@ -391,6 +446,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator moonErode(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
 
@@ -401,11 +458,13 @@ public class OdorikoHolder : JobSkillHolder
                 enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
             }
             StartCoroutine(BattleSetting.Instance.ShowActionText("月蚀"));
+            yield return new WaitForSeconds(1f);
         }
         else
         {
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
-            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放月蚀"));
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月蚀"));
+            yield return new WaitForSeconds(1f);
         }
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "SunProtectionTag"))
@@ -419,11 +478,13 @@ public class OdorikoHolder : JobSkillHolder
                     enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
                 }
                 StartCoroutine(BattleSetting.Instance.ShowActionText("月蚀"));
+                yield return new WaitForSeconds(1f);
             }
             else
             {
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
-                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放月蚀"));
+                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月蚀"));
+                yield return new WaitForSeconds(1f);
             }
         }
         BattleSetting.Instance.ActionEnd();
@@ -432,6 +493,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator moonProlog(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
 
@@ -444,6 +507,7 @@ public class OdorikoHolder : JobSkillHolder
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonPrologTag.CreateInstance<MoonPrologTag>());
         }
         StartCoroutine(BattleSetting.Instance.ShowActionText("月：序曲"));
+        yield return new WaitForSeconds(1f);
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "SunProtectionTag"))
         {
@@ -458,6 +522,7 @@ public class OdorikoHolder : JobSkillHolder
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonPrologTag.CreateInstance<MoonPrologTag>());
             }
             StartCoroutine(BattleSetting.Instance.ShowActionText("月：序曲"));
+            yield return new WaitForSeconds(1f);
         }
         BattleSetting.Instance.ActionEnd();
     }
@@ -465,6 +530,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator moonDuke(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Moon);
         SpCounter(SpCost, odoSkillKind);
 
@@ -473,11 +540,13 @@ public class OdorikoHolder : JobSkillHolder
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonDukeTag.CreateInstance<MoonDukeTag>());
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Find(Tag => Tag.TagName == "MoonDuke").TurnLast += 2;
             StartCoroutine(BattleSetting.Instance.ShowActionText("爵月"));
+            yield return new WaitForSeconds(1f);
         }
         else
         {
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonDukeTag.CreateInstance<MoonDukeTag>());
-            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放爵月"));
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放爵月"));
+            yield return new WaitForSeconds(1f);
         }
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "SunProtectionTag"))
@@ -489,11 +558,13 @@ public class OdorikoHolder : JobSkillHolder
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonDukeTag.CreateInstance<MoonDukeTag>());
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Find(Tag => Tag.TagName == "MoonDuke").TurnLast += 2;
                 StartCoroutine(BattleSetting.Instance.ShowActionText("爵月"));
+                yield return new WaitForSeconds(1f);
             }
             else
             {
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonDukeTag.CreateInstance<MoonDukeTag>());
-                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放爵月"));
+                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放爵月"));
+                yield return new WaitForSeconds(1f);
             }
         }
         BattleSetting.Instance.ActionEnd();
@@ -502,6 +573,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator sunFinale(int SpCost,OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Sun);
         SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
@@ -514,12 +587,14 @@ public class OdorikoHolder : JobSkillHolder
         {
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(SunFinaleTag.CreateInstance<SunFinaleTag>());
         }
-        StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget + "释放日：终曲"));
+        StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放日：终曲"));
+        yield return new WaitForSeconds(1f);
         BattleSetting.Instance.ActionEnd();
     }
 
     public IEnumerator sunReverse(int SpCost,OdoSkillKind odoSkillKind)
     {
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Sun);
         SpCounter(SpCost, odoSkillKind);
         List<GameObject> EnemiesToBeAttacked = new();
@@ -560,13 +635,15 @@ public class OdorikoHolder : JobSkillHolder
         }
 
         StartCoroutine(BattleSetting.Instance.ShowActionText("释放日溯"));
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         BattleSetting.Instance.ActionEnd();
     }
 
     public IEnumerator sunProtection(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Sun);
         SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
@@ -591,6 +668,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator sunCurse(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Sun);
         SpCounter(SpCost, odoSkillKind);
         var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
@@ -649,6 +728,8 @@ public class OdorikoHolder : JobSkillHolder
     public IEnumerator sunRhythm(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Sun);
         SpCounter(SpCost, odoSkillKind);
         var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
@@ -674,6 +755,7 @@ public class OdorikoHolder : JobSkillHolder
 
     public IEnumerator sunRound(int SpCost, OdoSkillKind odoSkillKind)
     {
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Sun);
         SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
@@ -703,8 +785,9 @@ public class OdorikoHolder : JobSkillHolder
 
     public IEnumerator sunRose(int SpCost,OdoSkillKind odoSkillKind)
     {
-        //enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Sun);
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
@@ -771,10 +854,22 @@ public class OdorikoHolder : JobSkillHolder
             LastTurnMoon = false;
             LastTurnSun = false;
         }
+        /*if (usedSkill)
+        {
+            int i = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().positionID;
+            if (i <= 2)
+            {
+                PositionControl.Instance.PositionControlCore(i + 3);
+            }
+            else
+            {
+                PositionControl.Instance.PositionControlCore(i - 3);
+            }
+        }*/
         usedSkill = false;
         //换位置
         int i = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().positionID;
-        if (i>2)
+        if (i <= 2)
         {
             PositionControl.Instance.PositionControlCore(i + 3);
         }

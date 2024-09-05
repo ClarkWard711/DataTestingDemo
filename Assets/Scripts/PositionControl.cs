@@ -34,32 +34,26 @@ public class PositionControl : MonoBehaviour
     public void Button1()
     {
         PositionControlCore(0);
-        BattleSetting.Instance.CheckPositionID();
     }
     public void Button2()
     {
         PositionControlCore(1);
-        BattleSetting.Instance.CheckPositionID();
     }
     public void Button3()
     {
         PositionControlCore(2);
-        BattleSetting.Instance.CheckPositionID();
     }
     public void Button4()
     {
         PositionControlCore(3);
-        BattleSetting.Instance.CheckPositionID();
     }
     public void Button5()
     {
         PositionControlCore(4);
-        BattleSetting.Instance.CheckPositionID();
     }
     public void Button6()
     {
         PositionControlCore(5);
-        BattleSetting.Instance.CheckPositionID();
     }
 
     void BackToAction()
@@ -88,5 +82,7 @@ public class PositionControl : MonoBehaviour
             BattleSetting.Instance.CurrentActUnit.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[i].transform, false);
             BattleSetting.Instance.isMoveFinished = true;
         }
+        BattleSetting.Instance.CheckPositionID();
+        BattleSetting.Instance.ComparePosition();
     }
 }
