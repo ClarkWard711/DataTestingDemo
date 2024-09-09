@@ -16,7 +16,7 @@ MonoBehaviour:
   SpCost: 8
   TurnCooldown: 0
   DealMultiplier: 0
-  SkillName: 
+  SkillName: "\u7EEF\u8272\u6708\u591C"
   Description: 
   HitRevise: 0
   odoSkillKind: 0

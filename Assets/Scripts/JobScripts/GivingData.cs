@@ -89,6 +89,10 @@ public class GivingData : MonoBehaviour
     {
         GameObject obj = Instantiate(DamagePrefab, BasePosition.transform);
         obj.GetComponent<Text>().text = "-" + Damage;
+        if (attackType == AttackType.Soul) 
+        {
+            obj.GetComponent<Text>().color = new Color(0, 1, 1, 1);
+        }
         yield return new WaitForSeconds(2f);
         Destroy(obj);
         if (currentHP <= 0)
@@ -111,7 +115,7 @@ public class GivingData : MonoBehaviour
     {
         int temp;
         temp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;
-        Debug.Log(1);
+        //Debug.Log(1);
         if (temp + deltaTemp >= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP)
         {
             deltaTemp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP - BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;

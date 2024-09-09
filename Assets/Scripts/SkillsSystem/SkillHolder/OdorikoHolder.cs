@@ -462,7 +462,23 @@ public class OdorikoHolder : JobSkillHolder
         }
         else
         {
-            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
+            foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
+            {
+                if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                {
+                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                    {
+                        enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
+                    }
+                }
+                else
+                {
+                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+                    {
+                        enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
+                    }
+                }
+            }
             StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月蚀"));
             yield return new WaitForSeconds(1f);
         }
@@ -482,7 +498,23 @@ public class OdorikoHolder : JobSkillHolder
             }
             else
             {
-                BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
+                foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
+                {
+                    if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                    {
+                        if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                        {
+                            enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
+                        }
+                    }
+                    else
+                    {
+                        if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+                        {
+                            enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
+                        }
+                    }
+                }
                 StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月蚀"));
                 yield return new WaitForSeconds(1f);
             }
@@ -500,11 +532,43 @@ public class OdorikoHolder : JobSkillHolder
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
-            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonPrologTagAdvanced.CreateInstance<MoonPrologTagAdvanced>());
+            foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
+            {
+                if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                {
+                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                    {
+                        enemy.GetComponent<GivingData>().AddTagToCharacter(MoonPrologTagAdvanced.CreateInstance<MoonPrologTagAdvanced>());
+                    }
+                }
+                else
+                {
+                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+                    {
+                        enemy.GetComponent<GivingData>().AddTagToCharacter(MoonPrologTagAdvanced.CreateInstance<MoonPrologTagAdvanced>());
+                    }
+                }
+            }
         }
         else
         {
-            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(MoonPrologTag.CreateInstance<MoonPrologTag>());
+            foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
+            {
+                if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                {
+                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+                    {
+                        enemy.GetComponent<GivingData>().AddTagToCharacter(MoonPrologTag.CreateInstance<MoonPrologTag>());
+                    }
+                }
+                else
+                {
+                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+                    {
+                        enemy.GetComponent<GivingData>().AddTagToCharacter(MoonPrologTag.CreateInstance<MoonPrologTag>());
+                    }
+                }
+            }
         }
         StartCoroutine(BattleSetting.Instance.ShowActionText("月：序曲"));
         yield return new WaitForSeconds(1f);
@@ -581,11 +645,16 @@ public class OdorikoHolder : JobSkillHolder
         {
             SunFinaleTag Tag = SunFinaleTag.CreateInstance<SunFinaleTag>();
             Tag.isCharged = true;
+            Tag.AtkUnit = BattleSetting.Instance.CurrentActUnit;
+            Tag.DfsUnit = BattleSetting.Instance.CurrentActUnitTarget;
             BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Tag);
         }
         else
         {
-            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(SunFinaleTag.CreateInstance<SunFinaleTag>());
+            SunFinaleTag Tag = SunFinaleTag.CreateInstance<SunFinaleTag>();
+            Tag.AtkUnit = BattleSetting.Instance.CurrentActUnit;
+            Tag.DfsUnit = BattleSetting.Instance.CurrentActUnitTarget;
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Tag);
         }
         StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放日：终曲"));
         yield return new WaitForSeconds(1f);

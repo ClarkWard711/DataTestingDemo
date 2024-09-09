@@ -34,11 +34,19 @@ public class FloatingText : MonoBehaviour,IPointerEnterHandler,IPointerExitHandl
 
     public void OnPointerMove(PointerEventData eventData)
     {
+        if (TextPanel == null)
+        {
+            TextPanel = Instantiate(TextPanelPrefab, this.transform);
+        }
         TextPanel.transform.position = eventData.position;
     }
 
     public void DestroyPanel()
     {
-        GameObject.Destroy(TextPanel);
+        if (TextPanel != null) 
+        {
+            GameObject.Destroy(TextPanel);
+        }
+        
     }
 }

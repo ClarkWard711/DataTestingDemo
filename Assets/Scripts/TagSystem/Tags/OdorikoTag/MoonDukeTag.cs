@@ -16,6 +16,7 @@ public class MoonDukeTag : OdorikoTag
         Effect = effect.bad;
         BuffTarget = target.enemy;
         Impact = impactOnMultiplier.AllDeal;
+        Multiplier = 0.75f;
         BeforeHit += DamageDistribute;
         OnHit += DealToSelf;
     }
@@ -24,8 +25,8 @@ public class MoonDukeTag : OdorikoTag
     {
         int Damage = BattleSetting.Instance.DamageCounting(BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType);
         attackType = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType;
-        BattleSetting.Instance.TempDamage = Mathf.CeilToInt(Damage * 0.75f);
-        DamageToSelf = Mathf.CeilToInt(Damage * 0.25f);
+        DamageToSelf = Mathf.CeilToInt(Damage / 3f);
+        Debug.Log(DamageToSelf);
         
     }
 

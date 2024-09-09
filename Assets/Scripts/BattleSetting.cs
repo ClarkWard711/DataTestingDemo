@@ -73,7 +73,6 @@ public class BattleSetting : MonoBehaviour
     float alpha;//颜色透明度
     //float DamageMultiplier = 1f;
     public Vector3 Position;
-    public int TempDamage;
     #endregion
 
     void Awake()
@@ -201,6 +200,7 @@ public class BattleSetting : MonoBehaviour
         if (BattleUnitsList.Count == 0) 
         {
             StartCoroutine(EndTurn());
+            return;
         }
 
         if (RemainingEnemyUnits.Length == 0)
@@ -282,13 +282,14 @@ public class BattleSetting : MonoBehaviour
             GameStateText.text = "Miss";
             StartCoroutine(ShowText(2f));
         }*/
+        StartCoroutine(BeforeHit());
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttakeType);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         StartCoroutine(ShowText(2f));
         //受击回调
         StartCoroutine(OnHit());
         StartCoroutine(BeingHit());
-        CurrentActUnitTarget = null;
+        
         yield return new WaitForSeconds(time);
         CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
         isNormalAttack = false;
@@ -298,6 +299,7 @@ public class BattleSetting : MonoBehaviour
     public IEnumerator DealDamageBonus(int Damage,AttackType attackType)
     {
         State = BattleState.Middle;
+        yield return new WaitForSeconds(0.5f);
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成追击伤害" + Damage;
         StartCoroutine(ShowText(1f));
@@ -307,8 +309,8 @@ public class BattleSetting : MonoBehaviour
     public IEnumerator DealCounterDamage(int Damage,AttackType attackType)
     {
         State = BattleState.Middle;
-        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
-        GameStateText.text = "对" + CurrentActUnitTarget.name + "造成反击伤害" + Damage;
+        CurrentActUnit.GetComponent<GivingData>().takeDamage(Damage, attackType);
+        GameStateText.text = "对" + CurrentActUnit.name + "造成反击伤害" + Damage;
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
     }
@@ -344,6 +346,13 @@ public class BattleSetting : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
+    IEnumerator Charge()
+    {
+        StartCoroutine(ShowActionText("蓄力"));
+        yield return new WaitForSeconds(1.5f);
+        ActionEnd();
+    }
+
     IEnumerator Move()
     {
         MovePanel.SetActive(true);
@@ -358,7 +367,7 @@ public class BattleSetting : MonoBehaviour
             StartCoroutine(ShowText(2f));
             ComparePosition();
             yield return new WaitForSeconds(2f);
-            ToBattle();
+            ActionEnd();
         }
         
     }
@@ -574,7 +583,7 @@ public class BattleSetting : MonoBehaviour
         CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
         CheckTagList(CurrentActUnit);
         State = BattleState.Middle;
-        StartCoroutine(ShowActionText("蓄力"));
+        StartCoroutine(Charge());
     }
 
     public void OnSKillButton()
@@ -1117,6 +1126,7 @@ public class BattleSetting : MonoBehaviour
             //unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
             //unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
         }
+        ToBattle();
     }
     /// <summary>
     /// 将buff效果作用在倍率上的函数（有新buff进入list时调用函数使buff即时有效）
@@ -1256,6 +1266,10 @@ public class BattleSetting : MonoBehaviour
             isMoveFinished = true;
             MovePanel.SetActive(false);
             CurrentActUnit.GetComponent<JobSkillHolder>().StopAllCoroutines();
+        }
+        else
+        {
+            return;
         }
     }
 }

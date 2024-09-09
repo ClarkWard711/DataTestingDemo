@@ -32,7 +32,7 @@ public class MoonPrologTagAdvanced : OdorikoTag
             damage = BattleSetting.Instance.DamageCounting(AttackType.Physical);
             attackType = AttackType.Physical;
         }
-        damage = Mathf.CeilToInt(damage * BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(Tag => Tag.TagName == "MoonPrologAdvanced").conditionMultiplier);
+        damage = Mathf.CeilToInt(damage * BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Find(Tag => Tag.TagName == "MoonPrologAdvanced").conditionMultiplier);
         BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealDamageBonus(damage, attackType));
     }
 }

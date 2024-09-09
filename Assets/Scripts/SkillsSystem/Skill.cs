@@ -20,16 +20,27 @@ public class Skill : ScriptableObject
         BattleSetting.Instance.AdvancedPanel.SetActive(false);
         BattleSetting.Instance.isAdvancedShowed = false;
         //BattleSetting.Instance.StopAllCoroutines();
-        BattleSetting.Instance.CheckCanChangeAction();
+        
         foreach (var button in BattleSetting.Instance.CurrentActUnit.GetComponent<JobSkillHolder>().AdvancedSkillButton)
         {
-            button.GetComponent<FloatingText>().DestroyPanel();
+            if (button.GetComponent<FloatingText>() != null)
+            {
+                button.GetComponent<FloatingText>().DestroyPanel();
+            }
         }
         foreach (var button in BattleSetting.Instance.CurrentActUnit.GetComponent<JobSkillHolder>().BasicSkillButton)
         {
-            button.GetComponent<FloatingText>().DestroyPanel();
+            if (button.GetComponent<FloatingText>() != null)
+            {
+                button.GetComponent<FloatingText>().DestroyPanel();
+            }
         }
-        if (BattleSetting.Instance.State != BattleState.PlayerTurn) return;
+        BattleSetting.Instance.CheckCanChangeAction();
+        if (BattleSetting.Instance.State == BattleState.Middle)
+        {
+            //Debug.Log(000);
+            return;
+        }
         BattleSetting.Instance.canChangeAction = true;
     }
 }
