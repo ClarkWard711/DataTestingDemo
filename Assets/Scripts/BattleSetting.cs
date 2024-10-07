@@ -344,6 +344,10 @@ public class BattleSetting : MonoBehaviour
         GameStateText.text = Action;
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
+        if (Action == "防御") 
+        {
+            ActionEnd();
+        }
     }
 
     IEnumerator Charge()
