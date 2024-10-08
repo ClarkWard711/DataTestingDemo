@@ -23,6 +23,7 @@ public class GivingData : MonoBehaviour
     public GameObject DamagePrefab;
     public GameObject SpPrefab;
     public GameObject HpPrefab;
+    public GameObject DropPrefab;
     public GameObject BasePosition;
     //public Canvas DamageCanvas;
     public List<Tag> tagList = new List<Tag>();
@@ -79,10 +80,16 @@ public class GivingData : MonoBehaviour
             //Debug.Log("变没了2");
         }
     }
-    public void takeDamage(int Damage,AttackType attackType)
+    public void takeDamage(int Damage, AttackType attackType)
     {
         currentHP -= Damage;
         StartCoroutine(FloatingNumber(Damage, attackType));
+    }
+
+    public void takeBonusDamage(int Damage,AttackType attackType)
+    {
+        currentHP -= Damage;
+        StartCoroutine(FloatingBonusNumber(Damage, attackType));
     }
 
     IEnumerator FloatingNumber(int Damage, AttackType attackType)
@@ -94,6 +101,32 @@ public class GivingData : MonoBehaviour
             obj.GetComponent<Text>().color = new Color(0, 1, 1, 1);
         }
         yield return new WaitForSeconds(2f);
+        Destroy(obj);
+        if (currentHP <= 0)
+        {
+            isDead = true;
+
+            if (this.gameObject.tag == "PlayerUnit")
+            {
+                this.gameObject.tag = "Untagged";
+                this.gameObject.GetComponentsInChildren<SpriteRenderer>()[0].color = new Color(255, 255, 255, 0.5f);
+            }
+            else if (this.gameObject.tag == "EnemyUnit")
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    IEnumerator FloatingBonusNumber(int Damage, AttackType attackType)
+    {
+        GameObject obj = Instantiate(DropPrefab, BasePosition.transform);
+        obj.GetComponent<Text>().text = "-" + Damage;
+        if (attackType == AttackType.Soul)
+        {
+            obj.GetComponent<Text>().color = new Color(0, 1, 1, 1);
+        }
+        yield return new WaitForSeconds(0.45f);
         Destroy(obj);
         if (currentHP <= 0)
         {
@@ -125,10 +158,14 @@ public class GivingData : MonoBehaviour
         {
             BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP += deltaTemp;
         }
-        GameObject obj = Instantiate(SpPrefab, BasePosition.transform);
-        obj.GetComponent<Text>().text = "+" + deltaTemp;
-        yield return new WaitForSeconds(2f);
-        Destroy(obj);
+        
+        if (deltaTemp != 0)
+        {
+            GameObject obj = Instantiate(SpPrefab, BasePosition.transform);
+            obj.GetComponent<Text>().text = "+" + deltaTemp;
+            yield return new WaitForSeconds(2f);
+            Destroy(obj);
+        }
     }
 
     public IEnumerator FloatingHP(int deltaTemp)
@@ -145,10 +182,14 @@ public class GivingData : MonoBehaviour
         {
             BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentHP += deltaTemp;
         }
-        GameObject obj = Instantiate(HpPrefab, BasePosition.transform);
-        obj.GetComponent<Text>().text = "+" + deltaTemp;
-        yield return new WaitForSeconds(2f);
-        Destroy(obj);
+
+        if (deltaTemp != 0)
+        {
+            GameObject obj = Instantiate(HpPrefab, BasePosition.transform);
+            obj.GetComponent<Text>().text = "+" + deltaTemp;
+            yield return new WaitForSeconds(2f);
+            Destroy(obj);
+        }
     }
 
     public void AddTagToCharacter(Tag tag)

@@ -131,8 +131,13 @@ MonoBehaviour:
   remote: 0
   maxHP: 0
   maxSP: 0
-  miss: 0
   AntiCri: 0
+  physicalDizziness: 0
+  soulDizziness: 0
+  pAntiDizziness: 0
+  sAntiDizziness: 0
+  positionID: 0
+  attackType: 2
   isDead: 0
   PhysicalDamageTakeMultiplier: 1
   PhysicalDamageDealMultiplier: 1
@@ -141,6 +146,7 @@ MonoBehaviour:
   DamagePrefab: {fileID: 5884769366753586431, guid: e86fd9a5c734c4e22a6c737a15bf9bd9, type: 3}
   SpPrefab: {fileID: 5884769366753586431, guid: d6f1af5e8d44646b683fc90a7b38a920, type: 3}
   HpPrefab: {fileID: 5884769366753586431, guid: c0794fdc627194e699349a33ddfcceba, type: 3}
+  DropPrefab: {fileID: 5884769366753586431, guid: 2ac3c5307d54d45e9a47a9b2d3f677f5, type: 3}
   BasePosition: {fileID: 7616726643814985540}
   tagList: []
 --- !u!61 &1460912350467585312

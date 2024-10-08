@@ -300,7 +300,7 @@ public class BattleSetting : MonoBehaviour
     {
         State = BattleState.Middle;
         yield return new WaitForSeconds(0.5f);
-        CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
+        CurrentActUnitTarget.GetComponent<GivingData>().takeBonusDamage(Damage, attackType);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成追击伤害" + Damage;
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
@@ -1241,15 +1241,18 @@ public class BattleSetting : MonoBehaviour
     /// <param name="dfsUnit"></param>
     public void DealDamageExtra(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType)
     {
-        //todo: add callback
+        //todo: add callback and hit cri check
+        CurrentActUnit.GetComponent<GivingData>().attackType = attackType;
         if (Damage == -1) 
         {
             Damage = DamageCountingByUnit(atkUnit, dfsUnit, attackType);
         }
         dfsUnit.GetComponent<GivingData>().takeDamage(Damage, attackType);
+        StartCoroutine(OnHit());
+        StartCoroutine(BeingHit());
         //GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         //StartCoroutine(ShowText(2f));
-        CurrentActUnitTarget = null;
+        //CurrentActUnitTarget = null;
     }
     /// <summary>
     /// 检测技能sp是否足够

@@ -717,16 +717,21 @@ public class OdorikoHolder : JobSkillHolder
         SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
+            var temp = BattleSetting.Instance.CurrentActUnitTarget;
             BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
+            yield return new WaitForSeconds(0.4f);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul);
+            yield return new WaitForSeconds(0.4f);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Physical);
+            yield return new WaitForSeconds(0.4f);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul);
         }
         else
         {
+            var temp = BattleSetting.Instance.CurrentActUnitTarget;
             BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
-            yield return new WaitForSeconds(0.2f);
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
+            yield return new WaitForSeconds(0.4f);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul);
         }
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(SunProtectionTag.CreateInstance<SunProtectionTag>());
         StartCoroutine(BattleSetting.Instance.ShowActionText("释放日护"));

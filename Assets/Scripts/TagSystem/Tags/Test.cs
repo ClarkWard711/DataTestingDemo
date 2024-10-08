@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public GameObject[] playerUnits;
+    /*public GameObject[] playerUnits;
     public PartyMember PlayerPartyMember;
     public GameObject Position;
     public GameObject CurrentActUnit;
@@ -75,6 +75,16 @@ public class Test : MonoBehaviour
 
                 yield return StartCoroutine(DelayedCallback(2f));
             }
+        }
+    }*/
+    public GameObject drop;
+    public Vector3 pos;
+    void FixedUpdate()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            pos = Input.mousePosition;
+            var obj = Instantiate(drop, pos, Quaternion.identity);
         }
     }
 }
