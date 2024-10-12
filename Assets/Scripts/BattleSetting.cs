@@ -670,7 +670,7 @@ public class BattleSetting : MonoBehaviour
             dfs = CurrentActUnitTarget.GetComponent<GivingData>().pd;
             TakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().PhysicalDamageTakeMultiplier;
             DealMultiplier = CurrentActUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
-            baseDamage = Mathf.CeilToInt((atk * atk) / (atk + dfs));
+            baseDamage = Mathf.CeilToInt(2 * (atk * atk) / (atk + dfs));
             finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
             return finalDamage;
         }
@@ -680,7 +680,7 @@ public class BattleSetting : MonoBehaviour
             dfs = CurrentActUnitTarget.GetComponent<GivingData>().sd;
             TakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().SoulDamageTakeMultiplier;
             DealMultiplier = CurrentActUnit.GetComponent<GivingData>().SoulDamageDealMultiplier;
-            baseDamage = Mathf.CeilToInt((atk * atk) / (atk + dfs));
+            baseDamage = Mathf.CeilToInt(2 * (atk * atk) / (atk + dfs));
             finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
             return finalDamage;
         }
@@ -707,7 +707,7 @@ public class BattleSetting : MonoBehaviour
             dfs = DfsUnit.GetComponent<GivingData>().pd;
             TakeMultiplier = DfsUnit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier;
             DealMultiplier = AtkUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
-            baseDamage = Mathf.CeilToInt((atk * atk) / (atk + dfs));
+            baseDamage = Mathf.CeilToInt(2 * (atk * atk) / (atk + dfs));
             finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
             return finalDamage;
         }
@@ -717,7 +717,7 @@ public class BattleSetting : MonoBehaviour
             dfs = DfsUnit.GetComponent<GivingData>().sd;
             TakeMultiplier = DfsUnit.GetComponent<GivingData>().SoulDamageTakeMultiplier;
             DealMultiplier = AtkUnit.GetComponent<GivingData>().SoulDamageDealMultiplier;
-            baseDamage = Mathf.CeilToInt((atk * atk) / (atk + dfs));
+            baseDamage = Mathf.CeilToInt(2 * (atk * atk) / (atk + dfs));
             finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
             return finalDamage;
         }

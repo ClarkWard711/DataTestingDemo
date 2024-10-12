@@ -15,6 +15,9 @@ public class EnemyStats
     public int AntiCri;
     public int melee;
     public int remote;
+    public int exp;
+    public int sxp;
+    public int dizzinessBar;
     public int PhysicalAntiDizziness;
     public int SoulAntiDizziness;
 }
