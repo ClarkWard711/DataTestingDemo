@@ -836,6 +836,7 @@ public class OdorikoHolder : JobSkillHolder
         {
             foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
             {
+                BattleSetting.Instance.CurrentActUnitTarget = enemy;
                 var physicalDamage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
                 var soulDamage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
                 BattleSetting.Instance.DealDamageExtra(physicalDamage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
@@ -847,6 +848,7 @@ public class OdorikoHolder : JobSkillHolder
         {
             foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
             {
+                BattleSetting.Instance.CurrentActUnitTarget = enemy;
                 var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
                 BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
             }
@@ -888,6 +890,7 @@ public class OdorikoHolder : JobSkillHolder
                 BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Attract.CreateInstance<Attract>());
             }
         }
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
         BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealDamage(1f));
         
         StartCoroutine(BattleSetting.Instance.ShowActionText("释放日瑰"));
