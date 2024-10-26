@@ -14,98 +14,248 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Frog
   jobInitialLevel: 1
-  currentHP: 120
+  currentHP: 359
   enemyLevel: 1
   JobPrefab: {fileID: 1460912350467585319, guid: 6e9ee63760d5c4ab9b35ee5977998624, type: 3}
-  dataFile: {fileID: 4900000, guid: 8c0baab37681d47eba63a40337331f7c, type: 3}
+  dataFile: {fileID: 4900000, guid: 57eaee9183b46414194aa4209f22ec9d, type: 3}
   enemyStatsList:
-  - maxHP: 120
-    physicalAtk: 30
-    physicalDfs: 20
-    soulAtk: 32
-    soulDfs: 16
-    miss: 10
-    hit: 5
-    speed: 150
-    AntiCri: 50
-  - maxHP: 140
-    physicalAtk: 35
-    physicalDfs: 23
-    soulAtk: 36
-    soulDfs: 18
-    miss: 11
-    hit: 5
-    speed: 157
-    AntiCri: 52
-  - maxHP: 160
-    physicalAtk: 40
-    physicalDfs: 26
-    soulAtk: 40
-    soulDfs: 20
-    miss: 12
-    hit: 5
-    speed: 164
-    AntiCri: 54
-  - maxHP: 180
-    physicalAtk: 45
-    physicalDfs: 29
-    soulAtk: 44
-    soulDfs: 22
-    miss: 13
-    hit: 5
-    speed: 171
-    AntiCri: 56
-  - maxHP: 200
-    physicalAtk: 50
-    physicalDfs: 32
-    soulAtk: 48
-    soulDfs: 24
-    miss: 14
-    hit: 5
-    speed: 178
-    AntiCri: 58
-  - maxHP: 220
-    physicalAtk: 55
-    physicalDfs: 35
-    soulAtk: 52
-    soulDfs: 26
-    miss: 15
-    hit: 5
-    speed: 185
-    AntiCri: 60
-  - maxHP: 240
-    physicalAtk: 60
-    physicalDfs: 38
-    soulAtk: 56
-    soulDfs: 28
-    miss: 16
-    hit: 5
-    speed: 192
-    AntiCri: 62
-  - maxHP: 260
-    physicalAtk: 65
-    physicalDfs: 41
-    soulAtk: 60
-    soulDfs: 30
-    miss: 17
-    hit: 5
-    speed: 199
-    AntiCri: 64
-  - maxHP: 280
-    physicalAtk: 70
-    physicalDfs: 44
-    soulAtk: 64
-    soulDfs: 32
-    miss: 18
-    hit: 5
-    speed: 206
-    AntiCri: 66
-  - maxHP: 300
-    physicalAtk: 75
-    physicalDfs: 47
-    soulAtk: 68
-    soulDfs: 34
-    miss: 19
-    hit: 5
-    speed: 213
-    AntiCri: 68
+  - maxHP: 359
+    physicalAtk: 47
+    physicalDfs: 73
+    soulAtk: 47
+    soulDfs: 73
+    nim: 20
+    hit: 90
+    speed: 70
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 2
+    sxp: 0
+    dizzinessBar: 85
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 479
+    physicalAtk: 67
+    physicalDfs: 100
+    soulAtk: 67
+    soulDfs: 100
+    nim: 23
+    hit: 138
+    speed: 75
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 8
+    sxp: 0
+    dizzinessBar: 100
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 663
+    physicalAtk: 97
+    physicalDfs: 127
+    soulAtk: 97
+    soulDfs: 127
+    nim: 26
+    hit: 186
+    speed: 80
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 21
+    sxp: 0
+    dizzinessBar: 115
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 911
+    physicalAtk: 134
+    physicalDfs: 154
+    soulAtk: 134
+    soulDfs: 154
+    nim: 29
+    hit: 234
+    speed: 85
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 42
+    sxp: 0
+    dizzinessBar: 130
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 1223
+    physicalAtk: 179
+    physicalDfs: 181
+    soulAtk: 179
+    soulDfs: 181
+    nim: 32
+    hit: 282
+    speed: 90
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 76
+    sxp: 0
+    dizzinessBar: 145
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 1599
+    physicalAtk: 229
+    physicalDfs: 208
+    soulAtk: 229
+    soulDfs: 208
+    nim: 35
+    hit: 330
+    speed: 95
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 124
+    sxp: 0
+    dizzinessBar: 160
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 2039
+    physicalAtk: 264
+    physicalDfs: 235
+    soulAtk: 264
+    soulDfs: 235
+    nim: 38
+    hit: 378
+    speed: 100
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 190
+    sxp: 0
+    dizzinessBar: 175
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 2543
+    physicalAtk: 299
+    physicalDfs: 262
+    soulAtk: 299
+    soulDfs: 262
+    nim: 41
+    hit: 426
+    speed: 105
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 277
+    sxp: 0
+    dizzinessBar: 190
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 3111
+    physicalAtk: 334
+    physicalDfs: 289
+    soulAtk: 334
+    soulDfs: 289
+    nim: 44
+    hit: 474
+    speed: 110
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 387
+    sxp: 0
+    dizzinessBar: 205
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 3743
+    physicalAtk: 370
+    physicalDfs: 316
+    soulAtk: 370
+    soulDfs: 316
+    nim: 47
+    hit: 522
+    speed: 115
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 523
+    sxp: 0
+    dizzinessBar: 220
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 4439
+    physicalAtk: 405
+    physicalDfs: 343
+    soulAtk: 405
+    soulDfs: 343
+    nim: 50
+    hit: 570
+    speed: 120
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 653
+    sxp: 0
+    dizzinessBar: 235
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 5199
+    physicalAtk: 440
+    physicalDfs: 370
+    soulAtk: 440
+    soulDfs: 370
+    nim: 53
+    hit: 618
+    speed: 125
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 805
+    sxp: 0
+    dizzinessBar: 250
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 6023
+    physicalAtk: 548
+    physicalDfs: 397
+    soulAtk: 548
+    soulDfs: 397
+    nim: 56
+    hit: 666
+    speed: 130
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 978
+    sxp: 0
+    dizzinessBar: 265
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 6911
+    physicalAtk: 577
+    physicalDfs: 424
+    soulAtk: 577
+    soulDfs: 424
+    nim: 59
+    hit: 714
+    speed: 135
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 1175
+    sxp: 0
+    dizzinessBar: 280
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8
+  - maxHP: 7863
+    physicalAtk: 606
+    physicalDfs: 451
+    soulAtk: 606
+    soulDfs: 451
+    nim: 62
+    hit: 762
+    speed: 140
+    AntiCri: 100
+    melee: 100
+    remote: 100
+    exp: 1397
+    sxp: 0
+    dizzinessBar: 295
+    PhysicalAntiDizziness: 10
+    SoulAntiDizziness: 8

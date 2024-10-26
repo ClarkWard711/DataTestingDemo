@@ -13,6 +13,7 @@ public class OdorikoHolder : JobSkillHolder
     public bool isDanceStepTriggered = false;
     public bool canSpecialBeUsed = false;
     public bool isOnlyOnceUsed = false;
+    public bool ignoreDanceStep = false;
     public int MoonUsedAmount = 0;
     public override void Awake()
     {
@@ -68,6 +69,10 @@ public class OdorikoHolder : JobSkillHolder
         {
             SunSpCost(SpCost);
         }
+        else
+        {
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+        }
     }
 
     void MoonSpCost(int SpCost)
@@ -99,41 +104,49 @@ public class OdorikoHolder : JobSkillHolder
 
     public void DanceStepCheck(OdoSkillKind skillKind)
     {
-        usedSkill = true;
-        if (skillKind == OdoSkillKind.Moon && BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+        if (ignoreDanceStep)
         {
-            if (LastTurnSun)
-            {
-                LastTurnMoon = true;
-                LastTurnSun = false;
-                BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
-                BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "Charging").TurnLast--;
-                isDanceStepTriggered = true;
-            }
-            else
-            {
-                LastTurnMoon = true;
-            }
-        }
-        else if (skillKind == OdoSkillKind.Sun && BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee")) 
-        {
-            if (LastTurnMoon)
-            {
-                LastTurnSun = true;
-                LastTurnMoon = false;
-                BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
-                BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "Charging").TurnLast--;
-                isDanceStepTriggered = true;
-            }
-            else
-            {
-                LastTurnSun = true;
-            }
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
+            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "Charging").TurnLast--;
         }
         else
         {
-            LastTurnMoon = false;
-            LastTurnSun = false;
+            usedSkill = true;
+            if (skillKind == OdoSkillKind.Moon && BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+            {
+                if (LastTurnSun)
+                {
+                    LastTurnMoon = true;
+                    LastTurnSun = false;
+                    BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
+                    BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "Charging").TurnLast--;
+                    isDanceStepTriggered = true;
+                }
+                else
+                {
+                    LastTurnMoon = true;
+                }
+            }
+            else if (skillKind == OdoSkillKind.Sun && BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+            {
+                if (LastTurnMoon)
+                {
+                    LastTurnSun = true;
+                    LastTurnMoon = false;
+                    BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
+                    BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "Charging").TurnLast--;
+                    isDanceStepTriggered = true;
+                }
+                else
+                {
+                    LastTurnSun = true;
+                }
+            }
+            else
+            {
+                LastTurnMoon = false;
+                LastTurnSun = false;
+            }
         }
     }
 
@@ -906,7 +919,7 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.isChooseFinished = false;
         BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Sun);
-
+        SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
             
@@ -994,6 +1007,17 @@ public class OdorikoHolder : JobSkillHolder
         {
             StartCoroutine(BattleSetting.Instance.ShowActionText("无可作用的友方"));
         }
+    }
+
+    public IEnumerator myriads(int SpCost, OdoSkillKind odoSkillKind)
+    {
+        BattleSetting.Instance.isChooseFinished = false;
+        BattleSetting.Instance.canChangeAction = false;
+        SpCounter(SpCost, odoSkillKind);
+        ignoreDanceStep = true;
+        StartCoroutine(BattleSetting.Instance.ShowActionText("万象"));
+        yield return new WaitForSeconds(1f);
+        BattleSetting.Instance.ActionEnd();
     }
     #endregion
 

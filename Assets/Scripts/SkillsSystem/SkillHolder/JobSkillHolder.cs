@@ -39,6 +39,8 @@ public class JobSkillHolder : MonoBehaviour
             SpecialButton.onClick.RemoveAllListeners();
             BasicSkillButton[0].onClick.AddListener(() => JobSkill.skillList[0].Apply(BattleSetting.Instance.CurrentActUnit));
             BasicSkillButton[1].onClick.AddListener(() => JobSkill.skillList[1].Apply(BattleSetting.Instance.CurrentActUnit));
+            BattleSetting.Instance.BasicPanel.GetComponentsInChildren<FloatingText>()[0].description = JobSkill.skillList[0].Description;
+            BattleSetting.Instance.BasicPanel.GetComponentsInChildren<FloatingText>()[1].description = JobSkill.skillList[1].Description;
             BasicSkillButton[0].GetComponentInChildren<Text>().text = JobSkill.skillList[0].SkillName;
             BasicSkillButton[1].GetComponentInChildren<Text>().text = JobSkill.skillList[1].SkillName;
             if (JobSkill.skillList[0].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
@@ -57,6 +59,7 @@ public class JobSkillHolder : MonoBehaviour
                 {
                     //把按钮文字也给改了
                     AdvancedSkillButton[i].GetComponentInChildren<Text>().text = JobSkill.skillList[jobData.SkillsID[i]].SkillName;
+                    BattleSetting.Instance.AdvancedPanel.GetComponentsInChildren<FloatingText>()[i].description = JobSkill.skillList[jobData.SkillsID[i]].Description;
                     //AdvancedSkillButton[i].onClick.AddListener(() => JobSkill.skillList[jobData.SkillsID[i]].Apply(BattleSetting.Instance.CurrentActUnit));
                     if (JobSkill.skillList[jobData.SkillsID[i]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
                     {
@@ -78,6 +81,7 @@ public class JobSkillHolder : MonoBehaviour
             {
                 SpecialSkill.SetActive(true);
                 SpecialButton.onClick.AddListener(() => JobSkill.skillList[jobData.SpecialID].Apply(BattleSetting.Instance.CurrentActUnit));
+                SpecialSkill.GetComponentInChildren<FloatingText>().description = JobSkill.skillList[jobData.SpecialID].Description;
             }
             else
             {

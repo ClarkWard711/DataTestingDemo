@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae5e711eb262548888c1b9ac531fd5ba, type: 3}
-  m_Name: MoonForever
+  m_Script: {fileID: 11500000, guid: aa52532ccccae4c869cb5e955a1be08b, type: 3}
+  m_Name: Myriads
   m_EditorClassIdentifier: 
-  SkillID: 16
-  SpCost: 10
+  SkillID: 0
+  SpCost: 8
   TurnCooldown: 0
   DealMultiplier: 0
-  SkillName: "\u6C38\u6708"
+  SkillName: "\u4E07\u8C61"
   Description: 
   HitRevise: 0
-  odoSkillKind: 0
+  odoSkillKind: 2

@@ -9,6 +9,7 @@ public class FloatingText : MonoBehaviour,IPointerEnterHandler,IPointerExitHandl
     public GameObject TextPanelPrefab;
     public GameObject TextPanel;
     public Canvas canvas;
+    public string description;
 
     /*private void Update()
     {
@@ -23,6 +24,10 @@ public class FloatingText : MonoBehaviour,IPointerEnterHandler,IPointerExitHandl
     public void OnPointerEnter(PointerEventData eventData)
     {
         TextPanel = Instantiate(TextPanelPrefab, this.transform);
+        if (description != null) 
+        {
+            TextPanel.GetComponentInChildren<Text>().text = description;
+        }
         //TextPanel.transform.position = eventData.position;
         //TextPanel.GetComponentInChildren<Text>().text = "";
     }
