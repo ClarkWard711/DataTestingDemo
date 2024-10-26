@@ -24,7 +24,7 @@ namespace Data
 
         [SerializeField] int jobLevel;
 
-        const int jobMaxLevel = 10;
+        const int jobMaxLevel = 15;
 
         public Sprite JobAvatarImage => jobAvatarImage;
 
@@ -59,7 +59,7 @@ namespace Data
 
             string[] textInLines = dataFile.text.Split('\n');
 
-            for (int LineIndex = 1; LineIndex < textInLines.Length-1; LineIndex++)
+            for (int LineIndex = 1; LineIndex < textInLines.Length - 1; LineIndex++) 
             {
                 string[] statsValues = textInLines[LineIndex].Split(",");
 
@@ -79,8 +79,8 @@ namespace Data
                 currentLevelStats.remote = int.Parse(statsValues[11]);
                 currentLevelStats.expPerLevel = int.Parse(statsValues[12]);
                 currentLevelStats.sxpPerLevel = int.Parse(statsValues[13]);
-                //currentLevelStats.PhysicalDizziness = int.Parse(statsValues[14]);
-                //currentLevelStats.SoulDizziness = int.Parse(statsValues[15]);
+                currentLevelStats.PhysicalDizziness = int.Parse(statsValues[14]);
+                currentLevelStats.SoulDizziness = int.Parse(statsValues[15]);
                 
                 jobStatsList.Add(currentLevelStats);
             }

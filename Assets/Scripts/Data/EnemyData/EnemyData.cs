@@ -15,10 +15,9 @@ public class EnemyData : ScriptableObject
     public int currentHP;
 
     [SerializeField] int enemyLevel;
-    const int enemyMaxLevel = 1;
 
+    const int enemyMaxLevel = 15;
     
-
     public string EnemyName => enemyName;
 
     public int EnemyLevel
@@ -49,7 +48,7 @@ public class EnemyData : ScriptableObject
 
         string[] textInLines = dataFile.text.Split('\n');
 
-        for (int LineIndex = 1; LineIndex < textInLines.Length - 1; LineIndex++)
+        for (int LineIndex = 1; LineIndex < textInLines.Length - 1; LineIndex++) 
         {
             string[] statsValues = textInLines[LineIndex].Split(",");
 
@@ -57,20 +56,20 @@ public class EnemyData : ScriptableObject
 
             currentLevelStats.maxHP = int.Parse(statsValues[0]);
             currentLevelStats.physicalAtk = int.Parse(statsValues[2]);
-            currentLevelStats.soulAtk = int.Parse(statsValues[4]);
-            currentLevelStats.physicalDfs = int.Parse(statsValues[3]);
+            currentLevelStats.soulAtk = int.Parse(statsValues[3]);
+            currentLevelStats.physicalDfs = int.Parse(statsValues[4]);
             currentLevelStats.soulDfs = int.Parse(statsValues[5]);
             currentLevelStats.hit = int.Parse(statsValues[6]);
             currentLevelStats.nim = int.Parse(statsValues[7]);
             currentLevelStats.speed = int.Parse(statsValues[8]);
             currentLevelStats.AntiCri = int.Parse(statsValues[9]);
-            //currentLevelStats.melee = int.Parse(statsValues[10]);
-            //currentLevelStats.remote = int.Parse(statsValues[11]);
-            //currentLevelStats.exp = int.Parse(statsValues[12]);
-            //currentLevelStats.sxp = int.Parse(statsValues[13]);
-            //currentLevelStats.dizzinessBar = int.Parse(statsValues[14]);
-            //currentLevelStats.PhysicalAntiDizziness = int.Parse(statsValues[15]);
-            //currentLevelStats.SoulAntiDizziness = int.Parse(statsValues[16]);
+            currentLevelStats.melee = int.Parse(statsValues[10]);
+            currentLevelStats.remote = int.Parse(statsValues[11]);
+            currentLevelStats.exp = int.Parse(statsValues[12]);
+            currentLevelStats.sxp = int.Parse(statsValues[13]);
+            currentLevelStats.dizzinessBar = int.Parse(statsValues[14]);
+            currentLevelStats.PhysicalAntiDizziness = int.Parse(statsValues[15]);
+            currentLevelStats.SoulAntiDizziness = int.Parse(statsValues[16]);
 
             enemyStatsList.Add(currentLevelStats);
         }

@@ -253,42 +253,40 @@ public class BattleSetting : MonoBehaviour
             Damage = Mathf.CeilToInt(2f * Damage);
         }
         //加入分配伤害检测
-        /*if (CheckHit())
+        if (CheckHit())
         {
             isCri = CheckCri();
             //命中检测成功回调
+            StartCoroutine(BeforeHit());
             if (isCri)
             {
-                TempDamage = Mathf.CeilToInt(Damage * 1.5f);
-                Damage = TempDamage;
-                StartCoroutine(BeforeHit());
-                Damage = TempDamage;
-                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
+                Damage = Mathf.CeilToInt(Damage * 1.5f);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttakeType);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成暴击伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }
             else
             {
-                TempDamage = Damage;
-                StartCoroutine(BeforeHit());
-                Damage = TempDamage;
-                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttakeType);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }
+            StartCoroutine(OnHit());
+            StartCoroutine(BeingHit());
         }
         else
         {
             GameStateText.text = "Miss";
             StartCoroutine(ShowText(2f));
-        }*/
-        StartCoroutine(BeforeHit());
+        }
+
+        /*StartCoroutine(BeforeHit());
         CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttakeType);
         GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         StartCoroutine(ShowText(2f));
         //受击回调
         StartCoroutine(OnHit());
-        StartCoroutine(BeingHit());
+        StartCoroutine(BeingHit());*/
         
         yield return new WaitForSeconds(time);
         CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
@@ -733,9 +731,10 @@ public class BattleSetting : MonoBehaviour
     float HitChanceCounting()
     {
         float HitChance;
-        HitChance = CurrentActUnit.GetComponent<GivingData>().hit / (CurrentActUnit.GetComponent<GivingData>().hit + CurrentActUnitTarget.GetComponent<GivingData>().nim);
+        HitChance = (float)CurrentActUnit.GetComponent<GivingData>().hit / ((float)CurrentActUnit.GetComponent<GivingData>().hit + (float)CurrentActUnitTarget.GetComponent<GivingData>().nim);
         //加入技能或者其他tag对命中率的检测
         //CurrentActUnit.GetComponent<GivingData>().tagList
+        //Debug.Log(HitChance);
         return HitChance;
     }
     /// <summary>
@@ -745,7 +744,15 @@ public class BattleSetting : MonoBehaviour
     float CriChanceCounting()
     {
         float CriChance;
-        CriChance = CurrentActUnit.GetComponent<GivingData>().cri / CurrentActUnitTarget.GetComponent<GivingData>().AntiCri;
+        if (CurrentActUnitTarget.GetComponent<GivingData>().AntiCri == 0) 
+        {
+            CriChance = -1f;
+        }
+        else
+        {
+            CriChance = 0.05f + (float)CurrentActUnit.GetComponent<GivingData>().cri / ((float)CurrentActUnit.GetComponent<GivingData>().cri + (float)CurrentActUnitTarget.GetComponent<GivingData>().AntiCri);
+        }
+        //Debug.Log(CriChance);
         return CriChance;
     }
     /// <summary>
@@ -1207,8 +1214,9 @@ public class BattleSetting : MonoBehaviour
     /// <returns></returns>
     bool CheckHit()
     {
-        float Hit = Random.Range(0, 1);
-        if (HitChanceCounting() <= Hit)
+        float Hit = Random.Range(0, 1f);
+        //Debug.Log(Hit);
+        if (HitChanceCounting() >= Hit)
         {
             return true;
         }
@@ -1223,8 +1231,9 @@ public class BattleSetting : MonoBehaviour
     /// <returns></returns>
     bool CheckCri()
     {
-        float Cri = Random.Range(0, 1);
-        if (CriChanceCounting() <= Cri) 
+        float Cri = Random.Range(0, 1f);
+        //Debug.Log(Cri);
+        if (CriChanceCounting() >= Cri) 
         {
             return true;
         }

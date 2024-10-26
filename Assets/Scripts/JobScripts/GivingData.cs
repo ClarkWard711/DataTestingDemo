@@ -9,7 +9,7 @@ public class GivingData : MonoBehaviour
 {
     public JobData jobData;
     public EnemyData EnemyData;
-    public int Speed, currentHP, currentSP, pa, sa, pd, sd, hit, nim, cri, melee, remote, maxHP, maxSP, AntiCri, physicalDizziness, soulDizziness, pAntiDizziness, sAntiDizziness;
+    public int Speed, currentHP, currentSP, pa, sa, pd, sd, hit, nim, cri, melee, remote, maxHP, maxSP, AntiCri, physicalDizziness, soulDizziness, pAntiDizziness, sAntiDizziness, expPerlevel, sxpPerlevel, exp, sxp, dizzinessBar;
     public int positionID;
     public AttackType attackType = AttackType.Null;
     public bool isDead = false;
@@ -48,6 +48,8 @@ public class GivingData : MonoBehaviour
             remote = jobData.JobStatsList[jobData.JobLevel - 1].remote;
             physicalDizziness= jobData.JobStatsList[jobData.JobLevel - 1].PhysicalDizziness;
             soulDizziness= jobData.JobStatsList[jobData.JobLevel - 1].SoulDizziness;
+            expPerlevel = jobData.JobStatsList[jobData.JobLevel - 1].expPerLevel;
+            sxpPerlevel = jobData.JobStatsList[jobData.JobLevel - 1].sxpPerLevel;
         }
         else
         {
@@ -63,8 +65,11 @@ public class GivingData : MonoBehaviour
             AntiCri = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].AntiCri;
             pAntiDizziness= EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].PhysicalAntiDizziness;
             sAntiDizziness= EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].SoulAntiDizziness;
-            melee = 100;
-            remote = 100;
+            dizzinessBar = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].dizzinessBar;
+            exp = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].exp;
+            sxp = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].sxp;
+            melee = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].melee;
+            remote = EnemyData.EnemyStatsList[EnemyData.EnemyLevel - 1].remote;
         }
         if (currentHP <= 0) 
         {
