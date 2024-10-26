@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class OdorikoHolder : JobSkillHolder
 {
@@ -9,13 +10,50 @@ public class OdorikoHolder : JobSkillHolder
     public bool MoonSpReduce = false, SunSpReduce = false;
     public float SpCostMultiplier = 1f;
     public bool LastTurnSun = false, LastTurnMoon = false, usedSkill = false;
-
+    public bool isDanceStepTriggered = false;
+    public bool canSpecialBeUsed = false;
+    public bool isOnlyOnceUsed = false;
+    public int MoonUsedAmount = 0;
     public override void Awake()
     {
         base.Awake();
         if (Instance == null)
         {
             Instance = this;
+        }
+    }
+
+    public override void AddSkillToButton()
+    {
+        base.AddSkillToButton();
+        if (jobData.SpecialID != 0)
+        {
+            SpecialSkill.SetActive(true);
+            SpecialButton.onClick.AddListener(() => JobSkill.skillList[jobData.SpecialID].Apply(BattleSetting.Instance.CurrentActUnit));
+            SpecialSkill.GetComponentInChildren<Text>().text = JobSkill.skillList[jobData.SpecialID].SkillName;
+            if (jobData.SpecialID == 16 && MoonUsedAmount >= 3)
+            {
+                canSpecialBeUsed = true;
+            }
+            else if (jobData.SpecialID == 17 || jobData.SpecialID == 18) 
+            {
+                if (isDanceStepTriggered)
+                {
+                    canSpecialBeUsed = true;
+                }
+            }
+            if (canSpecialBeUsed && !isOnlyOnceUsed && JobSkill.skillList[jobData.SpecialID].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP) 
+            {
+                SpecialButton.interactable = true;
+            }
+            else
+            {
+                SpecialButton.interactable = false;
+            }
+        }
+        else
+        {
+            SpecialSkill.SetActive(false);
         }
     }
 
@@ -43,6 +81,7 @@ public class OdorikoHolder : JobSkillHolder
             SpCostMultiplier = 1f;
         }
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= Mathf.CeilToInt(SpCost * SpCostMultiplier);
+        MoonUsedAmount++;
     }
 
     void SunSpCost(int SpCost)
@@ -69,6 +108,7 @@ public class OdorikoHolder : JobSkillHolder
                 LastTurnSun = false;
                 BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
                 BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "Charging").TurnLast--;
+                isDanceStepTriggered = true;
             }
             else
             {
@@ -83,6 +123,7 @@ public class OdorikoHolder : JobSkillHolder
                 LastTurnMoon = false;
                 BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(Charging.CreateInstance<Charging>());
                 BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "Charging").TurnLast--;
+                isDanceStepTriggered = true;
             }
             else
             {
@@ -922,7 +963,39 @@ public class OdorikoHolder : JobSkillHolder
     }*/
     #endregion
 
-
+    #region Special
+    public IEnumerator moonForever(int SpCost, OdoSkillKind odoSkillKind)
+    {
+        List<GameObject> players = new List<GameObject>();
+        foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+        {
+            if (player.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon))
+            {
+                players.Add(player);
+            }
+        }
+        if (players.Count != 0) 
+        {
+            BattleSetting.Instance.isChooseFinished = false;
+            BattleSetting.Instance.canChangeAction = false;
+            DanceStepCheck(OdoSkillKind.Moon);
+            SpCounter(SpCost, odoSkillKind);
+            MoonUsedAmount = 0;
+            canSpecialBeUsed = false;
+            int i = Random.Range(0, players.Count);
+            List<Tag> odorikoTags = players[i].GetComponent<GivingData>().tagList.FindAll(tag => tag is OdorikoTag && ((OdorikoTag)tag).odoTagKind == OdorikoTag.OdoTagKind.Moon);
+            int index = Random.Range(0, odorikoTags.Count);
+            odorikoTags[index].TagKind = Tag.Kind.eternal;
+            //对players[i]播放动画
+            yield return new WaitForSeconds(1f);
+            BattleSetting.Instance.ActionEnd();
+        }
+        else
+        {
+            StartCoroutine(BattleSetting.Instance.ShowActionText("无可作用的友方"));
+        }
+    }
+    #endregion
 
     public override void ActionEndCallback()
     {

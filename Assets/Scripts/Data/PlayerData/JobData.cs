@@ -42,6 +42,7 @@ namespace Data
         }
 
         public List<int> SkillsID;
+        public int SpecialID;
 
         public GameObject JobPrefab;
 

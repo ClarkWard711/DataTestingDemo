@@ -36,6 +36,7 @@ public class BattleSetting : MonoBehaviour
     public GameObject SkillList;//基础进阶技能显示
     bool isTextShowed = false;//基础进阶是否显示
     public GameObject BasicPanel, AdvancedPanel;//基础技能和进阶技能的panel
+    public GameObject SpecialSkill;
     public bool isBasicShowed = false;//基础技能是否显示
     public bool isAdvancedShowed = false;//进阶技能是否显示
     List<int> SkillID = new List<int>();//技能ID
@@ -390,6 +391,19 @@ public class BattleSetting : MonoBehaviour
     IEnumerator BeforeHit()
     {
         foreach (Tag tag in CurrentActUnit.GetComponent<GivingData>().tagList)
+        {
+            UnityAction BeforeHit;
+            BeforeHit = tag.BeforeHit;
+            if (BeforeHit == null)
+            {
+                continue;
+            }
+            BeforeHit.Invoke();
+
+            yield return null;
+        }
+
+        foreach (Tag tag in CurrentActUnitTarget.GetComponent<GivingData>().tagList)
         {
             UnityAction BeforeHit;
             BeforeHit = tag.BeforeHit;
