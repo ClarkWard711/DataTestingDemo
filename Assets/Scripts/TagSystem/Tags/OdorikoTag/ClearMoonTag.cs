@@ -7,7 +7,7 @@ public class ClearMoonTag : OdorikoTag
     public ClearMoonTag()
     {
         odoTagKind = OdoTagKind.Moon;
-        TagName = "FullMoon";
+        TagName = "ClearMoon";
         TagKind = Kind.turnLessen;
         TurnAdd = 3;
         TurnLast = 3;

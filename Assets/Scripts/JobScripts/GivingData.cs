@@ -94,7 +94,15 @@ public class GivingData : MonoBehaviour
     public void takeBonusDamage(int Damage,AttackType attackType)
     {
         currentHP -= Damage;
-        StartCoroutine(FloatingBonusNumber(Damage, attackType));
+        StartCoroutine(DroppingBonusNumber(Damage, attackType));
+    }
+
+    public IEnumerator FloatingMiss()
+    {
+        GameObject obj = Instantiate(DamagePrefab, BasePosition.transform);
+        obj.GetComponent<Text>().text = "Miss";
+        yield return new WaitForSeconds(2f);
+        Destroy(obj);
     }
 
     IEnumerator FloatingNumber(int Damage, AttackType attackType)
@@ -123,7 +131,7 @@ public class GivingData : MonoBehaviour
         }
     }
 
-    IEnumerator FloatingBonusNumber(int Damage, AttackType attackType)
+    IEnumerator DroppingBonusNumber(int Damage, AttackType attackType)
     {
         GameObject obj = Instantiate(DropPrefab, BasePosition.transform);
         obj.GetComponent<Text>().text = "-" + Damage;

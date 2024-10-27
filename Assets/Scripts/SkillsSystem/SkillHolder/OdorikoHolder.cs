@@ -989,17 +989,17 @@ public class OdorikoHolder : JobSkillHolder
         }
         if (players.Count != 0) 
         {
-            BattleSetting.Instance.isChooseFinished = false;
             BattleSetting.Instance.canChangeAction = false;
             DanceStepCheck(OdoSkillKind.Moon);
             SpCounter(SpCost, odoSkillKind);
             MoonUsedAmount = 0;
             canSpecialBeUsed = false;
+            SpecialButton.interactable = false;
             int i = Random.Range(0, players.Count);
             List<Tag> odorikoTags = players[i].GetComponent<GivingData>().tagList.FindAll(tag => tag is OdorikoTag && ((OdorikoTag)tag).odoTagKind == OdorikoTag.OdoTagKind.Moon);
             int index = Random.Range(0, odorikoTags.Count);
             odorikoTags[index].TagKind = Tag.Kind.eternal;
-            //对players[i]播放动画
+            //todo:对players[i]播放动画
             yield return new WaitForSeconds(1f);
             BattleSetting.Instance.ActionEnd();
         }
@@ -1011,13 +1011,48 @@ public class OdorikoHolder : JobSkillHolder
 
     public IEnumerator myriads(int SpCost, OdoSkillKind odoSkillKind)
     {
-        BattleSetting.Instance.isChooseFinished = false;
         BattleSetting.Instance.canChangeAction = false;
         SpCounter(SpCost, odoSkillKind);
+        SpecialButton.interactable = false;
         ignoreDanceStep = true;
         StartCoroutine(BattleSetting.Instance.ShowActionText("万象"));
+        isOnlyOnceUsed = true;
         yield return new WaitForSeconds(1f);
         BattleSetting.Instance.ActionEnd();
+    }
+
+    public IEnumerator sunlit(int SpCost, OdoSkillKind odoSkillKind)
+    {
+        BattleSetting.Instance.canChangeAction = false;
+        DanceStepCheck(OdoSkillKind.Sun);
+        SpCounter(SpCost, odoSkillKind);
+        SpecialButton.interactable = false;
+        isOnlyOnceUsed = true;
+        StartCoroutine(BattleSetting.Instance.ShowActionText("日耀"));
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(SunlitTag.CreateInstance<SunlitTag>());
+        yield return new WaitForSeconds(1f);
+        BattleSetting.Instance.ActionEnd();
+
+    }
+
+    public IEnumerator sunSpotOfSunlit(OdoSkillKind odoSkillKind)
+    {
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            MoonSpReduce = true;
+            SpCostMultiplier = 0.8f;
+        }
+        else
+        {
+            MoonSpReduce = true;
+            SpCostMultiplier = 0.9f;
+        }
+        BattleSetting.Instance.GameStateText.text = "日斑";
+        StartCoroutine(BattleSetting.Instance.ShowText(1f));
+        yield return new WaitForSeconds(0.5f);
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
+        //StartCoroutine(BattleSetting.Instance.DealDamage(0.5f));
+        BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
     }
     #endregion
 

@@ -246,29 +246,29 @@ public class BattleSetting : MonoBehaviour
     public IEnumerator DealDamage(float time)
     {
         State = BattleState.Middle;
-        AttackType ActAttakeType;
-        ActAttakeType = CurrentActUnit.GetComponent<GivingData>().attackType;
-        int Damage = DamageCounting(ActAttakeType);
+        AttackType ActAttackType;
+        ActAttackType = CurrentActUnit.GetComponent<GivingData>().attackType;
+        int Damage = DamageCounting(ActAttackType);
         if (CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging") && isNormalAttack) 
         {
             Damage = Mathf.CeilToInt(2f * Damage);
         }
         //加入分配伤害检测
-        if (CheckHit())
+        if (CheckHit(CurrentActUnit, CurrentActUnitTarget)) 
         {
-            isCri = CheckCri();
+            isCri = CheckCri(CurrentActUnit, CurrentActUnitTarget);
             //命中检测成功回调
             StartCoroutine(BeforeHit());
             if (isCri)
             {
                 Damage = Mathf.CeilToInt(Damage * 1.5f);
-                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttakeType);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttackType);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成暴击伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }
             else
             {
-                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttakeType);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttackType);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }
@@ -277,8 +277,7 @@ public class BattleSetting : MonoBehaviour
         }
         else
         {
-            GameStateText.text = "Miss";
-            StartCoroutine(ShowText(2f));
+            StartCoroutine(CurrentActUnitTarget.GetComponent<GivingData>().FloatingMiss());
         }
 
         /*StartCoroutine(BeforeHit());
@@ -742,10 +741,10 @@ public class BattleSetting : MonoBehaviour
     /// 命中概率计算
     /// </summary>
     /// <returns></returns>
-    float HitChanceCounting()
+    float HitChanceCounting(GameObject atk, GameObject dfs)
     {
         float HitChance;
-        HitChance = (float)CurrentActUnit.GetComponent<GivingData>().hit / ((float)CurrentActUnit.GetComponent<GivingData>().hit + (float)CurrentActUnitTarget.GetComponent<GivingData>().nim);
+        HitChance = (float)atk.GetComponent<GivingData>().hit / ((float)atk.GetComponent<GivingData>().hit + (float)dfs.GetComponent<GivingData>().nim);
         //加入技能或者其他tag对命中率的检测
         //CurrentActUnit.GetComponent<GivingData>().tagList
         //Debug.Log(HitChance);
@@ -755,16 +754,16 @@ public class BattleSetting : MonoBehaviour
     /// 暴击概率计算
     /// </summary>
     /// <returns></returns>
-    float CriChanceCounting()
+    float CriChanceCounting(GameObject atk, GameObject dfs)
     {
         float CriChance;
-        if (CurrentActUnitTarget.GetComponent<GivingData>().AntiCri == 0) 
+        if (dfs.GetComponent<GivingData>().AntiCri == 0) 
         {
             CriChance = -1f;
         }
         else
         {
-            CriChance = 0.05f + (float)CurrentActUnit.GetComponent<GivingData>().cri / ((float)CurrentActUnit.GetComponent<GivingData>().cri + (float)CurrentActUnitTarget.GetComponent<GivingData>().AntiCri);
+            CriChance = 0.05f + (float)atk.GetComponent<GivingData>().cri / ((float)atk.GetComponent<GivingData>().cri + (float)dfs.GetComponent<GivingData>().AntiCri);
         }
         //Debug.Log(CriChance);
         return CriChance;
@@ -1226,11 +1225,11 @@ public class BattleSetting : MonoBehaviour
     /// 检测是否命中
     /// </summary>
     /// <returns></returns>
-    bool CheckHit()
+    bool CheckHit(GameObject atk, GameObject dfs)
     {
         float Hit = Random.Range(0, 1f);
         //Debug.Log(Hit);
-        if (HitChanceCounting() >= Hit)
+        if (HitChanceCounting(atk, dfs) >= Hit) 
         {
             return true;
         }
@@ -1243,11 +1242,11 @@ public class BattleSetting : MonoBehaviour
     /// 检测是否暴击
     /// </summary>
     /// <returns></returns>
-    bool CheckCri()
+    bool CheckCri(GameObject atk, GameObject dfs)
     {
         float Cri = Random.Range(0, 1f);
         //Debug.Log(Cri);
-        if (CriChanceCounting() >= Cri) 
+        if (CriChanceCounting(atk, dfs) >= Cri)  
         {
             return true;
         }
@@ -1264,15 +1263,36 @@ public class BattleSetting : MonoBehaviour
     /// <param name="dfsUnit"></param>
     public void DealDamageExtra(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType)
     {
-        //todo: add callback and hit cri check
         CurrentActUnit.GetComponent<GivingData>().attackType = attackType;
         if (Damage == -1) 
         {
             Damage = DamageCountingByUnit(atkUnit, dfsUnit, attackType);
         }
-        dfsUnit.GetComponent<GivingData>().takeDamage(Damage, attackType);
-        StartCoroutine(OnHit());
-        StartCoroutine(BeingHit());
+        if (CheckHit(atkUnit, dfsUnit)) 
+        {
+            isCri = CheckCri(atkUnit, dfsUnit);
+            //命中检测成功回调
+            StartCoroutine(BeforeHit());
+            if (isCri)
+            {
+                Damage = Mathf.CeilToInt(Damage * 1.5f);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
+                GameStateText.text = "对" + CurrentActUnitTarget.name + "造成暴击伤害" + Damage;
+                StartCoroutine(ShowText(2f));
+            }
+            else
+            {
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
+                GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
+                StartCoroutine(ShowText(2f));
+            }
+            StartCoroutine(OnHit());
+            StartCoroutine(BeingHit());
+        }
+        else
+        {
+            StartCoroutine(CurrentActUnitTarget.GetComponent<GivingData>().FloatingMiss());
+        }
         //GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
         //StartCoroutine(ShowText(2f));
         //CurrentActUnitTarget = null;
