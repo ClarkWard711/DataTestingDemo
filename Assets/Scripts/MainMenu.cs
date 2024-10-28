@@ -19,7 +19,6 @@ public class MainMenu : MonoBehaviour
         if(enter)
         {
             enter = false;
-            SaveAndLoad.Instance.SaveByJson();
             SceneLoader.LoadAddressableScene(newGameScene);
 
         }

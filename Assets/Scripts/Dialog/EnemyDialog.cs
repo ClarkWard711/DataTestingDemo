@@ -28,7 +28,6 @@ public class EnemyDialog : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F)&&enter&&enterDialog)
         {
             enter = false;
-            DataInputs.Instance.Save();
             //GameObject.FindGameObjectWithTag("MainCamera").SetActive(false);
             SceneLoader.LoadAddressableScene(battleScene);
         }

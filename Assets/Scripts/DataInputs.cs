@@ -73,11 +73,8 @@ public class DataInputs : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-        Load();
         UpdatePlayerJob(state);
         //Debug.Log(playerCurrentLevel);
-        Save();
-        Load();
         if (playerCurrentHP == 0)
         {
             playerCurrentHP = maxHPOfPlayer;
@@ -172,43 +169,5 @@ public class DataInputs : MonoBehaviour
         }
     }
 
-    #endregion
-
-    #region SaveAndLoad
-    public void Save()
-    {
-        SaveAndLoad.Instance.playerCurrentLevel = playerCurrentLevel;
-        SaveAndLoad.Instance.playerCurrentSoulLevel = playerCurrentSoulLevel;
-        //SaveAndLoad.Instance.positionTransform = playerTransform;
-
-        SaveAndLoad.Instance.playerCurrentHP = playerCurrentHP;
-        SaveAndLoad.Instance.playerCurrentSP = playerCurrentSP;
-        SaveAndLoad.Instance.maxHP = maxHPOfPlayer;
-        SaveAndLoad.Instance.maxSP = maxSPOfPlayer;
-        SaveAndLoad.Instance.pa = physicalAttackOfPlayer;
-        SaveAndLoad.Instance.sa = soulAttackOfPlayer;
-        SaveAndLoad.Instance.pd = physicalDefenceOfPlayer;
-        SaveAndLoad.Instance.sd = soulDefenceOfPlayer;
-        SaveAndLoad.Instance.hit = hitOfPlayer;
-        SaveAndLoad.Instance.nim = nimblenessOfPlayer;
-        SaveAndLoad.Instance.spd = speedOfPlayer;
-        SaveAndLoad.Instance.cri = criticalOfPlayer;
-        SaveAndLoad.Instance.melee = meleeOfPlayer;
-        SaveAndLoad.Instance.remote = remoteOfPlayer;
-        SaveAndLoad.Instance.SaveByJson();
-    }
-
-    public void Load()
-    {
-        SaveAndLoad.Instance.LoadFromJson();
-        //positionTransform = SaveAndLoad.Instance.positionTransform;
-        //playerCurrentLevel = SaveAndLoad.Instance.playerCurrentLevel;
-        playerCurrentHP = SaveAndLoad.Instance.playerCurrentHP;
-        playerCurrentSP = SaveAndLoad.Instance.playerCurrentSP;
-        deltaExp = SaveAndLoad.Instance.DeltaExp;
-        deltaSp = SaveAndLoad.Instance.DeltaSp;
-        maxHPOfPlayer = SaveAndLoad.Instance.maxHP;
-        maxSPOfPlayer = SaveAndLoad.Instance.maxSP;
-    }
     #endregion
 }

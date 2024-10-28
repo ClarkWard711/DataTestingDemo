@@ -59,7 +59,6 @@ public class EnterBattle : MonoBehaviour
         isPressed = false;
         GameObject.Find("Player").SetActive(false);
         Instance = this;
-        Load();
         SkillList.SetActive(false);
         /*
         Debug.Log(SaveAndLoad.Instance.playerCurrentLevel);
@@ -118,7 +117,6 @@ public class EnterBattle : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !isPressed )
         {
             isPressed = true;
-            Save();
             SceneLoader.LoadAddressableScene(outerScene);
         }
         SetColorTo0Gradually(EnemyDamageText);
@@ -127,40 +125,6 @@ public class EnterBattle : MonoBehaviour
         SetColorTo0Gradually(EnemyHealText);
 
     }
-
-    #region SaveAndLoad
-    void Load()
-    {
-        SaveAndLoad.Instance.LoadFromJson();
-        //deltaExp = SaveAndLoad.Instance.DeltaExp;
-        //deltaSp = SaveAndLoad.Instance.DeltaSp;
-        cHP = SaveAndLoad.Instance.playerCurrentHP;
-        cSP = SaveAndLoad.Instance.playerCurrentSP;
-        maxHP = SaveAndLoad.Instance.maxHP;
-        maxSP = SaveAndLoad.Instance.maxSP;
-        pa = SaveAndLoad.Instance.pa;
-        sa = SaveAndLoad.Instance.sa;
-        pd = SaveAndLoad.Instance.pd;
-        sd = SaveAndLoad.Instance.sd;
-        hit = SaveAndLoad.Instance.hit;
-        nim = SaveAndLoad.Instance.nim;
-        spd = SaveAndLoad.Instance.spd;
-        cri = SaveAndLoad.Instance.cri;
-        melee = SaveAndLoad.Instance.melee;
-        remote = SaveAndLoad.Instance.remote;
-    }
-
-    void Save()
-    {
-        
-        SaveAndLoad.Instance.playerCurrentHP = cHP;
-        SaveAndLoad.Instance.playerCurrentSP = cSP;
-        SaveAndLoad.Instance.DeltaExp = deltaExp;
-        SaveAndLoad.Instance.DeltaSp = deltaSp;
-        SaveAndLoad.Instance.SaveByJson();
-
-    }
-    #endregion
 
     int Damage(int atk, int dfs)
     {

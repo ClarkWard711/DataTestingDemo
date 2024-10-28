@@ -47,8 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: f18b253c3c9d344ac80fc5d619a04889, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: d8c641443007049418746a0801067186,
-    type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: d8c641443007049418746a0801067186, type: 3}
   m_SortingOrder: 100
 --- !u!114 &4817859657273750234
 MonoBehaviour:
@@ -104,7 +103,6 @@ GameObject:
   - component: {fileID: 1917730887069710889}
   - component: {fileID: 3381012004156070329}
   - component: {fileID: 6012950755198801180}
-  - component: {fileID: 761748880022693795}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -153,17 +151,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e28a9fb560647a2a4b8d66eb1b602b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &761748880022693795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212229184901955972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c4d86276a18482c8055061efdc9ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCurrentLevel: 1
-  positionTransform: {fileID: 1917730887069710889}
