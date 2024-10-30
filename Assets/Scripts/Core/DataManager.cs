@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 
+[DefaultExecutionOrder(-100)] 
+
 public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
@@ -21,7 +23,7 @@ public class DataManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance==null)
+        if (Instance == null) 
         {
             Instance = this;
         }
@@ -52,8 +54,12 @@ public class DataManager : MonoBehaviour
         }
 
         var resultPath = jsonFolder + "data.sav";
-
-        var jsonData = JsonConvert.SerializeObject(saveData, Formatting.Indented);
+        Debug.Log(resultPath);
+        var jsonSetting = new JsonSerializerSettings
+        {
+            NullValueHandling = NullValueHandling.Ignore
+        };
+        var jsonData = JsonConvert.SerializeObject(saveData, Formatting.Indented, jsonSetting);
 
         if (!File.Exists(resultPath)) 
         {

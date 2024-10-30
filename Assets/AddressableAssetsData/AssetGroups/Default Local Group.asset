@@ -21,6 +21,10 @@ MonoBehaviour:
     m_Address: BattleTestScene
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0901ca0ce6cbd4d178a99d9e78dd45e9
+    m_Address: Assets/Scenes/TestScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 738b95c4ccd0846528d5e5af8e0c9b94, type: 2}
   m_SchemaSet:

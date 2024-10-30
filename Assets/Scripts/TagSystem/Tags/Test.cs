@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class Test : MonoBehaviour,ISaveable
 {
     /*public GameObject[] playerUnits;
     public PartyMember PlayerPartyMember;
@@ -77,14 +77,55 @@ public class Test : MonoBehaviour
             }
         }
     }*/
-    public GameObject drop;
-    public Vector3 pos;
+    public int testNum = 0;
+
+    public void Start()
+    {
+        ISaveable saveable = this;
+        saveable.RegisterSaveData();
+        DataManager.Instance.Load();
+    }
+
+    public GameDataDefinition GetGameDataID()
+    {
+        return GetComponent<GameDataDefinition>();
+    }
+
+    public void GetSaveData(GameData data)
+    {
+        if (data.intSavedData.ContainsKey(GetGameDataID().ID)) 
+        {
+            data.intSavedData[GetGameDataID().ID] = testNum;
+        }
+        else
+        {
+            data.intSavedData.Add(GetGameDataID().ID, testNum);
+        }
+    }
+
+    public void LoadData(GameData data)
+    {
+        if (data.intSavedData.ContainsKey(GetGameDataID().ID))
+        {
+            testNum = data.intSavedData[GetGameDataID().ID];
+        }
+    }
+
     void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyUp(KeyCode.N))
         {
-            pos = Input.mousePosition;
-            var obj = Instantiate(drop, pos, Quaternion.identity);
+            testNum++;
+        }
+
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            DataManager.Instance.Load();
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            DataManager.Instance.Save();
         }
     }
 }

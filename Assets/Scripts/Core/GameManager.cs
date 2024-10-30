@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
-
+[DefaultExecutionOrder(-100)]
 public class GameManager : MonoBehaviour
 {
     const string GameManagerKey = "GameManager";
