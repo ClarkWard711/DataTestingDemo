@@ -286,6 +286,11 @@ MonoBehaviour:
   soulDizziness: 0
   pAntiDizziness: 0
   sAntiDizziness: 0
+  expPerlevel: 0
+  sxpPerlevel: 0
+  exp: 0
+  sxp: 0
+  dizzinessBar: 0
   positionID: 0
   attackType: 2
   isDead: 0
@@ -315,8 +320,11 @@ MonoBehaviour:
   jobData: {fileID: 0}
   BasicSkillButton: []
   AdvancedSkillButton: []
+  SpecialSkill: {fileID: 0}
+  SpecialButton: {fileID: 0}
   BasicSkillText: []
   AdvancedSkillText: []
+  coolDownList: 
 --- !u!1 &6219407169606312322
 GameObject:
   m_ObjectHideFlags: 0
