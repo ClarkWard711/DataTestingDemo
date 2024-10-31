@@ -33,5 +33,5 @@ public abstract class Tag : ScriptableObject
 
     }
     //命中前后回调点
-    public UnityAction OnHit, BeforeHit, BeingHit;
+    public UnityAction OnHit, BeforeHit, BeingHit, OnDamageTake;
 }
