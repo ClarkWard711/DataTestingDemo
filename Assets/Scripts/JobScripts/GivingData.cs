@@ -85,13 +85,13 @@ public class GivingData : MonoBehaviour
             //Debug.Log("变没了2");
         }
     }
-    public void takeDamage(int Damage, AttackType attackType)
+    public void takeDamage(int Damage, AttackType attackType, bool isSelf)
     {
         currentHP -= Damage;
         StartCoroutine(FloatingNumber(Damage, attackType));
     }
 
-    public void takeBonusDamage(int Damage,AttackType attackType)
+    public void takeBonusDamage(int Damage, AttackType attackType)
     {
         currentHP -= Damage;
         StartCoroutine(DroppingBonusNumber(Damage, attackType));

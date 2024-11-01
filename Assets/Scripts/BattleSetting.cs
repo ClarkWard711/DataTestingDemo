@@ -243,7 +243,7 @@ public class BattleSetting : MonoBehaviour
         SetColorTo0(GameStateText);
     }
 
-    public IEnumerator DealDamage(float time)
+    public IEnumerator DealDamage(float time,bool isSelf)
     {
         State = BattleState.Middle;
         AttackType ActAttackType;
@@ -262,13 +262,13 @@ public class BattleSetting : MonoBehaviour
             if (isCri)
             {
                 Damage = Mathf.CeilToInt(Damage * 1.5f);
-                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttackType);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttackType, isSelf);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成暴击伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }
             else
             {
-                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttackType);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttackType,isSelf);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }
@@ -307,7 +307,7 @@ public class BattleSetting : MonoBehaviour
     public IEnumerator DealCounterDamage(int Damage,AttackType attackType)
     {
         State = BattleState.Middle;
-        CurrentActUnit.GetComponent<GivingData>().takeDamage(Damage, attackType);
+        CurrentActUnit.GetComponent<GivingData>().takeDamage(Damage, attackType, false);
         GameStateText.text = "对" + CurrentActUnit.name + "造成反击伤害" + Damage;
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
@@ -324,7 +324,7 @@ public class BattleSetting : MonoBehaviour
             int TargetIndex = Random.Range(0, RemainingPlayerUnits.Length);
             CurrentActUnitTarget = RemainingPlayerUnits[TargetIndex];
             CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
-            StartCoroutine(DealDamage(3f));
+            StartCoroutine(DealDamage(3f, false));
         }
         else if (State == BattleState.PlayerTurn)
         {
@@ -381,7 +381,7 @@ public class BattleSetting : MonoBehaviour
         isChooseFinished = false;
         isNormalAttack = true;
         CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
-        StartCoroutine(DealDamage(3f));
+        StartCoroutine(DealDamage(3f,false));
     }
     /// <summary>
     /// 命中检测成功后的回调
@@ -821,7 +821,7 @@ public class BattleSetting : MonoBehaviour
                     {
                         CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                         isWaitForPlayerToChooseUnit = false;
-                        StartCoroutine(DealDamage(3f));
+                        //StartCoroutine(DealDamage(3f));
                         CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                     }
                 }
@@ -945,7 +945,7 @@ public class BattleSetting : MonoBehaviour
                     {
                         CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                         isWaitForPlayerToChooseAlly = false;
-                        StartCoroutine(DealDamage(3f));
+                        //StartCoroutine(DealDamage(3f));
                         CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                     }
                 }
@@ -1261,7 +1261,7 @@ public class BattleSetting : MonoBehaviour
     /// <param name="Damage"></param>
     /// <param name="atkUnit"></param>
     /// <param name="dfsUnit"></param>
-    public void DealDamageExtra(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType)
+    public void DealDamageExtra(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType,bool isSelf)
     {
         CurrentActUnit.GetComponent<GivingData>().attackType = attackType;
         if (Damage == -1) 
@@ -1276,13 +1276,13 @@ public class BattleSetting : MonoBehaviour
             if (isCri)
             {
                 Damage = Mathf.CeilToInt(Damage * 1.5f);
-                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType, isSelf);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成暴击伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }
             else
             {
-                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType, isSelf);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }

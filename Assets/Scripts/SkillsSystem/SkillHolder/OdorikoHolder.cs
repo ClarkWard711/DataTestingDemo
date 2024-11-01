@@ -202,7 +202,7 @@ public class OdorikoHolder : JobSkillHolder
         StartCoroutine(BattleSetting.Instance.ShowText(1f));
         yield return new WaitForSeconds(1f);
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
-        StartCoroutine(BattleSetting.Instance.DealDamage(2f));
+        StartCoroutine(BattleSetting.Instance.DealDamage(2f, false));
     }
     #endregion
 
@@ -753,8 +753,8 @@ public class OdorikoHolder : JobSkillHolder
             {
                 damage = Mathf.CeilToInt(1.25f * damage);
             }
-            
-            BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical);
+
+            BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
         }
 
         StartCoroutine(BattleSetting.Instance.ShowActionText("释放日溯"));
@@ -772,20 +772,20 @@ public class OdorikoHolder : JobSkillHolder
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
             var temp = BattleSetting.Instance.CurrentActUnitTarget;
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
             yield return new WaitForSeconds(0.4f);
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul, false);
             yield return new WaitForSeconds(0.4f);
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Physical);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Physical, false);
             yield return new WaitForSeconds(0.4f);
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul, false);
         }
         else
         {
             var temp = BattleSetting.Instance.CurrentActUnitTarget;
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
             yield return new WaitForSeconds(0.4f);
-            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul);
+            BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul, false);
         }
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(SunProtectionTag.CreateInstance<SunProtectionTag>());
         StartCoroutine(BattleSetting.Instance.ShowActionText("释放日护"));
@@ -802,7 +802,7 @@ public class OdorikoHolder : JobSkillHolder
         SpCounter(SpCost, odoSkillKind);
         var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
         damage = Mathf.CeilToInt(1.5f * damage);
-        BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+        BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 
         var moonEnemyList = new List<GameObject>();
         foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
@@ -861,7 +861,7 @@ public class OdorikoHolder : JobSkillHolder
         DanceStepCheck(OdoSkillKind.Sun);
         SpCounter(SpCost, odoSkillKind);
         var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
-        BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+        BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
@@ -893,9 +893,9 @@ public class OdorikoHolder : JobSkillHolder
                 BattleSetting.Instance.CurrentActUnitTarget = enemy;
                 var physicalDamage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
                 var soulDamage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
-                BattleSetting.Instance.DealDamageExtra(physicalDamage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+                BattleSetting.Instance.DealDamageExtra(physicalDamage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
                 yield return new WaitForSeconds(0.2f);
-                BattleSetting.Instance.DealDamageExtra(soulDamage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
+                BattleSetting.Instance.DealDamageExtra(soulDamage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul, false);
             }
         }
         else
@@ -904,7 +904,7 @@ public class OdorikoHolder : JobSkillHolder
             {
                 BattleSetting.Instance.CurrentActUnitTarget = enemy;
                 var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
-                BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+                BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
             }
         }
 
@@ -945,7 +945,7 @@ public class OdorikoHolder : JobSkillHolder
             }
         }
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
-        BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealDamage(1f));
+        BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealDamage(1f, false));
         
         StartCoroutine(BattleSetting.Instance.ShowActionText("释放日瑰"));
         yield return new WaitForSeconds(1f);
@@ -1052,7 +1052,7 @@ public class OdorikoHolder : JobSkillHolder
         yield return new WaitForSeconds(0.5f);
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
         //StartCoroutine(BattleSetting.Instance.DealDamage(0.5f));
-        BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+        BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
     }
     #endregion
 

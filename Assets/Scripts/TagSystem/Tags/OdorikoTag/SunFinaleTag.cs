@@ -46,12 +46,12 @@ public class SunFinaleTag : OdorikoTag
 
         if (isCharged)
         {
-            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical), 0.1f, containMoonCount));
-            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(soulDamage, AtkUnit, DfsUnit, AttackType.Soul), 0.1f, containMoonCount));
+            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical, false), 0.1f, containMoonCount));
+            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(soulDamage, AtkUnit, DfsUnit, AttackType.Soul, false), 0.1f, containMoonCount));
         }
         else
         {
-            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical), 0.1f, containMoonCount));
+            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical, false), 0.1f, containMoonCount));
         }
 
         quantity = 0;

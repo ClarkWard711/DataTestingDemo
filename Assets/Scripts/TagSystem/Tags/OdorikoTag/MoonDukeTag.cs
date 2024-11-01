@@ -32,6 +32,6 @@ public class MoonDukeTag : OdorikoTag
 
     public void DealToSelf()
     {
-        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().takeDamage(DamageToSelf, attackType);
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().takeDamage(DamageToSelf, attackType, false);
     }
 }
