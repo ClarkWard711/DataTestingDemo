@@ -19,9 +19,12 @@ public class BloodistHolder : JobSkillHolder
 
     private void Start()
     {
+        var tag = BloodAddict.CreateInstance<BloodAddict>();
+        tag.isBloodist = true;
+        gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
         foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
         {
-
+            player.GetComponent<GivingData>().AddTagToCharacter(BloodAddict.CreateInstance<BloodAddict>());
         }
     }
 }

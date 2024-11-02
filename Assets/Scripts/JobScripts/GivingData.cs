@@ -93,6 +93,10 @@ public class GivingData : MonoBehaviour
         {
             StartCoroutine(OnSelfDamageTake());
         }
+        else
+        {
+            StartCoroutine(OnDamageTake());
+        }
         StartCoroutine(FloatingNumber(Damage, attackType));
     }
 
@@ -263,6 +267,22 @@ public class GivingData : MonoBehaviour
     public void CheckSP()
     {
 
+    }
+
+    IEnumerator OnDamageTake()
+    {
+        foreach (var tag in tagList)
+        {
+            UnityAction OnDamageTake;
+            OnDamageTake = tag.OnDamageTake;
+            if (OnDamageTake == null)
+            {
+                continue;
+            }
+            OnDamageTake.Invoke();
+
+            yield return null;
+        }
     }
 
     IEnumerator OnSelfDamageTake()
