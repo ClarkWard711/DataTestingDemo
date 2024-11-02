@@ -11,11 +11,11 @@ public class BloodAddict : Tag
         TagKind = Kind.eternal;
         Effect = effect.neutral;
         BuffTarget = target.all;
-        OnDamageTake += BloodAddictCheck;
+        OnSelfDamageTake += BloodAddictCheck;
     }
 
     public void BloodAddictCheck()
     {
-
+        BloodistHolder.Instance.BloodAddictSelf++;
     }
 }

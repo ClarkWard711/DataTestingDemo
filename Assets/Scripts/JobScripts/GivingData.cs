@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Data;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public enum AttackType { Physical, Soul, Null};
@@ -88,6 +89,10 @@ public class GivingData : MonoBehaviour
     public void takeDamage(int Damage, AttackType attackType, bool isSelf)
     {
         currentHP -= Damage;
+        if (isSelf)
+        {
+            StartCoroutine(OnSelfDamageTake());
+        }
         StartCoroutine(FloatingNumber(Damage, attackType));
     }
 
@@ -258,5 +263,21 @@ public class GivingData : MonoBehaviour
     public void CheckSP()
     {
 
+    }
+
+    IEnumerator OnSelfDamageTake()
+    {
+        foreach (var tag in tagList)
+        {
+            UnityAction OnSelfDamageTake;
+            OnSelfDamageTake = tag.OnSelfDamageTake;
+            if (OnSelfDamageTake == null)
+            {
+                continue;
+            }
+            OnSelfDamageTake.Invoke();
+
+            yield return null;
+        }
     }
 }
