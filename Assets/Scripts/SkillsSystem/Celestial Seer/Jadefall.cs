@@ -13,6 +13,6 @@ public class Jadefall : CsSkill
     {
         base.Apply(unit);
         BattleSetting.Instance.State = BattleState.Middle;
-        CelestialSeerHolder.Instance.CoroutineStart(CelestialSeerHolder.Instance.Jadefall(SpCost, csSkillKind));
+        //CelestialSeerHolder.Instance.CoroutineStart(CelestialSeerHolder.Instance.Jadefall(SpCost, csSkillKind));
     }
 }

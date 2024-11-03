@@ -333,7 +333,7 @@ public class BattleSetting : MonoBehaviour
         }
         else if (State == BattleState.Start)
         {
-            ToBattle();
+            StartCoroutine(StartTurn());
         }
     }
 
@@ -480,6 +480,28 @@ public class BattleSetting : MonoBehaviour
         }
         CurrentEndTurnUnit = null;
         TurnSettle();
+    }
+    /// <summary>
+    /// 回合开始的回调
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator StartTurn()
+    {
+        foreach (GameObject character in BattleUnitsList)
+        {
+            foreach (var tag in character.GetComponent<GivingData>().tagList)
+            {
+                var method = tag.GetType().GetMethod("OnTurnStartCallback");
+                if (method.DeclaringType == typeof(Tag))
+                {
+                    continue;
+                }
+                tag.OnTurnStartCallback();
+
+                yield return StartCoroutine(DelayedCallback(1f));
+            }
+        }
+        ToBattle();
     }
     /// <summary>
     /// 跟EndTurn和ActionEndCallBack绑定的在tag进行操作之后
@@ -1150,7 +1172,7 @@ public class BattleSetting : MonoBehaviour
             //unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
             //unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
         }
-        ToBattle();
+        StartCoroutine(StartTurn());
     }
     /// <summary>
     /// 将buff效果作用在倍率上的函数（有新buff进入list时调用函数使buff即时有效）

@@ -23,6 +23,11 @@ public abstract class Tag : ScriptableObject
     public float Multiplier = 1f;//倍率
     public float conditionMultiplier = 1f;
     //回调点
+    public virtual void OnTurnStartCallback()
+    {
+
+    }
+
     public virtual void OnTurnEndCallback()
     {
 
