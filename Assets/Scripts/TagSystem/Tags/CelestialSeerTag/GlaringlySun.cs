@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JadeFall : Tag
+public class GlaringlySun : Tag
 {
     public int remainTurn = 0;
     public bool isEnhanced = false;
 
-    public JadeFall()
+    public GlaringlySun()
     {
-        TagName = "JadeFall";
+        TagName = "GlaringlySun";
         TagKind = Kind.eternal;
         Effect = effect.good;
         BuffTarget = target.self;
@@ -22,18 +22,23 @@ public class JadeFall : Tag
         {
             if (isEnhanced)
             {
-                int HellingHp = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.10f);
+                int HellingHp = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.12f);
+                var tag = DamageReduction.CreateInstance<DamageReduction>();
+                tag.Multiplier = 0.85f;
+                player.GetComponent<GivingData>().AddTagToCharacter(tag);
                 player.GetComponent<GivingData>().CoroutineStart(player.GetComponent<GivingData>().FloatingHP(HellingHp));
             }
             else
             {
-                int HellingHp = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.05f);
+                var tag = DamageReduction.CreateInstance<DamageReduction>();
+                player.GetComponent<GivingData>().AddTagToCharacter(tag);
+                int HellingHp = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.08f);
                 player.GetComponent<GivingData>().CoroutineStart(player.GetComponent<GivingData>().FloatingHP(HellingHp));
-                
             }
             remainTurn--;
 
-            if(remainTurn == 0) {
+            if (remainTurn == 0)
+            {
                 isEnhanced = false;
             }
         }
