@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JadeFall : Tag
+public class JadeFall : CsState
 {
     public int remainTurn = 0;
     public bool isEnhanced = false;

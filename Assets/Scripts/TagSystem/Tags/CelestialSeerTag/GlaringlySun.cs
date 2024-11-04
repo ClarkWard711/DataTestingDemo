@@ -3,11 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlaringlySun : Tag
+public class GlaringlySun : CsState
 {
-    public int remainTurn = 0;
-    public bool isEnhanced = false;
-
+  
     public GlaringlySun()
     {
         TagName = "GlaringlySun";

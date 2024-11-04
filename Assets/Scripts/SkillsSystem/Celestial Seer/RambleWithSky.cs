@@ -4,15 +4,16 @@ using UnityEngine;
 [CreateAssetMenu(menuName = ("Skill/CsSkill/RambleWithSky"), fileName = ("RambleWithSky"))]
 public class RambleWithSky : CsSkill
 {
-    // Start is called before the first frame update
-    void Start()
+    public RambleWithSky()
     {
-        
+        SpCost = 20;
+        csSkillKind = CsSkillKind.Sun;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Apply(GameObject unit)
     {
-        
+        base.Apply(unit);
+        BattleSetting.Instance.State = BattleState.Middle;
+        CelestialSeerHolder.Instance.CoroutineStart(CelestialSeerHolder.Instance.rambleWithSky(SpCost, csSkillKind));
     }
 }

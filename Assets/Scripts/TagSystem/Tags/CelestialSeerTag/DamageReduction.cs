@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Tag;
 
-public class DamageReduction : Tag
+public class DamageReduction : CsState
 {
     public DamageReduction()
     {
