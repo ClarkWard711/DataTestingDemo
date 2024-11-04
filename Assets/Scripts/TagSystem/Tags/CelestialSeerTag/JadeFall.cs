@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class JadeFall : CsState
 {
-    public int remainTurn = 0;
-    public bool isEnhanced = false;
-
     public JadeFall()
     {
         TagName = "JadeFall";

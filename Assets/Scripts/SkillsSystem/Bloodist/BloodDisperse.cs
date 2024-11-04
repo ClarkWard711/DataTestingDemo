@@ -14,5 +14,6 @@ public class BloodDisperse : BloodistSkill
     {
         base.Apply(unit);
         BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
+        BloodistHolder.Instance.CoroutineStart(BloodistHolder.Instance.bloodDisperse(SpCost, bloodistSkillKind));
     }
 }

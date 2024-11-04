@@ -37,20 +37,20 @@ public class CelestialSeerHolder : JobSkillHolder
         var choice1 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
         var choice2 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
         var choice3 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
-        choice1.GetComponentInChildren<Text>().text = "ÈÕÖ®»ÔÒ«";
-        choice2.GetComponentInChildren<Text>().text = "ÔÂÖ®ð¨½à";
-        choice3.GetComponentInChildren<Text>().text = "ÐÇÖ®¹Ä¶¯";
+        choice1.GetComponentInChildren<Text>().text = "ï¿½ï¿½Ö®ï¿½ï¿½Ò«";
+        choice2.GetComponentInChildren<Text>().text = "ï¿½ï¿½Ö®ï¿½ï¿½";
+        choice3.GetComponentInChildren<Text>().text = "ï¿½ï¿½Ö®ï¿½Ä¶ï¿½";
 
-        //todo:¼ÓÌõ¼þ¼ì²â£¬Èç¹û´¦ÓÚÕâ¸ö×´Ì¬¾Í²»ÄÜ½øÈëÕâ¸ö×´Ì¬
+        //todo:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½Í²ï¿½ï¿½Ü½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
         if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is GlaringlySun))
         {
             choice1.GetComponent<Button>().enabled = false;
         } else if (true) {
 
-        } else if (true)
+        }/* else if (true)
         {
 
-        }
+        }*/
 
 
         choice1.GetComponent<Button>().onClick.AddListener(() => ChooseThree(1));
@@ -79,7 +79,7 @@ public class CelestialSeerHolder : JobSkillHolder
 
         //CsState test1 = (CsState)gameObject.GetComponent<GivingData>().tagList.Find(tag => tag is CsState);
         //test1.isEnhanced = false;
-        StartCoroutine(BattleSetting.Instance.ShowActionText("±ÌÌì°é×ß"));
+        StartCoroutine(BattleSetting.Instance.ShowActionText("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"));
         yield return new WaitForSeconds(1f);
         BattleSetting.Instance.ActionEnd();
 
