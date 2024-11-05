@@ -945,8 +945,10 @@ public class OdorikoHolder : JobSkillHolder
             }
         }
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
-        BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealDamage(1f, false));
-        
+        int damage = BattleSetting.Instance.DamageCounting(AttackType.Physical);
+        damage = Mathf.CeilToInt(damage * 1.2f);
+        BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+
         StartCoroutine(BattleSetting.Instance.ShowActionText("释放日瑰"));
         yield return new WaitForSeconds(1f);
         BattleSetting.Instance.ActionEnd();
