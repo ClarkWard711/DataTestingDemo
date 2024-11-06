@@ -22,6 +22,7 @@ public abstract class Tag : ScriptableObject
     public int quantity;//积累多少个
     public float Multiplier = 1f;//倍率
     public float conditionMultiplier = 1f;
+    public int hit = 0, nim = 0, spd = 0, cri = 0, antiCri = 0;
     //回调点
     public virtual void OnTurnStartCallback()
     {

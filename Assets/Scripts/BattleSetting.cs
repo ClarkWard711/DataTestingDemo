@@ -1214,6 +1214,20 @@ public class BattleSetting : MonoBehaviour
                 unit.GetComponent<GivingData>().SoulDamageTakeMultiplier *= tag.Multiplier;
                 unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier *= tag.Multiplier;
             }
+            if (unit.GetComponent<GivingData>().jobData != null)
+            {
+                unit.GetComponent<GivingData>().hit = unit.GetComponent<GivingData>().jobData.JobStatsList[unit.GetComponent<GivingData>().jobData.JobLevel - 1].hit + tag.hit;
+                unit.GetComponent<GivingData>().nim = unit.GetComponent<GivingData>().jobData.JobStatsList[unit.GetComponent<GivingData>().jobData.JobLevel - 1].nimbleness + tag.nim;
+                unit.GetComponent<GivingData>().Speed = unit.GetComponent<GivingData>().jobData.JobStatsList[unit.GetComponent<GivingData>().jobData.JobLevel - 1].speed + tag.spd;
+                unit.GetComponent<GivingData>().cri = unit.GetComponent<GivingData>().jobData.JobStatsList[unit.GetComponent<GivingData>().jobData.JobLevel - 1].critical + tag.cri;
+            }
+            else
+            {
+                unit.GetComponent<GivingData>().Speed = unit.GetComponent<GivingData>().EnemyData.EnemyStatsList[unit.GetComponent<GivingData>().EnemyData.EnemyLevel - 1].speed + tag.spd;
+                unit.GetComponent<GivingData>().AntiCri = unit.GetComponent<GivingData>().EnemyData.EnemyStatsList[unit.GetComponent<GivingData>().EnemyData.EnemyLevel - 1].AntiCri + tag.antiCri;
+                unit.GetComponent<GivingData>().nim = unit.GetComponent<GivingData>().EnemyData.EnemyStatsList[unit.GetComponent<GivingData>().EnemyData.EnemyLevel - 1].nim + tag.nim;
+                unit.GetComponent<GivingData>().hit = unit.GetComponent<GivingData>().EnemyData.EnemyStatsList[unit.GetComponent<GivingData>().EnemyData.EnemyLevel - 1].hit + tag.hit;
+            }
         }
     }
     /// <summary>
