@@ -66,7 +66,7 @@ public class BloodistHolder : JobSkillHolder
             int deltaTemp = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().maxSP * 0.05f);
             StartCoroutine(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().FloatingSP(deltaTemp));
             int damage= Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.04f);
-            BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().takeDamage(damage, AttackType.Physical, true);
+            BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, true);
         }
         StartCoroutine(BattleSetting.Instance.ShowActionText("血散"));
         yield return new WaitForSeconds(1f);

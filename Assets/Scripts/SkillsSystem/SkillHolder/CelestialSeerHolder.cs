@@ -73,15 +73,19 @@ public class CelestialSeerHolder : JobSkillHolder
             case 0:
                 break;
             case 1:
-                var tag =GlaringlySun.CreateInstance<GlaringlySun>();
-                gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
-                tag.OnTurnStartCallback.Invoke();
+                var tag1 = GlaringlySun.CreateInstance<GlaringlySun>();
+                gameObject.GetComponent<GivingData>().AddTagToCharacter(tag1);
+                tag1.OnTurnStartCallback();
                 break;
             case 2:
-                gameObject.GetComponent<GivingData>().AddTagToCharacter(SliveryMoon.CreateInstance<SliveryMoon>());
+                var tag2 = SliveryMoon.CreateInstance<SliveryMoon>();
+                gameObject.GetComponent<GivingData>().AddTagToCharacter(tag2);
+                tag2.OnTurnStartCallback();
                 break;
             case 3:
-                gameObject.GetComponent<GivingData>().AddTagToCharacter(StarBeat.CreateInstance<StarBeat>());
+                var tag3 = StarBeat.CreateInstance<StarBeat>();
+                gameObject.GetComponent<GivingData>().AddTagToCharacter(tag3);
+                tag3.OnTurnStartCallback();
                 break;
         }
         

@@ -15,4 +15,9 @@ public class TacticalTransferTag : Tag
         Impact = impactOnMultiplier.AllDeal;
         Multiplier = 0.8f;
     }
+
+    public void Transfer()
+    {
+
+    }
 }

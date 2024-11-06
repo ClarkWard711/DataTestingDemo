@@ -401,7 +401,7 @@ public class BattleSetting : MonoBehaviour
 
             yield return null;
         }
-
+        /*
         foreach (Tag tag in CurrentActUnitTarget.GetComponent<GivingData>().tagList)
         {
             UnityAction BeforeHit;
@@ -413,7 +413,7 @@ public class BattleSetting : MonoBehaviour
             BeforeHit.Invoke();
 
             yield return null;
-        }
+        }*/
     }
     /// <summary>
     /// 在命中之后回调的操作
