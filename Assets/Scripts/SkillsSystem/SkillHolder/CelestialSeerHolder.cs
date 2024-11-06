@@ -73,12 +73,9 @@ public class CelestialSeerHolder : JobSkillHolder
             case 0:
                 break;
             case 1:
-                gameObject.GetComponent<GivingData>().AddTagToCharacter(GlaringlySun.CreateInstance<GlaringlySun>());
-                foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
-                {
-                    var tag = DamageReduction.CreateInstance<DamageReduction>();
-                    player.GetComponent<GivingData>().AddTagToCharacter(tag);
-                }
+                var tag =GlaringlySun.CreateInstance<GlaringlySun>();
+                gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+                tag.OnTurnStartCallback.Invoke();
                 break;
             case 2:
                 gameObject.GetComponent<GivingData>().AddTagToCharacter(SliveryMoon.CreateInstance<SliveryMoon>());
@@ -106,9 +103,8 @@ public class CelestialSeerHolder : JobSkillHolder
         BattleSetting.Instance.canChangeAction = false;
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
         BattleSetting.Instance.DelimaPanel.SetActive(true);
-        CsState JadeTag = (CsState)gameObject.GetComponent<GivingData>().tagList.Find(tag => tag is CsState);
         isEnhanced = true;
-        remainTurn = 3;
+        remainTurn += 3;
         if (isEnhanced == true)
         {
             remainTurn--;

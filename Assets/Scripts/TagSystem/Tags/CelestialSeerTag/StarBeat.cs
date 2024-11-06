@@ -22,12 +22,19 @@ public class StarBeat : CsState
                 var tag = PhysicalDamage.CreateInstance<PhysicalDamage>();
                 tag.Multiplier = 1.10f;
                 player.GetComponent<GivingData>().AddTagToCharacter(tag);
-                //TODO:加上速度
+                var tag2 = SpeedUP.CreateInstance<SpeedUP>();
+                tag2.spd = Mathf.CeilToInt(player.GetComponent<GivingData>().jobData.JobStatsList
+                    [player.GetComponent<GivingData>().jobData.JobLevel - 1].speed*0.12f);
+                player.GetComponent<GivingData>().AddTagToCharacter(tag2);
             }
             else
             {
                 var tag = PhysicalDamage.CreateInstance<PhysicalDamage>();
                 player.GetComponent<GivingData>().AddTagToCharacter(tag);
+                var tag2 = SpeedUP.CreateInstance<SpeedUP>();
+                tag2.spd = Mathf.CeilToInt(player.GetComponent<GivingData>().jobData.JobStatsList
+                    [player.GetComponent<GivingData>().jobData.JobLevel - 1].speed*0.08f);
+                player.GetComponent<GivingData>().AddTagToCharacter(tag2);
                 
             }
             CelestialSeerHolder.Instance.remainTurn--;

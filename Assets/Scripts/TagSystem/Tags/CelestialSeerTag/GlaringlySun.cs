@@ -39,6 +39,7 @@ public class GlaringlySun : CsState
             {
                 CelestialSeerHolder.Instance.isEnhanced = false;
             }
+            
         }
     }
 }

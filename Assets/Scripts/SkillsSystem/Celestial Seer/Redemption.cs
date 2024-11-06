@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = ("Skill/CsSkill/DawnShield"), fileName = ("DawnShield"))]
+[CreateAssetMenu(menuName = ("Skill/CsSkill/Redemption"), fileName = ("Redemption"))]
 public class Redemption : CsSkill
 {
     public Redemption()
