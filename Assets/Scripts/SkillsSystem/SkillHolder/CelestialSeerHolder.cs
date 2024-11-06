@@ -37,20 +37,20 @@ public class CelestialSeerHolder : JobSkillHolder
         var choice1 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
         var choice2 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
         var choice3 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
-        choice1.GetComponentInChildren<Text>().text = "��֮��ҫ";
-        choice2.GetComponentInChildren<Text>().text = "��֮��";
-        choice3.GetComponentInChildren<Text>().text = "��֮�Ķ�";
-
-        //todo:��������⣬����������״̬�Ͳ��ܽ������״̬
+        choice1.GetComponentInChildren<Text>().text = "日之辉耀";
+        choice2.GetComponentInChildren<Text>().text = "月之皎洁";
+        choice3.GetComponentInChildren<Text>().text = "星之鼓动";
+        
         if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is GlaringlySun))
         {
             choice1.GetComponent<Button>().enabled = false;
-        } else if (true) {
-
-        }/* else if (true)
+        } else if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is SliveryMoon)) 
         {
-
-        }*/
+            choice1.GetComponent<Button>().enabled = false;
+        } else if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is StarBeat))
+        {
+            choice1.GetComponent<Button>().enabled = false;
+        }
 
 
         choice1.GetComponent<Button>().onClick.AddListener(() => ChooseThree(1));
@@ -73,13 +73,15 @@ public class CelestialSeerHolder : JobSkillHolder
             case 1:
                 gameObject.GetComponent<GivingData>().AddTagToCharacter(GlaringlySun.CreateInstance<GlaringlySun>());
                 break;
-            //todo :case 2/3:
-
+            case 2:
+                gameObject.GetComponent<GivingData>().AddTagToCharacter(SliveryMoon.CreateInstance<SliveryMoon>());
+                break;
+            case 3:
+                gameObject.GetComponent<GivingData>().AddTagToCharacter(StarBeat.CreateInstance<StarBeat>());
+                break;
         }
-
-        //CsState test1 = (CsState)gameObject.GetComponent<GivingData>().tagList.Find(tag => tag is CsState);
-        //test1.isEnhanced = false;
-        StartCoroutine(BattleSetting.Instance.ShowActionText("�������"));
+        
+        StartCoroutine(BattleSetting.Instance.ShowActionText("碧天伴走"));
         yield return new WaitForSeconds(1f);
         BattleSetting.Instance.ActionEnd();
 
@@ -91,7 +93,22 @@ public class CelestialSeerHolder : JobSkillHolder
         isChoseFin = true;
     }
 
-
-
+    public IEnumerator Redemption(int SpCost, CsSkillKind csSkillKind)
+    {
+        BattleSetting.Instance.canChangeAction = false;
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+        BattleSetting.Instance.DelimaPanel.SetActive(true);
+        CsState JadeTag = (CsState)gameObject.GetComponent<GivingData>().tagList.Find(tag => tag is CsState);
+        JadeTag.isEnhanced = true;
+        JadeTag.remainTurn = 3;
+        //然后怎么判定他过了一个回合再减掉一呢
+        //if
+        JadeTag.isEnhanced = false;
+        StartCoroutine(BattleSetting.Instance.ShowActionText("处救生"));
+        yield return new WaitForSeconds(1f);
+        BattleSetting.Instance.ActionEnd();
+    }
+    
+    
 
 }

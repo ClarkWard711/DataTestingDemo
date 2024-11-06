@@ -6,8 +6,8 @@ public class RambleWithSky : CsSkill
 {
     public RambleWithSky()
     {
-        SpCost = 20;
-        csSkillKind = CsSkillKind.Sun;
+        SpCost = 15;
+        csSkillKind = CsSkillKind.Null;
     }
 
     public override void Apply(GameObject unit)
