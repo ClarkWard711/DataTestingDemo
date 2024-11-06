@@ -18,7 +18,7 @@ public class GlaringlySun : CsState
     {
         foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
         {
-            if (isEnhanced)
+            if (CelestialSeerHolder.Instance.isEnhanced)
             {
                 int HellingHp = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.12f);
                 var tag = DamageReduction.CreateInstance<DamageReduction>();
@@ -33,11 +33,11 @@ public class GlaringlySun : CsState
                 int HellingHp = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.08f);
                 player.GetComponent<GivingData>().CoroutineStart(player.GetComponent<GivingData>().FloatingHP(HellingHp));
             }
-            remainTurn--;
+            CelestialSeerHolder.Instance.remainTurn--;
 
-            if (remainTurn == 0)
+            if (CelestialSeerHolder.Instance.remainTurn == 0)
             {
-                isEnhanced = false;
+                CelestialSeerHolder.Instance.isEnhanced = false;
             }
         }
     }

@@ -13,6 +13,8 @@ public class CelestialSeerHolder : JobSkillHolder
     public bool isChoseFin = false;
     public int state = 0;
     public static CelestialSeerHolder Instance;
+    public int remainTurn = 0;
+    public bool isEnhanced = false;
 
 
     public override void Awake()
@@ -72,6 +74,11 @@ public class CelestialSeerHolder : JobSkillHolder
                 break;
             case 1:
                 gameObject.GetComponent<GivingData>().AddTagToCharacter(GlaringlySun.CreateInstance<GlaringlySun>());
+                foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+                {
+                    var tag = DamageReduction.CreateInstance<DamageReduction>();
+                    player.GetComponent<GivingData>().AddTagToCharacter(tag);
+                }
                 break;
             case 2:
                 gameObject.GetComponent<GivingData>().AddTagToCharacter(SliveryMoon.CreateInstance<SliveryMoon>());
@@ -92,18 +99,24 @@ public class CelestialSeerHolder : JobSkillHolder
         state = stateNumber;
         isChoseFin = true;
     }
+    
 
-    public IEnumerator Redemption(int SpCost, CsSkillKind csSkillKind)
+    public IEnumerator redemption(int SpCost, CsSkillKind csSkillKind)
     {
         BattleSetting.Instance.canChangeAction = false;
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
         BattleSetting.Instance.DelimaPanel.SetActive(true);
         CsState JadeTag = (CsState)gameObject.GetComponent<GivingData>().tagList.Find(tag => tag is CsState);
-        JadeTag.isEnhanced = true;
-        JadeTag.remainTurn = 3;
-        //然后怎么判定他过了一个回合再减掉一呢
-        //if
-        JadeTag.isEnhanced = false;
+        isEnhanced = true;
+        remainTurn = 3;
+        if (isEnhanced == true)
+        {
+            remainTurn--;
+        }
+        while (remainTurn == 0)
+        {
+            isEnhanced = false;
+        }
         StartCoroutine(BattleSetting.Instance.ShowActionText("处救生"));
         yield return new WaitForSeconds(1f);
         BattleSetting.Instance.ActionEnd();

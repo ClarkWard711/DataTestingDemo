@@ -17,7 +17,7 @@ public class StarBeat : CsState
     {
         foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
         {
-            if (isEnhanced)
+            if (CelestialSeerHolder.Instance.isEnhanced)
             {
                 var tag = PhysicalDamage.CreateInstance<PhysicalDamage>();
                 tag.Multiplier = 1.10f;
@@ -30,10 +30,10 @@ public class StarBeat : CsState
                 player.GetComponent<GivingData>().AddTagToCharacter(tag);
                 
             }
-            remainTurn--;
+            CelestialSeerHolder.Instance.remainTurn--;
 
-            if(remainTurn == 0) {
-                isEnhanced = false;
+            if(CelestialSeerHolder.Instance.remainTurn == 0) {
+                CelestialSeerHolder.Instance.isEnhanced = false;
             }
         }
     }

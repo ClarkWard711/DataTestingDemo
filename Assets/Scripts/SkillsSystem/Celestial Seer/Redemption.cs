@@ -14,6 +14,6 @@ public class Redemption : CsSkill
     {
         base.Apply(unit);
         BattleSetting.Instance.State = BattleState.Middle;
-        CelestialSeerHolder.Instance.CoroutineStart(CelestialSeerHolder.Instance.Redemption(SpCost, csSkillKind));
+        CelestialSeerHolder.Instance.CoroutineStart(CelestialSeerHolder.Instance.redemption(SpCost, csSkillKind));
     }
 }

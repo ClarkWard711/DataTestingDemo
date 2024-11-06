@@ -17,7 +17,7 @@ public class JadeFall : CsState
     {
         foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
         {
-            if (isEnhanced)
+            if (CelestialSeerHolder.Instance.isEnhanced)
             {
                 int HellingHp = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.10f);
                 player.GetComponent<GivingData>().CoroutineStart(player.GetComponent<GivingData>().FloatingHP(HellingHp));
@@ -28,10 +28,10 @@ public class JadeFall : CsState
                 player.GetComponent<GivingData>().CoroutineStart(player.GetComponent<GivingData>().FloatingHP(HellingHp));
                 
             }
-            remainTurn--;
+            CelestialSeerHolder.Instance.remainTurn--;
 
-            if(remainTurn == 0) {
-                isEnhanced = false;
+            if(CelestialSeerHolder.Instance.remainTurn == 0) {
+                CelestialSeerHolder.Instance.isEnhanced = false;
             }
         }
     }

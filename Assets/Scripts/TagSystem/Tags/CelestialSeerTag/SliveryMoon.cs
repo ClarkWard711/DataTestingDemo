@@ -17,7 +17,7 @@ public class SliveryMoon : CsState
     {
         foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
         {
-            if (isEnhanced)
+            if (CelestialSeerHolder.Instance.isEnhanced)
             {
                 int HellingHp = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.06f);
                 player.GetComponent<GivingData>().CoroutineStart
@@ -49,10 +49,10 @@ public class SliveryMoon : CsState
                 var tag = SoulDamage.CreateInstance<SoulDamage>();
                 player.GetComponent<GivingData>().AddTagToCharacter(tag);
             }
-            remainTurn--;
+            CelestialSeerHolder.Instance.remainTurn--;
 
-            if(remainTurn == 0) {
-                isEnhanced = false;
+            if(CelestialSeerHolder.Instance.remainTurn == 0) {
+                CelestialSeerHolder.Instance.isEnhanced = false;
             }
         }
     }
