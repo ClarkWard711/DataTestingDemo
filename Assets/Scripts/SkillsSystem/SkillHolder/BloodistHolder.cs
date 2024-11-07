@@ -127,7 +127,12 @@ public class BloodistHolder : JobSkillHolder
     {
         BattleSetting.Instance.canChangeAction = false;
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
-        gameObject.GetComponent<GivingData>().AddTagToCharacter(TacticalTransferTag.CreateInstance<TacticalTransferTag>());
+        var tag = TacticalTransferTag.CreateInstance<TacticalTransferTag>();
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        {
+            tag.isCharged = true;
+        }
+        gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
         StartCoroutine(BattleSetting.Instance.ShowActionText("战略转移"));
         yield return new WaitForSeconds(1f);
         BattleSetting.Instance.ActionEnd();

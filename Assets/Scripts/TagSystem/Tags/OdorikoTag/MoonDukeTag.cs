@@ -23,7 +23,7 @@ public class MoonDukeTag : OdorikoTag
 
     public void DamageDistribute()
     {
-        int Damage = BattleSetting.Instance.DamageCounting(BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType);
+        int Damage = BattleSetting.Instance.damageCache;
         attackType = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType;
         DamageToSelf = Mathf.CeilToInt(Damage / 3f);
         Debug.Log(DamageToSelf);

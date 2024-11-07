@@ -70,7 +70,7 @@ public class BattleSetting : MonoBehaviour
     public bool isTurnEnding = false;
     public bool canChangeAction = false;
     bool isNormalAttack = false;
-
+    public int damageCache;
     float alpha;//颜色透明度
     //float DamageMultiplier = 1f;
     public Vector3 Position;
@@ -258,7 +258,9 @@ public class BattleSetting : MonoBehaviour
         {
             isCri = CheckCri(CurrentActUnit, CurrentActUnitTarget);
             //命中检测成功回调
+            damageCache = Damage;
             StartCoroutine(BeforeHit());
+            Damage = damageCache;
             if (isCri)
             {
                 Damage = Mathf.CeilToInt(Damage * 1.5f);
@@ -1308,7 +1310,9 @@ public class BattleSetting : MonoBehaviour
         {
             isCri = CheckCri(atkUnit, dfsUnit);
             //命中检测成功回调
+            damageCache = Damage;
             StartCoroutine(BeforeHit());
+            Damage = damageCache;
             if (isCri)
             {
                 Damage = Mathf.CeilToInt(Damage * 1.5f);
