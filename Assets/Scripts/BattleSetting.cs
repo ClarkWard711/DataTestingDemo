@@ -8,7 +8,7 @@ using Data;
 using UnityEngine.Events;
 
 
-public enum BattleState {Won,Lose,PlayerTurn,EnemyTurn,Start,Middle};
+public enum BattleState { Won, Lose, PlayerTurn, EnemyTurn, Start, Middle };
 
 public class BattleSetting : MonoBehaviour
 {
@@ -35,7 +35,7 @@ public class BattleSetting : MonoBehaviour
 
     public GameObject SkillList;//基础进阶技能显示
     bool isTextShowed = false;//基础进阶是否显示
-    public GameObject BasicPanel, AdvancedPanel,DelimaPanel,DelimaActionPrefab;//基础技能和进阶技能的panel
+    public GameObject BasicPanel, AdvancedPanel, DelimaPanel, DelimaActionPrefab;//基础技能和进阶技能的panel
     public GameObject SpecialSkill;
     public bool isBasicShowed = false;//基础技能是否显示
     public bool isAdvancedShowed = false;//进阶技能是否显示
@@ -46,8 +46,8 @@ public class BattleSetting : MonoBehaviour
     public Image Avatar;//ui显示头像
     Ray TargetChosenRay;//选择激光
     RaycastHit2D TargetHit;//选择激光目标
-    //RaycastHit2D[] TargetHitResult;
-    
+                           //RaycastHit2D[] TargetHitResult;
+
     public Slider HpSlider;//血条
     public Slider SpSlider;//蓝条
 
@@ -128,7 +128,7 @@ public class BattleSetting : MonoBehaviour
             isMoving = true;
             isKeyboardTouched = false;
         }
-        else if (Input.mousePosition == Position && isKeyboardTouched) 
+        else if (Input.mousePosition == Position && isKeyboardTouched)
         {
             isMoving = false;
         }
@@ -140,14 +140,14 @@ public class BattleSetting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !isPressed)
         {
             isPressed = true;
-            if (Player != null) 
+            if (Player != null)
             {
                 Player.SetActive(true);
             }
             //GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = false;
             SceneLoader.LoadAddressableScene(outerScene);
         }
-        if ((State == BattleState.Won || State == BattleState.Lose) && !isPressed) 
+        if ((State == BattleState.Won || State == BattleState.Lose) && !isPressed)
         {
             isPressed = true;
             if (Player != null)
@@ -161,7 +161,7 @@ public class BattleSetting : MonoBehaviour
         Position = Input.mousePosition;
         ChoosingEnemy();
         ChoosingAlly();
-        if (CurrentSliderOwner != null) 
+        if (CurrentSliderOwner != null)
         {
             UpdateSliderChange();
         }
@@ -198,7 +198,7 @@ public class BattleSetting : MonoBehaviour
         RemainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
         State = BattleState.Middle;
 
-        if (BattleUnitsList.Count == 0) 
+        if (BattleUnitsList.Count == 0)
         {
             StartCoroutine(EndTurn());
             return;
@@ -243,18 +243,18 @@ public class BattleSetting : MonoBehaviour
         SetColorTo0(GameStateText);
     }
 
-    public IEnumerator DealDamage(float time,bool isSelf)
+    public IEnumerator DealDamage(float time, bool isSelf)
     {
         State = BattleState.Middle;
         AttackType ActAttackType;
         ActAttackType = CurrentActUnit.GetComponent<GivingData>().attackType;
         int Damage = DamageCounting(ActAttackType);
-        if (CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging") && isNormalAttack) 
+        if (CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging") && isNormalAttack)
         {
             Damage = Mathf.CeilToInt(2f * Damage);
         }
         //加入分配伤害检测
-        if (CheckHit(CurrentActUnit, CurrentActUnitTarget)) 
+        if (CheckHit(CurrentActUnit, CurrentActUnitTarget))
         {
             isCri = CheckCri(CurrentActUnit, CurrentActUnitTarget);
             //命中检测成功回调
@@ -270,7 +270,7 @@ public class BattleSetting : MonoBehaviour
             }
             else
             {
-                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttackType,isSelf);
+                CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, ActAttackType, isSelf);
                 GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
                 StartCoroutine(ShowText(2f));
             }
@@ -289,14 +289,14 @@ public class BattleSetting : MonoBehaviour
         //受击回调
         StartCoroutine(OnHit());
         StartCoroutine(BeingHit());*/
-        
+
         yield return new WaitForSeconds(time);
         CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
         isNormalAttack = false;
         ActionEnd();
     }
 
-    public IEnumerator DealDamageBonus(int Damage,AttackType attackType)
+    public IEnumerator DealDamageBonus(int Damage, AttackType attackType)
     {
         State = BattleState.Middle;
         yield return new WaitForSeconds(0.5f);
@@ -306,7 +306,7 @@ public class BattleSetting : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
-    public IEnumerator DealCounterDamage(int Damage,AttackType attackType)
+    public IEnumerator DealCounterDamage(int Damage, AttackType attackType)
     {
         State = BattleState.Middle;
         CurrentActUnit.GetComponent<GivingData>().takeDamage(Damage, attackType, false);
@@ -344,7 +344,7 @@ public class BattleSetting : MonoBehaviour
         GameStateText.text = Action;
         StartCoroutine(ShowText(1f));
         yield return new WaitForSeconds(1f);
-        if (Action == "防御") 
+        if (Action == "防御")
         {
             ActionEnd();
         }
@@ -360,12 +360,12 @@ public class BattleSetting : MonoBehaviour
     IEnumerator Move()
     {
         MovePanel.SetActive(true);
-        yield return new WaitUntil(() =>isMoveFinished);
+        yield return new WaitUntil(() => isMoveFinished);
         canChangeAction = false;
 
         MovePanel.SetActive(false);
 
-        if (State != BattleState.PlayerTurn) 
+        if (State != BattleState.PlayerTurn)
         {
             GameStateText.text = "移动";
             StartCoroutine(ShowText(2f));
@@ -373,7 +373,7 @@ public class BattleSetting : MonoBehaviour
             yield return new WaitForSeconds(2f);
             ActionEnd();
         }
-        
+
     }
 
     IEnumerator Attack()
@@ -383,7 +383,7 @@ public class BattleSetting : MonoBehaviour
         isChooseFinished = false;
         isNormalAttack = true;
         CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
-        StartCoroutine(DealDamage(3f,false));
+        StartCoroutine(DealDamage(3f, false));
     }
     /// <summary>
     /// 命中检测成功后的回调
@@ -427,7 +427,7 @@ public class BattleSetting : MonoBehaviour
         {
             UnityAction OnHit;
             OnHit = tag.OnHit;
-            if (OnHit == null) 
+            if (OnHit == null)
             {
                 continue;
             }
@@ -524,7 +524,7 @@ public class BattleSetting : MonoBehaviour
     /// <param name="delay"></param>
     /// <param name="time"></param>
     /// <returns></returns>
-    public IEnumerator MethodActivateDelay(UnityAction action,float delay,int time)
+    public IEnumerator MethodActivateDelay(UnityAction action, float delay, int time)
     {
         for (int i = 0; i < time; i++)
         {
@@ -564,7 +564,7 @@ public class BattleSetting : MonoBehaviour
 
     void FindTarget()
     {
-        if (CurrentActUnit.tag == "EnemyUnit")
+        if (CurrentActUnit.CompareTag("EnemyUnit"))
         {
             State = BattleState.EnemyTurn;
             StartCoroutine(TurnAction(1f, "敌方回合"));
@@ -611,7 +611,7 @@ public class BattleSetting : MonoBehaviour
         State = BattleState.Middle;
         isMoveFinished = false;
         StartCoroutine(Move());
-        
+
     }
 
     public void OnChargeButton()
@@ -650,7 +650,7 @@ public class BattleSetting : MonoBehaviour
             isAdvancedShowed = false;
         }
     }
-    
+
     public void OnBasicButton()
     {
         if (!isBasicShowed)
@@ -709,7 +709,7 @@ public class BattleSetting : MonoBehaviour
             finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
             return finalDamage;
         }
-        else if(attackType == AttackType.Soul)
+        else if (attackType == AttackType.Soul)
         {
             atk = CurrentActUnit.GetComponent<GivingData>().sa;
             dfs = CurrentActUnitTarget.GetComponent<GivingData>().sd;
@@ -781,7 +781,7 @@ public class BattleSetting : MonoBehaviour
     float CriChanceCounting(GameObject atk, GameObject dfs)
     {
         float CriChance;
-        if (dfs.GetComponent<GivingData>().AntiCri == 0) 
+        if (dfs.GetComponent<GivingData>().AntiCri == 0)
         {
             CriChance = -1f;
         }
@@ -823,7 +823,7 @@ public class BattleSetting : MonoBehaviour
                     //CurrentActUnitTarget = TargetHit.collider.gameObject;
                     //Debug.Log(TargetHit.collider.gameObject.name);
                     //Debug.Log(TargetChosenRay);
-                    if (TargetHit.collider.gameObject.tag == "EnemyUnit")
+                    if (TargetHit.collider.gameObject.CompareTag("EnemyUnit"))
                     {
                         CurrentActUnitTarget = TargetHit.collider.gameObject;
                         ShownUnit = TargetHit.collider.gameObject;
@@ -831,7 +831,7 @@ public class BattleSetting : MonoBehaviour
                         TargetHit.collider.gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
                     }
 
-                    if (Input.GetMouseButtonDown(0) && TargetHit.collider.gameObject.tag == "EnemyUnit")
+                    if (Input.GetMouseButtonDown(0) && TargetHit.collider.gameObject.CompareTag("EnemyUnit"))
                     {
                         //CurrentActUnitTarget = TargetHit.collider.gameObject;
                         ShownUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
@@ -841,7 +841,7 @@ public class BattleSetting : MonoBehaviour
                         CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                     }
 
-                    if (Input.GetKey(KeyCode.Return) && TargetHit.collider.gameObject.tag == "EnemyUnit")
+                    if (Input.GetKey(KeyCode.Return) && TargetHit.collider.gameObject.CompareTag("EnemyUnit"))
                     {
                         CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                         isWaitForPlayerToChooseUnit = false;
@@ -868,7 +868,7 @@ public class BattleSetting : MonoBehaviour
                 {
                     float direction = Input.GetAxisRaw("Horizontal");
                     TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(direction, 0));
-                    if (TargetHit.collider != null && TargetHit.collider.gameObject.tag == "EnemyUnit")
+                    if (TargetHit.collider != null && TargetHit.collider.gameObject.CompareTag("EnemyUnit"))
                     {
                         //Debug.Log(TargetHit.collider.gameObject);
                         CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
@@ -947,7 +947,7 @@ public class BattleSetting : MonoBehaviour
                     //CurrentActUnitTarget = TargetHit.collider.gameObject;
                     //Debug.Log(TargetHit.collider.gameObject.name);
                     //Debug.Log(TargetChosenRay);
-                    if (TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    if (TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
                     {
                         CurrentActUnitTarget = TargetHit.collider.gameObject;
                         ShownUnit = TargetHit.collider.gameObject;
@@ -955,7 +955,7 @@ public class BattleSetting : MonoBehaviour
                         TargetHit.collider.gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
                     }
 
-                    if (Input.GetMouseButtonDown(0) && TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    if (Input.GetMouseButtonDown(0) && TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
                     {
                         //CurrentActUnitTarget = TargetHit.collider.gameObject;
                         ShownUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
@@ -965,7 +965,7 @@ public class BattleSetting : MonoBehaviour
                         CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                     }
 
-                    if (Input.GetKey(KeyCode.Return) && TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    if (Input.GetKey(KeyCode.Return) && TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
                     {
                         CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                         isWaitForPlayerToChooseAlly = false;
@@ -992,7 +992,7 @@ public class BattleSetting : MonoBehaviour
                 {
                     float direction = Input.GetAxisRaw("Horizontal");
                     TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(direction, 0));
-                    if (TargetHit.collider != null && TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    if (TargetHit.collider != null && TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
                     {
                         //Debug.Log(TargetHit.collider.gameObject);
                         CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
@@ -1006,7 +1006,7 @@ public class BattleSetting : MonoBehaviour
                 {
                     float direction = Input.GetAxisRaw("Vertical");
                     TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(0, direction));
-                    if (TargetHit.collider != null && TargetHit.collider.gameObject.tag == "PlayerUnit")
+                    if (TargetHit.collider != null && TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
                     {
                         //Debug.Log(TargetHit.collider.gameObject);
                         CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
@@ -1020,7 +1020,7 @@ public class BattleSetting : MonoBehaviour
             {
                 CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
                 CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
-                isWaitForPlayerToChooseAlly= false;
+                isWaitForPlayerToChooseAlly = false;
                 //StartCoroutine(DealDamage(3f));
                 isChooseFinished = true;
                 CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
@@ -1046,7 +1046,7 @@ public class BattleSetting : MonoBehaviour
     public void UpdateSliderChange()
     {
         HpSlider.maxValue = CurrentSliderOwner.GetComponent<GivingData>().maxHP;
-        SpSlider.maxValue= CurrentSliderOwner.GetComponent<GivingData>().maxSP;
+        SpSlider.maxValue = CurrentSliderOwner.GetComponent<GivingData>().maxSP;
         HpSlider.value = CurrentSliderOwner.GetComponent<GivingData>().currentHP;
         SpSlider.value = CurrentSliderOwner.GetComponent<GivingData>().currentSP;
     }
@@ -1056,7 +1056,7 @@ public class BattleSetting : MonoBehaviour
     public void ComparePosition()
     {
         //完善敌方位置的tag添加
-        for (int i = 0; i < PlayerPositionsList.Count; i++) 
+        for (int i = 0; i < PlayerPositionsList.Count; i++)
         {
             if (PlayerPositionsList[i].transform.childCount != 0)
             {
@@ -1068,7 +1068,7 @@ public class BattleSetting : MonoBehaviour
                     {
                         continue;
                     }
-                    else if(TagList.Exists(tag => tag.TagName == "Remote"))
+                    else if (TagList.Exists(tag => tag.TagName == "Remote"))
                     {
                         TagList.Remove(TagList.Find(tag => tag.TagName == "Remote"));
                     }
@@ -1162,7 +1162,7 @@ public class BattleSetting : MonoBehaviour
 
             foreach (Tag tag in TagList)
             {
-                if (tag.TagKind == Tag.Kind.turnLessen) 
+                if (tag.TagKind == Tag.Kind.turnLessen)
                 {
                     tag.TurnLast--;
                 }
@@ -1190,11 +1190,11 @@ public class BattleSetting : MonoBehaviour
 
         foreach (Tag tag in TagList)
         {
-            if (tag.Impact == Tag.impactOnMultiplier.PhysicalTake) 
+            if (tag.Impact == Tag.impactOnMultiplier.PhysicalTake)
             {
                 unit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier *= tag.Multiplier;
             }
-            else if(tag.Impact == Tag.impactOnMultiplier.PhysicalDeal)
+            else if (tag.Impact == Tag.impactOnMultiplier.PhysicalDeal)
             {
                 unit.GetComponent<GivingData>().PhysicalDamageDealMultiplier *= tag.Multiplier;
             }
@@ -1267,7 +1267,7 @@ public class BattleSetting : MonoBehaviour
     {
         float Hit = Random.Range(0, 1f);
         //Debug.Log(Hit);
-        if (HitChanceCounting(atk, dfs) >= Hit) 
+        if (HitChanceCounting(atk, dfs) >= Hit)
         {
             return true;
         }
@@ -1284,7 +1284,7 @@ public class BattleSetting : MonoBehaviour
     {
         float Cri = Random.Range(0, 1f);
         //Debug.Log(Cri);
-        if (CriChanceCounting(atk, dfs) >= Cri)  
+        if (CriChanceCounting(atk, dfs) >= Cri)
         {
             return true;
         }
@@ -1299,14 +1299,14 @@ public class BattleSetting : MonoBehaviour
     /// <param name="Damage"></param>
     /// <param name="atkUnit"></param>
     /// <param name="dfsUnit"></param>
-    public void DealDamageExtra(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType,bool isSelf)
+    public void DealDamageExtra(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType, bool isSelf)
     {
         CurrentActUnit.GetComponent<GivingData>().attackType = attackType;
-        if (Damage == -1) 
+        if (Damage == -1)
         {
             Damage = DamageCountingByUnit(atkUnit, dfsUnit, attackType);
         }
-        if (CheckHit(atkUnit, dfsUnit)) 
+        if (CheckHit(atkUnit, dfsUnit))
         {
             isCri = CheckCri(atkUnit, dfsUnit);
             //命中检测成功回调

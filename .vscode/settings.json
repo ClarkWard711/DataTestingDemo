@@ -51,5 +51,11 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "DataTestingDemo.sln"
+    "dotnet.defaultSolution": "DataTestingDemo.sln",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    
+    "terminal.integrated.ignoreBracketedPasteMode": true
 }
