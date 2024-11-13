@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoloTag : Tag
+public class SoloTagDefense : Tag
 {
-	public SoloTag()
+	public SoloTagDefense()
 	{
-		TagName = "SoloTag";
+		TagName = "SoloTagDefense";
 		TagKind = Kind.turnLessen;
 		TurnAdd = 2;
 		TurnLast = 2;
 		Effect = effect.good;
 		BuffTarget = target.self;
-		Impact = impactOnMultiplier.PhysicalDeal;
-		Multiplier = 1.1f;
+		Impact = impactOnMultiplier.AllTake;
+		Multiplier = 0.9f;
 		cri = 0;
 	}
 }
