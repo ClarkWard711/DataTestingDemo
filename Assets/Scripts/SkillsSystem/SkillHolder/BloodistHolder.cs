@@ -162,4 +162,26 @@ public class BloodistHolder : JobSkillHolder
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
+
+	public IEnumerator noSelf(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		var tag = NoSelfCheck.CreateInstance<NoSelfCheck>();
+		foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+		{
+			BloodAddict bloodTag = (BloodAddict)player.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "BloodAddict");
+			bloodTag.isNoSelf = true;
+		}
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			tag.TurnLast = 3;
+		}
+		int id = jobData.SkillsID.FindIndex(id => id == 4);
+		coolDownList[id] = 4;
+		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("独斗"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
 }

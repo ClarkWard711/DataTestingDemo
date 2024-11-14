@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Solo : BloodistSkill
+public class NoSelf : BloodistSkill
 {
-	public Solo()
+	public NoSelf()
 	{
-		SpCost = 18;
+		SpCost = 8;
+		TurnCooldown = 3;
 		bloodistSkillKind = BloodistSkillKind.other;
 	}
 
@@ -14,8 +15,7 @@ public class Solo : BloodistSkill
 	{
 		base.Apply(unit);
 		BattleSetting.Instance.State = BattleState.Middle;
-		BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
-		BloodistHolder.Instance.CoroutineStart(BloodistHolder.Instance.solo(SpCost, bloodistSkillKind));
+		BloodistHolder.Instance.CoroutineStart(BloodistHolder.Instance.noSelf(SpCost, bloodistSkillKind));
 	}
 
 }
