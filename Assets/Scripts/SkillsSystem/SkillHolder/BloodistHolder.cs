@@ -180,7 +180,7 @@ public class BloodistHolder : JobSkillHolder
 		int id = jobData.SkillsID.FindIndex(id => id == 4);
 		coolDownList[id] = 4;
 		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
-		StartCoroutine(BattleSetting.Instance.ShowActionText("独斗"));
+		StartCoroutine(BattleSetting.Instance.ShowActionText("无我"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}

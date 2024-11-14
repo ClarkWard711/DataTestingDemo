@@ -61,6 +61,7 @@ public class BattleSetting : MonoBehaviour
 	bool isMoving = false;//鼠标有没有在移动
 	bool isKeyboardTouched = false;//键盘有没有碰 用于键盘操控ui
 	public bool isMoveFinished = false;//移动完了没 用于前后排tag
+	public bool mouseClicked;
 	public BattleState State = BattleState.Start;//战斗进度状态
 
 
@@ -132,6 +133,23 @@ public class BattleSetting : MonoBehaviour
 		{
 			isMoving = false;
 		}
+		TargetChosenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+		TargetHit = Physics2D.Raycast(TargetChosenRay.origin, Vector2.down);
+		if (Input.GetMouseButtonDown(0) && isWaitForPlayerToChooseAlly)
+		{
+			if (TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
+			{
+				mouseClicked = true;
+			}
+		}
+		if (Input.GetMouseButtonDown(0) && isWaitForPlayerToChooseUnit)
+		{
+			if (TargetHit.collider.gameObject.CompareTag("EnemyUnit"))
+			{
+				mouseClicked = true;
+			}
+		}
+
 	}
 
 	private void FixedUpdate()
@@ -837,9 +855,10 @@ public class BattleSetting : MonoBehaviour
 						TargetHit.collider.gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
 					}
 
-					if (Input.GetMouseButtonDown(0) && TargetHit.collider.gameObject.CompareTag("EnemyUnit"))
+					if (mouseClicked && TargetHit.collider.gameObject.CompareTag("EnemyUnit"))
 					{
 						//CurrentActUnitTarget = TargetHit.collider.gameObject;
+						mouseClicked = false;
 						ShownUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
 						isWaitForPlayerToChooseUnit = false;
 						//StartCoroutine(DealDamage(3f));
@@ -961,9 +980,10 @@ public class BattleSetting : MonoBehaviour
 						TargetHit.collider.gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
 					}
 
-					if (Input.GetMouseButtonDown(0) && TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
+					if (mouseClicked && TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
 					{
 						//CurrentActUnitTarget = TargetHit.collider.gameObject;
+						mouseClicked = false;
 						ShownUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
 						isWaitForPlayerToChooseAlly = false;
 						//StartCoroutine(DealDamage(3f));

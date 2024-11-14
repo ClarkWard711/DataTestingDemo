@@ -27,11 +27,11 @@ public class MoonDukeTag : OdorikoTag
         attackType = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType;
         DamageToSelf = Mathf.CeilToInt(Damage / 3f);
         Debug.Log(DamageToSelf);
-        
+
     }
 
     public void DealToSelf()
     {
-        BattleSetting.Instance.DealDamageExtra(DamageToSelf, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, false);
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().takeDamage(DamageToSelf, AttackType.Physical, false);
     }
 }
