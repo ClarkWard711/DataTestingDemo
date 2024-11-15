@@ -137,16 +137,22 @@ public class BattleSetting : MonoBehaviour
 		TargetHit = Physics2D.Raycast(TargetChosenRay.origin, Vector2.down);
 		if (Input.GetMouseButtonDown(0) && isWaitForPlayerToChooseAlly)
 		{
-			if (TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
+			if (TargetHit.collider != null)
 			{
-				mouseClicked = true;
+				if (TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
+				{
+					mouseClicked = true;
+				}
 			}
 		}
 		if (Input.GetMouseButtonDown(0) && isWaitForPlayerToChooseUnit)
 		{
-			if (TargetHit.collider.gameObject.CompareTag("EnemyUnit"))
+			if (TargetHit.collider != null)
 			{
-				mouseClicked = true;
+				if (TargetHit.collider.gameObject.CompareTag("EnemyUnit"))
+				{
+					mouseClicked = true;
+				}
 			}
 		}
 
@@ -294,6 +300,7 @@ public class BattleSetting : MonoBehaviour
 			}
 			StartCoroutine(OnHit());
 			StartCoroutine(BeingHit());
+			StartCoroutine(OnDealDamage());
 		}
 		else
 		{
@@ -471,6 +478,25 @@ public class BattleSetting : MonoBehaviour
 			BeingHit.Invoke();
 
 			yield return StartCoroutine(DelayedCallback(1f));
+		}
+	}
+	/// <summary>
+	/// 造成伤害时的回调 主要用于流血
+	/// </summary>
+	/// <returns></returns>
+	IEnumerator OnDealDamage()
+	{
+		foreach (Tag tag in CurrentActUnit.GetComponent<GivingData>().tagList)
+		{
+			UnityAction OnDealDamage;
+			OnDealDamage = tag.OnDealDamage;
+			if (OnDealDamage == null)
+			{
+				continue;
+			}
+			OnDealDamage.Invoke();
+
+			yield return StartCoroutine(DelayedCallback(0.5f));
 		}
 	}
 	/// <summary>
@@ -1347,6 +1373,8 @@ public class BattleSetting : MonoBehaviour
 		{
 			Damage = DamageCountingByUnit(atkUnit, dfsUnit, attackType);
 		}
+		CurrentActUnit = atkUnit;
+		CurrentActUnitTarget = dfsUnit;
 		if (CheckHit(atkUnit, dfsUnit))
 		{
 			isCri = CheckCri(atkUnit, dfsUnit);
@@ -1369,6 +1397,7 @@ public class BattleSetting : MonoBehaviour
 			}
 			StartCoroutine(OnHit());
 			StartCoroutine(BeingHit());
+			StartCoroutine(OnDealDamage());
 		}
 		else
 		{
@@ -1380,13 +1409,19 @@ public class BattleSetting : MonoBehaviour
 	}
 	public void DealDamageWithNoCallBack(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType, bool isSelf)
 	{
-		CurrentActUnit.GetComponent<GivingData>().attackType = attackType;
+
+		if (CurrentActUnit != null)
+		{
+			CurrentActUnit.GetComponent<GivingData>().attackType = attackType;
+			CurrentActUnit = atkUnit;
+		}
+		CurrentActUnitTarget = dfsUnit;
 		if (Damage == -1)
 		{
 			Damage = DamageCountingByUnit(atkUnit, dfsUnit, attackType);
 		}
 		CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType, isSelf);
-		GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
+		GameStateText.text = CurrentActUnitTarget.name + "受到伤害" + Damage;
 		StartCoroutine(ShowText(2f));
 		//GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
 		//StartCoroutine(ShowText(2f));

@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c059c75bfcdfc4b8eafb174d55d77dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jobData: {fileID: 11400000, guid: c38fdb8bed54749c6994e395ac769869, type: 2}
+  jobData: {fileID: 11400000, guid: 0414593760ec2470b845965df3d3b3ac, type: 2}
   EnemyData: {fileID: 0}
   Speed: 0
   currentHP: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JobSkill: {fileID: 11400000, guid: d830cbc20f66c4f4a8e26c9e7b0f8873, type: 2}
-  jobData: {fileID: 0}
+  jobData: {fileID: 11400000, guid: 0414593760ec2470b845965df3d3b3ac, type: 2}
   BasicSkillButton: []
   AdvancedSkillButton: []
   SpecialSkill: {fileID: 0}
@@ -187,6 +187,10 @@ MonoBehaviour:
   BasicSkillText: []
   AdvancedSkillText: []
   coolDownList: 
+  optionIndex: 0
+  isChooseFin: 0
+  BloodAddictEnemy: 0
+  BloodAddictSelf: 0
 --- !u!1 &2412899308788011300
 GameObject:
   m_ObjectHideFlags: 0

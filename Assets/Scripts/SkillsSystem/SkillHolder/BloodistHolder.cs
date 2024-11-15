@@ -140,6 +140,8 @@ public class BloodistHolder : JobSkillHolder
 
 	public IEnumerator solo(int SpCost, BloodistSkillKind bloodistSkillKind)
 	{
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.isChooseFinished = false;
 		BattleSetting.Instance.canChangeAction = false;
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 		int criTemp = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().cri * 0.1f);
@@ -175,11 +177,44 @@ public class BloodistHolder : JobSkillHolder
 		}
 		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
-			tag.TurnLast = 3;
+			tag.TurnLast += 1;
 		}
 		int id = jobData.SkillsID.FindIndex(id => id == 4);
 		coolDownList[id] = 4;
 		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("无我"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator bloodFight(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
+		{
+			Bleed bleedTag = Bleed.CreateInstance<Bleed>();
+			enemy.GetComponent<GivingData>().AddTagToCharacter(bleedTag);
+			bleedTag.unit = enemy;
+			bleedTag.TurnLast += 2;
+		}
+		foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+		{
+			Bleed bleedTag = Bleed.CreateInstance<Bleed>();
+			player.GetComponent<GivingData>().AddTagToCharacter(bleedTag);
+			bleedTag.unit = player;
+			bleedTag.isSelf = true;
+			bleedTag.TurnLast += 2;
+			AllDamageUp tag = AllDamageUp.CreateInstance<AllDamageUp>();
+			player.GetComponent<GivingData>().AddTagToCharacter(tag);
+			tag.TurnLast += 2;
+		}
+
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+
+		}
+
 		StartCoroutine(BattleSetting.Instance.ShowActionText("无我"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();

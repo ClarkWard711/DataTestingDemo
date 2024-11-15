@@ -9,7 +9,7 @@ public abstract class Tag : ScriptableObject
     public int ID;
     public string TagName;//Tag名称
     public bool isTriggered;//是否触发
-    public enum Kind { accumulable, turnLessen, eternal ,trigger };//累积类，随回合减少，永久
+    public enum Kind { accumulable, turnLessen, eternal, trigger };//累积类，随回合减少，永久
     public enum target { ally, enemy, all, self };//tag给到谁身上
     public enum impactOnMultiplier { PhysicalTake, PhysicalDeal, SoulTake, SoulDeal, AllDeal, AllTake };//tag对倍率的影响
     public enum effect { good, bad, neutral };//tag效果
@@ -39,5 +39,5 @@ public abstract class Tag : ScriptableObject
 
     }
     //命中前后回调点
-    public UnityAction OnHit, BeforeHit, BeingHit, OnSelfDamageTake, OnDamageTake;
+    public UnityAction OnHit, BeforeHit, BeingHit, OnSelfDamageTake, OnDamageTake, OnDealDamage;
 }

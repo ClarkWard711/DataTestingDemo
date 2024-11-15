@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[CreateAssetMenu(menuName = ("Skill/BloodistSkill/BloodDisperse"), fileName = ("BloodDisperse"))]
 public class BloodDisperse : BloodistSkill
 {
 	public BloodDisperse()

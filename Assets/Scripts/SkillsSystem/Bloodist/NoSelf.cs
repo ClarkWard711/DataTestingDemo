@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[CreateAssetMenu(menuName = ("Skill/BloodistSkill/NoSelf"), fileName = ("NoSelf"))]
 public class NoSelf : BloodistSkill
 {
 	public NoSelf()
