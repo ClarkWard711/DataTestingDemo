@@ -22,6 +22,7 @@ public class Bleed : Tag
 
 	public void BleedActivate()
 	{
+		hpOfUnit = unit.GetComponent<GivingData>().maxHP;
 		BattleSetting.Instance.DealDamageWithNoCallBack(Mathf.CeilToInt(hpOfUnit * 0.04f), null, unit, AttackType.Physical, isSelf);
 		//这里的gameobject可能需要传入 先看一下目前的行不行
 	}

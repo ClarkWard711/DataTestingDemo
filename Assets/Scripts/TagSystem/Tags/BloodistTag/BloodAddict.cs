@@ -5,28 +5,28 @@ using static OdorikoTag;
 
 public class BloodAddict : Tag
 {
-    public bool isNoSelf = false;
-    public bool isBloodist = false;
-    public BloodAddict()
-    {
-        TagName = "BloodAddict";
-        TagKind = Kind.eternal;
-        Effect = effect.neutral;
-        BuffTarget = target.all;
-        OnSelfDamageTake += BloodAddictCheck;
-        OnDamageTake += BloodAddictEnemyCheck;
-    }
+	public bool isNoSelf = false;
+	public bool isBloodist = false;
+	public BloodAddict()
+	{
+		TagName = "BloodAddict";
+		TagKind = Kind.eternal;
+		Effect = effect.neutral;
+		BuffTarget = target.all;
+		OnSelfDamageTake += BloodAddictCheck;
+		OnDamageTake += BloodAddictEnemyCheck;
+	}
 
-    public void BloodAddictCheck()
-    {
-        BloodistHolder.Instance.BloodAddictSelf++;
-    }
+	public void BloodAddictCheck()
+	{
+		BloodistHolder.Instance.BloodAddictSelf++;
+	}
 
-    public void BloodAddictEnemyCheck()
-    {
-        if (isNoSelf || isBloodist) 
-        {
-            BloodistHolder.Instance.BloodAddictEnemy++;
-        }
-    }
+	public void BloodAddictEnemyCheck()
+	{
+		if (isNoSelf || isBloodist)
+		{
+			BloodistHolder.Instance.BloodAddictEnemy++;
+		}
+	}
 }

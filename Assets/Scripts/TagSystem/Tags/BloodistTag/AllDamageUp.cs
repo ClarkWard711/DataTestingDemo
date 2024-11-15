@@ -13,6 +13,6 @@ public class AllDamageUp : Tag
 		Effect = effect.good;
 		BuffTarget = target.self;
 		Impact = impactOnMultiplier.AllDeal;
-		Multiplier = 0.9f;
+		Multiplier = 1.1f;
 	}
 }

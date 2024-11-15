@@ -24,7 +24,7 @@ public class BloodistHolder : JobSkillHolder
 		var tag = BloodAddict.CreateInstance<BloodAddict>();
 		tag.isBloodist = true;
 		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
-		foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+		foreach (var player in BattleSetting.Instance.playerUnits)
 		{
 			player.GetComponent<GivingData>().AddTagToCharacter(BloodAddict.CreateInstance<BloodAddict>());
 		}
@@ -194,20 +194,23 @@ public class BloodistHolder : JobSkillHolder
 		foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
 		{
 			Bleed bleedTag = Bleed.CreateInstance<Bleed>();
-			enemy.GetComponent<GivingData>().AddTagToCharacter(bleedTag);
 			bleedTag.unit = enemy;
+			bleedTag.TurnAdd += 2;
 			bleedTag.TurnLast += 2;
+			enemy.GetComponent<GivingData>().AddTagToCharacter(bleedTag);
 		}
 		foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
 		{
 			Bleed bleedTag = Bleed.CreateInstance<Bleed>();
-			player.GetComponent<GivingData>().AddTagToCharacter(bleedTag);
 			bleedTag.unit = player;
 			bleedTag.isSelf = true;
+			bleedTag.TurnAdd += 2;
 			bleedTag.TurnLast += 2;
+			player.GetComponent<GivingData>().AddTagToCharacter(bleedTag);
 			AllDamageUp tag = AllDamageUp.CreateInstance<AllDamageUp>();
-			player.GetComponent<GivingData>().AddTagToCharacter(tag);
+			tag.TurnAdd += 2;
 			tag.TurnLast += 2;
+			player.GetComponent<GivingData>().AddTagToCharacter(tag);
 		}
 
 		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
@@ -215,7 +218,7 @@ public class BloodistHolder : JobSkillHolder
 
 		}
 
-		StartCoroutine(BattleSetting.Instance.ShowActionText("无我"));
+		StartCoroutine(BattleSetting.Instance.ShowActionText("浴血奋战"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}

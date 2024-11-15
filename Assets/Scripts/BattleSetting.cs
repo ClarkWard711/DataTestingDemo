@@ -1413,10 +1413,10 @@ public class BattleSetting : MonoBehaviour
 		if (CurrentActUnit != null)
 		{
 			CurrentActUnit.GetComponent<GivingData>().attackType = attackType;
-			CurrentActUnit = atkUnit;
+			//CurrentActUnit = atkUnit;
 		}
 		CurrentActUnitTarget = dfsUnit;
-		if (Damage == -1)
+		if (Damage == -1 && atkUnit != null)
 		{
 			Damage = DamageCountingByUnit(atkUnit, dfsUnit, attackType);
 		}
