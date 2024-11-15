@@ -36,14 +36,14 @@ public class OdorikoHolder : JobSkillHolder
             {
                 canSpecialBeUsed = true;
             }
-            else if (jobData.SpecialID == 17 || jobData.SpecialID == 18) 
+            else if (jobData.SpecialID == 17 || jobData.SpecialID == 18)
             {
                 if (isDanceStepTriggered)
                 {
                     canSpecialBeUsed = true;
                 }
             }
-            if (canSpecialBeUsed && !isOnlyOnceUsed && JobSkill.skillList[jobData.SpecialID].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP) 
+            if (canSpecialBeUsed && !isOnlyOnceUsed && JobSkill.skillList[jobData.SpecialID].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
             {
                 SpecialButton.interactable = true;
             }
@@ -58,14 +58,14 @@ public class OdorikoHolder : JobSkillHolder
         }
     }
 
-    public void SpCounter(int SpCost,OdoSkillKind skillKind)
+    public void SpCounter(int SpCost, OdoSkillKind skillKind)
     {
         //base.SpCounter(SpCost);
-        if (skillKind == OdoSkillKind.Moon) 
+        if (skillKind == OdoSkillKind.Moon)
         {
             MoonSpCost(SpCost);
         }
-        else if(skillKind == OdoSkillKind.Sun)
+        else if (skillKind == OdoSkillKind.Sun)
         {
             SunSpCost(SpCost);
         }
@@ -181,7 +181,7 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.ActionEnd();
     }
 
-    public IEnumerator sunSpot(int SpCost,OdoSkillKind odoSkillKind)
+    public IEnumerator sunSpot(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         BattleSetting.Instance.canChangeAction = false;
@@ -219,9 +219,9 @@ public class OdorikoHolder : JobSkillHolder
         {
             foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
             {
-                if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee")) 
+                if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
                 {
-                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee")) 
+                    if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
                     {
                         enemy.GetComponent<GivingData>().AddTagToCharacter(ScarletMoon.CreateInstance<ScarletMoon>());
                     }
@@ -301,7 +301,7 @@ public class OdorikoHolder : JobSkillHolder
                 else
                 {
                     if (player.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
-                    { 
+                    {
                         player.GetComponent<GivingData>().AddTagToCharacter(FullMoonTag.CreateInstance<FullMoonTag>());
                     }
                 }
@@ -688,7 +688,7 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.ActionEnd();
     }
 
-    public IEnumerator sunFinale(int SpCost,OdoSkillKind odoSkillKind)
+    public IEnumerator sunFinale(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         BattleSetting.Instance.isChooseFinished = false;
@@ -715,7 +715,7 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.ActionEnd();
     }
 
-    public IEnumerator sunReverse(int SpCost,OdoSkillKind odoSkillKind)
+    public IEnumerator sunReverse(int SpCost, OdoSkillKind odoSkillKind)
     {
         BattleSetting.Instance.canChangeAction = false;
         DanceStepCheck(OdoSkillKind.Sun);
@@ -807,7 +807,7 @@ public class OdorikoHolder : JobSkillHolder
         var moonEnemyList = new List<GameObject>();
         foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
         {
-            if (enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon)) 
+            if (enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon))
             {
                 moonEnemyList.Add(enemy);
             }
@@ -913,7 +913,7 @@ public class OdorikoHolder : JobSkillHolder
         BattleSetting.Instance.ActionEnd();
     }
 
-    public IEnumerator sunRose(int SpCost,OdoSkillKind odoSkillKind)
+    public IEnumerator sunRose(int SpCost, OdoSkillKind odoSkillKind)
     {
         yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
         BattleSetting.Instance.isChooseFinished = false;
@@ -922,10 +922,10 @@ public class OdorikoHolder : JobSkillHolder
         SpCounter(SpCost, odoSkillKind);
         if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
         {
-            
-            if(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon))
+
+            if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon))
             {
-                
+
             }
             else
             {
@@ -989,7 +989,7 @@ public class OdorikoHolder : JobSkillHolder
                 players.Add(player);
             }
         }
-        if (players.Count != 0) 
+        if (players.Count != 0)
         {
             BattleSetting.Instance.canChangeAction = false;
             DanceStepCheck(OdoSkillKind.Moon);
@@ -1054,7 +1054,7 @@ public class OdorikoHolder : JobSkillHolder
         yield return new WaitForSeconds(0.5f);
         BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
         //StartCoroutine(BattleSetting.Instance.DealDamage(0.5f));
-        BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+        BattleSetting.Instance.DealDamageWithNoCallBack(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
     }
     #endregion
 

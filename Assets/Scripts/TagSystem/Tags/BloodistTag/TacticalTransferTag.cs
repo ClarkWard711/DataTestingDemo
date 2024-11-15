@@ -35,7 +35,7 @@ public class TacticalTransferTag : Tag
         }
 
         var randomAlly = otherPlayerList[Random.Range(0, otherPlayerList.Count)];
-        BattleSetting.Instance.DealDamageExtra(damageToAlly, BattleSetting.Instance.CurrentActUnitTarget, randomAlly, AttackType.Physical, true);
+        BattleSetting.Instance.DealDamageWithNoCallBack(damageToAlly, BattleSetting.Instance.CurrentActUnitTarget, randomAlly, AttackType.Physical, true);
 
         if (isCharged)
         {

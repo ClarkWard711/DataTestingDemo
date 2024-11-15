@@ -20,7 +20,7 @@ public class SunFinaleTag : OdorikoTag
 
     public override void OnTurnEndCallback()
     {
-        int physicalDamage,soulDamage;
+        int physicalDamage, soulDamage;
         physicalDamage = Mathf.CeilToInt(quantity * conditionMultiplier * BattleSetting.Instance.DamageCountingByUnit(AtkUnit, DfsUnit, AttackType.Physical));
         soulDamage = Mathf.CeilToInt(quantity * conditionMultiplier * BattleSetting.Instance.DamageCountingByUnit(AtkUnit, DfsUnit, AttackType.Soul));
         Debug.Log("SunFinaleActivating");
@@ -46,12 +46,12 @@ public class SunFinaleTag : OdorikoTag
 
         if (isCharged)
         {
-            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical, false), 0.1f, containMoonCount));
-            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(soulDamage, AtkUnit, DfsUnit, AttackType.Soul, false), 0.1f, containMoonCount));
+            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageWithNoCallBack(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical, false), 0.1f, containMoonCount));
+            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageWithNoCallBack(soulDamage, AtkUnit, DfsUnit, AttackType.Soul, false), 0.1f, containMoonCount));
         }
         else
         {
-            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageExtra(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical, false), 0.1f, containMoonCount));
+            BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.MethodActivateDelay(() => BattleSetting.Instance.DealDamageWithNoCallBack(physicalDamage, AtkUnit, DfsUnit, AttackType.Physical, false), 0.1f, containMoonCount));
         }
 
         quantity = 0;

@@ -1378,6 +1378,20 @@ public class BattleSetting : MonoBehaviour
 		//StartCoroutine(ShowText(2f));
 		//CurrentActUnitTarget = null;
 	}
+	public void DealDamageWithNoCallBack(int Damage, GameObject atkUnit, GameObject dfsUnit, AttackType attackType, bool isSelf)
+	{
+		CurrentActUnit.GetComponent<GivingData>().attackType = attackType;
+		if (Damage == -1)
+		{
+			Damage = DamageCountingByUnit(atkUnit, dfsUnit, attackType);
+		}
+		CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(Damage, attackType, isSelf);
+		GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
+		StartCoroutine(ShowText(2f));
+		//GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
+		//StartCoroutine(ShowText(2f));
+		CurrentActUnitTarget = null;
+	}
 	/// <summary>
 	/// 检测技能sp是否足够
 	/// </summary>
