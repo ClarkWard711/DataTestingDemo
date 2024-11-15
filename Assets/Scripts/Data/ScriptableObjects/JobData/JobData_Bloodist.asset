@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jobAvatarImage: {fileID: -1222851860, guid: 9186111b4a8934ccab3800e3e981ae8c, type: 3}
   jobName: Bloodist
-  jobInitialLevel: 1
+  jobInitialLevel: 4
   jobIndex: 1
-  currentHP: 335
-  currentSP: 50
-  jobLevel: 1
+  currentHP: 1109
+  currentSP: 80
+  jobLevel: 4
   SkillsID: 02000000030000000400000005000000
   SpecialID: 0
   JobPrefab: {fileID: 1749416364117990524, guid: 5f598b27e4fd04cc2b586bac5677607e, type: 3}

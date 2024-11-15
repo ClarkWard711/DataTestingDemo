@@ -16,7 +16,7 @@ MonoBehaviour:
   SpCost: 18
   TurnCooldown: 0
   DealMultiplier: 0
-  SkillName: 
+  SkillName: "\u72EC\u6597"
   Description: 
   HitRevise: 0
   bloodistSkillKind: 1

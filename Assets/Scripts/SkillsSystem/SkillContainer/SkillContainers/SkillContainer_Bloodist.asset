@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cb1e3e7d387473ea7610f7bcee6133, type: 3}
   m_Name: SkillContainer_Bloodist
   m_EditorClassIdentifier: 
-  SkillList: []
+  SkillList:
+  - {fileID: 11400000, guid: 6b21d0788501748e194be96e534b7fe4, type: 2}
+  - {fileID: 11400000, guid: c9f4c5f9c48d74aaaa381aab9483f7b4, type: 2}
+  - {fileID: 11400000, guid: b5291d17fa6aa41b5ac8c0485d43f94e, type: 2}
+  - {fileID: 11400000, guid: 05fd33c235298482dae8ec31c050827a, type: 2}
+  - {fileID: 11400000, guid: e7e2dccf8ed644ca1b7e1ea749206e3a, type: 2}
+  - {fileID: 11400000, guid: cb8646f70cb2a44e6b9e2f16da6a4f30, type: 2}
