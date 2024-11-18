@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24adfbd74adf46fea938ebc6d8ed269, type: 3}
   m_Name: BloodFight
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 8
   SpCost: 15
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u6D74\u8840\u594B\u6218"
-  Description: 
+  Description: "\u4F7F\u6240\u6709\u89D2\u8272\u83B7\u5F97\u6D41\u8840\u4E09\u4E2A\u56DE\u5408,\u5DF1\u65B9\u7269\u653B\u9B54\u653B\u63D0\u5347\u4E09\u4E2A\u56DE\u5408"
   HitRevise: 0
   bloodistSkillKind: 1
