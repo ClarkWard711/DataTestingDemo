@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5eb2d4503fd48469f9bfd7b13d2c14, type: 3}
   m_Name: SunSpot
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 1
   SpCost: 5
   TurnCooldown: 0
   DealMultiplier: 0.9
   SkillName: "\u65E5\u6591"
-  Description: 
+  Description: "\u5BF9\u4E00\u4E2A\u654C\u4EBA\u9020\u6210\u4E00\u6B21\u7269\u7406\u4F24\u5BB3,\u4F60\u7684\u4E0B\u4E00\u4E2A\"\u6708\"\u6D88\u8017sp\u51CF\u5C1110%(\u84C4\u529B:20%)"
   HitRevise: 0
   odoSkillKind: 1

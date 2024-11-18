@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd10efb7da8034db296266afb78011d2, type: 3}
   m_Name: SunRhythm
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 13
   SpCost: 8
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u65E5\u4E4B\u5F8B\u52A8"
-  Description: 
+  Description: "\u5BF9\u4E00\u4E2A\u654C\u4EBA\u9020\u6210\u7269\u7406\u4F24\u5BB3,\u5728\u672C\u56DE\u5408\u961F\u53CB\u6BCF\u653B\u51FB\u4E00\u6B21\u8BE5\u654C\u4EBA,\u821E\u59EC\u90FD\u4F1A\u5BF9\u5176\u9020\u621025%\u7269\u7406\u8FFD\u51FB\u4F24\u5BB3(\u84C4\u529B:50%)"
   HitRevise: 0
   odoSkillKind: 1

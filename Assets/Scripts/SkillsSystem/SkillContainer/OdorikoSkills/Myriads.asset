@@ -17,6 +17,6 @@ MonoBehaviour:
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u4E07\u8C61"
-  Description: 
+  Description: "\u4F60\u7684\"\u65E5\"\"\u6708\"\u4E0D\u9700\u8981\u6309\u7167\u821E\u6B65\u5373\u53EF\u89E6\u53D1\u84C4\u529B"
   HitRevise: 0
   odoSkillKind: 2

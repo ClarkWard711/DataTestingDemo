@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b441241181d7c449083a38a2904d88df, type: 3}
   m_Name: SunRound
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 14
   SpCost: 15
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u65E5\u8F6E"
-  Description: 
+  Description: "\u5BF9\u6240\u6709\u654C\u65B9\u9020\u6210\u4E00\u6B21\u7269\u7406\u4F24\u5BB3(\u84C4\u529B:\u518D\u9020\u6210\u4E00\u6B21\u9B54\u6CD5\u4F24\u5BB3)"
   HitRevise: 0
   odoSkillKind: 1

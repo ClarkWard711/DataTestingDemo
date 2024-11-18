@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6ac09f2662e468681e5b23bdfead60, type: 3}
   m_Name: SunReverse
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 10
   SpCost: 18
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u65E5\u6EAF"
-  Description: 
+  Description: "\u5EF6\u957F\u5DF1\u65B9\"\u6708\"\u4E00\u56DE\u5408,\u5BF9\u53D7\"\u6708\"\u5F71\u54CD\u7684\u654C\u65B9\u9020\u6210\u4E00\u6B21\u7269\u7406\u4F24\u5BB3(\u84C4\u529B:\u4E24\u56DE\u5408,\u4F24\u5BB3\u63D0\u534725%)"
   HitRevise: 0
   odoSkillKind: 1

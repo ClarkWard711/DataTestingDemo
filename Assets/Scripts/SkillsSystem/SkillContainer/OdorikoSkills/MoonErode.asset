@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e134c568061164ae18bf363edaed40b5, type: 3}
   m_Name: MoonErode
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 6
   SpCost: 12
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u6708\u8680"
-  Description: 
+  Description: "\u4F7F\u654C\u65B9\u5355\u6392\u653B\u51FB\u540E\u53D7\u5230\u6211\u65B9\u53CD\u51FB\u4F24\u5BB3\u4E24\u56DE\u5408(\u84C4\u529B:\u6539\u4E3A\u5168\u4F53)"
   HitRevise: 0
   odoSkillKind: 0

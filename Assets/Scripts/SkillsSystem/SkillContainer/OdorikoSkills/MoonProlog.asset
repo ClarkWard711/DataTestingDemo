@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c021598fd6d564783a76b2d4528d7481, type: 3}
   m_Name: MoonProlog
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 7
   SpCost: 15
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u6708\uFF1A\u5E8F\u66F2"
-  Description: 
+  Description: "\u4F7F\u5355\u6392\u505A\u4EBA\u53D7\u5230\u4F24\u5BB3\u540E\u989D\u5916\u53D7\u5230\u653B\u51FB\u65B9\u4E00\u6B21\u53E6\u4E00\u79CD\u5C5E\u6027(\u7269\u7406/\u9B54\u6CD5)\u768470%\u8FFD\u51FB\u4F24\u5BB3\u4E09\u56DE\u5408(\u84C4\u529B:150%)"
   HitRevise: 0
   odoSkillKind: 0

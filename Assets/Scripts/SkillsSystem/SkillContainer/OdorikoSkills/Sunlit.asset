@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d54df85898a34ea5b72885367f2f6d2, type: 3}
   m_Name: Sunlit
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 18
   SpCost: 10
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u65E5\u8000"
-  Description: 
+  Description: "\u672C\u5C40\u5BF9\u6218\u5269\u4F59\u65F6\u95F4,\u5728\u4F60\u4FBF\u7528\"\u6708\"\u4E4B\u540E\u968F\u673A\u5BF9\u4E00\u4E2A\u654C\u65B9\u4F7F\u7528\u5DF2\u84C4\u529B\u7684\"\u65E5\u6591\",\u884C\u52A8\u7ED3\u675F\u65F6\u4E0D\u5F71\u54CD\u821E\u6B65"
   HitRevise: 0
   odoSkillKind: 1

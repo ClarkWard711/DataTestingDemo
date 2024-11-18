@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0520e29acf4414d078e6b7114f431299, type: 3}
   m_Name: FullMoon
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 3
   SpCost: 12
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u76C8\u6708"
-  Description: 
+  Description: "\u4F7F\u4E00\u4E2A\u53CB\u65B9\u6BCF\u547D\u4E2D\u4E00\u6B21\u654C\u4EBA\u56DE\u590D10%sp\u4E24\u56DE\u5408(\u84C4\u529B:\u540C\u6392\u6240\u6709\u5355\u4F4D)"
   HitRevise: 0
   odoSkillKind: 0
