@@ -34,7 +34,7 @@ public class BattleSetting : MonoBehaviour
 	public List<GameObject> EnemyPositionsList;//敌方位置
 
 	public GameObject SkillList;//基础进阶技能显示
-	bool isTextShowed = false;//基础进阶是否显示
+	public bool isTextShowed = false;//基础进阶是否显示
 	public GameObject BasicPanel, AdvancedPanel, DelimaPanel, DelimaActionPrefab;//基础技能和进阶技能的panel
 	public GameObject SpecialSkill;
 	public bool isBasicShowed = false;//基础技能是否显示

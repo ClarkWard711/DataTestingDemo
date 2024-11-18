@@ -5,11 +5,11 @@ using UnityEngine;
 public class ChangePanel : MonoBehaviour
 {
 
-    public GameObject ChangePagePanel, UpgradePanel, DataPanel, PartyPanel;
+    public GameObject ChangePagePanel, UpgradePanel, PartyPanel;
 
     void Update()
     {
-        if (ShowData.Instance.isShowed == true) 
+        if (ShowData.Instance.isShowed == true)
         {
             ChangePagePanel.SetActive(true);
         }
@@ -24,15 +24,6 @@ public class ChangePanel : MonoBehaviour
     {
         PartyPanel.SetActive(true);
         UpgradePanel.SetActive(false);
-        DataPanel.SetActive(false);
-        CharacterUpgrade.Instance.isShowed = false;
-    }
-
-    public void Data()
-    {
-        PartyPanel.SetActive(false);
-        UpgradePanel.SetActive(false);
-        DataPanel.SetActive(true);
         CharacterUpgrade.Instance.isShowed = false;
     }
 
@@ -40,7 +31,6 @@ public class ChangePanel : MonoBehaviour
     {
         PartyPanel.SetActive(false);
         UpgradePanel.SetActive(true);
-        DataPanel.SetActive(false);
         CharacterUpgrade.Instance.isShowed = true;
     }
 }

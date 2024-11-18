@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 1344288105742593009}
   - component: {fileID: 1344288105742593010}
   - component: {fileID: 1344288105742593013}
-  - component: {fileID: 5734606396014624584}
   m_Layer: 20
   m_Name: Player
   m_TagString: Player
@@ -159,33 +158,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &5734606396014624584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344288105742593011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d93cf59b2f7dc4d16b26467f493c9ec3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partyData: {fileID: 0}
-  maxHPOfPlayer: 0
-  maxSPOfPlayer: 0
-  physicalAttackOfPlayer: 0
-  soulAttackOfPlayer: 0
-  physicalDefenceOfPlayer: 0
-  soulDefenceOfPlayer: 0
-  hitOfPlayer: 0
-  nimblenessOfPlayer: 0
-  speedOfPlayer: 0
-  criticalOfPlayer: 0
-  meleeOfPlayer: 0
-  remoteOfPlayer: 0
-  playerCurrentLevel: 0
-  playerTransform: {fileID: 0}
-  positionTransform: {fileID: 0}
-  level: {fileID: 0}
-  state: 0

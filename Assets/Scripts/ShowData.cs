@@ -9,7 +9,7 @@ public class ShowData : MonoBehaviour
 
     public bool isShowed;
     public bool isPressed;
-    public GameObject DataPanel, UpgradePanel, PartyPanel;
+    public GameObject UpgradePanel, PartyPanel;
     //public Text hp, sp, pa, sa, pd, sd, hit, nim, spd, cri, melee, remote;
 
     private void Awake()
@@ -37,14 +37,14 @@ public class ShowData : MonoBehaviour
         if (isPressed && !isShowed)
         {
             isShowed = true;
-            DataPanel.SetActive(true);
+            PartyPanel.SetActive(true);
             //UpgradePanel.GetComponent<CharacterUpgrade>().enabled = false;
             isPressed = false;
         }
-        else if (isPressed && isShowed) 
+        else if (isPressed && isShowed)
         {
             isShowed = false;
-            DataPanel.SetActive(false);
+            PartyPanel.SetActive(false);
             UpgradePanel.SetActive(false);
             PartyPanel.SetActive(false);
             //UpgradePanel.GetComponent<CharacterUpgrade>().enabled = true;
