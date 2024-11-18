@@ -130,7 +130,7 @@ public class GivingData : MonoBehaviour
 
 			if (this.gameObject.tag == "PlayerUnit")
 			{
-				this.gameObject.tag = "Untagged";
+				this.gameObject.tag = "Dead";
 				this.gameObject.GetComponentsInChildren<SpriteRenderer>()[0].color = new Color(255, 255, 255, 0.5f);
 			}
 			else if (this.gameObject.tag == "EnemyUnit")
@@ -156,7 +156,7 @@ public class GivingData : MonoBehaviour
 
 			if (this.gameObject.tag == "PlayerUnit")
 			{
-				this.gameObject.tag = "Untagged";
+				this.gameObject.tag = "Dead";
 				this.gameObject.GetComponentsInChildren<SpriteRenderer>()[0].color = new Color(255, 255, 255, 0.5f);
 			}
 			else if (this.gameObject.tag == "EnemyUnit")

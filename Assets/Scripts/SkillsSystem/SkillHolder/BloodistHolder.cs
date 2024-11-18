@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,6 +28,33 @@ public class BloodistHolder : JobSkillHolder
 		foreach (var player in BattleSetting.Instance.playerUnits)
 		{
 			player.GetComponent<GivingData>().AddTagToCharacter(BloodAddict.CreateInstance<BloodAddict>());
+		}
+	}
+
+	public override void AddSkillToButton()
+	{
+		base.AddSkillToButton();
+		if (jobData.SkillsID.Exists(num => num == 5))
+		{
+			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee"))
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = true;
+			}
+			else
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = false;
+			}
+		}
+		if (jobData.SkillsID.Exists(num => num == 6))
+		{
+			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Remote"))
+			{
+				BasicSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = true;
+			}
+			else
+			{
+				BasicSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = false;
+			}
 		}
 	}
 
@@ -153,7 +181,7 @@ public class BloodistHolder : JobSkillHolder
 		{
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 			//播放动画
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(0.3f);
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnitTarget, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, false);
 		}
 		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
@@ -219,6 +247,39 @@ public class BloodistHolder : JobSkillHolder
 		}
 
 		StartCoroutine(BattleSetting.Instance.ShowActionText("浴血奋战"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator clamour(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		var tag = Protect.CreateInstance<Protect>();
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			tag.TurnLast += 1;
+		}
+		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("叫嚣"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator bloodThirst(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		for (int i = 0; i < 3; i++)
+		{
+			var enemy = BattleSetting.Instance.RemainingEnemyUnits[Random.Range(0, BattleSetting.Instance.RemainingEnemyUnits.Length)];
+
+			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
+			yield return new WaitForSeconds(0.2f);
+		}
+		int damage = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.04f);
+		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, true);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("嗜血"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}

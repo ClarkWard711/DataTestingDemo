@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f3ebc0b6e00e440881ae3fc6aaf785a, type: 3}
-  m_Name: TacticalTransfer
+  m_Script: {fileID: 11500000, guid: 8bd8da66665ad484bac32dda82382dfb, type: 3}
+  m_Name: BloodThirst
   m_EditorClassIdentifier: 
-  SkillID: 2
-  SpCost: 6
+  SkillID: 0
+  SpCost: 17
   TurnCooldown: 0
   DealMultiplier: 0
-  SkillName: "\u6218\u7565\u8F6C\u79FB"
-  Description: "\u53D7\u5230\u7684\u4F24\u5BB350%\u8F6C\u79FB\u7ED9\u4E00\u4E2A\u968F\u673A\u53CB\u65B9(\u84C4\u529B:\u53D7\u5230\u4F24\u5BB3\u65F6\u81EA\u5DF1\u56DE\u590D2%\u7684\u8840\u91CF)"
+  SkillName: "\u55DC\u8840"
+  Description: "\u968F\u673A\u5BF9\u4E00\u4E2A\u89D2\u8272\u9020\u6210\u4E00\u6B21\u4F24\u5BB3\uFF0C\u91CD\u590D\u4E09\u6B21\uFF0C\u7136\u540E\u5BF9\u81EA\u5DF1\u9020\u6210\u4F24\u5BB3"
   HitRevise: 0
   bloodistSkillKind: 1

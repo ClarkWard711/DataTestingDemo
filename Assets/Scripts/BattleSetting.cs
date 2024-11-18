@@ -900,7 +900,7 @@ public class BattleSetting : MonoBehaviour
 						CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
 					}
 				}
-			}
+			}/*
 			if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
 			{
 				isKeyboardTouched = true;
@@ -942,7 +942,7 @@ public class BattleSetting : MonoBehaviour
 					}
 					//Debug.Log(TargetHit.collider.gameObject);
 				}
-			}
+			}*/
 			if (Input.GetKey(KeyCode.Return) && CurrentActUnitTarget != null)
 			{
 				CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
@@ -1025,7 +1025,7 @@ public class BattleSetting : MonoBehaviour
 						CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
 					}
 				}
-			}
+			}/*
 			if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
 			{
 				isKeyboardTouched = true;
@@ -1067,7 +1067,7 @@ public class BattleSetting : MonoBehaviour
 					}
 					//Debug.Log(TargetHit.collider.gameObject);
 				}
-			}
+			}*/
 			if (Input.GetKey(KeyCode.Return) && CurrentActUnitTarget != null)
 			{
 				CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
