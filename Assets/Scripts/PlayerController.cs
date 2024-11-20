@@ -4,61 +4,70 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
-    private Rigidbody2D playerRb;
-    private Animator anime;
-    // private Animator Anime;
-    public float speed;
-    
+	public static PlayerController Instance;
+	private Rigidbody2D playerRb;
+	private Animator anime;
+	// private Animator Anime;
+	public float speed;
 
-    bool run;
 
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        playerRb = GetComponent<Rigidbody2D>();
-        anime = GetComponent<Animator>();
+	bool run;
 
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	// Start is called before the first frame update
+	void Start()
+	{
+		GameObject.Find("Player").GetComponentInChildren<Camera>().enabled = true;
+		playerRb = GetComponent<Rigidbody2D>();
+		anime = GetComponent<Animator>();
+		if (Instance == null)
+		{
+			Instance = this;
+		}
+		else
+		{
+			Destroy(gameObject);
+		}
+		DontDestroyOnLoad(gameObject);
+	}
 
-    private void FixedUpdate()
-    {
-        Movement();
-    }
+	// Update is called once per frame
+	void Update()
+	{
 
-    void Movement()
-    {
-        float Hmove = Input.GetAxis("Horizontal");
-        float Vmove = Input.GetAxis("Vertical");
-        float direction = Input.GetAxisRaw("Horizontal");
+	}
 
-        if (Input.GetButton("Horizontal")|| Input.GetButton("Vertical")) 
-        {
-            run = true;
-        }
-        else
-        {
-            run = false;
-        }
+	private void FixedUpdate()
+	{
+		Movement();
+	}
 
-        playerRb.velocity = new Vector2(Hmove * speed, Vmove * speed);
-        anime.SetBool("running", run);
+	void Movement()
+	{
+		float Hmove = Input.GetAxis("Horizontal");
+		float Vmove = Input.GetAxis("Vertical");
+		float direction = Input.GetAxisRaw("Horizontal");
 
-        if (direction != 0)
-        {
-            transform.localScale = new Vector3(direction, 1, 1); 
-        }
-    }
+		if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+		{
+			run = true;
+		}
+		else
+		{
+			run = false;
+		}
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
+		playerRb.velocity = new Vector2(Hmove * speed, Vmove * speed);
+		anime.SetBool("running", run);
+
+		if (direction != 0)
+		{
+			transform.localScale = new Vector3(direction, 1, 1);
+		}
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+
+	}
 }
