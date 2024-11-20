@@ -190,8 +190,11 @@ public class BloodistHolder : JobSkillHolder
 		}
 		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
+			yield return new WaitForSeconds(0.3f);
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 		}
+		yield return new WaitForSeconds(0.3f);
+		BattleSetting.Instance.CurrentActUnit = this.gameObject;
 		StartCoroutine(BattleSetting.Instance.ShowActionText("独斗"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
