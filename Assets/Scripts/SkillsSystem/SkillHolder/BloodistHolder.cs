@@ -81,6 +81,7 @@ public class BloodistHolder : JobSkillHolder
 			//伤害
 			BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
 			yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+			BattleSetting.Instance.isChooseFinished = false;
 			int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
 			damage = Mathf.CeilToInt(damage * (1 + 0.2f * BloodAddictSelf));
 			BloodAddictSelf = 0;
@@ -91,6 +92,7 @@ public class BloodistHolder : JobSkillHolder
 			//回复sp
 			BattleSetting.Instance.isWaitForPlayerToChooseAlly = true;
 			yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+			BattleSetting.Instance.isChooseFinished = false;
 			int deltaTemp = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().maxSP * 0.05f);
 			StartCoroutine(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().FloatingSP(deltaTemp));
 			int damage = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.04f);
@@ -122,6 +124,7 @@ public class BloodistHolder : JobSkillHolder
 		{
 			BattleSetting.Instance.isWaitForPlayerToChooseAlly = true;
 			yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+			BattleSetting.Instance.isChooseFinished = false;
 			int deltaTemp;
 			deltaTemp = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxHP * (0.05f + 0.01f * BloodAddictEnemy));
 			StartCoroutine(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().FloatingHP(deltaTemp));
@@ -131,6 +134,7 @@ public class BloodistHolder : JobSkillHolder
 		{
 			BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
 			yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+			BattleSetting.Instance.isChooseFinished = false;
 			int damage = BattleSetting.Instance.DamageCounting(AttackType.Physical);
 			damage = Mathf.CeilToInt(1.5f * damage);
 			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
