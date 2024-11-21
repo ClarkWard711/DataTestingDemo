@@ -127,7 +127,7 @@ public class GivingData : MonoBehaviour
 		if (currentHP <= 0)
 		{
 			isDead = true;
-
+			currentHP = 0;
 			if (this.gameObject.tag == "PlayerUnit")
 			{
 				this.gameObject.tag = "Dead";
@@ -169,12 +169,12 @@ public class GivingData : MonoBehaviour
 	public IEnumerator FloatingSP(int deltaTemp)
 	{
 		int temp;
-		temp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;
+		temp = currentSP;
 		//Debug.Log(1);
-		if (temp + deltaTemp >= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP)
+		if (temp + deltaTemp >= maxSP)
 		{
-			deltaTemp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP - BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;
-			BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxSP;
+			deltaTemp = maxSP - currentSP;
+			currentSP = maxSP;
 		}
 		else
 		{
@@ -193,16 +193,16 @@ public class GivingData : MonoBehaviour
 	public IEnumerator FloatingHP(int deltaTemp)
 	{
 		int temp;
-		temp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentHP;
+		temp = currentHP;
 
-		if (temp + deltaTemp >= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxHP)
+		if (temp + deltaTemp >= maxHP)
 		{
-			deltaTemp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxHP - BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentHP;
-			BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentHP = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxHP;
+			deltaTemp = maxHP - currentHP;
+			currentHP = maxHP;
 		}
 		else
 		{
-			BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentHP += deltaTemp;
+			currentHP += deltaTemp;
 		}
 
 		if (deltaTemp != 0)

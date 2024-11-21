@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BloodThirst
   m_EditorClassIdentifier: 
   SkillID: 0
-  SpCost: 17
+  SpCost: 20
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u55DC\u8840"

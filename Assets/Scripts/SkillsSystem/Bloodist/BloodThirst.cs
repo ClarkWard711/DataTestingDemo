@@ -6,7 +6,7 @@ public class BloodThirst : BloodistSkill
 {
 	public BloodThirst()
 	{
-		SpCost = 17;
+		SpCost = 20;
 		bloodistSkillKind = BloodistSkillKind.other;
 	}
 

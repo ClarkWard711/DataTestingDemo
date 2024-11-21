@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca55883c737644b528b82d35cb4c0058, type: 3}
+  m_Name: BloodAlly
+  m_EditorClassIdentifier: 
+  SkillID: 0
+  SpCost: 24
+  TurnCooldown: 0
+  DealMultiplier: 0
+  SkillName: "\u8840\u76DF"
+  Description: "\u590D\u6D3B\u4E00\u4E2A\u53CB\u65B9\uFF0C\u5BF9\u81EA\u5DF1\u9020\u6210\u4F24\u5BB3\n(\u84C4\u529B:\u6D88\u8017\u6700\u591A\u4E09\u4E2A\u8840\u763E(\u654C)\u63D0\u5347\u590D\u6D3B\u7684\u6548\u679C)"
+  HitRevise: 0
+  bloodistSkillKind: 0

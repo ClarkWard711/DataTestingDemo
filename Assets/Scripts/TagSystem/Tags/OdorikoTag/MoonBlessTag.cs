@@ -22,7 +22,7 @@ public class MoonBlessTag : OdorikoTag
         List<Tag> badTags = new List<Tag>();
         foreach (Tag tag in BattleSetting.Instance.CurrentEndTurnUnit.GetComponent<GivingData>().tagList)
         {
-            if (tag.Effect == effect.bad)
+            if (tag.Effect == effect.bad && tag.TagKind != Kind.eternal)
             {
                 badTags.Add(tag);
             }

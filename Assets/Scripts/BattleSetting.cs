@@ -57,6 +57,7 @@ public class BattleSetting : MonoBehaviour
 	//public bool isWaitForPlayerToChooseAction = false;//等待玩家选择操作
 	public bool isWaitForPlayerToChooseUnit = false;//等待玩家选择单位
 	public bool isWaitForPlayerToChooseAlly = false;//等待玩家选择友方
+	public bool isWaitForPlayerToChooseDead = false;//等待玩家选择死亡友方
 	public bool isPressed = false;//回主世界是否按下
 	bool isMoving = false;//鼠标有没有在移动
 	bool isKeyboardTouched = false;//键盘有没有碰 用于键盘操控ui
@@ -155,6 +156,16 @@ public class BattleSetting : MonoBehaviour
 				}
 			}
 		}
+		if (Input.GetMouseButtonDown(0) && isWaitForPlayerToChooseDead)
+		{
+			if (TargetHit.collider != null)
+			{
+				if (TargetHit.collider.gameObject.CompareTag("Dead"))
+				{
+					mouseClicked = true;
+				}
+			}
+		}
 
 	}
 
@@ -185,6 +196,7 @@ public class BattleSetting : MonoBehaviour
 		Position = Input.mousePosition;
 		ChoosingEnemy();
 		ChoosingAlly();
+		ChoosingDead();
 		if (CurrentSliderOwner != null)
 		{
 			UpdateSliderChange();
@@ -1093,6 +1105,131 @@ public class BattleSetting : MonoBehaviour
 		}
 	}
 	/// <summary>
+	/// 选择死亡友方
+	/// </summary>
+	void ChoosingDead()
+	{
+		if (isWaitForPlayerToChooseDead)
+		{
+			if (isMoving && !isKeyboardTouched)
+			{
+				if (CurrentActUnitTarget != null)
+				{
+					CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+				}
+				isKeyboardTouched = false;
+				TargetChosenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+				//Debug.Log(TargetChosenRay);
+				TargetHit = Physics2D.Raycast(TargetChosenRay.origin, Vector2.down);
+				if (ShownUnit != null)
+				{
+					if (TargetHit.collider == null || TargetHit.collider.gameObject != ShownUnit)
+					{
+						//Debug.Log("移出collider");
+						//Debug.Log("变没了1");
+						ShownUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+					}
+				}
+				if (TargetHit.collider != null)
+				{
+					//CurrentActUnitTarget = TargetHit.collider.gameObject;
+					//Debug.Log(TargetHit.collider.gameObject.name);
+					//Debug.Log(TargetChosenRay);
+					if (TargetHit.collider.gameObject.CompareTag("Dead"))
+					{
+						CurrentActUnitTarget = TargetHit.collider.gameObject;
+						ShownUnit = TargetHit.collider.gameObject;
+						//Debug.Log("变了");
+						TargetHit.collider.gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
+					}
+
+					if (mouseClicked && TargetHit.collider.gameObject.CompareTag("Dead"))
+					{
+						//CurrentActUnitTarget = TargetHit.collider.gameObject;
+						mouseClicked = false;
+						ShownUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+						isWaitForPlayerToChooseDead = false;
+						//StartCoroutine(DealDamage(3f));
+						isChooseFinished = true;
+						CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+					}
+
+					if (Input.GetKey(KeyCode.Return) && TargetHit.collider.gameObject.CompareTag("Dead"))
+					{
+						CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+						isWaitForPlayerToChooseDead = false;
+						//StartCoroutine(DealDamage(3f));
+						CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+					}
+				}
+			}/*
+			if (Input.GetButton("Horizontal") || Input.GetButton("Vertical"))
+			{
+				isKeyboardTouched = true;
+				//增加如果target不存在的检测
+				if (CurrentActUnitTarget == null)
+				{
+					CurrentActUnitTarget = playerUnits[0];
+				}
+				CurrentActUnitTarget.GetComponent<Collider2D>().enabled = false;
+				//TargetChosenRay = new Ray(CurrentActUnitTarget.transform.position, );
+				//TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, Vector2.down);
+				//Debug.Log(TargetHit.collider.gameObject);
+				CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
+
+				if (Input.GetButton("Horizontal"))
+				{
+					float direction = Input.GetAxisRaw("Horizontal");
+					TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(direction, 0));
+					if (TargetHit.collider != null && TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
+					{
+						//Debug.Log(TargetHit.collider.gameObject);
+						CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+						CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+						CurrentActUnitTarget = TargetHit.collider.gameObject;
+					}
+					//Debug.Log(TargetHit.collider.gameObject);
+				}
+
+				if (Input.GetButton("Vertical"))
+				{
+					float direction = Input.GetAxisRaw("Vertical");
+					TargetHit = Physics2D.Raycast(CurrentActUnitTarget.transform.position, new Vector2(0, direction));
+					if (TargetHit.collider != null && TargetHit.collider.gameObject.CompareTag("PlayerUnit"))
+					{
+						//Debug.Log(TargetHit.collider.gameObject);
+						CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+						CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+						CurrentActUnitTarget = TargetHit.collider.gameObject;
+					}
+					//Debug.Log(TargetHit.collider.gameObject);
+				}
+			}*/
+			if (Input.GetKey(KeyCode.Return) && CurrentActUnitTarget != null)
+			{
+				CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+				CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+				isWaitForPlayerToChooseDead = false;
+				//StartCoroutine(DealDamage(3f));
+				isChooseFinished = true;
+				CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+			}
+			if (Input.GetKey(KeyCode.Escape))
+			{
+				CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+				CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 0);
+				if (CurrentActUnitTarget != null)
+				{
+					CurrentActUnitTarget.GetComponent<Collider2D>().enabled = true;
+					CurrentActUnitTarget = null;
+				}
+				isWaitForPlayerToChooseDead = false;
+				StopAllCoroutines();
+				State = BattleState.PlayerTurn;
+			}
+		}
+	}
+	/// <summary>
 	/// 更新血条的函数
 	/// </summary>
 	public void UpdateSliderChange()
@@ -1318,6 +1455,7 @@ public class BattleSetting : MonoBehaviour
 	{
 		isWaitForPlayerToChooseUnit = false;
 		isWaitForPlayerToChooseAlly = false;
+		isWaitForPlayerToChooseDead = false;
 		CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
 		CurrentActUnitTarget = null;
 		if (!isActionEnding)
@@ -1443,6 +1581,7 @@ public class BattleSetting : MonoBehaviour
 			StopAllCoroutines();
 			isWaitForPlayerToChooseAlly = false;
 			isWaitForPlayerToChooseUnit = false;
+			isWaitForPlayerToChooseDead = false;
 			isMoveFinished = true;
 			MovePanel.SetActive(false);
 			CurrentActUnit.GetComponent<JobSkillHolder>().StopAllCoroutines();

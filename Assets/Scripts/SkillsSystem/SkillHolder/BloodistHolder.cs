@@ -49,11 +49,22 @@ public class BloodistHolder : JobSkillHolder
 		{
 			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Remote"))
 			{
-				BasicSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = true;
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = true;
 			}
 			else
 			{
-				BasicSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = false;
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = false;
+			}
+		}
+		if (jobData.SkillsID.Exists(num => num == 8))
+		{
+			if (GameObject.FindGameObjectsWithTag("Dead").Length != 0)
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 8)].interactable = true;
+			}
+			else
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 8)].interactable = false;
 			}
 		}
 	}
@@ -282,11 +293,84 @@ public class BloodistHolder : JobSkillHolder
 			var enemy = BattleSetting.Instance.RemainingEnemyUnits[Random.Range(0, BattleSetting.Instance.RemainingEnemyUnits.Length)];
 
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
-			int damage = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.04f);
+			int damage = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.08f);
 			BattleSetting.Instance.DealDamageWithNoCallBack(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, true);
 			yield return new WaitForSeconds(0.2f);
 		}
+		int id = jobData.SkillsID.FindIndex(id => id == 7);
+		coolDownList[id] = 2;
 		StartCoroutine(BattleSetting.Instance.ShowActionText("嗜血"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator bloodAlly(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		int bloodAddictBonus = BloodAddictEnemy >= 3 ? 3 : BloodAddictEnemy;
+		int deltaTemp;
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			deltaTemp = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().maxHP * (0.1f + bloodAddictBonus * 0.05f));
+			BloodAddictEnemy -= bloodAddictBonus;
+		}
+		else
+		{
+			deltaTemp = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().maxHP * 0.1f);
+		}
+		BattleSetting.Instance.CurrentActUnitTarget.tag = "PlayerUnit";
+		BattleSetting.Instance.RemainingPlayerUnits = GameObject.FindGameObjectsWithTag("PlayerUnit");
+
+		StartCoroutine(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().FloatingHP(deltaTemp));
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().isDead = false;
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[0].color = new Color(255, 255, 255, 1);
+		int damage = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.05f);
+		BattleSetting.Instance.DealDamageWithNoCallBack(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, true);
+		yield return new WaitForSeconds(0.3f);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("血盟"));
+		yield return new WaitForSeconds(0.6f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator bloodRain(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
+		{
+			BattleSetting.Instance.CurrentActUnitTarget = enemy;
+			var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+			damage = Mathf.CeilToInt(damage * 0.8f);
+			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		}
+		yield return new WaitForSeconds(0.5f);
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+		{
+			int deltaTemp = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.02f * BloodAddictSelf);
+			StartCoroutine(gameObject.GetComponent<GivingData>().FloatingHP(deltaTemp));
+			BloodAddictSelf = 0;
+		}
+		else
+		{
+			while (BloodAddictEnemy > 0)
+			{
+				if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.Effect == Tag.effect.bad))
+				{
+					gameObject.GetComponent<GivingData>().tagList.Find(tag => tag.Effect == Tag.effect.bad && tag.TagKind != Tag.Kind.eternal).TurnLast--;
+					BloodAddictEnemy--;
+				}
+				else
+				{
+					break;
+				}
+			}
+		}
+		int id = jobData.SkillsID.FindIndex(id => id == 9);
+		coolDownList[id] = 2;
+		StartCoroutine(BattleSetting.Instance.ShowActionText("血雨"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}

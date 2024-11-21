@@ -9,6 +9,7 @@ TagManager:
   - PlayerUnit
   - Slot
   - EnemyUnit
+  - Dead
   layers:
   - Default
   - TransparentFX
