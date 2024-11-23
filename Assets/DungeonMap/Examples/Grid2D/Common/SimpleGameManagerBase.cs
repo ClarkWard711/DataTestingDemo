@@ -18,7 +18,7 @@ namespace Edgar.Unity.Examples
         {
             if (Instance == null)
             {
-                Instance = this as STGameManager; 
+                Instance = this as STGameManager;
             }
             else if (!ReferenceEquals(Instance, this))
             {
@@ -32,14 +32,14 @@ namespace Edgar.Unity.Examples
                 Canvas.SetActive(true);
             }
 
-            SingletonAwake();
+            //SingletonAwake();
         }
 
         protected virtual void SingletonAwake()
         {
             LoadNextLevel();
         }
-        
+
         public abstract void LoadNextLevel();
 
         protected void SetLevelInfo(string text)
@@ -52,7 +52,7 @@ namespace Edgar.Unity.Examples
                 levelInfo.text = text;
             }
         }
-        
+
         protected void ShowLoadingScreen(string loadingText, string secondaryText)
         {
             var canvas = GetCanvas();
@@ -73,7 +73,7 @@ namespace Edgar.Unity.Examples
             {
                 secondaryTextComponent.text = secondaryText;
             }
-            
+
         }
 
         protected GameObject GetCanvas()

@@ -34,18 +34,7 @@ public class EncounterManager : MonoBehaviour
 			generator.GetComponent<DungeonGeneratorBaseGrid2D>().Generate();
 		}
 	}
-	void Start()
-	{
-		if (PlayerSaveController.Instance.playerSaveData.playerPosition != Vector3.zero)
-		{
-			Debug.Log(PlayerSaveController.Instance.playerSaveData.playerPosition);
-			RestoreState();
-		}
-		if (PlayerSaveController.Instance.playerSaveData.stepsToEncounter != 0)
-		{
-			stepsToEncounter = PlayerSaveController.Instance.playerSaveData.stepsToEncounter;
-		}
-	}
+
 
 	public void ResetSteps()
 	{
@@ -69,6 +58,7 @@ public class EncounterManager : MonoBehaviour
 		Debug.Log("Battle Start！");
 		ResetSteps();
 		SaveState(GameObject.FindGameObjectWithTag("Player").transform);
+		Debug.Log(PlayerSaveController.Instance.playerSaveData.playerPosition);
 		PlayerSaveController.Instance.playerSaveData.stepsToEncounter = stepsToEncounter;
 		DataManager.Instance.Save();
 		SceneLoader.LoadAddressableScene(battleScene);
