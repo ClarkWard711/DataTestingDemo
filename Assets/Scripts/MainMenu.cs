@@ -5,22 +5,27 @@ using UnityEngine.AddressableAssets;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] AssetReference newGameScene;
-    [SerializeField] bool debugMode = true;
-    bool enter = true;
-    public void StartGame()
-    {
-        //todo: disable all player inputs
-        if (debugMode)
-        {
-            enter = false;
-            SceneLoader.LoadAddressableScene(SceneLoader.DebugRoomSceneKey);
-        }
-        if(enter)
-        {
-            enter = false;
-            SceneLoader.LoadAddressableScene(newGameScene);
-
-        }
-    }
+	[SerializeField] AssetReference newGameScene;
+	[SerializeField] bool debugMode = true;
+	bool enter = true;
+	public void StartGame()
+	{
+		//todo: disable all player inputs
+		if (debugMode)
+		{
+			enter = false;
+			SceneLoader.LoadAddressableScene(SceneLoader.DebugRoomSceneKey);
+		}
+		if (enter)
+		{
+			enter = false;
+			DataManager.Instance.Load();
+			if (PlayerSaveController.Instance.playerSaveData.seed == 0)
+			{
+				PlayerSaveController.Instance.playerSaveData.seed = Random.Range(10000000, 100000000);
+			}
+			DataManager.Instance.Save();
+			SceneLoader.LoadAddressableScene(newGameScene);
+		}
+	}
 }

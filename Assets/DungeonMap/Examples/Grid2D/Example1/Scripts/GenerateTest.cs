@@ -11,6 +11,7 @@ public class GenerateTest : MonoBehaviour
 	public void Awake()
 	{
 		generator.GetComponent<DungeonGeneratorBaseGrid2D>().RandomGeneratorSeed = seed;
+		generator.GetComponent<DungeonGeneratorBaseGrid2D>().Generate();
 		//seed = generator.GetComponent<DungeonGeneratorBaseGrid2D>().RandomGeneratorSeed;
 		//Debug.Log(seed);
 		//Debug.Log(generator.GetComponent<DungeonGeneratorBaseGrid2D>().RandomGeneratorSeed);

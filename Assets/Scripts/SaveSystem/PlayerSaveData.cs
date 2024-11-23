@@ -13,6 +13,8 @@ public class PlayerSaveData
 	//是否是新的一局
 	public bool isNewGame = true;
 	//地图数据
+	public int seed;
+	public int stepsToEncounter;
 	//位置
 	public Vector3 playerPosition;
 	//翻转

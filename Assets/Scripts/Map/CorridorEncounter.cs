@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CorridorEncounter : MonoBehaviour
 {
-    public int initialStepsToEncounter = 15; 
-    private int currentSteps = 0; 
+    public int initialStepsToEncounter = 15;
+    //private int currentSteps = 0; 
     private int stepsToEncounter;
     private bool playerInZone = false;
 
@@ -13,7 +13,7 @@ public class CorridorEncounter : MonoBehaviour
 
     void Start()
     {
-        stepsToEncounter = initialStepsToEncounter; 
+        stepsToEncounter = initialStepsToEncounter;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -30,7 +30,7 @@ public class CorridorEncounter : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInZone = false;
-            currentSteps = 0;
+            //currentSteps = 0;
         }
     }
 
@@ -52,7 +52,7 @@ public class CorridorEncounter : MonoBehaviour
             {
                 EncounterManager.instance.currentSteps++;
                 lastPosition = player.transform.position;
-                
+
                 if (EncounterManager.instance.currentSteps >= EncounterManager.instance.stepsToEncounter)
                 {
                     EncounterManager.instance.TriggerBattle();
@@ -62,5 +62,5 @@ public class CorridorEncounter : MonoBehaviour
     }
 
 
-    
+
 }

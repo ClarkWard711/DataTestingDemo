@@ -33,6 +33,14 @@ MonoBehaviour:
     m_Address: MainMenuScene
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7ea4b1b1e4703864893aa3ada20f1a6f
+    m_Address: StudyExample1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4dcaa9447778449bca494eb70932fa92
+    m_Address: BattleTestScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 738b95c4ccd0846528d5e5af8e0c9b94, type: 2}
   m_SchemaSet:

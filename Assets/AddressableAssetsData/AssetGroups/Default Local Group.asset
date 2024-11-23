@@ -17,16 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 8b41fd17c5b2340a5b3feb0a576d250f
   m_SerializeEntries:
-  - m_GUID: 4dcaa9447778449bca494eb70932fa92
-    m_Address: BattleTestScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 0901ca0ce6cbd4d178a99d9e78dd45e9
     m_Address: Assets/Scenes/TestScene.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 7ea4b1b1e4703864893aa3ada20f1a6f
-    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/StudyExample1.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
