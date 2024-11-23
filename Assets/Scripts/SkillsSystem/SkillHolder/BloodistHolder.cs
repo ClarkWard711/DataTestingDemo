@@ -67,6 +67,17 @@ public class BloodistHolder : JobSkillHolder
 				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 8)].interactable = false;
 			}
 		}
+		if (jobData.SkillsID.Exists(num => num == 11))
+		{
+			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee") && BloodAddictSelf >= 3)
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = true;
+			}
+			else
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = false;
+			}
+		}
 	}
 
 	#region 基础
@@ -371,6 +382,78 @@ public class BloodistHolder : JobSkillHolder
 		int id = jobData.SkillsID.FindIndex(id => id == 9);
 		coolDownList[id] = 2;
 		StartCoroutine(BattleSetting.Instance.ShowActionText("血雨"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator bloodMourning(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		int count = BloodAddictEnemy >= 3 ? 3 : BloodAddictEnemy;
+		for (int i = 0; i < count + 1; i++)
+		{
+			int randomNum = Random.Range(0, 6);
+			if (randomNum == 0)
+			{
+				int damage = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.08f);
+				BattleSetting.Instance.DealDamageWithNoCallBack(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, true);
+			}
+			else if (randomNum == 1)
+			{
+				foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
+				{
+					BattleSetting.Instance.CurrentActUnitTarget = enemy;
+					var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+					damage = Mathf.CeilToInt(damage * 0.75f);
+					BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+				}
+			}
+			else if (randomNum == 2)
+			{
+				var enemy = BattleSetting.Instance.RemainingEnemyUnits[Random.Range(0, BattleSetting.Instance.RemainingEnemyUnits.Length)];
+				BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
+			}
+			else if (randomNum == 3)
+			{
+				var player = BattleSetting.Instance.RemainingEnemyUnits[Random.Range(0, BattleSetting.Instance.RemainingPlayerUnits.Length)];
+				var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, player, AttackType.Physical);
+				damage = Mathf.CeilToInt(damage * 0.5f);
+				BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, player, AttackType.Physical, true);
+			}
+			else if (randomNum == 4)
+			{
+				//int Sp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP <= 10 ? 10 : BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;
+				//BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= Sp;
+				//StartCoroutine(BattleSetting.Instance.ShowActionText("SP减少"));
+				StartCoroutine(gameObject.GetComponent<GivingData>().FloatingSP(10));
+				yield return new WaitForSeconds(0.2f);
+			}
+			else if (randomNum == 5)
+			{
+				int deltaTemp = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.08f);
+				StartCoroutine(gameObject.GetComponent<GivingData>().FloatingHP(deltaTemp));
+			}
+
+			yield return new WaitForSeconds(0.2f);
+		}
+		StartCoroutine(BattleSetting.Instance.ShowActionText("血殇"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator bloodCongeal(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		BloodAddictSelf -= 3;
+		var tag = BloodCongealTag.CreateInstance<BloodCongealTag>();
+		tag.TurnAdd++;
+		tag.spd = -BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().Speed;
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("血凝"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
