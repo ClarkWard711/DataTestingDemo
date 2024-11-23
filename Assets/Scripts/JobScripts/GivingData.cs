@@ -122,6 +122,15 @@ public class GivingData : MonoBehaviour
 		{
 			obj.GetComponent<Text>().color = new Color(0, 1, 1, 1);
 		}
+		if (currentHP <= 0)
+		{
+			isDead = true;
+			currentHP = 0;
+			if (this.gameObject.tag == "EnemyUnit")
+			{
+				this.gameObject.tag = "Untagged";
+			}
+		}
 		yield return new WaitForSeconds(2f);
 		Destroy(obj);
 		if (currentHP <= 0)
@@ -133,7 +142,7 @@ public class GivingData : MonoBehaviour
 				this.gameObject.tag = "Dead";
 				this.gameObject.GetComponentsInChildren<SpriteRenderer>()[0].color = new Color(255, 255, 255, 0.5f);
 			}
-			else if (this.gameObject.tag == "EnemyUnit")
+			else if (this.gameObject.tag == "Untagged")
 			{
 				this.gameObject.SetActive(false);
 			}

@@ -36,8 +36,6 @@ public class BloodistHolder : JobSkillHolder
 		base.AddSkillToButton();
 		for (int i = 0; i < 4; i++)
 		{
-			AdvancedSkillButton[i].interactable = true;
-			AdvancedSkillButton[i].onClick.RemoveAllListeners();
 			if (jobData.SkillsID[i] != -1)
 			{
 				//把按钮文字也给改了
@@ -280,6 +278,7 @@ public class BloodistHolder : JobSkillHolder
 			damage = Mathf.CeilToInt(damage * (1 + 0.2f * BloodAddictSelf));
 			BloodAddictSelf = 0;
 			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+			yield return new WaitForSeconds(0.5f);
 		}
 		else if (optionIndex == 2)
 		{
