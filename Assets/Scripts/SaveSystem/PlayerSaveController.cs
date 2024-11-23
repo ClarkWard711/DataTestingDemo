@@ -5,6 +5,18 @@ using UnityEngine;
 public class PlayerSaveController : MonoBehaviour, ISaveable
 {
 	public PlayerSaveData playerSaveData;
+	public void OnEnable()
+	{
+		ISaveable Saveable;
+		Saveable = this;
+		Saveable.RegisterSaveData();
+	}
+	public void OnDisable()
+	{
+		ISaveable Saveable;
+		Saveable = this;
+		Saveable.UnRegisterSaveData();
+	}
 	public GameDataDefinition GetGameDataID()
 	{
 		return GetComponent<GameDataDefinition>();
@@ -19,18 +31,18 @@ public class PlayerSaveController : MonoBehaviour, ISaveable
 	{
 		playerSaveData = data.playerSaveData;
 	}
-	
+
 	public void SaveState(Transform playerTransform)
 	{
 		playerSaveData.playerPosition = playerTransform.position;
 		playerSaveData.playerRotation = playerTransform.rotation;
 	}
-	
+
 	public void RestoreState()
 	{
 		GameObject player = GameObject.FindGameObjectWithTag("Player");
 		player.transform.position = playerSaveData.playerPosition;
 		player.transform.rotation = playerSaveData.playerRotation;
 	}
-	
+
 }
