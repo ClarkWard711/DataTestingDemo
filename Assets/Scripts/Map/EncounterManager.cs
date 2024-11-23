@@ -33,6 +33,15 @@ public class EncounterManager : MonoBehaviour
 			generator.GetComponent<DungeonGeneratorBaseGrid2D>().RandomGeneratorSeed = seed;
 			generator.GetComponent<DungeonGeneratorBaseGrid2D>().Generate();
 		}
+		if (PlayerSaveController.Instance.playerSaveData.playerPosition != Vector3.zero)
+		{
+			Debug.Log(PlayerSaveController.Instance.playerSaveData.playerPosition);
+			RestoreState();
+		}
+		if (PlayerSaveController.Instance.playerSaveData.stepsToEncounter != 0)
+		{
+			stepsToEncounter = PlayerSaveController.Instance.playerSaveData.stepsToEncounter;
+		}
 	}
 
 
