@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Edgar.Unity;
 using UnityEngine.AddressableAssets;
+using JetBrains.Annotations;
+using Edgar.Unity.Examples;
 
 public class EncounterManager : MonoBehaviour
 {
@@ -10,10 +12,11 @@ public class EncounterManager : MonoBehaviour
 	public GameObject generator;
 	public int seed;
 	[SerializeField] AssetReference battleScene;
-
+	public GameObject level;
+	public GameObject player;
 	public int currentSteps = 0;
 	public int stepsToEncounter = 15;
-
+	public bool isLocated;
 	void Awake()
 	{
 		if (instance == null)
@@ -33,18 +36,26 @@ public class EncounterManager : MonoBehaviour
 			generator.GetComponent<DungeonGeneratorBaseGrid2D>().RandomGeneratorSeed = seed;
 			generator.GetComponent<DungeonGeneratorBaseGrid2D>().Generate();
 		}
-		if (PlayerSaveController.Instance.playerSaveData.playerPosition != Vector3.zero)
-		{
-			Debug.Log(PlayerSaveController.Instance.playerSaveData.playerPosition);
-			RestoreState();
-		}
-		if (PlayerSaveController.Instance.playerSaveData.stepsToEncounter != 0)
-		{
-			stepsToEncounter = PlayerSaveController.Instance.playerSaveData.stepsToEncounter;
-		}
+		player = level.GetComponentInChildren<SimplePlayer2D>().gameObject;
+
 	}
 
-
+	public void Update()
+	{
+		if (GameObject.FindGameObjectWithTag("Player") != null && !isLocated)
+		{
+			isLocated = true;
+			if (PlayerSaveController.Instance.playerSaveData.playerPosition != Vector3.zero)
+			{
+				Debug.Log(PlayerSaveController.Instance.playerSaveData.playerPosition);
+				RestoreState();
+			}
+			if (PlayerSaveController.Instance.playerSaveData.stepsToEncounter != 0)
+			{
+				stepsToEncounter = PlayerSaveController.Instance.playerSaveData.stepsToEncounter;
+			}
+		}
+	}
 	public void ResetSteps()
 	{
 		currentSteps = 0;
@@ -58,7 +69,7 @@ public class EncounterManager : MonoBehaviour
 
 	public void RestoreState()
 	{
-		GameObject player = GameObject.FindGameObjectWithTag("Player");
+
 		player.transform.position = PlayerSaveController.Instance.playerSaveData.playerPosition;
 		player.transform.rotation = PlayerSaveController.Instance.playerSaveData.playerRotation;
 	}

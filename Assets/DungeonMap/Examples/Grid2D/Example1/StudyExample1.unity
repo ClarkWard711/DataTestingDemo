@@ -24474,8 +24474,11 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
+  level: {fileID: 1294600797}
+  player: {fileID: 1748571556}
   currentSteps: 0
   stepsToEncounter: 15
+  isLocated: 0
 --- !u!1 &721703041
 GameObject:
   m_ObjectHideFlags: 0
