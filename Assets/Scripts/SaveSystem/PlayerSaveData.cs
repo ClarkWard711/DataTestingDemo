@@ -13,6 +13,10 @@ public class PlayerSaveData
 	//是否是新的一局
 	public bool isNewGame = true;
 	//地图数据
+	//位置
+	public Vector3 playerPosition;
+	//翻转
+	public Quaternion playerRotation;
 	//武器饰品等数值
 	//经验 等级等数据
 	//敌人宝箱状态和位置

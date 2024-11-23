@@ -19,4 +19,18 @@ public class PlayerSaveController : MonoBehaviour, ISaveable
 	{
 		playerSaveData = data.playerSaveData;
 	}
+	
+	public void SaveState(Transform playerTransform)
+	{
+		playerSaveData.playerPosition = playerTransform.position;
+		playerSaveData.playerRotation = playerTransform.rotation;
+	}
+	
+	public void RestoreState()
+	{
+		GameObject player = GameObject.FindGameObjectWithTag("Player");
+		player.transform.position = playerSaveData.playerPosition;
+		player.transform.rotation = playerSaveData.playerRotation;
+	}
+	
 }
