@@ -25106,6 +25106,7 @@ GameObject:
   - component: {fileID: 715889804}
   - component: {fileID: 715889803}
   - component: {fileID: 715889805}
+  - component: {fileID: 715889806}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -25155,6 +25156,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generator: {fileID: 494446621}
   seed: 1
+--- !u!114 &715889806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715889802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0010e78d2d02844bd2e911f65e4458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleScene:
+    m_AssetGUID: 4dcaa9447778449bca494eb70932fa92
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  currentSteps: 0
+  stepsToEncounter: 15
 --- !u!1 &719161290
 GameObject:
   m_ObjectHideFlags: 0

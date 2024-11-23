@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/Scenes/TestScene.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7ea4b1b1e4703864893aa3ada20f1a6f
+    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/StudyExample1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 738b95c4ccd0846528d5e5af8e0c9b94, type: 2}
   m_SchemaSet:
