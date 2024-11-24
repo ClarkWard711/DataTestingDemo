@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8275c5669db7640b1a9cc9dcdc77c94c, type: 3}
   m_Name: Clamour
   m_EditorClassIdentifier: 
-  SkillID: 0
+  SkillID: 6
   SpCost: 15
   TurnCooldown: 0
   DealMultiplier: 0
-  SkillName: 
-  Description: "\u76F4\u5230\u4E0B\u4E00\u4E2A\u56DE\u5408\uFF0C\u4F60\u83B7\u5F97\u5B88\u62A4\n(\u84C4\u529B:\u4E0B\u4E24\u4E2A\u56DE\u5408)"
+  SkillName: "\u53EB\u56A3"
+  Description: "Sp:15\n\u76F4\u5230\u4E0B\u4E00\u4E2A\u56DE\u5408\uFF0C\u4F60\u83B7\u5F97\u5B88\u62A4\n(\u84C4\u529B:\u4E0B\u4E24\u4E2A\u56DE\u5408)"
   HitRevise: 0
   bloodistSkillKind: 1
