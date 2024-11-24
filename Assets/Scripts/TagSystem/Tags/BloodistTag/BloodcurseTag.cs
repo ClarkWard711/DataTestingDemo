@@ -11,7 +11,7 @@ public class BloodcurseTag : Tag
         TagKind = Kind.turnLessen;
         BuffTarget = target.self;
         Effect = effect.good;
-        TurnAdd = 1;
-        TurnLast = 2;
+        TurnAdd = 3;
+        TurnLast = 3;
     }
 }

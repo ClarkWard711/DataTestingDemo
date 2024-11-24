@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de70f1fb040046e2a34616a6097e0a8, type: 3}
+  m_Name: BloodCurse
+  m_EditorClassIdentifier: 
+  SkillID: 0
+  SpCost: 12
+  TurnCooldown: 0
+  DealMultiplier: 0
+  SkillName: "\u8840\u5492"
+  Description: "\u4F7F\u4F60\u7684\u4F60\u7684\u8840\u763E\u53EF\u4EE5\u4F5C\u4E3ASp\u4F7F\u75283\u56DE\u5408\uFF0C\u6BCF\u4E2A\u8840\u763E\u76F8\u5F53\u4E8E3
+    Sp(\u4F18\u5148\u6D88\u8017\u8F83\u591A\u7684\u8840\u763E)"
+  HitRevise: 0
+  bloodistSkillKind: 0
