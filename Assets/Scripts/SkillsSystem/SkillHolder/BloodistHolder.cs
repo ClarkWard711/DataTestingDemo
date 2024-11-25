@@ -652,10 +652,10 @@ public class BloodistHolder : JobSkillHolder
 		yield return new WaitForSeconds(0.3f);
 		if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee"))
 		{
-			if (BloodAddictSelf >= 2 && BattleSetting.Instance.PlayerPositionsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().positionID - 3].transform.childCount != 0)
+			if (BloodAddictSelf >= 2 && BattleSetting.Instance.EnemyPositionsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().positionID - 3].transform.childCount != 0)
 			{
 				BloodAddictSelf -= 2;
-				BattleSetting.Instance.CurrentActUnitTarget = BattleSetting.Instance.PlayerPositionsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().positionID - 3].transform.GetChild(0).gameObject;
+				BattleSetting.Instance.CurrentActUnitTarget = BattleSetting.Instance.EnemyPositionsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().positionID - 3].transform.GetChild(0).gameObject;
 				var damage1 = Mathf.CeilToInt(1.2f * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical));
 				BattleSetting.Instance.DealDamageExtra(damage1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 				BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Locked.CreateInstance<Locked>());
