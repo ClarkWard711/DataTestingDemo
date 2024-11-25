@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b0d227ce700d4c029ae8dbeebf371d8, type: 3}
-  m_Name: BloodMourning
+  m_Script: {fileID: 11500000, guid: 3041c526998e84efcb3625122121fd4f, type: 3}
+  m_Name: BloodStab
   m_EditorClassIdentifier: 
-  SkillID: 10
-  SpCost: 20
+  SkillID: 0
+  SpCost: 12
   TurnCooldown: 0
   DealMultiplier: 0
-  SkillName: "\u8840\u6B87"
-  Description: "Sp:20\n\u89E6\u53D1\u4E00\u4E2A\u968F\u5373\u6548\u679C,\u81F3\u591A\u6D88\u80173\u4E2A\u8840\u763E(\u5DF1)\u6BCF\u6D88\u8017\u4E00\u4E2A\u591A\u89E6\u53D1\u4E00\u6B21 "
+  SkillName: "\u8840\u523A"
+  Description: 
   HitRevise: 0
   bloodistSkillKind: 0

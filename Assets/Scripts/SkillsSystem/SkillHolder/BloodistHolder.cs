@@ -639,4 +639,30 @@ public class BloodistHolder : JobSkillHolder
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
+
+	public IEnumerator bloodStab(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.canChangeAction = false;
+		CheckBloodCurseSP(SpCost);
+		var damage = Mathf.CeilToInt(1.2f * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical));
+		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Locked.CreateInstance<Locked>());
+		yield return new WaitForSeconds(0.3f);
+		if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee"))
+		{
+			if (BloodAddictSelf >= 2 && BattleSetting.Instance.PlayerPositionsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().positionID - 3].transform.childCount != 0)
+			{
+				BloodAddictSelf -= 2;
+				BattleSetting.Instance.CurrentActUnitTarget = BattleSetting.Instance.PlayerPositionsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().positionID - 3].transform.GetChild(0).gameObject;
+				var damage1 = Mathf.CeilToInt(1.2f * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical));
+				BattleSetting.Instance.DealDamageExtra(damage1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+				BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Locked.CreateInstance<Locked>());
+			}
+		}
+		StartCoroutine(BattleSetting.Instance.ShowActionText("血刺"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
 }
