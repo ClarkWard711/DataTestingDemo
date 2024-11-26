@@ -241,6 +241,36 @@ public class GivingData : MonoBehaviour
 			BattleSetting.Instance.CheckTagList(this.gameObject);
 			return;
 		}
+		if (tag is Bleed)
+		{
+			if (tagList.Exists(tag => tag is Bleed))
+			{
+				bool isAdded = false;
+				foreach (Bleed bleed in tagList.FindAll(tag => tag is Bleed))
+				{
+					if (bleed.isSelf == ((Bleed)tag).isSelf)
+					{
+						bleed.TurnLast += tag.TurnAdd;
+						isAdded = true;
+					}
+				}
+				if (!isAdded)
+				{
+					Tag newTag0 = Instantiate(tag);
+					tagList.Add(newTag0);
+					BattleSetting.Instance.CheckTagList(this.gameObject);
+					StartCoroutine(OnTagAdded(newTag0));
+				}
+			}
+			else
+			{
+				Tag newTag0 = Instantiate(tag);
+				tagList.Add(newTag0);
+				BattleSetting.Instance.CheckTagList(this.gameObject);
+				StartCoroutine(OnTagAdded(newTag0));
+			}
+			return;
+		}
 		foreach (Tag existingTag in tagList)
 		{
 			if (existingTag.GetType() == tag.GetType())
@@ -263,6 +293,7 @@ public class GivingData : MonoBehaviour
 		Tag newTag = Instantiate(tag);
 		tagList.Add(newTag);
 		BattleSetting.Instance.CheckTagList(this.gameObject);
+		StartCoroutine(OnTagAdded(newTag));
 	}
 
 	public void CoroutineStart(IEnumerator enumerator)
@@ -307,6 +338,19 @@ public class GivingData : MonoBehaviour
 			OnSelfDamageTake.Invoke();
 
 			yield return null;
+		}
+	}
+	IEnumerator OnTagAdded(Tag tag)
+	{
+		UnityAction OnTagAdded;
+		OnTagAdded = tag.OnTagAdded;
+		if (OnTagAdded == null)
+		{
+			yield return null;
+		}
+		else
+		{
+			OnTagAdded.Invoke();
 		}
 	}
 }

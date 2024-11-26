@@ -665,4 +665,36 @@ public class BloodistHolder : JobSkillHolder
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
+
+	public IEnumerator bloodMonogatari(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.canChangeAction = false;
+		CheckBloodCurseSP(SpCost);
+		int count = 0;
+		if (BloodAddictSelf >= 4)
+		{
+			if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee"))
+			{
+				Fear tag = Fear.CreateInstance<Fear>();
+				tag.unit = BattleSetting.Instance.CurrentActUnitTarget;
+				BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+			}
+			else
+			{
+				Attract tag = Attract.CreateInstance<Attract>();
+				tag.unit = BattleSetting.Instance.CurrentActUnitTarget;
+				BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+			}
+			count++;
+		}
+		if (BloodAddictSelf >= 3)
+		{
+
+		}
+		StartCoroutine(BattleSetting.Instance.ShowActionText("血咒"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
 }

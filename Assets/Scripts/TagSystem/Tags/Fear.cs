@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Attract : Tag
+public class Fear : Tag
 {
 	public GameObject unit;
-	public Attract()
+	public Fear()
 	{
-		TagName = "Attract";
+		TagName = "Fear";
 		Impact = impactOnMultiplier.AllDeal;
 		TurnAdd = 1;
 		TagKind = Kind.turnLessen;
@@ -19,11 +20,11 @@ public class Attract : Tag
 
 	public void ChangePosition()
 	{
-		if (unit.GetComponent<GivingData>().tagList.Exists(tag => tag is Remote))
+		if (unit.GetComponent<GivingData>().tagList.Exists(tag => tag is Melee))
 		{
 			if (unit.CompareTag("PlayerUnit"))
 			{
-				int i = unit.GetComponent<GivingData>().positionID - 3;
+				int i = unit.GetComponent<GivingData>().positionID + 3;
 				if (BattleSetting.Instance.PlayerPositionsList[i].transform.childCount != 0)
 				{
 					BattleSetting.Instance.PlayerPositionsList[i].transform.GetChild(0).gameObject.transform.SetParent(unit.transform.parent, false);
@@ -38,7 +39,7 @@ public class Attract : Tag
 			}
 			else
 			{
-				int i = unit.GetComponent<GivingData>().positionID - 3;
+				int i = unit.GetComponent<GivingData>().positionID + 3;
 				if (BattleSetting.Instance.EnemyPositionsList[i].transform.childCount != 0)
 				{
 					BattleSetting.Instance.EnemyPositionsList[i].transform.GetChild(0).gameObject.transform.SetParent(unit.transform.parent, false);

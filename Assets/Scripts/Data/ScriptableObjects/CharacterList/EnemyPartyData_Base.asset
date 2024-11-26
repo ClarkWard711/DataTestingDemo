@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Data:EnemyPartyData
   enemyDataList:
   - {fileID: 11400000, guid: 01b876f22e98d4b5d8f1c2bc727a14e8, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 8de60b598c5004bfb8e4c48cf0263d56, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
