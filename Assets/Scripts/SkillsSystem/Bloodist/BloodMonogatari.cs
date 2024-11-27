@@ -6,7 +6,7 @@ public class BloodMonogatari : BloodistSkill
 {
 	public BloodMonogatari()
 	{
-		SpCost = 18;
+		SpCost = 20;
 		bloodistSkillKind = BloodistSkillKind.Blood;
 	}
 

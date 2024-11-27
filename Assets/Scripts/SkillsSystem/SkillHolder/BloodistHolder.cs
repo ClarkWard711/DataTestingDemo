@@ -691,7 +691,56 @@ public class BloodistHolder : JobSkillHolder
 		}
 		if (BloodAddictSelf >= 3)
 		{
-
+			var tag = Weak.CreateInstance<Weak>();
+			tag.TurnAdd = 2;
+			tag.TurnLast = 2;
+			BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+			count++;
+		}
+		if (BloodAddictSelf >= 2)
+		{
+			var tag = Bleed.CreateInstance<Bleed>();
+			tag.TurnAdd = 2;
+			tag.TurnLast = 2;
+			BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+			count++;
+		}
+		if (BloodAddictSelf >= 1)
+		{
+			var tag = PhysicalDfsDown.CreateInstance<PhysicalDfsDown>();
+			tag.TurnAdd = 2;
+			tag.TurnLast = 2;
+			BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+			count++;
+		}
+		BloodAddictSelf -= count;
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			var unit = BattleSetting.Instance.CurrentActUnitTarget;
+			foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
+			{
+				if (unit.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+				{
+					if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
+					{
+						var damage = Mathf.CeilToInt(1.2f * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical));
+						BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
+					}
+				}
+				else
+				{
+					if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+					{
+						var damage = Mathf.CeilToInt(1.2f * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical));
+						BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
+					}
+				}
+			}
+		}
+		else
+		{
+			var damage = Mathf.CeilToInt(1.2f * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical));
+			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 		}
 		StartCoroutine(BattleSetting.Instance.ShowActionText("血咒"));
 		yield return new WaitForSeconds(1f);

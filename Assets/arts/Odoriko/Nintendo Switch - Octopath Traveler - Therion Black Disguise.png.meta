@@ -1,0 +1,3467 @@
+fileFormatVersion: 2
+guid: 90742bcb19097421797d229971621d60
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 221
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20827cd2ea6fe4033847c8380e680022
+      internalID: 1675603995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 221
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fe84716335e4f2ba172fb807b22f52
+      internalID: -1878090278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_2
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 221
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c5fc348dcb44c8ba3633d89ea0a3a4
+      internalID: 1476232731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_3
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 221
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39ce5c82a3de423eb30e49319cf26e2
+      internalID: 1718805654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 229
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08cfd9e7de66241a3be0faf15b92a4b5
+      internalID: 1350430407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_5
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 229
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133480d16dcfa41788b5f97a2a40b7b4
+      internalID: 2146256857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_6
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 229
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08cbc69fa2d3147319b59d106c1384ee
+      internalID: -253837871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 229
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ffb51195b4a48b1b4bdc833df36d14
+      internalID: 1119019521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 229
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3ff77fdf4264cfd9936c394f9d276b
+      internalID: -1055720031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_9
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 229
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bd028576c764e748950d769e30106e
+      internalID: 1239963772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_10
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 223
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91803801ab68486787b8d11ea1412b4
+      internalID: -71071907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_11
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 217
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eeab8723bb2a4636b63ab810628b698
+      internalID: -928202359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_12
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 225
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bead8d1f1e9514e1abe6b526a14b4908
+      internalID: 1970899462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_13
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 226
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9cdab5cfeb04a2c8c83805f770770e
+      internalID: -321880142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_14
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 226
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06353ba67f64a4da9a160417c06715de
+      internalID: -1644512746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_15
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 225
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286ba0242443e4f01a7fbc8913110486
+      internalID: 1325327668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_16
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 223
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58393af8d2d84fad9de0ac63f8c3676
+      internalID: -822854589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_17
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 223
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f53e0a3db12b4995b1934932b892e6c
+      internalID: 1431674173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 217
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01b406a1d8cb4900adac3dcc1aad916
+      internalID: 922583735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_19
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 225
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb1115b925d542a281837c242ec0617
+      internalID: -18168402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 187
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b520065227e4a420e874334588acff9e
+      internalID: -277381933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_21
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 187
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7767eedbf4a94d3b949588799ce2b1a
+      internalID: 1697824463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_22
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 186
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ca3de0a4e904723976854e977d66cd
+      internalID: 1382425866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_23
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 184
+        width: 36
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11691a30148a4117a1e4a5b8ab7101d
+      internalID: 1971403772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_24
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 182
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334feaa1a3f6b4e3a92b45a38853f4bb
+      internalID: -1321086401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_25
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 183
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bffdb96812384418b3ebf5b894a195f
+      internalID: 187617724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_26
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 184
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f82fb3d3bc6d46ad87e6b63a2ee83d0
+      internalID: -1178749859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_27
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 184
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f0d6e430f9b4e76944b8050234996d
+      internalID: 953542405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_28
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 182
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f554aca754844ad9bae1b8352145299
+      internalID: 1738143054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_29
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 183
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779d54d48ebcd495d8c6c88092731561
+      internalID: 954661291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_30
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 184
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6097ebbbe551b40a08fb1c881fdebf22
+      internalID: -1514280479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_31
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 184
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0779efdbc58444fc8a43b5c08840d6b0
+      internalID: -202705972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_32
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 182
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffda47afcd4ec4ed4add116a7da48fb9
+      internalID: -829086644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_33
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 182
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b466a8a33dc3644928d8909588cdaf84
+      internalID: -123404258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_34
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 182
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecadae70256941fc9d921228a602fe3
+      internalID: -1398165215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_35
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 182
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb30c923e85dd41f1b049d5b4b32cc22
+      internalID: -806665061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_36
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 184
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afeeb2e92df614e89a3fc2164028e4fd
+      internalID: -26616783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_37
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 184
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9701e41dba59f4af9be585e892a6d294
+      internalID: -1195183510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_38
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 149
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a627ab3a742d34470acc3f258d519bf0
+      internalID: 193344917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_39
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 149
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e9a17eb375f4f1e9ee8621475dce14
+      internalID: -1735067842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_40
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35545dbdc088049ca8c1bf82a525f865
+      internalID: -1321245397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_41
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95abba486096642179f9c7b0e20df844
+      internalID: 24747102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_42
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb3e9548a41242d2867a48af5f69841
+      internalID: 964940295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_43
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635ad603fc3c54e278f077bf59cd8fed
+      internalID: 2074938855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_44
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 147
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17072645d5bf42c2ad96dd568fc47b7
+      internalID: 407184291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_45
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 147
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f62a7a6031b045f9b00b6cad56e5253
+      internalID: 627179719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_46
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 147
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fd10adf38bb433195be0556f0d2492
+      internalID: -182728293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_47
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80227982a0f947d48a5f8d2eb8f7e5e
+      internalID: 513995499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_48
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 147
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794d3a8f2350f461eba1e20f5407885b
+      internalID: -254987782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_49
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 147
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3edb5d4e8c34444009aff4b8ddfd477d
+      internalID: -677034198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_50
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e45fb4bef4141cbabb8d260a1069b3
+      internalID: -410500085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_51
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0b36c9657df482e8d309e270c071b3
+      internalID: 1687974568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_52
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61025dbe834144807bbcc394c2fe9cc7
+      internalID: 1270623785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_53
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39fd55af0349b4bd6a55aa7dd5cff96b
+      internalID: 30056900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_54
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03c3fce3ba984f409922f4d7a1a0b03
+      internalID: 1709868167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_55
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34bb0cb7b1d6e420180e0a9f500a3d6f
+      internalID: -577222548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_56
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52eccc66ad2f948bda755c9e6cc3483f
+      internalID: -25258772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_57
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 147
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82109b5fa7b74c7caef086b29d8fc30
+      internalID: 1289599981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_58
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 147
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da93c22e9cd640dcbb6b24b15f4cfb7
+      internalID: -1277734642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_59
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 147
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21160b770f014759a928f8cd54dc678
+      internalID: -91208199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_60
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 147
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ebea5cd52744a09a32213b6cc9794b
+      internalID: -1001084170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_61
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 147
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd32d225ded504ec49bba43e34e1aa62
+      internalID: -1366722093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_62
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 147
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258679e8b32114ba8b250c5bbe5bca5a
+      internalID: -2015593014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_63
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 113
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b7f444fb0844b60a913215f60a9c70
+      internalID: 657042030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_64
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 113
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5eddfe9c7e74584bec1ee5da221282
+      internalID: -719098108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_65
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 113
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d25469c5b9748cba7631f55bd3956e
+      internalID: 343061267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_66
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 113
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eacb50545ecb44076bbf2177859a8018
+      internalID: 1322377717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_67
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 112
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69eb141bb834e444a9d086f55b6dc6de
+      internalID: 865244090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_68
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 112
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9f0eeb20ad3440ab81de5cf4a0646c
+      internalID: 1516784087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_69
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 112
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c425a46b88b5843959207c6def2c65ba
+      internalID: -646321437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_70
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 112
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567fca261817b4db4a3148d4d372281a
+      internalID: -1144957687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_71
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 112
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db64b47d3d54d45e39626ed3c09036cd
+      internalID: 1207445521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_72
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 112
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6c0819609de49898333ebb8e533a52
+      internalID: -1487717331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_73
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 112
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f241651e27c44fcab7c8a8f16eb6421
+      internalID: 1835215043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_74
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 112
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7a906d486f14f328ebe7e398916488
+      internalID: -250039809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_75
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 132
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a608fa93bb27344fb86378ded42e8ea0
+      internalID: -2046873605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_76
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 132
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105c0b6bf9aed4e3eae6fd6663dbd75d
+      internalID: 1905471298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_77
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 112
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fe7168e3d4844f2a6ec78d0de19797
+      internalID: 661627645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_78
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 112
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df51bac532ae4aa9845606383fb71b1
+      internalID: -1630012863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_79
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 112
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9cdbc51b5a04f588671982a17b3cdc
+      internalID: 739387329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_80
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 115
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c5b6b70013546e6b1f9f33da77daa8
+      internalID: -1940554266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_81
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 113
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d5f02e4193f4947be59c37adf34581
+      internalID: 1462762590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_82
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 112
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9706d53981b43118e377412910c439
+      internalID: 1009402724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_83
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 114
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd385606ad3145dc8e7f94db12d9ed9
+      internalID: 1128591591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_84
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 113
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90dd77b2e210d478295575ee897df463
+      internalID: 1960821937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_85
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 112
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00abc11aefbef435085b1f4643e0ef8b
+      internalID: 1760383770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_86
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 80
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7270cf994e52c42caa4fcc6f01da96af
+      internalID: -196570763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_87
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 79
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31467b933dd834dca984d26fffee4230
+      internalID: 1720907657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_88
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 78
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa9479a1994c40c3b42ef7c11e00e42
+      internalID: -1889382110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_89
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 80
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4f69163baf44b62b13181317480285
+      internalID: -1912594382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_90
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 79
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafa909faf8ad40c3bf3b81816883c16
+      internalID: 43318190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_91
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 78
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5842cd3545b24432796b09c58f395b32
+      internalID: -1249918026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_92
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 78
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe62a30fbff643f8a8a00a20700ae67
+      internalID: 1063089853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_93
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 77
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b59480c3ccc4da1812d6117e36e60b
+      internalID: -1126140248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_94
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 76
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff02418de4dc478cb1c198550ce1272
+      internalID: 1740113644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_95
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 79
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b735e482d04d4cdcbc5fb31a3f4e91e
+      internalID: 58285859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_96
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 78
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca50f13d86fd4ac8b83f4bc9697125e
+      internalID: -1353002958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_97
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 77
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9760db60d8291474495ffeb2f2991ef8
+      internalID: 1015193795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_98
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 78
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf141ae10aea421898d530a0ec3021c
+      internalID: -169258362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_99
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 77
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be55dd5d9e3564b7e906095423a7c435
+      internalID: -135051486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_100
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 76
+        width: 19
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64acdaf8db2c415aad6c4774af2138d
+      internalID: 1101523273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_101
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 79
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e85cda9b85914a458233186da22977e
+      internalID: 652487810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_102
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 78
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b1c9cc8cf80490ea3199fc9c2416bd
+      internalID: 1904443524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_103
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 77
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0b38465f88e4dcda3646ae5561b6d3
+      internalID: 1149199183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_104
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 79
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c0170ce40ba46e0a1dc2c1c467c85f
+      internalID: -1823685199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_105
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 77
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb43edc08d18418da68d96de525d2ce
+      internalID: 1423596503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_106
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 76
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca91764e9ab9a4e32b882cd1b9f39602
+      internalID: 1862208988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_107
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 78
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d2f9ab52e584366abeee4851404637
+      internalID: 295405843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_108
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 77
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0ec7ec2a2d447feba4d872ab921838
+      internalID: -1129470307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_109
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 76
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02e2656a008e4138810bae1c6d45582
+      internalID: -1646530676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_110
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 79
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f700fb1d6114287b57845b7e5d4f07
+      internalID: 859581173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_111
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 42
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99160e2070064e55b7547fe36b532a4
+      internalID: -1481722333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_112
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 41
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13693dc5350914c798dd428892784505
+      internalID: 474886522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_113
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 43
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6335800cfeee947bca8ca33d288bfcbf
+      internalID: -160995201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_114
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 42
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a4a9d777e5a40a7bbc974e04060194
+      internalID: 550016636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_115
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 41
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf0436b714cd4e15b02b84c31364682
+      internalID: 1209850254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_116
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 42
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0212b5f6d855424c9a5e2e347c9ee4e
+      internalID: -1749768745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_117
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 41
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b8b3cf59dc54ec18947b253a89cf57
+      internalID: 1380198596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_118
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 40
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16f684792d2e41119737776bdf4be3b
+      internalID: 1383132246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_119
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 43
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350bd889712b244a197af9543a6b98b2
+      internalID: 717305310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_120
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 42
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aeb6a5c2d9d94ff292cb8ee591c2a25
+      internalID: 1910969044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_121
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 41
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33377d47edc0b463ea5cb96d095b3f1f
+      internalID: -176742321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_122
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 42
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828b172fd4f97481e950c500a912bcf6
+      internalID: -411585015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_123
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 41
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb89066f16e14279864a3de3e1e555d
+      internalID: 573597303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_124
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 40
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6faa301e0af72422ba9e95a0497327ab
+      internalID: -212288739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_125
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 43
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51b29c19fc81470881dde04c73a7bec
+      internalID: -2060423559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_126
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 42
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac157f6c2aa24f77ba3c4a1459bb1db
+      internalID: -120891427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_127
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 41
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7658f73d08cec4f828b7c65114685244
+      internalID: 1717576216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_128
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 41
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9908d1b923648309f805a50dec8d91
+      internalID: 1590435409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_129
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 41
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5bb36d8d6d6b4108bb77adaae37f2f5
+      internalID: 781918245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_130
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 41
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7803b5399fe24f99a69b53001cc8511
+      internalID: 1736534085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_131
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 41
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6911981cc7d4b2ab31aff368f3af56
+      internalID: 1033612507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_132
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 41
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293405b62e0854a1eb580a3df68e412e
+      internalID: 1861089073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_133
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 41
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f896cc667ca643f29a7da82dd53ee0a
+      internalID: 344637806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_134
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 41
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c530268d7266b400787b09164ebe5991
+      internalID: 1209834124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_135
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 41
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a40115263be4d438c31c0ca0260756
+      internalID: 1979507170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_136
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 41
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e4ffd1771994f2b9978ed72f5128dc
+      internalID: 1841425329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_137
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 5
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb9814c2829b4b929f40660577fae66
+      internalID: -1923935069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_138
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 5
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 569a0813030084affaf5d3b43db778dc
+      internalID: 765505817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_139
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 5
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800a1d41849274ba29c61b2724723c70
+      internalID: 1370911944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_140
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 6
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ce7b558fb5c41a59ee5cf47ae3d79f
+      internalID: -720420935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_141
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 5
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952189bf60f294a75905d9cc613cee41
+      internalID: 234842012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_142
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 5
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e174b766845a4287ab63895749853f9
+      internalID: -486754894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_143
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 6
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d08fc84ec0146ea890113f6d718092
+      internalID: -1821124292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_144
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 5
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af1617503c70241babe25a39312159d8
+      internalID: -5552312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_145
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 5
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6f12389ef554213933b07cc74ba68b
+      internalID: -1923387261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_146
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 6
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f3c1b44e16e435d956549d5d0c927d
+      internalID: 2107789733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_147
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 5
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c8f75ceca924363b27774cc4606ee2
+      internalID: 395433381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_148
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 5
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3179c0458a45a4f75928fe5a2d8f6fd9
+      internalID: 283082588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_149
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 6
+        width: 15
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b0c1843fc6404e058dc22113c7ace66
+      internalID: 1244511166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_150
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 5
+        width: 13
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8aa650acede44e68b83846b720da9c7
+      internalID: -1483100175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Therion Black Disguise_151
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 5
+        width: 14
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d23908dda28e4d72b06d63046a05219
+      internalID: -1727625154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_50: -410500085
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_4: 1350430407
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_29: 954661291
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_129: 781918245
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_34: -1398165215
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_33: -123404258
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_71: 1207445521
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_107: 295405843
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_121: -176742321
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_39: -1735067842
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_74: -250039809
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_5: 2146256857
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_102: 1904443524
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_134: 1209834124
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_145: -1923387261
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_37: -1195183510
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_142: -486754894
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_55: -577222548
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_32: -829086644
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_19: -18168402
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_1: -1878090278
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_89: -1912594382
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_23: 1971403772
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_108: -1129470307
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_47: 513995499
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_151: -1727625154
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_0: 1675603995
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_20: -277381933
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_49: -677034198
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_127: 1717576216
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_44: 407184291
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_58: -1277734642
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_105: 1423596503
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_148: 283082588
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_98: -169258362
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_137: -1923935069
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_61: -1366722093
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_118: 1383132246
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_73: 1835215043
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_116: -1749768745
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_8: -1055720031
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_115: 1209850254
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_136: 1841425329
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_62: -2015593014
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_77: 661627645
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_139: 1370911944
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_16: -822854589
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_26: -1178749859
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_28: 1738143054
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_31: -202705972
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_52: 1270623785
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_25: 187617724
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_15: 1325327668
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_41: 24747102
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_144: -5552312
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_94: 1740113644
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_132: 1861089073
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_14: -1644512746
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_88: -1889382110
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_120: 1910969044
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_7: 1119019521
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_68: 1516784087
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_27: 953542405
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_150: -1483100175
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_75: -2046873605
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_109: -1646530676
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_128: 1590435409
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_12: 1970899462
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_101: 652487810
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_100: 1101523273
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_113: -160995201
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_43: 2074938855
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_40: -1321245397
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_24: -1321086401
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_13: -321880142
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_10: -71071907
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_67: 865244090
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_117: 1380198596
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_9: 1239963772
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_125: -2060423559
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_87: 1720907657
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_126: -120891427
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_97: 1015193795
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_78: -1630012863
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_79: 739387329
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_76: 1905471298
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_83: 1128591591
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_22: 1382425866
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_91: -1249918026
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_64: -719098108
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_72: -1487717331
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_53: 30056900
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_95: 58285859
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_103: 1149199183
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_30: -1514280479
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_65: 343061267
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_11: -928202359
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_42: 964940295
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_140: -720420935
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_21: 1697824463
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_63: 657042030
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_146: 2107789733
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_80: -1940554266
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_2: 1476232731
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_131: 1033612507
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_119: 717305310
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_81: 1462762590
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_70: -1144957687
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_46: -182728293
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_60: -1001084170
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_92: 1063089853
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_123: 573597303
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_130: 1736534085
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_93: -1126140248
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_86: -196570763
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_18: 922583735
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_111: -1481722333
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_6: -253837871
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_57: 1289599981
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_3: 1718805654
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_114: 550016636
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_110: 859581173
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_147: 395433381
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_45: 627179719
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_96: -1353002958
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_143: -1821124292
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_141: 234842012
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_82: 1009402724
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_99: -135051486
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_106: 1862208988
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_149: 1244511166
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_35: -806665061
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_36: -26616783
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_54: 1709868167
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_51: 1687974568
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_59: -91208199
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_90: 43318190
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_84: 1960821937
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_66: 1322377717
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_112: 474886522
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_48: -254987782
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_69: -646321437
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_133: 344637806
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_135: 1979507170
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_56: -25258772
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_138: 765505817
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_122: -411585015
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_17: 1431674173
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_104: -1823685199
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_85: 1760383770
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_38: 193344917
+      Nintendo Switch - Octopath Traveler - Therion Black Disguise_124: -212288739
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
