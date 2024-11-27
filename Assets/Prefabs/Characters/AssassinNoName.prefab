@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4318773405855386686}
   - component: {fileID: 2600529764020901902}
   - component: {fileID: 6493294774292954754}
-  - component: {fileID: 6630718767477471568}
+  - component: {fileID: -4746459503918657297}
   m_Layer: 0
   m_Name: AssassinNoName
   m_TagString: PlayerUnit
@@ -166,7 +166,7 @@ MonoBehaviour:
   DropPrefab: {fileID: 5884769366753586431, guid: 2ac3c5307d54d45e9a47a9b2d3f677f5, type: 3}
   BasePosition: {fileID: 6878872692302258193}
   tagList: []
---- !u!114 &6630718767477471568
+--- !u!114 &-4746459503918657297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1749416364117990524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 810bdbde108ee44d483b162cbcb22ffc, type: 3}
+  m_Script: {fileID: 11500000, guid: 6596059fec4d0453c8e8a6868c9e92d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   JobSkill: {fileID: 11400000, guid: 10319655f76d34338b1cc6ba957aaf48, type: 2}
@@ -187,10 +187,7 @@ MonoBehaviour:
   BasicSkillText: []
   AdvancedSkillText: []
   coolDownList: 
-  optionIndex: 0
-  isChooseFin: 0
-  BloodAddictEnemy: 0
-  BloodAddictSelf: 0
+  Instance: {fileID: 0}
 --- !u!1 &2412899308788011300
 GameObject:
   m_ObjectHideFlags: 0

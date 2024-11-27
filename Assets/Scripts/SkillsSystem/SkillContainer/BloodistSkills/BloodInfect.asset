@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 858472538f4e34e789f0d999ce2de361, type: 3}
-  m_Name: BloodMonogatari
+  m_Script: {fileID: 11500000, guid: e1463632bb3b74e2b8a080b1418060d8, type: 3}
+  m_Name: BloodInfect
   m_EditorClassIdentifier: 
   SkillID: 0
-  SpCost: 20
+  SpCost: 15
   TurnCooldown: 0
   DealMultiplier: 0
-  SkillName: "\u8840\u5F62\u7269\u8BED"
+  SkillName: "\u8840\u67D3"
   Description: 
   HitRevise: 0
   bloodistSkillKind: 0

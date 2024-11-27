@@ -1591,4 +1591,42 @@ public class BattleSetting : MonoBehaviour
 			return;
 		}
 	}
+
+	public List<int> CheckSurroundPosition(int i)
+	{
+		List<int> SurroundID = new List<int>();
+		if (i == 0)
+		{
+			SurroundID.Add(1);
+			SurroundID.Add(3);
+		}
+		else if (i == 1)
+		{
+			SurroundID.Add(0);
+			SurroundID.Add(2);
+			SurroundID.Add(4);
+		}
+		else if (i == 2)
+		{
+			SurroundID.Add(1);
+			SurroundID.Add(5);
+		}
+		else if (i == 3)
+		{
+			SurroundID.Add(0);
+			SurroundID.Add(4);
+		}
+		else if (i == 4)
+		{
+			SurroundID.Add(1);
+			SurroundID.Add(3);
+			SurroundID.Add(5);
+		}
+		else if (i == 5)
+		{
+			SurroundID.Add(2);
+			SurroundID.Add(4);
+		}
+		return SurroundID;
+	}
 }

@@ -634,7 +634,7 @@ public class BloodistHolder : JobSkillHolder
 		BattleSetting.Instance.canChangeAction = false;
 		CheckBloodCurseSP(SpCost);
 		var tag = BloodcurseTag.CreateInstance<BloodcurseTag>();
-		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(tag);
 		StartCoroutine(BattleSetting.Instance.ShowActionText("血咒"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
@@ -743,6 +743,28 @@ public class BloodistHolder : JobSkillHolder
 			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 		}
 		StartCoroutine(BattleSetting.Instance.ShowActionText("血咒"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator bloodInfect(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		CheckBloodCurseSP(SpCost);
+		BloodInfectTag tag = BloodInfectTag.CreateInstance<BloodInfectTag>();
+		tag.tagPosID = Random.Range(0, 6);
+		tag.unit = this.gameObject;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(tag);
+		List<int> targetID = BattleSetting.Instance.CheckSurroundPosition(tag.tagPosID);
+		foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
+		{
+			if (targetID.Exists(id => id == enemy.GetComponent<GivingData>().positionID) || enemy.GetComponent<GivingData>().positionID == tag.tagPosID)
+			{
+				var damage = Mathf.CeilToInt(0.3f * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical));
+				BattleSetting.Instance.DealDamageWithNoCallBack(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
+			}
+		}
+		StartCoroutine(BattleSetting.Instance.ShowActionText("血染"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
