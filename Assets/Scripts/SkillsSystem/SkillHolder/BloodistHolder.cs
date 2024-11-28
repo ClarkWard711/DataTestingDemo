@@ -253,8 +253,6 @@ public class BloodistHolder : JobSkillHolder
 	#region 基础
 	public IEnumerator bloodDisperse(int SpCost, BloodistSkillKind bloodistSkillKind)
 	{
-		BattleSetting.Instance.canChangeAction = false;
-		CheckBloodCurseSP(SpCost);
 		BattleSetting.Instance.DelimaPanel.SetActive(true);
 		var choice1 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
 		var choice2 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
@@ -264,8 +262,6 @@ public class BloodistHolder : JobSkillHolder
 		choice1.GetComponent<Button>().onClick.AddListener(() => Choose(1));
 		choice2.GetComponent<Button>().onClick.AddListener(() => Choose(2));
 		yield return new WaitUntil(() => isChooseFin);
-		Destroy(choice1);
-		Destroy(choice2);
 		isChooseFin = false;
 		BattleSetting.Instance.DelimaPanel.SetActive(false);
 		if (optionIndex == 1)
@@ -273,6 +269,10 @@ public class BloodistHolder : JobSkillHolder
 			//伤害
 			BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
 			yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+			Destroy(choice1);
+			Destroy(choice2);
+			BattleSetting.Instance.canChangeAction = false;
+			CheckBloodCurseSP(SpCost);
 			BattleSetting.Instance.isChooseFinished = false;
 			int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
 			damage = Mathf.CeilToInt(damage * (1 + 0.2f * BloodAddictSelf));
@@ -285,6 +285,10 @@ public class BloodistHolder : JobSkillHolder
 			//回复sp
 			BattleSetting.Instance.isWaitForPlayerToChooseAlly = true;
 			yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+			Destroy(choice1);
+			Destroy(choice2);
+			BattleSetting.Instance.canChangeAction = false;
+			CheckBloodCurseSP(SpCost);
 			BattleSetting.Instance.isChooseFinished = false;
 			int deltaTemp = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().maxSP * 0.05f);
 			StartCoroutine(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().FloatingSP(deltaTemp));
@@ -298,8 +302,6 @@ public class BloodistHolder : JobSkillHolder
 
 	public IEnumerator bloodAssemble(int SpCost, BloodistSkillKind bloodistSkillKind)
 	{
-		BattleSetting.Instance.canChangeAction = false;
-		CheckBloodCurseSP(SpCost);
 		BattleSetting.Instance.DelimaPanel.SetActive(true);
 		var choice1 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
 		var choice2 = Instantiate(BattleSetting.Instance.DelimaActionPrefab, BattleSetting.Instance.DelimaPanel.transform);
@@ -309,14 +311,16 @@ public class BloodistHolder : JobSkillHolder
 		choice1.GetComponent<Button>().onClick.AddListener(() => Choose(1));
 		choice2.GetComponent<Button>().onClick.AddListener(() => Choose(2));
 		yield return new WaitUntil(() => isChooseFin);
-		Destroy(choice1);
-		Destroy(choice2);
 		isChooseFin = false;
 		BattleSetting.Instance.DelimaPanel.SetActive(false);
 		if (optionIndex == 1)
 		{
 			BattleSetting.Instance.isWaitForPlayerToChooseAlly = true;
 			yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+			Destroy(choice1);
+			Destroy(choice2);
+			BattleSetting.Instance.canChangeAction = false;
+			CheckBloodCurseSP(SpCost);
 			BattleSetting.Instance.isChooseFinished = false;
 			int deltaTemp;
 			deltaTemp = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().maxHP * (0.05f + 0.01f * BloodAddictEnemy));
@@ -327,6 +331,10 @@ public class BloodistHolder : JobSkillHolder
 		{
 			BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
 			yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+			Destroy(choice1);
+			Destroy(choice2);
+			BattleSetting.Instance.canChangeAction = false;
+			CheckBloodCurseSP(SpCost);
 			BattleSetting.Instance.isChooseFinished = false;
 			int damage = BattleSetting.Instance.DamageCounting(AttackType.Physical);
 			damage = Mathf.CeilToInt(1.5f * damage);

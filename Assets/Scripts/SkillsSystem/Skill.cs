@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public enum SkillKind { Baic, Advanced, Special };
@@ -20,6 +22,11 @@ public class Skill : ScriptableObject
 		BattleSetting.Instance.isBasicShowed = false;
 		BattleSetting.Instance.AdvancedPanel.SetActive(false);
 		BattleSetting.Instance.isAdvancedShowed = false;
+		foreach (var button in BattleSetting.Instance.DelimaPanel.GetComponentsInChildren<Button>())
+		{
+			Destroy(button.gameObject);
+		}
+		BattleSetting.Instance.DelimaPanel.SetActive(false);
 		//BattleSetting.Instance.StopAllCoroutines();
 
 		foreach (var button in BattleSetting.Instance.CurrentActUnit.GetComponent<JobSkillHolder>().AdvancedSkillButton)
