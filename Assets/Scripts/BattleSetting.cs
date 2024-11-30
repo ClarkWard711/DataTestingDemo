@@ -120,7 +120,7 @@ public class BattleSetting : MonoBehaviour
 		ComparePosition();
 		BattleUnitsList.Sort((x, y) => -x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
 		State = BattleState.Start;
-		StartCoroutine(TurnAction(2f, "对战开始"));
+		StartCoroutine(TurnAction(1f, "对战开始"));
 	}
 
 	private void Update()
@@ -296,6 +296,7 @@ public class BattleSetting : MonoBehaviour
 			//命中检测成功回调
 			damageCache = Damage;
 			StartCoroutine(BeforeHit());
+			StartCoroutine(BeforeBeingHit());
 			Damage = damageCache;
 			if (isCri)
 			{
@@ -437,6 +438,34 @@ public class BattleSetting : MonoBehaviour
 				continue;
 			}
 			BeforeHit.Invoke();
+
+			yield return null;
+		}
+		/*
+		foreach (Tag tag in CurrentActUnitTarget.GetComponent<GivingData>().tagList)
+		{
+			UnityAction BeforeHit;
+			BeforeHit = tag.BeforeHit;
+			if (BeforeHit == null)
+			{
+				continue;
+			}
+			BeforeHit.Invoke();
+
+			yield return null;
+		}*/
+	}
+	IEnumerator BeforeBeingHit()
+	{
+		foreach (Tag tag in CurrentActUnitTarget.GetComponent<GivingData>().tagList)
+		{
+			UnityAction BeforeBeingHit;
+			BeforeBeingHit = tag.BeforeBeingHit;
+			if (BeforeBeingHit == null)
+			{
+				continue;
+			}
+			BeforeBeingHit.Invoke();
 
 			yield return null;
 		}
@@ -631,7 +660,7 @@ public class BattleSetting : MonoBehaviour
 			CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
 			CurrentActUnit.GetComponent<GivingData>().CheckSP();
 			UpdateUIPanel();
-			StartCoroutine(TurnAction(1f, "你的回合"));
+			StartCoroutine(TurnAction(0.5f, "你的回合"));
 		}
 	}
 
@@ -1519,6 +1548,7 @@ public class BattleSetting : MonoBehaviour
 			//命中检测成功回调
 			damageCache = Damage;
 			StartCoroutine(BeforeHit());
+			StartCoroutine(BeforeBeingHit());
 			Damage = damageCache;
 			if (isCri)
 			{

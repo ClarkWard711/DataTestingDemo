@@ -69,7 +69,7 @@ public class BloodistHolder : JobSkillHolder
 		}
 		if (jobData.SkillsID.Exists(num => num == 5))
 		{
-			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee") && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.Find(num => num == 5)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee") && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 5)]].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
 			{
 				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = true;
 			}
@@ -80,18 +80,18 @@ public class BloodistHolder : JobSkillHolder
 		}
 		if (jobData.SkillsID.Exists(num => num == 6))
 		{
-			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Remote") && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.Find(num => num == 6)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote") && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 6)]].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
 			{
-				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = true;
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 6)].interactable = true;
 			}
 			else
 			{
-				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = false;
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 6)].interactable = false;
 			}
 		}
 		if (jobData.SkillsID.Exists(num => num == 8))
 		{
-			if (GameObject.FindGameObjectsWithTag("Dead").Length != 0 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.Find(num => num == 8)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+			if (GameObject.FindGameObjectsWithTag("Dead").Length != 0 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 8)]].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
 			{
 				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 8)].interactable = true;
 			}
@@ -111,7 +111,7 @@ public class BloodistHolder : JobSkillHolder
 					{
 						if (BloodAddictEnemy * 3 > 14)
 						{
-							if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee") && BloodAddictSelf >= 3 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.Find(num => num == 11)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+							if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee") && BloodAddictSelf >= 3 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 11)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
 							{
 								AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 11)].interactable = true;
 							}
@@ -128,7 +128,7 @@ public class BloodistHolder : JobSkillHolder
 							{
 								count++;
 							}
-							if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee") && BloodAddictSelf - count >= 3 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.Find(num => num == 11)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+							if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee") && BloodAddictSelf - count >= 3 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 11)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
 							{
 								AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 11)].interactable = true;
 							}
@@ -147,7 +147,7 @@ public class BloodistHolder : JobSkillHolder
 							{
 								count++;
 							}
-							if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee") && BloodAddictSelf - count >= 3 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.Find(num => num == 11)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+							if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee") && BloodAddictSelf - count >= 3 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 11)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
 							{
 								AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 11)].interactable = true;
 							}
@@ -167,13 +167,35 @@ public class BloodistHolder : JobSkillHolder
 					AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 11)].interactable = false;
 				}
 			}
-			else if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee") && BloodAddictSelf >= 3 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.Find(num => num == 11)]].SpCost > BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+			else if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee") && BloodAddictSelf >= 3 && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 11)]].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
 			{
-				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = true;
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 11)].interactable = true;
 			}
 			else
 			{
-				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = false;
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 11)].interactable = false;
+			}
+		}
+		if (jobData.SkillsID.Exists(num => num == 15))
+		{
+			if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is BloodInfectTag) && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 15)]].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 15)].interactable = true;
+			}
+			else
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 15)].interactable = false;
+			}
+		}
+		if (jobData.SkillsID.Exists(num => num == 16))
+		{
+			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote") && !gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is BloodFilthTag) && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 16)]].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 16)].interactable = true;
+			}
+			else
+			{
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 16)].interactable = false;
 			}
 		}
 		for (int i = 0; i < 4; i++)
@@ -466,7 +488,8 @@ public class BloodistHolder : JobSkillHolder
 		var tag = Protect.CreateInstance<Protect>();
 		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
-			tag.TurnLast += 1;
+			tag.TurnAdd++;
+			tag.TurnLast++;
 		}
 		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
 		StartCoroutine(BattleSetting.Instance.ShowActionText("叫嚣"));
@@ -773,6 +796,28 @@ public class BloodistHolder : JobSkillHolder
 			}
 		}
 		StartCoroutine(BattleSetting.Instance.ShowActionText("血染"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator bloodFilth(int SpCost, BloodistSkillKind bloodistSkillKind)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		CheckBloodCurseSP(SpCost);
+		BloodFilthTag tag = BloodFilthTag.CreateInstance<BloodFilthTag>();
+		int count = BloodAddictEnemy >= 5 ? 5 : BloodAddictEnemy;
+		tag.percentage = count * 0.2f;
+		tag.unit = this.gameObject;
+		BloodAddictEnemy -= count;
+		tag.BeingHitCount = 2;
+		tag.HitCount = 2;
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			tag.BeingHitCount++;
+			tag.HitCount++;
+		}
+		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("血秽"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
