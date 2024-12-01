@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkillID: 0
   SpCost: 20
-  TurnCooldown: 0
+  TurnCooldown: 1
   DealMultiplier: 0
   SkillName: "\u55DC\u8840"
   Description: "Sp:20 CD:1\n\u968F\u673A\u5BF9\u4E00\u4E2A\u89D2\u8272\u9020\u6210\u4E00\u6B21\u4F24\u5BB3\uFF0C\u7136\u540E\u5BF9\u81EA\u5DF1\u9020\u6210\u4F24\u5BB3\uFF0C\u91CD\u590D\u4E09\u6B21"
