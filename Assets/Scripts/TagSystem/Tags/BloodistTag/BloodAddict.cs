@@ -10,7 +10,7 @@ public class BloodAddict : Tag
 	public BloodAddict()
 	{
 		TagName = "BloodAddict";
-		TagKind = Kind.eternal;
+		TagKind = Kind.special;
 		Effect = effect.neutral;
 		BuffTarget = target.all;
 		OnSelfDamageTake += BloodAddictCheck;

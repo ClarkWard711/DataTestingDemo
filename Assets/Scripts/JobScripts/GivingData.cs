@@ -271,6 +271,14 @@ public class GivingData : MonoBehaviour
 			}
 			return;
 		}
+		if (tag is SpeedDown || tag is SpeedUp)
+		{
+			Tag newTag0 = Instantiate(tag);
+			tagList.Add(newTag0);
+			BattleSetting.Instance.CheckTagList(this.gameObject);
+			StartCoroutine(OnTagAdded(newTag0));
+			return;
+		}
 		foreach (Tag existingTag in tagList)
 		{
 			if (existingTag.GetType() == tag.GetType())

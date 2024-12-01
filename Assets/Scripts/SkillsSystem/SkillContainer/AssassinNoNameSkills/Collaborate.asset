@@ -9,9 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22cb1e3e7d387473ea7610f7bcee6133, type: 3}
-  m_Name: SkillContainer_AssassinNoName
+  m_Script: {fileID: 11500000, guid: beaecb10c068b471cbcf119f7dc13144, type: 3}
+  m_Name: Collaborate
   m_EditorClassIdentifier: 
-  SkillList:
-  - {fileID: 11400000, guid: cd79a946772654d1eb1425dc8855680a, type: 2}
-  - {fileID: 11400000, guid: 20432b2c849bc4ae1b6ebc3d1363983c, type: 2}
+  SkillID: 0
+  SpCost: 8
+  TurnCooldown: 0
+  DealMultiplier: 0
+  SkillName: "\u534F\u540C"
+  Description: 
+  HitRevise: 0

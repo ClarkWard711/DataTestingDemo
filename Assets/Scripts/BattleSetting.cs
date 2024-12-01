@@ -1392,6 +1392,7 @@ public class BattleSetting : MonoBehaviour
 			//unit.GetComponent<GivingData>().DamageDealMultiplier = 1f;
 			//unit.GetComponent<GivingData>().DamageTakeMultiplier = 1f;
 		}
+		BattleUnitsList.Sort((x, y) => -x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
 		StartCoroutine(StartTurn());
 	}
 	/// <summary>

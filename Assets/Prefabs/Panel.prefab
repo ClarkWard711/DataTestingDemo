@@ -145,15 +145,15 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3ca63903306ac4b6094ed99a8b85a322, type: 3}
-    m_FontSize: 39
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 23
-    m_MaxSize: 45
+    m_MinSize: 20
+    m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8FD9\u662F\u4E00\u4E2A\u6280\u80FD\u7684\u63CF\u8FF0\u8981\u591A\u5C11\u884C\u624D\u4F1A\u6362\u884C"
+  m_Text: "Sp:10\n\u4F7F\u4E00\u4E2A\u53CB\u65B9\u83B7\u5F97\u884C\u52A8\u540E\u56DE\u590D15%\u8840\u91CF\u4E09\u56DE\u5408\n[\u84C4\u529B:\u540C\u6392\u6240\u6709\u53CB\u65B9]"

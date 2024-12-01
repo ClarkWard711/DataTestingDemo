@@ -265,6 +265,7 @@ public class BloodistHolder : JobSkillHolder
 				SpCost -= allBloodAddict;
 				BloodAddictEnemy = 0;
 				BloodAddictSelf = 0;
+				BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 			}
 		}
 		else
