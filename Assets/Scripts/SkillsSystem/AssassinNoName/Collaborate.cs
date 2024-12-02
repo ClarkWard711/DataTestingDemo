@@ -14,6 +14,6 @@ public class Collaborate : Skill
 	{
 		base.Apply(unit);
 		BattleSetting.Instance.State = BattleState.Middle;
-		OdorikoHolder.Instance.CoroutineStart(AssassinNoNameHolder.Instance.raid(SpCost));
+		OdorikoHolder.Instance.CoroutineStart(AssassinNoNameHolder.Instance.collaborate(SpCost));
 	}
 }

@@ -29,6 +29,10 @@ public class AssassinNoNameHolder : JobSkillHolder
 	#region  基础
 	public IEnumerator raid(int SpCost)
 	{
+		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
 		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
 		BattleSetting.Instance.canChangeAction = false;
 		BattleSetting.Instance.isChooseFinished = false;
@@ -42,9 +46,13 @@ public class AssassinNoNameHolder : JobSkillHolder
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 		var tag = SpeedDown.CreateInstance<SpeedDown>();
 		tag.spd = -Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().EnemyData.EnemyStatsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().GetComponent<GivingData>().EnemyData.EnemyLevel - 1].speed * 0.1f);
-		tag.TurnAdd++;
-		tag.TurnLast++;
+		if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			tag.TurnAdd++;
+			tag.TurnLast++;
+		}
 		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+		BattleSetting.Instance.BattleUnitsList.Sort((x, y) => -x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
 		StartCoroutine(BattleSetting.Instance.ShowActionText("偷袭"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
@@ -52,6 +60,10 @@ public class AssassinNoNameHolder : JobSkillHolder
 
 	public IEnumerator collaborate(int SpCost)
 	{
+		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
 		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
 			BattleSetting.Instance.canChangeAction = false;
@@ -61,8 +73,11 @@ public class AssassinNoNameHolder : JobSkillHolder
 			foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
 			{
 				var tag = SpeedUp.CreateInstance<SpeedUp>();
-				tag.TurnAdd++;
-				tag.TurnLast++;
+				if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+				{
+					tag.TurnAdd++;
+					tag.TurnLast++;
+				}
 				tag.spd = Mathf.CeilToInt(player.GetComponent<GivingData>().jobData.JobStatsList[player.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].speed * 0.1f);
 				player.GetComponent<GivingData>().AddTagToCharacter(tag);
 			}
@@ -77,16 +92,70 @@ public class AssassinNoNameHolder : JobSkillHolder
 			BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 			var tag = SpeedUp.CreateInstance<SpeedUp>();
 			tag.spd = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().jobData.JobStatsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].speed * 0.1f);
-			tag.TurnAdd++;
-			tag.TurnLast++;
+			if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+			{
+				tag.TurnAdd++;
+				tag.TurnLast++;
+			}
 			BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
 			var tag0 = SpeedUp.CreateInstance<SpeedUp>();
-			tag0.TurnAdd++;
-			tag0.TurnLast++;
+			if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+			{
+				tag0.TurnAdd++;
+				tag0.TurnLast++;
+			}
 			tag0.spd = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().jobData.JobStatsList[gameObject.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].speed * 0.1f);
 			gameObject.GetComponent<GivingData>().AddTagToCharacter(tag0);
 		}
 		StartCoroutine(BattleSetting.Instance.ShowActionText("协同"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+	#endregion
+
+	#region Advanced
+	public IEnumerator shadowFollow(int SpCost)
+	{
+		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		var tag = PhysicalAtkUp.CreateInstance<PhysicalAtkUp>();
+		if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			tag.TurnAdd++;
+			tag.TurnLast++;
+		}
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("影随"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator shadowFrighten(int SpCost)
+	{
+		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		var tag = PhysicalAtkDown.CreateInstance<PhysicalAtkDown>();
+		if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			tag.TurnAdd++;
+			tag.TurnLast++;
+		}
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("影随"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}

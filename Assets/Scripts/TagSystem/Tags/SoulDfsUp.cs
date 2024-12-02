@@ -6,13 +6,13 @@ public class SoulDfsUp : Tag
 {
     public SoulDfsUp()
     {
-        TagName = "SoulDfsDown";
+        TagName = "SoulDfsUp";
         Impact = impactOnMultiplier.SoulTake;
         Multiplier = 0.8f;
         TurnAdd = 1;
         TagKind = Kind.turnLessen;
         BuffTarget = target.all;
-        Effect = effect.bad;
+        Effect = effect.good;
         TurnLast = 1;
     }
 }

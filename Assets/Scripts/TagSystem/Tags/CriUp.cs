@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedDown : Tag
+public class CriUp : Tag
 {
-    public SpeedDown()
+    public CriUp()
     {
-        TagName = "SpeedDown";
+        TagName = "CriUp";
         TurnAdd = 1;
         TagKind = Kind.turnLessen;
         BuffTarget = target.all;
-        Effect = effect.bad;
+        Effect = effect.good;
         TurnLast = 1;
-        spd = 0;
+        cri = 0;
     }
 }

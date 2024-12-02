@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedDown : Tag
+public class NimUp : Tag
 {
-    public SpeedDown()
+    public NimUp()
     {
-        TagName = "SpeedDown";
+        TagName = "NimUp";
         TurnAdd = 1;
         TagKind = Kind.turnLessen;
         BuffTarget = target.all;
-        Effect = effect.bad;
+        Effect = effect.good;
         TurnLast = 1;
-        spd = 0;
+        nim = 0;
     }
 }
