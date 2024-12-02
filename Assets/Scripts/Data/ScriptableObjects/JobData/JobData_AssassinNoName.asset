@@ -19,7 +19,7 @@ MonoBehaviour:
   currentHP: 335
   currentSP: 50
   jobLevel: 1
-  SkillsID: ffffffffffffffffffffffffffffffff
+  SkillsID: 02000000030000000400000005000000
   SpecialID: 0
   JobPrefab: {fileID: 1749416364117990524, guid: 1c305fd791b914b19a1ca32d470200f3, type: 3}
   dataFile: {fileID: 4900000, guid: 71f59072f7f544c4898a639f959608c2, type: 3}

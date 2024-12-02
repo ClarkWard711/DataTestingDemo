@@ -1615,6 +1615,14 @@ public class BattleSetting : MonoBehaviour
 			isWaitForPlayerToChooseDead = false;
 			isMoveFinished = true;
 			MovePanel.SetActive(false);
+			foreach (var player in RemainingPlayerUnits)
+			{
+				player.GetComponent<Collider2D>().enabled = true;
+			}
+			foreach (var enemy in RemainingEnemyUnits)
+			{
+				enemy.GetComponent<Collider2D>().enabled = true;
+			}
 			CurrentActUnit.GetComponent<JobSkillHolder>().StopAllCoroutines();
 		}
 		else

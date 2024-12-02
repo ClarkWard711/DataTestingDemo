@@ -29,7 +29,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 	#region  基础
 	public IEnumerator raid(int SpCost)
 	{
-		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
 			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
 		}
@@ -46,7 +46,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 		var tag = SpeedDown.CreateInstance<SpeedDown>();
 		tag.spd = -Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().EnemyData.EnemyStatsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().GetComponent<GivingData>().EnemyData.EnemyLevel - 1].speed * 0.1f);
-		if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
 			tag.TurnAdd++;
 			tag.TurnLast++;
@@ -60,7 +60,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 
 	public IEnumerator collaborate(int SpCost)
 	{
-		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
 			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
 		}
@@ -85,21 +85,23 @@ public class AssassinNoNameHolder : JobSkillHolder
 		else
 		{
 			BattleSetting.Instance.isWaitForPlayerToChooseAlly = true;
+			gameObject.GetComponent<Collider2D>().enabled = false;
 			yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
 			BattleSetting.Instance.canChangeAction = false;
 			BattleSetting.Instance.isChooseFinished = false;
 			BattleSetting.Instance.State = BattleState.Middle;
 			BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+			gameObject.GetComponent<Collider2D>().enabled = true;
 			var tag = SpeedUp.CreateInstance<SpeedUp>();
 			tag.spd = Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().jobData.JobStatsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].speed * 0.1f);
-			if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+			if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 			{
 				tag.TurnAdd++;
 				tag.TurnLast++;
 			}
 			BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
 			var tag0 = SpeedUp.CreateInstance<SpeedUp>();
-			if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+			if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 			{
 				tag0.TurnAdd++;
 				tag0.TurnLast++;
@@ -117,7 +119,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 	#region Advanced
 	public IEnumerator shadowFollow(int SpCost)
 	{
-		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
 			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
 		}
@@ -127,7 +129,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 		BattleSetting.Instance.State = BattleState.Middle;
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 		var tag = PhysicalAtkUp.CreateInstance<PhysicalAtkUp>();
-		if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
 			tag.TurnAdd++;
 			tag.TurnLast++;
@@ -150,7 +152,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 		BattleSetting.Instance.State = BattleState.Middle;
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 		var tag = PhysicalAtkDown.CreateInstance<PhysicalAtkDown>();
-		if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
 			tag.TurnAdd++;
 			tag.TurnLast++;
@@ -176,7 +178,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 		var tag0 = NimUp.CreateInstance<NimUp>();
 		tag.cri = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().jobData.JobStatsList[gameObject.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].critical * 0.1f);
 		tag0.nim = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().jobData.JobStatsList[gameObject.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].nimbleness * 0.1f);
-		if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
 			tag.TurnAdd++;
 			tag.TurnLast++;
@@ -193,6 +195,41 @@ public class AssassinNoNameHolder : JobSkillHolder
 		}
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 		StartCoroutine(BattleSetting.Instance.ShowActionText("闪袭"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator preparation(int SpCost)
+	{
+		gameObject.GetComponent<Collider2D>().enabled = false;
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		gameObject.GetComponent<Collider2D>().enabled = true;
+		var tag = Charging.CreateInstance<Charging>();
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			tag.TurnAdd--;
+			tag.TurnLast--;
+		}
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			var tag0 = Charging.CreateInstance<Charging>();
+			if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+			{
+				tag0.TurnAdd--;
+				tag0.TurnLast--;
+			}
+			gameObject.GetComponent<GivingData>().AddTagToCharacter(tag0);
+		}
+		StartCoroutine(BattleSetting.Instance.ShowActionText("伺机"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
