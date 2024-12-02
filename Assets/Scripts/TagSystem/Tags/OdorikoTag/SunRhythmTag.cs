@@ -7,7 +7,7 @@ public class SunRhythmTag : OdorikoTag
     public GameObject atkUnit;
     public SunRhythmTag()
     {
-        odoTagKind = OdoTagKind.Moon;
+        odoTagKind = OdoTagKind.Sun;
         TagName = "SunRhythm";
         TagKind = Kind.turnLessen;
         TurnAdd = 3;

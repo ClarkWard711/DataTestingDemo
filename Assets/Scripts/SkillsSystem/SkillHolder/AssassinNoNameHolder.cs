@@ -107,6 +107,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 			tag0.spd = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().jobData.JobStatsList[gameObject.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].speed * 0.1f);
 			gameObject.GetComponent<GivingData>().AddTagToCharacter(tag0);
 		}
+		BattleSetting.Instance.BattleUnitsList.Sort((x, y) => -x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
 		StartCoroutine(BattleSetting.Instance.ShowActionText("协同"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
@@ -155,7 +156,43 @@ public class AssassinNoNameHolder : JobSkillHolder
 			tag.TurnLast++;
 		}
 		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
-		StartCoroutine(BattleSetting.Instance.ShowActionText("影随"));
+		StartCoroutine(BattleSetting.Instance.ShowActionText("影吓"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator flashAttack(int SpCost)
+	{
+		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		var tag = CriUp.CreateInstance<CriUp>();
+		var tag0 = NimUp.CreateInstance<NimUp>();
+		tag.cri = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().jobData.JobStatsList[gameObject.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].critical * 0.1f);
+		tag0.nim = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().jobData.JobStatsList[gameObject.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].nimbleness * 0.1f);
+		if (!gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			tag.TurnAdd++;
+			tag.TurnLast++;
+			tag0.TurnAdd++;
+			tag0.TurnLast++;
+		}
+		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag0);
+		int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+		damage = Mathf.CeilToInt(damage * 0.8f);
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			damage = Mathf.CeilToInt(damage * 2f);
+		}
+		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("闪袭"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}

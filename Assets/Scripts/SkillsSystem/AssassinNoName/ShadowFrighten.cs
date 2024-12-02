@@ -15,6 +15,6 @@ public class ShadowFrighten : Skill
 		base.Apply(unit);
 		BattleSetting.Instance.State = BattleState.Middle;
 		BattleSetting.Instance.isWaitForPlayerToChooseUnit = true;
-		OdorikoHolder.Instance.CoroutineStart(AssassinNoNameHolder.Instance.shadowFrighten(SpCost));
+		AssassinNoNameHolder.Instance.CoroutineStart(AssassinNoNameHolder.Instance.shadowFrighten(SpCost));
 	}
 }

@@ -15,6 +15,6 @@ public class ShadowFollow : Skill
 		base.Apply(unit);
 		BattleSetting.Instance.State = BattleState.Middle;
 		BattleSetting.Instance.isWaitForPlayerToChooseAlly = true;
-		OdorikoHolder.Instance.CoroutineStart(AssassinNoNameHolder.Instance.shadowFollow(SpCost));
+		AssassinNoNameHolder.Instance.CoroutineStart(AssassinNoNameHolder.Instance.shadowFollow(SpCost));
 	}
 }
