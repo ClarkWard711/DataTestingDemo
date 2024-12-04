@@ -9,6 +9,10 @@ public class AssassinNoNameHolder : JobSkillHolder
 
 	public int canMoveCount = 1;
 	public int canMoveCountLimit = 1;
+	public bool isRaidUsed;
+	public bool isCollaborateUsed;
+	GameObject RaidTarget;
+	GameObject CollaborateTarget;
 	public override void Awake()
 	{
 		base.Awake();
@@ -38,6 +42,8 @@ public class AssassinNoNameHolder : JobSkillHolder
 		BattleSetting.Instance.isChooseFinished = false;
 		BattleSetting.Instance.State = BattleState.Middle;
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		isRaidUsed = true;
+		RaidTarget = BattleSetting.Instance.CurrentActUnitTarget;
 		int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
 		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
@@ -111,6 +117,8 @@ public class AssassinNoNameHolder : JobSkillHolder
 		}
 		BattleSetting.Instance.BattleUnitsList.Sort((x, y) => -x.GetComponent<GivingData>().Speed.CompareTo(y.GetComponent<GivingData>().Speed));
 		StartCoroutine(BattleSetting.Instance.ShowActionText("协同"));
+		isCollaborateUsed = true;
+		CollaborateTarget = BattleSetting.Instance.CurrentActUnitTarget;
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
@@ -219,7 +227,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 			tag.TurnLast--;
 		}
 		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
-		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
 			var tag0 = Charging.CreateInstance<Charging>();
 			if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
@@ -233,6 +241,160 @@ public class AssassinNoNameHolder : JobSkillHolder
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
+
+	public IEnumerator sneak(int SpCost)
+	{
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
+
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		float multiplier = 0.04f;
+		if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			multiplier = 0.08f;
+			if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+			{
+				multiplier = 0.15f;
+			}
+		}
+		int hp = Mathf.CeilToInt(multiplier * gameObject.GetComponent<GivingData>().maxHP);
+		StartCoroutine(gameObject.GetComponent<GivingData>().FloatingHP(hp));
+		int sp = Mathf.CeilToInt(multiplier * gameObject.GetComponent<GivingData>().maxSP);
+		StartCoroutine(gameObject.GetComponent<GivingData>().FloatingSP(sp));
+		for (int i = 0; i < 2; i++)
+		{
+			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.Effect == Tag.effect.bad))
+			{
+				gameObject.GetComponent<GivingData>().tagList.Find(tag => tag.Effect == Tag.effect.bad && tag.TagKind == Tag.Kind.turnLessen).TurnLast--;
+			}
+		}
+		StartCoroutine(BattleSetting.Instance.ShowActionText("潜行"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+	public IEnumerator shadowChange(int SpCost)
+	{
+		gameObject.GetComponent<Collider2D>().enabled = false;
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		gameObject.GetComponent<Collider2D>().enabled = true;
+		var tag = ShadowChangeTag.CreateInstance<ShadowChangeTag>();
+		var tag0 = ShadowChangeTag.CreateInstance<ShadowChangeTag>();
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			tag.TurnAdd--;
+			tag.TurnLast--;
+			tag0.TurnAdd--;
+			tag0.TurnLast--;
+		}
+		int difference = gameObject.GetComponent<GivingData>().Speed - BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().Speed;
+		tag.spd = difference;
+		tag0.spd = -difference;
+		if (!gameObject.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			gameObject.GetComponent<GivingData>().AddTagToCharacter(tag0);
+		}
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("影移"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator launch(int SpCost)
+	{
+		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+		damage = Mathf.CeilToInt(damage * 1.2f);
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			damage = Mathf.CeilToInt(damage * 2f);
+		}
+		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		yield return new WaitForSeconds(0.3f);
+		if (isCollaborateUsed)
+		{
+			int damage0 = BattleSetting.Instance.DamageCountingByUnit(CollaborateTarget, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+			damage0 = Mathf.CeilToInt(damage0 * 1.2f);
+			if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+			{
+				damage0 = Mathf.CeilToInt(damage0 * 2f);
+			}
+			BattleSetting.Instance.DealDamageExtra(damage0, CollaborateTarget, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		}
+		StartCoroutine(BattleSetting.Instance.ShowActionText("出击"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator illusionFear(int SpCost)
+	{
+		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			SpCost = Mathf.CeilToInt(SpCost * 0.5f);
+		}
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+		damage = Mathf.CeilToInt(damage * 0.7f);
+		var tag = Fear.CreateInstance<Fear>();
+		tag.unit = BattleSetting.Instance.CurrentActUnitTarget;
+		if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			tag.TurnAdd++;
+			tag.TurnLast++;
+		}
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+		{
+			damage = Mathf.CeilToInt(damage * 2f);
+		}
+		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+		yield return new WaitForSeconds(0.3f);
+		if (isRaidUsed)
+		{
+			int damage0 = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, RaidTarget, AttackType.Physical);
+			damage0 = Mathf.CeilToInt(damage0 * 0.7f);
+			if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+			{
+				damage0 = Mathf.CeilToInt(damage0 * 2f);
+			}
+			BattleSetting.Instance.DealDamageExtra(damage0, BattleSetting.Instance.CurrentActUnit, RaidTarget, AttackType.Physical, false);
+		}
+		var tag0 = Fear.CreateInstance<Fear>();
+		tag0.unit = RaidTarget;
+		if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
+		{
+			tag0.TurnAdd++;
+			tag0.TurnLast++;
+		}
+		RaidTarget.GetComponent<GivingData>().AddTagToCharacter(tag0);
+		StartCoroutine(BattleSetting.Instance.ShowActionText("幻惧"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
 	#endregion
 	public override void ActionEndCallback()
 	{
@@ -241,6 +403,13 @@ public class AssassinNoNameHolder : JobSkillHolder
 			canMoveCount--;
 			BattleSetting.Instance.BattleUnitsList.Insert(0, gameObject);
 			BattleSetting.Instance.BattleUnitsListToBeLaunched.RemoveAt(BattleSetting.Instance.BattleUnitsListToBeLaunched.FindIndex(obj => obj == gameObject));
+		}
+		else
+		{
+			isRaidUsed = false;
+			isCollaborateUsed = false;
+			RaidTarget = null;
+			CollaborateTarget = null;
 		}
 		base.ActionEndCallback();
 	}

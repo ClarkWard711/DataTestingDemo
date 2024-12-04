@@ -797,7 +797,7 @@ public class BattleSetting : MonoBehaviour
 			TakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().PhysicalDamageTakeMultiplier;
 			DealMultiplier = CurrentActUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
 			baseDamage = Mathf.CeilToInt(2 * (atk * atk) / (atk + dfs));
-			finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
+			finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier * (1 + Random.Range(-0.05f, 0.05f)));
 			return finalDamage;
 		}
 		else if (attackType == AttackType.Soul)
@@ -807,7 +807,7 @@ public class BattleSetting : MonoBehaviour
 			TakeMultiplier = CurrentActUnitTarget.GetComponent<GivingData>().SoulDamageTakeMultiplier;
 			DealMultiplier = CurrentActUnit.GetComponent<GivingData>().SoulDamageDealMultiplier;
 			baseDamage = Mathf.CeilToInt(2 * (atk * atk) / (atk + dfs));
-			finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
+			finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier * (1 + Random.Range(-0.05f, 0.05f)));
 			return finalDamage;
 		}
 		else
@@ -834,7 +834,7 @@ public class BattleSetting : MonoBehaviour
 			TakeMultiplier = DfsUnit.GetComponent<GivingData>().PhysicalDamageTakeMultiplier;
 			DealMultiplier = AtkUnit.GetComponent<GivingData>().PhysicalDamageDealMultiplier;
 			baseDamage = Mathf.CeilToInt(2 * (atk * atk) / (atk + dfs));
-			finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
+			finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier * (1 + Random.Range(-0.05f, 0.05f)));
 			return finalDamage;
 		}
 		else if (attackType == AttackType.Soul)
@@ -844,7 +844,7 @@ public class BattleSetting : MonoBehaviour
 			TakeMultiplier = DfsUnit.GetComponent<GivingData>().SoulDamageTakeMultiplier;
 			DealMultiplier = AtkUnit.GetComponent<GivingData>().SoulDamageDealMultiplier;
 			baseDamage = Mathf.CeilToInt(2 * (atk * atk) / (atk + dfs));
-			finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier);
+			finalDamage = Mathf.CeilToInt(baseDamage * TakeMultiplier * DealMultiplier * (1 + Random.Range(-0.05f, 0.05f)));
 			return finalDamage;
 		}
 		else

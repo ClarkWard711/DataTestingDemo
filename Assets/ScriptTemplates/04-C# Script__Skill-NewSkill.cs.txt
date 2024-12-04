@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
     #ROOTNAMESPACEBEGIN#
-    [CreateAssetMenu(menuName = ("Skill"), fileName = (""))]
+    [CreateAssetMenu(menuName = ("Skill//#SCRIPTNAME#"), fileName = ("#SCRIPTNAME#"))]
 public class #SCRIPTNAME# : Skill
 {
     public #SCRIPTNAME#()
