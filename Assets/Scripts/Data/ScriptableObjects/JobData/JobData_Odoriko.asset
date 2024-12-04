@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jobAvatarImage: {fileID: 21300000, guid: f47091b22dc58405a846664231ea4a79, type: 3}
   jobName: Odoriko
-  jobInitialLevel: 2
+  jobInitialLevel: 1
   jobIndex: 1
   currentHP: 368
   currentSP: 76
-  jobLevel: 2
+  jobLevel: 1
   SkillsID: 0300000004000000080000000f000000
   SpecialID: 18
   JobPrefab: {fileID: 1749416364117990524, guid: 83dbd5385707445259a45123a0e61e67, type: 3}

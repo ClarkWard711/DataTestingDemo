@@ -14,253 +14,253 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jobAvatarImage: {fileID: -1222851860, guid: 9186111b4a8934ccab3800e3e981ae8c, type: 3}
   jobName: Bloodist
-  jobInitialLevel: 4
+  jobInitialLevel: 1
   jobIndex: 1
-  currentHP: 1109
-  currentSP: 80
-  jobLevel: 4
+  currentHP: 1017
+  currentSP: 84
+  jobLevel: 1
   SkillsID: 02000000030000000f00000010000000
   SpecialID: 0
   JobPrefab: {fileID: 1749416364117990524, guid: 5f598b27e4fd04cc2b586bac5677607e, type: 3}
-  dataFile: {fileID: 4900000, guid: 71f59072f7f544c4898a639f959608c2, type: 3}
+  dataFile: {fileID: 4900000, guid: 789a1dd2c03fa458f9280a2787e94396, type: 3}
   jobStatsList:
-  - maxHP: 335
-    maxSP: 50
-    physicalAttack: 55
-    soulAttack: 49
-    physicalDefence: 58
-    soulDefence: 52
-    hit: 80
-    nimbleness: 30
-    speed: 80
-    critical: 25
-    melee: 120
-    remote: 80
+  - maxHP: 307
+    maxSP: 53
+    physicalAttack: 64
+    soulAttack: 52
+    physicalDefence: 67
+    soulDefence: 55
+    hit: 91
+    nimbleness: 29
+    speed: 76
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 38
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 490
-    maxSP: 60
-    physicalAttack: 91
-    soulAttack: 80
-    physicalDefence: 82
-    soulDefence: 72
-    hit: 128
-    nimbleness: 34
-    speed: 85
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 449
+    maxSP: 63
+    physicalAttack: 105
+    soulAttack: 84
+    physicalDefence: 87
+    soulDefence: 76
+    hit: 145
+    nimbleness: 33
+    speed: 81
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 166
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 748
-    maxSP: 70
-    physicalAttack: 126
-    soulAttack: 111
-    physicalDefence: 107
-    soulDefence: 93
-    hit: 176
-    nimbleness: 38
-    speed: 90
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 686
+    maxSP: 74
+    physicalAttack: 145
+    soulAttack: 117
+    physicalDefence: 113
+    soulDefence: 98
+    hit: 199
+    nimbleness: 37
+    speed: 86
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 462
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 1109
-    maxSP: 80
-    physicalAttack: 162
-    soulAttack: 143
-    physicalDefence: 131
-    soulDefence: 114
-    hit: 224
-    nimbleness: 42
-    speed: 95
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 1017
+    maxSP: 84
+    physicalAttack: 187
+    soulAttack: 151
+    physicalDefence: 138
+    soulDefence: 120
+    hit: 254
+    nimbleness: 40
+    speed: 91
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 1028
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 1574
-    maxSP: 90
-    physicalAttack: 198
-    soulAttack: 173
-    physicalDefence: 155
-    soulDefence: 135
-    hit: 272
-    nimbleness: 46
-    speed: 100
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 1443
+    maxSP: 95
+    physicalAttack: 228
+    soulAttack: 182
+    physicalDefence: 163
+    soulDefence: 142
+    hit: 308
+    nimbleness: 44
+    speed: 95
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 1990
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 1760
-    maxSP: 100
-    physicalAttack: 208
-    soulAttack: 182
-    physicalDefence: 160
-    soulDefence: 138
-    hit: 320
-    nimbleness: 50
-    speed: 105
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 1613
+    maxSP: 105
+    physicalAttack: 240
+    soulAttack: 192
+    physicalDefence: 168
+    soulDefence: 145
+    hit: 362
+    nimbleness: 48
+    speed: 100
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 3498
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 2045
-    maxSP: 110
-    physicalAttack: 240
-    soulAttack: 209
-    physicalDefence: 181
-    soulDefence: 156
-    hit: 368
-    nimbleness: 54
-    speed: 110
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 1875
+    maxSP: 116
+    physicalAttack: 276
+    soulAttack: 220
+    physicalDefence: 191
+    soulDefence: 164
+    hit: 416
+    nimbleness: 52
+    speed: 105
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 5726
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 2331
-    maxSP: 120
-    physicalAttack: 272
-    soulAttack: 237
-    physicalDefence: 203
-    soulDefence: 175
-    hit: 416
-    nimbleness: 58
-    speed: 115
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 2137
+    maxSP: 126
+    physicalAttack: 313
+    soulAttack: 249
+    physicalDefence: 214
+    soulDefence: 184
+    hit: 471
+    nimbleness: 56
+    speed: 110
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 8872
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 2616
-    maxSP: 130
-    physicalAttack: 304
-    soulAttack: 265
-    physicalDefence: 224
-    soulDefence: 193
-    hit: 464
-    nimbleness: 62
-    speed: 120
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 2398
+    maxSP: 137
+    physicalAttack: 350
+    soulAttack: 279
+    physicalDefence: 236
+    soulDefence: 203
+    hit: 525
+    nimbleness: 59
+    speed: 114
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 13158
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 2902
-    maxSP: 140
-    physicalAttack: 335
-    soulAttack: 292
-    physicalDefence: 246
-    soulDefence: 212
-    hit: 512
-    nimbleness: 66
-    speed: 125
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 2660
+    maxSP: 147
+    physicalAttack: 386
+    soulAttack: 307
+    physicalDefence: 259
+    soulDefence: 223
+    hit: 579
+    nimbleness: 63
+    speed: 119
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 18830
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 3188
-    maxSP: 150
-    physicalAttack: 367
-    soulAttack: 320
-    physicalDefence: 268
-    soulDefence: 230
-    hit: 560
-    nimbleness: 70
-    speed: 130
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 2922
+    maxSP: 158
+    physicalAttack: 423
+    soulAttack: 336
+    physicalDefence: 282
+    soulDefence: 242
+    hit: 633
+    nimbleness: 67
+    speed: 124
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 26158
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 3473
-    maxSP: 160
-    physicalAttack: 399
-    soulAttack: 348
-    physicalDefence: 289
-    soulDefence: 248
-    hit: 608
-    nimbleness: 74
-    speed: 135
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 3184
+    maxSP: 168
+    physicalAttack: 459
+    soulAttack: 366
+    physicalDefence: 304
+    soulDefence: 261
+    hit: 688
+    nimbleness: 71
+    speed: 129
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 35436
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 3688
-    maxSP: 170
-    physicalAttack: 430
-    soulAttack: 376
-    physicalDefence: 311
-    soulDefence: 267
-    hit: 656
-    nimbleness: 78
-    speed: 140
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 3381
+    maxSP: 179
+    physicalAttack: 495
+    soulAttack: 395
+    physicalDefence: 327
+    soulDefence: 281
+    hit: 742
+    nimbleness: 75
+    speed: 133
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 46982
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 3860
-    maxSP: 180
-    physicalAttack: 462
-    soulAttack: 404
-    physicalDefence: 332
-    soulDefence: 285
-    hit: 704
-    nimbleness: 82
-    speed: 145
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 3538
+    maxSP: 189
+    physicalAttack: 532
+    soulAttack: 425
+    physicalDefence: 349
+    soulDefence: 300
+    hit: 796
+    nimbleness: 78
+    speed: 138
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 61138
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
-  - maxHP: 4031
-    maxSP: 190
-    physicalAttack: 494
-    soulAttack: 431
-    physicalDefence: 354
-    soulDefence: 304
-    hit: 752
-    nimbleness: 86
-    speed: 150
-    critical: 25
-    melee: 120
-    remote: 80
+    PhysicalDizziness: 36
+    SoulDizziness: 24
+  - maxHP: 3695
+    maxSP: 200
+    physicalAttack: 569
+    soulAttack: 453
+    physicalDefence: 372
+    soulDefence: 320
+    hit: 850
+    nimbleness: 82
+    speed: 143
+    critical: 27
+    melee: 108
+    remote: 92
     expPerLevel: 78270
     sxpPerLevel: 0
-    PhysicalDizziness: 45
-    SoulDizziness: 20
+    PhysicalDizziness: 36
+    SoulDizziness: 24

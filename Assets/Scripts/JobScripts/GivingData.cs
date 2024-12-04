@@ -225,18 +225,18 @@ public class GivingData : MonoBehaviour
 
 	public void AddTagToCharacter(Tag tag)
 	{
-		if (tag.name == "Remote")
+		if (tag.TagName == "Remote")
 		{
 			Tag newTag0 = Instantiate(tag);
-			newTag0.Multiplier = remote / 100;
+			newTag0.Multiplier = remote / 100f;
 			tagList.Add(newTag0);
 			BattleSetting.Instance.CheckTagList(this.gameObject);
 			return;
 		}
-		if (tag.name == "Melee")
+		if (tag.TagName == "Melee")
 		{
 			Tag newTag0 = Instantiate(tag);
-			newTag0.Multiplier = melee / 100;
+			newTag0.Multiplier = melee / 100f;
 			tagList.Add(newTag0);
 			BattleSetting.Instance.CheckTagList(this.gameObject);
 			return;

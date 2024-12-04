@@ -1502,6 +1502,7 @@ public class BattleSetting : MonoBehaviour
 	{
 		float Hit = Random.Range(0, 1f);
 		//Debug.Log(Hit);
+		Hit -= 0.1f;
 		if (HitChanceCounting(atk, dfs) >= Hit)
 		{
 			return true;
