@@ -271,7 +271,7 @@ public class GivingData : MonoBehaviour
 			}
 			return;
 		}
-		if (tag is SpeedDown || tag is SpeedUp)
+		if (tag is SpeedDown || tag is SpeedUp || tag is Poison)
 		{
 			Tag newTag0 = Instantiate(tag);
 			tagList.Add(newTag0);
