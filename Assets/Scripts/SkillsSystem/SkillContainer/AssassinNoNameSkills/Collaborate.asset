@@ -17,5 +17,5 @@ MonoBehaviour:
   TurnCooldown: 0
   DealMultiplier: 0
   SkillName: "\u534F\u540C"
-  Description: 
+  Description: "Sp:8\n\u4F7F\u81EA\u8EAB\u548C\u5176\u4ED6\u53CB\u65B9\u901F\u5EA6\u4E0A\u5347\u4E24\u4E2A\u56DE\u5408\r\n[\u84C4\u529B:\u6240\u6709\u53CB\u65B9]"
   HitRevise: 0
