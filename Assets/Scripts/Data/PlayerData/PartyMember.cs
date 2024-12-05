@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Data;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = ("CharacterList"), fileName = ("CharacterList_"))]
+[CreateAssetMenu(menuName = ("Data/CharacterList"), fileName = ("CharacterList_"))]
 
 public class PartyMember : ScriptableObject
 {

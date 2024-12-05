@@ -6,6 +6,7 @@ using UnityEngine.AddressableAssets;
 public class MainMenu : MonoBehaviour
 {
 	[SerializeField] AssetReference newGameScene;
+	[SerializeField] AssetReference chooseScene;
 	[SerializeField] bool debugMode = true;
 	bool enter = true;
 	public void StartGame()
@@ -20,12 +21,20 @@ public class MainMenu : MonoBehaviour
 		{
 			enter = false;
 			DataManager.Instance.Load();
-			if (PlayerSaveController.Instance.playerSaveData.seed == 0)
+			if (PlayerSaveController.Instance.playerSaveData.seed == 0 || PlayerSaveController.Instance.playerSaveData.isNewGame)
 			{
+				PlayerSaveController.Instance.playerSaveData.isNewGame = false;
 				PlayerSaveController.Instance.playerSaveData.seed = Random.Range(10000000, 100000000);
+				PlayerSaveController.Instance.playerSaveData.jobStatsState.Clear();
+				DataManager.Instance.Save();
+				SceneLoader.LoadAddressableScene(chooseScene);
 			}
-			DataManager.Instance.Save();
-			SceneLoader.LoadAddressableScene(newGameScene);
+			else
+			{
+				DataManager.Instance.Save();
+				SceneLoader.LoadAddressableScene(newGameScene);
+			}
+
 		}
 	}
 }

@@ -6,100 +6,103 @@ using Data;
 
 namespace Data
 {
-    [CreateAssetMenu(menuName = ("Data/JobData"), fileName = ("JobData_"))]
+	[CreateAssetMenu(menuName = ("Data/JobData"), fileName = ("JobData_"))]
 
-    public class JobData : ScriptableObject
-    {
-        [SerializeField] Sprite jobAvatarImage;
+	public class JobData : ScriptableObject
+	{
+		[SerializeField] Sprite jobAvatarImage;
 
-        [SerializeField] string jobName;
+		[SerializeField] string jobName;
 
-        [SerializeField, Range(1, jobMaxLevel)] int jobInitialLevel = 1;
+		[SerializeField, Range(1, jobMaxLevel)] int jobInitialLevel = 1;
 
-        [SerializeField] int jobIndex;
+		[SerializeField] int jobIndex;
 
-        public int currentHP;
+		public int currentHP;
 
-        public int currentSP;
+		public int currentSP;
 
-        [SerializeField] int jobLevel;
+		[SerializeField] int jobLevel;
 
-        const int jobMaxLevel = 15;
+		const int jobMaxLevel = 15;
 
-        public Sprite JobAvatarImage => jobAvatarImage;
+		public Sprite JobAvatarImage => jobAvatarImage;
 
-        public string JobName => jobName;
+		public string JobName => jobName;
 
-        public int JobLevel
-        {
-            get => jobLevel;
-            set
-            {
-                if (jobLevel == value || value is < 1 or > jobMaxLevel) return;
+		[TextArea]
+		public string Description;
 
-                jobLevel = value;
-            }
-        }
+		public int JobLevel
+		{
+			get => jobLevel;
+			set
+			{
+				if (jobLevel == value || value is < 1 or > jobMaxLevel) return;
 
-        public List<int> SkillsID;
-        public int SpecialID;
+				jobLevel = value;
+			}
+		}
 
-        public GameObject JobPrefab;
+		public List<int> SkillsID;
+		public int SpecialID;
 
-        [SerializeField] TextAsset dataFile;
+		public GameObject JobPrefab;
 
-        [SerializeField] List<JobStats> jobStatsList;
+		[SerializeField] TextAsset dataFile;
 
-        public List<JobStats> JobStatsList => jobStatsList;
+		[SerializeField] List<JobStats> jobStatsList;
 
-        void OnValidate()
-        {
-            if (!dataFile) return;
+		public List<JobStats> JobStatsList => jobStatsList;
 
-            jobStatsList.Clear();
+		void OnValidate()
+		{
+			if (!dataFile) return;
 
-            string[] textInLines = dataFile.text.Split('\n');
+			jobStatsList.Clear();
 
-            for (int LineIndex = 1; LineIndex < textInLines.Length - 1; LineIndex++) 
-            {
-                string[] statsValues = textInLines[LineIndex].Split(",");
+			string[] textInLines = dataFile.text.Split('\n');
 
-                JobStats currentLevelStats = new JobStats();
+			for (int LineIndex = 1; LineIndex < textInLines.Length - 1; LineIndex++)
+			{
+				string[] statsValues = textInLines[LineIndex].Split(",");
 
-                currentLevelStats.maxHP = int.Parse(statsValues[0]);
-                currentLevelStats.maxSP = int.Parse(statsValues[1]);
-                currentLevelStats.physicalAttack = int.Parse(statsValues[2]);
-                currentLevelStats.soulAttack = int.Parse(statsValues[3]);
-                currentLevelStats.physicalDefence = int.Parse(statsValues[4]);
-                currentLevelStats.soulDefence = int.Parse(statsValues[5]);
-                currentLevelStats.hit = int.Parse(statsValues[6]);
-                currentLevelStats.nimbleness = int.Parse(statsValues[7]);
-                currentLevelStats.speed = int.Parse(statsValues[8]);
-                currentLevelStats.critical = int.Parse(statsValues[9]);
-                currentLevelStats.melee = int.Parse(statsValues[10]);
-                currentLevelStats.remote = int.Parse(statsValues[11]);
-                currentLevelStats.expPerLevel = int.Parse(statsValues[12]);
-                currentLevelStats.sxpPerLevel = int.Parse(statsValues[13]);
-                currentLevelStats.PhysicalDizziness = int.Parse(statsValues[14]);
-                currentLevelStats.SoulDizziness = int.Parse(statsValues[15]);
-                
-                jobStatsList.Add(currentLevelStats);
-            }
-        }
+				JobStats currentLevelStats = new JobStats();
 
-        private void OnEnable()
-        {
-            jobLevel = jobInitialLevel;
-            currentHP = jobStatsList[jobInitialLevel - 1].maxHP;
-            currentSP = jobStatsList[jobInitialLevel - 1].maxSP;
-            if (SkillsID.Count <= 3)
-            {
-                for (int i = 0; i < 4; i++)
-                {
-                    SkillsID.Add(-1);
-                }
-            }
-        }
-    }
+				currentLevelStats.maxHP = int.Parse(statsValues[0]);
+				currentLevelStats.maxSP = int.Parse(statsValues[1]);
+				currentLevelStats.physicalAttack = int.Parse(statsValues[2]);
+				currentLevelStats.soulAttack = int.Parse(statsValues[3]);
+				currentLevelStats.physicalDefence = int.Parse(statsValues[4]);
+				currentLevelStats.soulDefence = int.Parse(statsValues[5]);
+				currentLevelStats.hit = int.Parse(statsValues[6]);
+				currentLevelStats.nimbleness = int.Parse(statsValues[7]);
+				currentLevelStats.speed = int.Parse(statsValues[8]);
+				currentLevelStats.critical = int.Parse(statsValues[9]);
+				currentLevelStats.melee = int.Parse(statsValues[10]);
+				currentLevelStats.remote = int.Parse(statsValues[11]);
+				currentLevelStats.expPerLevel = int.Parse(statsValues[12]);
+				currentLevelStats.sxpPerLevel = int.Parse(statsValues[13]);
+				currentLevelStats.PhysicalDizziness = int.Parse(statsValues[14]);
+				currentLevelStats.SoulDizziness = int.Parse(statsValues[15]);
+
+				jobStatsList.Add(currentLevelStats);
+			}
+		}
+
+		private void OnEnable()
+		{
+			jobLevel = jobInitialLevel;
+			currentHP = jobStatsList[jobInitialLevel - 1].maxHP;
+			currentSP = jobStatsList[jobInitialLevel - 1].maxSP;
+			if (SkillsID.Count <= 3)
+			{
+				for (int i = 0; i < 4; i++)
+				{
+					SkillsID.Add(-1);
+				}
+			}
+		}
+	}
 
 }

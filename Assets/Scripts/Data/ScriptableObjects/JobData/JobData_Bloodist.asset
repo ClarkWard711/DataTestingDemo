@@ -16,9 +16,10 @@ MonoBehaviour:
   jobName: Bloodist
   jobInitialLevel: 1
   jobIndex: 1
-  currentHP: 1017
-  currentSP: 84
+  currentHP: 307
+  currentSP: 53
   jobLevel: 1
+  Description: "\u5FA1\u8840\u58EB\u53D7\u5230\u654C\u65B9\u4F24\u5BB3\u4F1A\u79EF\u7D2F\u8840\u763E(\u654C)\uFF0C\u6240\u6709\u5DF1\u65B9\u53D7\u5230\u4F24\u5BB3\u4F1A\u83B7\u5F97\u8840\u763E(\u5DF1)\uFF0C\u5FA1\u8840\u58EB\u53EF\u4EE5\u6D88\u8017\u8840\u763E\u6765\u63D0\u5347\u6280\u80FD\u5A01\u529B"
   SkillsID: 02000000030000000f00000010000000
   SpecialID: 0
   JobPrefab: {fileID: 1749416364117990524, guid: 5f598b27e4fd04cc2b586bac5677607e, type: 3}
