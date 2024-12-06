@@ -21,14 +21,6 @@ MonoBehaviour:
     m_Address: GameManager
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 0901ca0ce6cbd4d178a99d9e78dd45e9
-    m_Address: TestScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 68391339225014bab982ea05ea5c8cf2
-    m_Address: ChooseScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: b9d1014a3cb914d1fba76a46cd46c182
     m_Address: Panel
     m_ReadOnly: 0

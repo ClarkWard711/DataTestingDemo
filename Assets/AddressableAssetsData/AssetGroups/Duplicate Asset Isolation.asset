@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Duplicate Asset Isolation
+  m_EditorClassIdentifier: 
+  m_GroupName: Duplicate Asset Isolation
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 8e5b809a3dfce41efbc386e777cab1b2
+  m_SerializeEntries:
+  - m_GUID: 72de0c64f2c6a498096698322c976a67
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/idle/player-idle-1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c487c756c614c44b6ab9d43161c37a2f
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/idle/Player.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dc8c1a16f7ce5a94fa620ee313ea89b5
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/run/run-Animation.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ec0a0aeed9edcb543a7dda6bd460375c
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/idle/Idle-Animation.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c8a742c1f2ebb43b9afe34a47304c051
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/idle/player-idle-2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8afd73b29f8e34c70b0db80184b8cc7f
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/run/player-run-1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8bc3c2c2a565342aab778fd8e874313a
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/idle/player-idle-4.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: af314424f59d946469a97f398e8de53f
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/run/player-run-6.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f58cc0961cc9146ca9780a0cb1327e5d
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/run/player-run-5.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 077f0469c420a4365bc67943783293df
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/idle/player-idle-3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d094cf6ac3d8a4d0bbbef5d6d6ad3eed
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/run/player-run-2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bc3fcf1d561104bea933686de6bade4b
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/run/player-run-4.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3f59d4fdf4fe04ab79f11dadde82fe8c
+    m_Address: Assets/SunnyLand Artwork/Sprites/player/run/player-run-3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9186111b4a8934ccab3800e3e981ae8c
+    m_Address: Assets/arts/Odoriko/Nintendo Switch - Octopath Traveler - Primrose
+      Dancer Base.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1c9ed9d1200c29d4cbfd2071028c1cd5
+    m_Address: Assets/Cainos/Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 738b95c4ccd0846528d5e5af8e0c9b94, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: eafeafac252ef4136ba20568a6852222, type: 2}
+    - {fileID: 11400000, guid: 0d18a63d3ba964c13add8564b127cb89, type: 2}

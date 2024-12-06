@@ -291,6 +291,8 @@ MonoBehaviour:
   ChoosePanel: {fileID: 1054133651}
   PlayerPanel: {fileID: 1224493564}
   PlayerPanelChosen: []
+  ChoosePanelChosen: []
+  ContinueButton: {fileID: 1369553433}
 --- !u!4 &165666121
 Transform:
   m_ObjectHideFlags: 0
