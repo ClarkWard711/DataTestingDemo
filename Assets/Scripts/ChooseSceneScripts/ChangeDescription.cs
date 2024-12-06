@@ -11,8 +11,17 @@ public class ChangeDescription : MonoBehaviour, IPointerEnterHandler
 	public Text text;
 	public bool isChosen;
 	public int index;
+	public bool isSkill;
+	public string description = "";
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		text.text = jobData.Description;
+		if (!isSkill)
+		{
+			text.text = jobData.Description;
+		}
+		else
+		{
+			text.text = description;
+		}
 	}
 }

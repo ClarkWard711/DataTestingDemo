@@ -17,10 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: c512b24add66845eb94461ca91338941
   m_SerializeEntries:
-  - m_GUID: 2cda990e2423bbf4892e6590ba056729
-    m_Address: OuterScene
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 2ac9dfeb805be47ddb298e63fe506762
     m_Address: BattleScene
     m_ReadOnly: 0
