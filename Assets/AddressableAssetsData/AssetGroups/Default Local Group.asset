@@ -17,52 +17,28 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 8b41fd17c5b2340a5b3feb0a576d250f
   m_SerializeEntries:
-  - m_GUID: 008568859dd48426c9c35de01c3a3177
-    m_Address: CharacterList_Base
+  - m_GUID: 335fa42c47359a54382ec2db3a044a0f
+    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RealLifeLevelGraph.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: e6c15a7b56c3e459eb38a85eeda35ccd
-    m_Address: CharacterList_Party
+  - m_GUID: 34dc4295d40861a41b698208654b7812
+    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/BasicRoom.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 9aec083a70b95425888588c24bf7c4a4
-    m_Address: AllJobs
+  - m_GUID: bdeb842f30603f84bb24fc8ded30d651
+    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/Hor5x2.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 414163cba8f764418b75c5f0b84d8b6b
-    m_Address: JobData_AssassinNoName
+  - m_GUID: 817d50d9241043d48b75ce90665cfd6f
+    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/Hor8x2.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: c38fdb8bed54749c6994e395ac769869
-    m_Address: JobData_Odoriko
+  - m_GUID: 4253f21fc42b6004b97c0af8f9637c7d
+    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/Ver2x6.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 0414593760ec2470b845965df3d3b3ac
-    m_Address: JobData_Bloodist
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: b41b8fbd4fb514a969b86c731859bfb6
-    m_Address: JobData_Samurai
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 25a4385607c2c408da76ef4063b5ad1f
-    m_Address: JobData_Knight
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 99ce7c10bca844362a85789676ec7a12
-    m_Address: JobData_Watcher
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 01b876f22e98d4b5d8f1c2bc727a14e8
-    m_Address: EnemyData_Frog
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 8de60b598c5004bfb8e4c48cf0263d56
-    m_Address: EnemyData_Kuma
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 4edaf5ec0552a42c7baf5553b4e6dcf5
-    m_Address: EnemyPartyData_Base
+  - m_GUID: 40e7e2943e9246d4aae1a783d75b4213
+    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/Ver2x8.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
