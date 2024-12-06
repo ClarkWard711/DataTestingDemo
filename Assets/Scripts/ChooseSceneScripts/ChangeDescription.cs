@@ -9,6 +9,8 @@ public class ChangeDescription : MonoBehaviour, IPointerEnterHandler
 {
 	public JobData jobData;
 	public Text text;
+	public bool isChosen;
+	public int index;
 	public void OnPointerEnter(PointerEventData eventData)
 	{
 		text.text = jobData.Description;

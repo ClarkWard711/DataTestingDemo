@@ -81,6 +81,7 @@ public class JobSkillHolder : MonoBehaviour
 			{
 				SpecialSkill.GetComponentInChildren<Text>().text = JobSkill.skillList[jobData.SpecialID].SkillName;
 				SpecialButton.onClick.AddListener(() => JobSkill.skillList[jobData.SpecialID].Apply(BattleSetting.Instance.CurrentActUnit));
+				SpecialButton.GetComponent<FloatingText>().enabled = true;
 				SpecialSkill.GetComponentInChildren<FloatingText>().description = JobSkill.skillList[jobData.SpecialID].Description;
 			}
 			else

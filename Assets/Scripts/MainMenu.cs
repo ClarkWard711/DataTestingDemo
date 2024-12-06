@@ -26,6 +26,7 @@ public class MainMenu : MonoBehaviour
 				PlayerSaveController.Instance.playerSaveData.isNewGame = false;
 				PlayerSaveController.Instance.playerSaveData.seed = Random.Range(10000000, 100000000);
 				PlayerSaveController.Instance.playerSaveData.jobStatsState.Clear();
+				PlayerSaveController.Instance.playerSaveData.playerPosition = Vector3.zero;
 				DataManager.Instance.Save();
 				SceneLoader.LoadAddressableScene(chooseScene);
 			}

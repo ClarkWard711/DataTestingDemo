@@ -21,6 +21,90 @@ MonoBehaviour:
     m_Address: GameManager
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 0901ca0ce6cbd4d178a99d9e78dd45e9
+    m_Address: TestScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 68391339225014bab982ea05ea5c8cf2
+    m_Address: ChooseScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b9d1014a3cb914d1fba76a46cd46c182
+    m_Address: Panel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c0794fdc627194e699349a33ddfcceba
+    m_Address: HP
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e86fd9a5c734c4e22a6c737a15bf9bd9
+    m_Address: Damage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2ac3c5307d54d45e9a47a9b2d3f677f5
+    m_Address: DropDamage
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6d1cfe8d55c394af688d8f507c904f54
+    m_Address: Player
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6fdc26ab597eca48b3a89a46b21160f
+    m_Address: Action
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d6f1af5e8d44646b683fc90a7b38a920
+    m_Address: SP
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 034c2b1510fff46c1bc2977ef386ffb2
+    m_Address: Slot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 73bb13d0c61b74c88b4ec1ee23c0a29e
+    m_Address: SmallSlider
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 573bea053d9b6497da9d1726d0a5c1c4
+    m_Address: Hp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fc0be07a098944ae4ae13a460f94648f
+    m_Address: Sp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1c305fd791b914b19a1ca32d470200f3
+    m_Address: AssassinNoName
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5f598b27e4fd04cc2b586bac5677607e
+    m_Address: Bloodist
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 83dbd5385707445259a45123a0e61e67
+    m_Address: Odoriko
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6e9ee63760d5c4ab9b35ee5977998624
+    m_Address: Enemy1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9d52346ad6a7e4b07be8a3f091d84145
+    m_Address: Enemy2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f5f7d4b69b17543b5a86a8024a55571d
+    m_Address: Knight
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: aed0c1025800647f09aa4d304659a51d
+    m_Address: Samurai
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cf50f0bb3edd442f5b251b738be56e5a
+    m_Address: Watcher
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 738b95c4ccd0846528d5e5af8e0c9b94, type: 2}
   m_SchemaSet:

@@ -25,6 +25,7 @@ public class PlayerSaveData
 	//天赋树状态
 	public Dictionary<int, JobStatsData> jobStatsState = new Dictionary<int, JobStatsData>();
 	//武器？
+	public Dictionary<int, int> positionID = new Dictionary<int, int>();
 }
 public class JobStatsData
 {
