@@ -6,6 +6,7 @@ using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
 using Data;
 using UnityEngine.Events;
+using System.Diagnostics.Contracts;
 
 
 public enum BattleState { Won, Lose, PlayerTurn, EnemyTurn, Start, Middle };
@@ -76,6 +77,8 @@ public class BattleSetting : MonoBehaviour
 	float alpha;//颜色透明度
 				//float DamageMultiplier = 1f;
 	public Vector3 Position;
+	public FinishManager finishManager;
+	public Button skill;
 	#endregion
 
 	void Awake()
@@ -182,7 +185,7 @@ public class BattleSetting : MonoBehaviour
 			//GameObject.FindGameObjectWithTag("MainCamera").GetComponent<AudioListener>().enabled = false;
 			SceneLoader.LoadAddressableScene(outerScene);
 		}
-		if ((State == BattleState.Won || State == BattleState.Lose) && !isPressed)
+		/*if ((State == BattleState.Won || State == BattleState.Lose) && !isPressed)
 		{
 			isPressed = true;
 			if (Player != null)
@@ -190,7 +193,7 @@ public class BattleSetting : MonoBehaviour
 				Player.SetActive(true);
 			}
 			SceneLoader.LoadAddressableScene(outerScene);
-		}
+		}*/
 		#endregion
 
 		Position = Input.mousePosition;
@@ -245,12 +248,14 @@ public class BattleSetting : MonoBehaviour
 			GameStateText.text = "胜利";
 			StartCoroutine(ShowText(3f));
 			State = BattleState.Won;
+			finishManager.ShowFinPanel(true);
 		}
 		else if (RemainingPlayerUnits.Length == 0)
 		{
 			GameStateText.text = "失败";
 			StartCoroutine(ShowText(3f));
 			State = BattleState.Lose;
+			finishManager.ShowFinPanel(false);
 		}
 		else
 		{
@@ -652,11 +657,13 @@ public class BattleSetting : MonoBehaviour
 		if (CurrentActUnit.CompareTag("EnemyUnit"))
 		{
 			State = BattleState.EnemyTurn;
+			skill.interactable = false;
 			StartCoroutine(TurnAction(1f, "敌方回合"));
 		}
 		else
 		{
 			State = BattleState.PlayerTurn;
+			skill.interactable = true;
 			CurrentActUnit.GetComponentsInChildren<SpriteRenderer>()[1].color = new Color(255, 255, 255, 255);
 			CurrentActUnit.GetComponent<GivingData>().CheckSP();
 			UpdateUIPanel();

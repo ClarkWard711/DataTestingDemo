@@ -29,7 +29,7 @@ public class OdorikoHolder : JobSkillHolder
 		base.AddSkillToButton();
 		if (jobData.SpecialID != 0)
 		{
-			SpecialSkill.SetActive(true);
+			SpecialSkill.GetComponent<Button>().interactable = true;
 			SpecialButton.onClick.AddListener(() => JobSkill.skillList[jobData.SpecialID].Apply(BattleSetting.Instance.CurrentActUnit));
 			SpecialSkill.GetComponentInChildren<Text>().text = JobSkill.skillList[jobData.SpecialID].SkillName;
 			if (jobData.SpecialID == 16 && MoonUsedAmount >= 3)
@@ -54,7 +54,7 @@ public class OdorikoHolder : JobSkillHolder
 		}
 		else
 		{
-			SpecialSkill.SetActive(false);
+			SpecialSkill.GetComponent<Button>().interactable = false;
 		}
 	}
 

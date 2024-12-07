@@ -46,15 +46,15 @@ public class AssassinNoNameHolder : JobSkillHolder
 				}
 			}
 		}
-		if (jobData.SkillsID.Exists(num => num == 5))
+		if (jobData.SkillsID.Exists(num => num == 4))
 		{
-			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote") && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 5)]].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
+			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote") && JobSkill.skillList[jobData.SkillsID[jobData.SkillsID.FindIndex(num => num == 4)]].SpCost <= BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP)
 			{
-				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = true;
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 4)].interactable = true;
 			}
 			else
 			{
-				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 5)].interactable = false;
+				AdvancedSkillButton[jobData.SkillsID.FindIndex(num => num == 4)].interactable = false;
 			}
 		}
 	}
@@ -533,7 +533,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 		if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
-			PositionControl.Instance.PositionControlCore(gameObject.GetComponent<GivingData>().positionID - 3);
+			PositionControl.Instance.PositionControlCore(gameObject.GetComponent<GivingData>().positionID + 3);
 		}
 		var enemy = BattleSetting.Instance.RemainingEnemyUnits[Random.Range(0, BattleSetting.Instance.RemainingEnemyUnits.Length)];
 		int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical);

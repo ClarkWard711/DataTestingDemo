@@ -46,6 +46,27 @@ public class PlayerSaveController : MonoBehaviour, ISaveable
 
 	public void GetSaveData(GameData data)
 	{
+		if (playerSaveData.jobStatsState != null)
+		{
+			foreach (var player in playerParty.CharacterList)
+			{
+				if (player != null)
+				{
+					JobStatsData job = new JobStatsData();
+					job.currentExp = player.currentExp;
+					job.currentHp = player.currentHP;
+					job.specialID = player.SpecialID;
+					job.currentSp = player.currentSP;
+					job.level = player.JobLevel;
+					for (int i = 0; i < 4; i++)
+					{
+						job.skillsID.Add(0);
+						job.skillsID[i] = player.SkillsID[i];
+					}
+					PlayerSaveController.Instance.playerSaveData.jobStatsState[player.JobID] = job;
+				}
+			}
+		}
 		data.playerSaveData = playerSaveData;
 	}
 

@@ -44,11 +44,14 @@ public class Skill : ScriptableObject
 			}
 		}
 		BattleSetting.Instance.CheckCanChangeAction();
-		if (BattleSetting.Instance.State == BattleState.Middle)
+		if (BattleSetting.Instance.State == BattleState.Middle || BattleSetting.Instance.State == BattleState.EnemyTurn)
 		{
-			//Debug.Log(000);
+			//Debug.Log("Return");
 			return;
 		}
-		BattleSetting.Instance.canChangeAction = true;
+		else
+		{
+			BattleSetting.Instance.canChangeAction = true;
+		}
 	}
 }

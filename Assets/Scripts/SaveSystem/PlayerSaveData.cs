@@ -34,6 +34,6 @@ public class JobStatsData
 	public int currentSp;
 	public int currentExp;
 	public int specialID;
-	public List<int> skillsID;
+	public List<int> skillsID = new List<int>();
 	public List<bool> skillUnlockState;
 }
