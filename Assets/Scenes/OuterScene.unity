@@ -9179,7 +9179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyDialog: {fileID: 1959937400}
   battleScene:
-    m_AssetGUID: 4dcaa9447778449bca494eb70932fa92
+    m_AssetGUID: 7ea4b1b1e4703864893aa3ada20f1a6f
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

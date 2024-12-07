@@ -148,24 +148,28 @@ public class ChooseManager : MonoBehaviour
 			//开始游戏
 			ContinueButton.interactable = false;
 			chooseJobFin = false;
-			for (int i = 0; i < 3; i++)
+			/*for (int i = 0; i < 3; i++)
 			{
-				foreach (int ID in PlayerSaveController.Instance.playerSaveData.positionID.Keys)
-				{
-					int posID;
-					JobStatsData job;
-					PlayerSaveController.Instance.playerSaveData.jobStatsState.TryGetValue(ID, out job);
-					PlayerSaveController.Instance.playerSaveData.positionID.TryGetValue(ID, out posID);
-					PlayerSaveController.Instance.AllJobs.CharacterList[ID].JobLevel = job.level;
-					PlayerSaveController.Instance.AllJobs.CharacterList[ID].currentHP = job.currentHp;
-					for (int j = 0; j < 4; j++)
-					{
-						PlayerSaveController.Instance.AllJobs.CharacterList[ID].SkillsID[j] = job.skillsID[j];
-					}
-					PlayerSaveController.Instance.playerParty.CharacterList[posID] = PlayerSaveController.Instance.AllJobs.CharacterList[ID];
-				}
+				
 				//PlayerSaveController.Instance.playerSaveData.jobStatsState.
 				//PlayerSaveController.Instance.playerParty.CharacterList
+			}*/
+			foreach (int ID in PlayerSaveController.Instance.playerSaveData.positionID.Keys)
+			{
+				int posID;
+				JobStatsData job;
+				PlayerSaveController.Instance.playerSaveData.jobStatsState.TryGetValue(ID, out job);
+				PlayerSaveController.Instance.playerSaveData.positionID.TryGetValue(ID, out posID);
+				PlayerSaveController.Instance.AllJobs.CharacterList[ID].JobLevel = job.level;
+				PlayerSaveController.Instance.AllJobs.CharacterList[ID].currentHP = job.currentHp;
+				PlayerSaveController.Instance.AllJobs.CharacterList[ID].currentSP = job.currentSp;
+				PlayerSaveController.Instance.AllJobs.CharacterList[ID].SpecialID = 0;
+				PlayerSaveController.Instance.AllJobs.CharacterList[ID].currentExp = 0;
+				for (int j = 0; j < 4; j++)
+				{
+					PlayerSaveController.Instance.AllJobs.CharacterList[ID].SkillsID[j] = job.skillsID[j];
+				}
+				PlayerSaveController.Instance.playerParty.CharacterList[posID] = PlayerSaveController.Instance.AllJobs.CharacterList[ID];
 			}
 
 			DataManager.Instance.Save();
@@ -222,11 +226,14 @@ public class ChooseManager : MonoBehaviour
 
 	public void SkillBackChoose(int index)
 	{
-		Skillbuttons[index].gameObject.GetComponent<Chosen>().isChosen = false;
-		Skillbuttons[index].gameObject.GetComponentInChildren<Text>().text = "-";
-		SkillToBeChosen.GetComponentsInChildren<Button>()[Skillbuttons[index].gameObject.GetComponent<Chosen>().id - 2].interactable = true;
-		Skillbuttons[index].gameObject.GetComponent<Chosen>().id = -1;
-		ContinueButton.interactable = false;
-		isChooseSkillFin = false;
+		if (Skillbuttons[index].gameObject.GetComponentInChildren<Text>().text != "-")
+		{
+			Skillbuttons[index].gameObject.GetComponent<Chosen>().isChosen = false;
+			Skillbuttons[index].gameObject.GetComponentInChildren<Text>().text = "-";
+			SkillToBeChosen.GetComponentsInChildren<Button>()[Skillbuttons[index].gameObject.GetComponent<Chosen>().id - 2].interactable = true;
+			Skillbuttons[index].gameObject.GetComponent<Chosen>().id = -1;
+			ContinueButton.interactable = false;
+			isChooseSkillFin = false;
+		}
 	}
 }

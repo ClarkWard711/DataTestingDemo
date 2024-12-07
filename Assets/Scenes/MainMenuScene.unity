@@ -1053,8 +1053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d92b316e19b4f948e10349f124511c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameScene:
-    m_AssetGUID: 7ea4b1b1e4703864893aa3ada20f1a6f
+  outerScene:
+    m_AssetGUID: 2cda990e2423bbf4892e6590ba056729
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0

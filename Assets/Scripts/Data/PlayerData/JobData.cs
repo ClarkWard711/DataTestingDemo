@@ -22,6 +22,8 @@ namespace Data
 
 		public int currentSP;
 
+		public int currentExp;
+
 		[SerializeField] int jobLevel;
 
 		const int jobMaxLevel = 15;
@@ -29,6 +31,8 @@ namespace Data
 		public Sprite JobAvatarImage => jobAvatarImage;
 
 		public string JobName => jobName;
+
+		public int JobID;
 
 		[TextArea]
 		public string Description;
