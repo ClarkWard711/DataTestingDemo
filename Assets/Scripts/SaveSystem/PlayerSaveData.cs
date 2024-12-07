@@ -29,11 +29,11 @@ public class PlayerSaveData
 }
 public class JobStatsData
 {
-	int level;
-	int currentHp;
-	int currentSp;
-	int currentExp;
-	int specialID;
-	List<int> skillsID;
-	List<bool> skillUnlockState;
+	public int level;
+	public int currentHp;
+	public int currentSp;
+	public int currentExp;
+	public int specialID;
+	public List<int> skillsID;
+	public List<bool> skillUnlockState;
 }

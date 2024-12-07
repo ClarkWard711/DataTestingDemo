@@ -12,6 +12,7 @@ public class ChangeDescription : MonoBehaviour, IPointerEnterHandler
 	public bool isChosen;
 	public int index;
 	public bool isSkill;
+	public int jobID;
 	public string description = "";
 	public void OnPointerEnter(PointerEventData eventData)
 	{

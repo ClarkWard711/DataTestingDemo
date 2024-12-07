@@ -8,6 +8,7 @@ public class PlayerSaveController : MonoBehaviour, ISaveable
 	public static PlayerSaveController Instance;
 	public PlayerSaveData playerSaveData;
 	public PartyMember AllJobs;
+	public PartyMember playerParty;
 	void Awake()
 	{
 		Instance = this;

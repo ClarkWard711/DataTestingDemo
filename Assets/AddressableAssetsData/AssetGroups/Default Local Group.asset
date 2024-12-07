@@ -41,6 +41,10 @@ MonoBehaviour:
     m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/Ver2x8.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 2cda990e2423bbf4892e6590ba056729
+    m_Address: Assets/Scenes/OuterScene.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 738b95c4ccd0846528d5e5af8e0c9b94, type: 2}
   m_SchemaSet:

@@ -178,3 +178,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllJobs: {fileID: 11400000, guid: 9aec083a70b95425888588c24bf7c4a4, type: 2}
+  playerParty: {fileID: 11400000, guid: e6c15a7b56c3e459eb38a85eeda35ccd, type: 2}

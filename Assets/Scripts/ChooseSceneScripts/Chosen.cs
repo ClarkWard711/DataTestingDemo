@@ -8,5 +8,6 @@ public class Chosen : MonoBehaviour
 	public bool isChosen;
 	public int buttonIndex;
 	public int id;
+	public int jobID;
 	public JobData selectedJob;
 }

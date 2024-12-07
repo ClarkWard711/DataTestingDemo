@@ -182,6 +182,7 @@ MonoBehaviour:
   isChosen: 0
   index: 0
   isSkill: 1
+  jobID: 0
   description: 
 --- !u!114 &29864790
 MonoBehaviour:
@@ -280,6 +281,7 @@ MonoBehaviour:
   isChosen: 0
   buttonIndex: 0
   id: 0
+  jobID: 0
   selectedJob: {fileID: 0}
 --- !u!1 &39051045
 GameObject:
@@ -418,6 +420,7 @@ MonoBehaviour:
   isChosen: 0
   buttonIndex: 0
   id: 0
+  jobID: 0
   selectedJob: {fileID: 0}
 --- !u!1 &121231956
 GameObject:
@@ -478,6 +481,7 @@ MonoBehaviour:
   isChosen: 0
   index: 0
   isSkill: 1
+  jobID: 0
   description: 
 --- !u!114 &121231959
 MonoBehaviour:
@@ -576,6 +580,7 @@ MonoBehaviour:
   isChosen: 0
   buttonIndex: 0
   id: 0
+  jobID: 0
   selectedJob: {fileID: 0}
 --- !u!1 &165666119
 GameObject:
@@ -624,6 +629,12 @@ MonoBehaviour:
   playerSkill: {fileID: 189677737}
   Skillbuttons: []
   isChooseSkillFin: 0
+  currentID: 0
+  OuterScene:
+    m_AssetGUID: 2cda990e2423bbf4892e6590ba056729
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!4 &165666121
 Transform:
   m_ObjectHideFlags: 0
@@ -963,6 +974,7 @@ MonoBehaviour:
   isChosen: 0
   index: 0
   isSkill: 1
+  jobID: 0
   description: 
 --- !u!114 &535075334
 MonoBehaviour:
@@ -1061,6 +1073,7 @@ MonoBehaviour:
   isChosen: 0
   buttonIndex: 0
   id: 0
+  jobID: 0
   selectedJob: {fileID: 0}
 --- !u!1 &570746016
 GameObject:
@@ -1121,6 +1134,7 @@ MonoBehaviour:
   isChosen: 0
   index: 0
   isSkill: 1
+  jobID: 0
   description: 
 --- !u!114 &570746019
 MonoBehaviour:
@@ -1219,6 +1233,7 @@ MonoBehaviour:
   isChosen: 0
   buttonIndex: 0
   id: 0
+  jobID: 0
   selectedJob: {fileID: 0}
 --- !u!1 &571705306
 GameObject:
@@ -2386,6 +2401,7 @@ MonoBehaviour:
   isChosen: 0
   index: 0
   isSkill: 0
+  jobID: 0
   description: 
 --- !u!114 &1139650944
 MonoBehaviour:
@@ -2914,6 +2930,7 @@ MonoBehaviour:
   isChosen: 0
   index: 0
   isSkill: 0
+  jobID: 0
   description: 
 --- !u!114 &1443226438
 MonoBehaviour:
@@ -3256,6 +3273,7 @@ MonoBehaviour:
   isChosen: 0
   buttonIndex: 0
   id: 0
+  jobID: 0
   selectedJob: {fileID: 0}
 --- !u!1 &1639105113
 GameObject:
@@ -3537,6 +3555,7 @@ MonoBehaviour:
   isChosen: 0
   index: 0
   isSkill: 0
+  jobID: 0
   description: 
 --- !u!114 &1777644376
 MonoBehaviour:
@@ -3799,6 +3818,7 @@ MonoBehaviour:
   isChosen: 0
   buttonIndex: 0
   id: 0
+  jobID: 0
   selectedJob: {fileID: 0}
 --- !u!1 &2067080425
 GameObject:

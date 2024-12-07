@@ -4,6 +4,9 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
+using JetBrains.Annotations;
+using Edgar.GraphBasedGenerator.Common;
 
 public class ChooseManager : MonoBehaviour
 {
@@ -24,8 +27,12 @@ public class ChooseManager : MonoBehaviour
 	public GameObject playerSkill;
 	public Button[] Skillbuttons;
 	public bool isChooseSkillFin;
+	public int currentID;
+	[SerializeField] AssetReference OuterScene;
 	public void Start()
 	{
+		PlayerSaveController.Instance.playerSaveData.jobStatsState.Clear();
+		PlayerSaveController.Instance.playerSaveData.positionID.Clear();
 		for (int i = 0; i < ChoosePanel.GetComponentsInChildren<Image>().Length; i++)
 		{
 			ChoosePanel.GetComponentsInChildren<Image>()[i].preserveAspect = true;
@@ -47,6 +54,7 @@ public class ChooseManager : MonoBehaviour
 			ChoosePanel.GetComponentsInChildren<Image>()[i + 1].sprite = PlayerSaveController.Instance.AllJobs.CharacterList[index].JobAvatarImage;
 			ChoosePanel.GetComponentsInChildren<Image>()[i + 1].color = new Color(1, 1, 1, 1);
 			ChoosePanel.GetComponentsInChildren<ChangeDescription>()[i].jobData = PlayerSaveController.Instance.AllJobs.CharacterList[index];
+			ChoosePanel.GetComponentsInChildren<ChangeDescription>()[i].jobID = index;
 			ChoosePanel.GetComponentsInChildren<ChangeDescription>()[i].index = i;
 			Debug.Log(i);
 			int j = i;
@@ -79,6 +87,7 @@ public class ChooseManager : MonoBehaviour
 					PlayerPanelChosen[i].gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
 					PlayerPanelChosen[i].gameObject.GetComponent<Chosen>().isChosen = true;
 					PlayerPanelChosen[i].gameObject.GetComponent<Chosen>().buttonIndex = ChoosePanelChosen[index].gameObject.GetComponent<ChangeDescription>().index;
+					PlayerPanelChosen[i].gameObject.GetComponent<Chosen>().jobID = ChoosePanelChosen[index].gameObject.GetComponent<ChangeDescription>().jobID;
 					PlayerPanelChosen[i].gameObject.GetComponent<Chosen>().selectedJob = ChoosePanelChosen[index].gameObject.GetComponent<ChangeDescription>().jobData;
 					if (i == PlayerPanelChosen.Length - 1)
 					{
@@ -98,6 +107,7 @@ public class ChooseManager : MonoBehaviour
 				ChoosePanel.GetComponentsInChildren<ChangeDescription>()[PlayerPanelChosen[0].gameObject.GetComponent<Chosen>().buttonIndex].isChosen = false;
 				PlayerPanelChosen[0].gameObject.GetComponent<Chosen>().buttonIndex = ChoosePanelChosen[index].gameObject.GetComponent<ChangeDescription>().index;
 				PlayerPanelChosen[0].gameObject.GetComponent<Chosen>().selectedJob = ChoosePanelChosen[index].gameObject.GetComponent<ChangeDescription>().jobData;
+				PlayerPanelChosen[0].gameObject.GetComponent<Chosen>().jobID = ChoosePanelChosen[index].gameObject.GetComponent<ChangeDescription>().jobID;
 			}
 		}
 	}
@@ -107,7 +117,22 @@ public class ChooseManager : MonoBehaviour
 		if (isChooseSkillFin)
 		{
 			isChooseSkillFin = false;
-			//写入技能id
+			List<int> skills = new List<int>();
+			for (int i = 0; i < 4; i++)
+			{
+				skills.Add(Skillbuttons[i].gameObject.GetComponent<Chosen>().id);
+			}
+			JobStatsData newJob = new JobStatsData()
+			{
+				level = 1,
+				currentHp = PlayerSaveController.Instance.AllJobs.CharacterList[currentID].JobStatsList[0].maxHP,
+				currentSp = PlayerSaveController.Instance.AllJobs.CharacterList[currentID].JobStatsList[0].maxSP,
+				currentExp = 0,
+				specialID = 0,
+				skillsID = skills,
+			};
+			PlayerSaveController.Instance.playerSaveData.positionID.Add(currentID, num);
+			PlayerSaveController.Instance.playerSaveData.jobStatsState.Add(currentID, newJob);
 			num++;
 			for (int i = 0; i < 4; i++)
 			{
@@ -117,10 +142,35 @@ public class ChooseManager : MonoBehaviour
 				ContinueButton.interactable = false;
 				isChooseSkillFin = false;
 			}
-			if (num == 4)
+		}
+		if (num == 3)
+		{
+			//开始游戏
+			ContinueButton.interactable = false;
+			chooseJobFin = false;
+			for (int i = 0; i < 3; i++)
 			{
-				//开始游戏
+				foreach (int ID in PlayerSaveController.Instance.playerSaveData.positionID.Keys)
+				{
+					int posID;
+					JobStatsData job;
+					PlayerSaveController.Instance.playerSaveData.jobStatsState.TryGetValue(ID, out job);
+					PlayerSaveController.Instance.playerSaveData.positionID.TryGetValue(ID, out posID);
+					PlayerSaveController.Instance.AllJobs.CharacterList[ID].JobLevel = job.level;
+					PlayerSaveController.Instance.AllJobs.CharacterList[ID].currentHP = job.currentHp;
+					for (int j = 0; j < 4; j++)
+					{
+						PlayerSaveController.Instance.AllJobs.CharacterList[ID].SkillsID[j] = job.skillsID[j];
+					}
+					PlayerSaveController.Instance.playerParty.CharacterList[posID] = PlayerSaveController.Instance.AllJobs.CharacterList[ID];
+				}
+				//PlayerSaveController.Instance.playerSaveData.jobStatsState.
+				//PlayerSaveController.Instance.playerParty.CharacterList
 			}
+
+			DataManager.Instance.Save();
+			SceneLoader.LoadAddressableScene(OuterScene);
+			return;
 		}
 		if (chooseJobFin)
 		{
@@ -128,6 +178,7 @@ public class ChooseManager : MonoBehaviour
 			ContinueButton.interactable = false;
 			SkillPanel.SetActive(true);
 			JobPanel.SetActive(false);
+			currentID = PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().jobID;
 			JobImage.sprite = PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().selectedJob.JobAvatarImage;
 			basic.text = PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().selectedJob.JobPrefab.GetComponent<JobSkillHolder>().JobSkill.skillList[0].SkillName + PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().selectedJob.JobPrefab.GetComponent<JobSkillHolder>().JobSkill.skillList[0].Description;
 			basic1.text = PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().selectedJob.JobPrefab.GetComponent<JobSkillHolder>().JobSkill.skillList[1].SkillName + PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().selectedJob.JobPrefab.GetComponent<JobSkillHolder>().JobSkill.skillList[1].Description;
