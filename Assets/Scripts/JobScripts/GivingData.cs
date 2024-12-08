@@ -137,6 +137,10 @@ public class GivingData : MonoBehaviour
 		{
 			isDead = true;
 			currentHP = 0;
+			if (BattleSetting.Instance.CurrentActUnit == gameObject)
+			{
+				BattleSetting.Instance.CurrentActUnit = null;
+			}
 			if (this.gameObject.tag == "PlayerUnit")
 			{
 				this.gameObject.tag = "Dead";

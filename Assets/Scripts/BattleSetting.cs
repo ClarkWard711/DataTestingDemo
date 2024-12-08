@@ -334,8 +334,11 @@ public class BattleSetting : MonoBehaviour
 		StartCoroutine(BeingHit());*/
 
 		yield return new WaitForSeconds(time);
-		CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
-		isNormalAttack = false;
+		if (CurrentActUnit != null)
+		{
+			CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
+			isNormalAttack = false;
+		}
 		ActionEnd();
 	}
 
@@ -1493,12 +1496,31 @@ public class BattleSetting : MonoBehaviour
 		isWaitForPlayerToChooseUnit = false;
 		isWaitForPlayerToChooseAlly = false;
 		isWaitForPlayerToChooseDead = false;
-		CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
-		CurrentActUnitTarget = null;
+		if (CurrentActUnit != null)
+		{
+			CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
+			CurrentActUnitTarget = null;
+		}
 		if (!isActionEnding)
 		{
 			isActionEnding = true;
-			CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
+			if (CurrentActUnit == null)
+			{
+				isActionEnding = false;
+				foreach (var button in playerUnits[0].GetComponent<JobSkillHolder>().AdvancedSkillButton)
+				{
+					button.GetComponent<FloatingText>().DestroyPanel();
+				}
+				foreach (var button in playerUnits[0].GetComponent<JobSkillHolder>().BasicSkillButton)
+				{
+					button.GetComponent<FloatingText>().DestroyPanel();
+				}
+				ToBattle();
+			}
+			else
+			{
+				CurrentActUnit.GetComponent<JobSkillHolder>().ActionEndCallback();
+			}
 		}
 	}
 	/// <summary>

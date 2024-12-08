@@ -9439,6 +9439,7 @@ MonoBehaviour:
   damageCache: 0
   Position: {x: 0, y: 0, z: 0}
   finishManager: {fileID: 1791494665}
+  skill: {fileID: 2064817925}
 --- !u!4 &1791494664
 Transform:
   m_ObjectHideFlags: 0
