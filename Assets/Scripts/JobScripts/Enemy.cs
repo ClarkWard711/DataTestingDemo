@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public EnemyData EnemyData;
-    void OnEnable()
-    {
-        //EnemyData.EnemyLevel = Random.Range(1, 10); 
-    }
+	public EnemyData EnemyData;
+	public GivingData givingData;
+	public void Awake()
+	{
+		givingData = gameObject.GetComponent<GivingData>();
+	}
+	public virtual void EnemyAction()
+	{
+
+	}
 }

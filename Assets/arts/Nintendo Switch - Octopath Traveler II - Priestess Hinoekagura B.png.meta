@@ -1,0 +1,739 @@
+fileFormatVersion: 2
+guid: 4c04ddaf5881142c592a3b7e90eff81a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2654
+        width: 634
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d793214387486416dafcb7fad52684bb
+      internalID: 1037872733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_1
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 2952
+        width: 618
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2851c36d70f5540858688afc286b9d28
+      internalID: 557753934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_2
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 2283
+        width: 634
+        height: 967
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebbf5874007f4aaca24a7c97fbe38d1
+      internalID: 1575557624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_3
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 2654
+        width: 634
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef279d3de7b34c048fa148b6a3074c9
+      internalID: 1189611656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2292
+        width: 600
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da91a3a32b8d1410e8d7a50314b9bf86
+      internalID: -885033412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 2284
+        width: 368
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2711102f3206b4ca691fd1a823dee090
+      internalID: 1636218965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_6
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 2284
+        width: 370
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6abddb70c70a24c54aee70ce7c417d65
+      internalID: 986152241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1940
+        width: 372
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782cbf983eea8487eb0f74f391ef0de6
+      internalID: 863454391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_8
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1938
+        width: 550
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041d328c1eec34b40ab55a6da98ff913
+      internalID: 852803763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_9
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1938
+        width: 549
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7eb54214fb6464287acc4fd8e4208d
+      internalID: -504720143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_10
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 1938
+        width: 373
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a395716b0be429cad0a7de74951957
+      internalID: -827869716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1594
+        width: 372
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1a206f5405d430a89dcfae4c53846a
+      internalID: -436553421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_12
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1247
+        width: 500
+        height: 691
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c662a16a8c5b4d70bfe3bb1050ae570
+      internalID: 2039342746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_13
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 1247
+        width: 486
+        height: 691
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f688dc6c2d644918d1124603f1d200
+      internalID: -1175651002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_14
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1592
+        width: 506
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8bb89e8d63c4a569ca5514b7bc1a2f
+      internalID: 932326192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1247
+        width: 500
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c112c43f54ac4ae9ab56e54bc83d661
+      internalID: -1860126097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_16
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1247
+        width: 372
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18c6552d57b64c10bb21a2a856bcb96
+      internalID: -1637193002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_17
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 1247
+        width: 371
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b99d3df185344c50ba62cc932857845
+      internalID: -1008621323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 893
+        width: 954
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ead3b7c14c164851b00db107109d776
+      internalID: -664212572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_19
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 893
+        width: 478
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32c1735df5874f10a7d71d362bc5464
+      internalID: -1472794248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_20
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 893
+        width: 404
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93c47861193d41f898d430cf0cedf08
+      internalID: 45114521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536
+        width: 464
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c03ac0a941e4c41ad9f457b955935b
+      internalID: -424482955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_22
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 532
+        width: 454
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636c0383dd0fc46dcbe7d3a7c00dc17e
+      internalID: 1139610483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_23
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 510
+        width: 468
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b01d2c92f16496bbddfec419a63692
+      internalID: 1983775923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_24
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 496
+        width: 490
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1131b5216d439467bbe5276059a97073
+      internalID: 806118449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 428
+        height: 424
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93de0efe98a3434f963da23271fe64e
+      internalID: 176999640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_26
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 18
+        width: 440
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164434a25e97646058bc1a9725363889
+      internalID: 1766932571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_27
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 18
+        width: 461
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a45c7ab3665844b8bcc6ce43c80c36e
+      internalID: -1837034278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_23: 1983775923
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_21: -424482955
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_27: -1837034278
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_19: -1472794248
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_7: 863454391
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_25: 176999640
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_4: -885033412
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_9: -504720143
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_5: 1636218965
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_11: -436553421
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_13: -1175651002
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_17: -1008621323
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_3: 1189611656
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_8: 852803763
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_0: 1037872733
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_18: -664212572
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_20: 45114521
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_12: 2039342746
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_2: 1575557624
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_10: -827869716
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_14: 932326192
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_6: 986152241
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_22: 1139610483
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_16: -1637193002
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_24: 806118449
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_26: 1766932571
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_15: -1860126097
+      Nintendo Switch - Octopath Traveler II - Priestess Hinoekagura B_1: 557753934
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -369,6 +369,7 @@ public class BattleSetting : MonoBehaviour
 
 		if (State == BattleState.EnemyTurn)
 		{
+			//敌人逻辑在这里调用
 			int TargetIndex = Random.Range(0, RemainingPlayerUnits.Length);
 			CurrentActUnitTarget = RemainingPlayerUnits[TargetIndex];
 			CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
