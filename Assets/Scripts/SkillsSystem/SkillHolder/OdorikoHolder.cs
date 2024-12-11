@@ -754,7 +754,7 @@ public class OdorikoHolder : JobSkillHolder
 				damage = Mathf.CeilToInt(1.25f * damage);
 			}
 
-			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
+			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Soul, false);
 		}
 
 		StartCoroutine(BattleSetting.Instance.ShowActionText("释放日溯"));
@@ -800,9 +800,9 @@ public class OdorikoHolder : JobSkillHolder
 		BattleSetting.Instance.canChangeAction = false;
 		DanceStepCheck(OdoSkillKind.Sun);
 		SpCounter(SpCost, odoSkillKind);
-		var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+		var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
 		damage = Mathf.CeilToInt(1.5f * damage);
-		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul, false);
 
 		var moonEnemyList = new List<GameObject>();
 		foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
@@ -947,10 +947,10 @@ public class OdorikoHolder : JobSkillHolder
 				BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
 			}
 		}
-		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
-		int damage = BattleSetting.Instance.DamageCounting(AttackType.Physical);
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Soul;
+		int damage = BattleSetting.Instance.DamageCounting(AttackType.Soul);
 		damage = Mathf.CeilToInt(damage * 1.2f);
-		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul, false);
 
 		StartCoroutine(BattleSetting.Instance.ShowActionText("释放日瑰"));
 		yield return new WaitForSeconds(1f);

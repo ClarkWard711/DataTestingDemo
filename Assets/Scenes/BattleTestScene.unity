@@ -5372,7 +5372,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 194.54181, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 374, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &812863217
@@ -10737,6 +10737,79 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &4180558778833218275
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2754507357451927392, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: EnemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: d71c69da476a94149b54a2aa3f608213, type: 2}
+    - target: {fileID: 2754507357451927393, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: EnemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: d71c69da476a94149b54a2aa3f608213, type: 2}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927394, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927405, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_Name
+      value: ShadowOfSunAndMoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878055350648613701, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878055350648613701, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
 --- !u!1 &5876906787529988801
 GameObject:
   m_ObjectHideFlags: 0

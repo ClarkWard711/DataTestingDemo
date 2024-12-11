@@ -21,7 +21,7 @@ public class SunRhythmTag : OdorikoTag
 
     public void DealDamage()
     {
-        int damage = Mathf.CeilToInt(conditionMultiplier * BattleSetting.Instance.DamageCountingByUnit(atkUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical));
-        BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealDamageBonus(damage, AttackType.Physical));
+        int damage = Mathf.CeilToInt(conditionMultiplier * BattleSetting.Instance.DamageCountingByUnit(atkUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul));
+        BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealDamageBonus(damage, AttackType.Soul));
     }
 }
