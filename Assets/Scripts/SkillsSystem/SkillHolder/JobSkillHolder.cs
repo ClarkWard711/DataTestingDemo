@@ -102,6 +102,11 @@ public class JobSkillHolder : MonoBehaviour
 	{
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 	}*/
+	public virtual void AttackButton()
+	{
+		StartCoroutine(Attack());
+	}
+
 	public virtual void ActionEndCallback()
 	{
 		StartCoroutine(ActionEnd());
@@ -110,6 +115,16 @@ public class JobSkillHolder : MonoBehaviour
 	public void CoroutineStart(IEnumerator enumerator)
 	{
 		StartCoroutine(enumerator);
+	}
+
+	IEnumerator Attack()
+	{
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.isNormalAttack = true;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
+		StartCoroutine(BattleSetting.Instance.DealDamage(3f, false));
 	}
 
 	IEnumerator ActionEnd()

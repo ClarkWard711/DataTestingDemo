@@ -72,7 +72,7 @@ public class BattleSetting : MonoBehaviour
 	public bool isActionEnding = false;
 	public bool isTurnEnding = false;
 	public bool canChangeAction = false;
-	bool isNormalAttack = false;
+	public bool isNormalAttack = false;
 	public int damageCache;
 	float alpha;//颜色透明度
 				//float DamageMultiplier = 1f;
@@ -683,7 +683,7 @@ public class BattleSetting : MonoBehaviour
 		if (State != BattleState.PlayerTurn) return;
 		canChangeAction = true;
 		isWaitForPlayerToChooseUnit = true;
-		StartCoroutine(Attack());
+		CurrentActUnit.GetComponent<JobSkillHolder>().AttackButton();
 	}
 
 	public void OnDefButton()
