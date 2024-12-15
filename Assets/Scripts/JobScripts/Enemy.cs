@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
 	public EnemyData EnemyData;
 	public GivingData givingData;
-	public void Awake()
+	public virtual void Awake()
 	{
 		givingData = gameObject.GetComponent<GivingData>();
 	}

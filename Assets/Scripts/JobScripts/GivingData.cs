@@ -191,13 +191,24 @@ public class GivingData : MonoBehaviour
 		}
 		else
 		{
-			BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP += deltaTemp;
+			currentSP += deltaTemp;
+			if (currentSP < 0)
+			{
+				currentSP = 0;
+			}
 		}
 
 		if (deltaTemp != 0)
 		{
 			GameObject obj = Instantiate(SpPrefab, BasePosition.transform);
-			obj.GetComponent<Text>().text = "+" + deltaTemp;
+			if (deltaTemp > 0)
+			{
+				obj.GetComponent<Text>().text = "+" + deltaTemp;
+			}
+			else
+			{
+				obj.GetComponent<Text>().text = "-" + deltaTemp;
+			}
 			yield return new WaitForSeconds(2f);
 			Destroy(obj);
 		}

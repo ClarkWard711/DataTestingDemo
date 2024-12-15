@@ -9436,6 +9436,7 @@ MonoBehaviour:
   isActionEnding: 0
   isTurnEnding: 0
   canChangeAction: 0
+  isNormalAttack: 0
   damageCache: 0
   Position: {x: 0, y: 0, z: 0}
   finishManager: {fileID: 1791494665}
@@ -10799,6 +10800,10 @@ PrefabInstance:
     - target: {fileID: 2754507357451927405, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
       propertyPath: m_Name
       value: ShadowOfSunAndMoon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2754507357451927405, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7878055350648613701, guid: 5526374d9d29b43d7a97949a2b11ef3d, type: 3}
       propertyPath: m_AnchorMax.x
