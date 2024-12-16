@@ -8,6 +8,7 @@ public class ShadowOfSunAndMoon : Enemy
 	public Sprite TsukiMode;
 	public Sprite HiMode;
 	public SOSAMState BossState = SOSAMState.Tsuki;
+	public int TurnCount;
 
 	public override void Awake()
 	{
@@ -31,6 +32,34 @@ public class ShadowOfSunAndMoon : Enemy
 		{
 			gameObject.GetComponent<SpriteRenderer>().sprite = HiMode;
 			BossState = SOSAMState.Hi;
+		}
+
+		if (givingData.currentHP >= givingData.maxHP * 0.2f)
+		{
+			//20%之前的逻辑
+			if (BossState == SOSAMState.Tsuki)
+			{
+				if (givingData.tagList.FindAll(tag => tag.Effect == Tag.effect.bad).Count >= 3)
+				{
+					//去除buff并回血
+				}
+				else if (!givingData.tagList.Exists(tag => tag is SoulAtkUp))
+				{
+					//获得魔法伤害提升
+				}
+				else
+				{
+					//造成伤害并移位置
+				}
+			}
+			else
+			{
+
+			}
+		}
+		else
+		{
+			//小于20%的逻辑
 		}
 	}
 }

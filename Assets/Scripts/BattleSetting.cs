@@ -1574,6 +1574,7 @@ public class BattleSetting : MonoBehaviour
 		}
 		CurrentActUnit = atkUnit;
 		CurrentActUnitTarget = dfsUnit;
+		CurrentActUnit.GetComponent<GivingData>().attackType = attackType;
 		if (CheckHit(atkUnit, dfsUnit))
 		{
 			isCri = CheckCri(atkUnit, dfsUnit);
@@ -1603,6 +1604,7 @@ public class BattleSetting : MonoBehaviour
 		{
 			StartCoroutine(CurrentActUnitTarget.GetComponent<GivingData>().FloatingMiss());
 		}
+		CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Null;
 		//GameStateText.text = "对" + CurrentActUnitTarget.name + "造成伤害" + Damage;
 		//StartCoroutine(ShowText(2f));
 		//CurrentActUnitTarget = null;

@@ -225,10 +225,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2754507357451927394}
   - component: {fileID: 2754507357451927395}
-  - component: {fileID: 2754507357451927392}
   - component: {fileID: 2754507357451927393}
   - component: {fileID: 2754507357451927404}
   - component: {fileID: 5108733068150291129}
+  - component: {fileID: 2715621373381389017}
   m_Layer: 0
   m_Name: ShadowOfSunAndMoon
   m_TagString: EnemyUnit
@@ -305,20 +305,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2754507357451927392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2754507357451927405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b603f1f0b80844e49fadeff812ba774, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyData: {fileID: 11400000, guid: d71c69da476a94149b54a2aa3f608213, type: 2}
-  givingData: {fileID: 0}
 --- !u!114 &2754507357451927393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +403,23 @@ MonoBehaviour:
   BasicSkillText: []
   AdvancedSkillText: []
   coolDownList: 
+--- !u!114 &2715621373381389017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754507357451927405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f461d8f1a5b544a6999ed24e2f25808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyData: {fileID: 11400000, guid: d71c69da476a94149b54a2aa3f608213, type: 2}
+  givingData: {fileID: 0}
+  TsukiMode: {fileID: 1599990265, guid: ca0bf76cbcce64598a4984ac25de9997, type: 3}
+  HiMode: {fileID: -827869716, guid: 4c04ddaf5881142c592a3b7e90eff81a, type: 3}
+  BossState: 0
 --- !u!1 &4271905424204492305
 GameObject:
   m_ObjectHideFlags: 0
