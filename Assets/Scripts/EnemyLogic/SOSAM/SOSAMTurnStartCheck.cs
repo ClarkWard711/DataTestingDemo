@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using UnityEngine;
 
 public class SOSAMTurnStartCheck : Tag
 {
 	public GameObject unit;
+	public float CounterMultiplier = 0.1f;
 	public SOSAMTurnStartCheck()
 	{
 		TagName = "SOSAMCheck";
@@ -37,13 +39,36 @@ public class SOSAMTurnStartCheck : Tag
 			{
 				if (player.GetComponent<GivingData>().tagList.Exists(tag => tag is Melee))
 				{
-
+					Burn tag = Burn.CreateInstance<Burn>();
+					tag.unit = player;
+					player.GetComponent<GivingData>().AddTagToCharacter(tag);
+					SOSAMSunTag tag1 = SOSAMSunTag.CreateInstance<SOSAMSunTag>();
+					SOSAMSunTagSecond tag2 = SOSAMSunTagSecond.CreateInstance<SOSAMSunTagSecond>();
+					player.GetComponent<GivingData>().AddTagToCharacter(tag1);
+					player.GetComponent<GivingData>().AddTagToCharacter(tag2);
 				}
 			}
 		}
 	}
 	public void DamageDecrease()
 	{
-
+		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType == AttackType.Soul && unit.GetComponent<ShadowOfSunAndMoon>().BossState == ShadowOfSunAndMoon.SOSAMState.Tsuki)
+		{
+			BattleSetting.Instance.damageCache = 0;
+			//眩晕也为0
+		}
+		else if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType == AttackType.Physical && unit.GetComponent<ShadowOfSunAndMoon>().BossState == ShadowOfSunAndMoon.SOSAMState.Hi)
+		{
+			BattleSetting.Instance.damageCache = 0;
+			//眩晕也为0
+		}
+		if (BattleSetting.Instance.damageCache != 0)
+		{
+			if (unit.GetComponent<ShadowOfSunAndMoon>().BossState == ShadowOfSunAndMoon.SOSAMState.Hi)
+			{
+				int damage = Mathf.CeilToInt(BattleSetting.Instance.DamageCountingByUnit(unit, BattleSetting.Instance.CurrentActUnit, AttackType.Physical) * CounterMultiplier);
+				BattleSetting.Instance.StartCoroutine(BattleSetting.Instance.DealCounterDamage(damage, AttackType.Physical));
+			}
+		}
 	}
 }
