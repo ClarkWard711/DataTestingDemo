@@ -221,7 +221,7 @@ public class GivingData : MonoBehaviour
 			}
 			else
 			{
-				obj.GetComponent<Text>().text = "-" + deltaTemp;
+				obj.GetComponent<Text>().text = deltaTemp.ToString();
 			}
 			yield return new WaitForSeconds(2f);
 			Destroy(obj);

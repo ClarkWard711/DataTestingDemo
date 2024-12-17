@@ -301,7 +301,6 @@ public class BattleSetting : MonoBehaviour
 			//命中检测成功回调
 			damageCache = Damage;
 			StartCoroutine(BeforeHit());
-			StartCoroutine(BeforeBeingHit());
 			Damage = damageCache;
 			if (isCri)
 			{
@@ -458,6 +457,8 @@ public class BattleSetting : MonoBehaviour
 
 			yield return null;
 		}
+
+		StartCoroutine(BeforeBeingHit());
 		/*
 		foreach (Tag tag in CurrentActUnitTarget.GetComponent<GivingData>().tagList)
 		{
@@ -1589,7 +1590,6 @@ public class BattleSetting : MonoBehaviour
 			//命中检测成功回调
 			damageCache = Damage;
 			StartCoroutine(BeforeHit());
-			StartCoroutine(BeforeBeingHit());
 			Damage = damageCache;
 			if (isCri)
 			{
