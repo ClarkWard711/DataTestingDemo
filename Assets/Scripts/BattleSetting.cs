@@ -370,10 +370,18 @@ public class BattleSetting : MonoBehaviour
 		if (State == BattleState.EnemyTurn)
 		{
 			//敌人逻辑在这里调用
-			int TargetIndex = Random.Range(0, RemainingPlayerUnits.Length);
-			CurrentActUnitTarget = RemainingPlayerUnits[TargetIndex];
-			CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
-			StartCoroutine(DealDamage(3f, false));
+			var method = CurrentActUnit.GetComponent<Enemy>().GetType().GetMethod("EnemyAction");
+			if (method.DeclaringType != typeof(Enemy))
+			{
+				CurrentActUnit.GetComponent<Enemy>().EnemyAction();
+			}
+			else
+			{
+				int TargetIndex = Random.Range(0, RemainingPlayerUnits.Length);
+				CurrentActUnitTarget = RemainingPlayerUnits[TargetIndex];
+				CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
+				StartCoroutine(DealDamage(3f, false));
+			}
 		}
 		else if (State == BattleState.PlayerTurn)
 		{

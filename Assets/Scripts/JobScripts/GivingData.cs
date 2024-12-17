@@ -110,6 +110,9 @@ public class GivingData : MonoBehaviour
 	{
 		GameObject obj = Instantiate(DamagePrefab, BasePosition.transform);
 		obj.GetComponent<Text>().text = "Miss";
+		//obj.gameObject.transform.localScale = Vector3.one;
+		obj.gameObject.transform.localScale = new Vector3(0.7f / gameObject.transform.localScale.x, 0.7f / gameObject.transform.localScale.y, 0.7f / gameObject.transform.localScale.z);
+		obj.GetComponent<FloatingDamage>().speed /= gameObject.transform.localScale.x;
 		yield return new WaitForSeconds(2f);
 		Destroy(obj);
 	}
@@ -117,6 +120,9 @@ public class GivingData : MonoBehaviour
 	IEnumerator FloatingNumber(int Damage, AttackType attackType)
 	{
 		GameObject obj = Instantiate(DamagePrefab, BasePosition.transform);
+		//obj.gameObject.transform.localScale = Vector3.one;
+		obj.gameObject.transform.localScale = new Vector3(0.7f / gameObject.transform.localScale.x, 0.7f / gameObject.transform.localScale.y, 0.7f / gameObject.transform.localScale.z);
+		obj.GetComponent<FloatingDamage>().speed /= gameObject.transform.localScale.x;
 		obj.GetComponent<Text>().text = "-" + Damage;
 		if (attackType == AttackType.Soul)
 		{
@@ -157,6 +163,11 @@ public class GivingData : MonoBehaviour
 	{
 		GameObject obj = Instantiate(DropPrefab, BasePosition.transform);
 		obj.GetComponent<Text>().text = "-" + Damage;
+		//obj.gameObject.transform.localScale = Vector3.one;
+		obj.gameObject.transform.localScale = new Vector3(0.7f / gameObject.transform.localScale.x, 0.7f / gameObject.transform.localScale.y, 0.7f / gameObject.transform.localScale.z);
+		obj.GetComponent<DroppingDamge>().speed /= gameObject.transform.localScale.x;
+		obj.GetComponent<DroppingDamge>().horiSpeed /= gameObject.transform.localScale.x;
+		obj.GetComponent<DroppingDamge>().acceleration /= gameObject.transform.localScale.x;
 		if (attackType == AttackType.Soul)
 		{
 			obj.GetComponent<Text>().color = new Color(0, 1, 1, 1);
@@ -201,6 +212,9 @@ public class GivingData : MonoBehaviour
 		if (deltaTemp != 0)
 		{
 			GameObject obj = Instantiate(SpPrefab, BasePosition.transform);
+			//obj.gameObject.transform.localScale = Vector3.one;
+			obj.gameObject.transform.localScale = new Vector3(0.7f / gameObject.transform.localScale.x, 0.7f / gameObject.transform.localScale.y, 0.7f / gameObject.transform.localScale.z);
+			obj.GetComponent<FloatingDamage>().speed /= gameObject.transform.localScale.x;
 			if (deltaTemp > 0)
 			{
 				obj.GetComponent<Text>().text = "+" + deltaTemp;
@@ -233,6 +247,9 @@ public class GivingData : MonoBehaviour
 		{
 			GameObject obj = Instantiate(HpPrefab, BasePosition.transform);
 			obj.GetComponent<Text>().text = "+" + deltaTemp;
+			//obj.gameObject.transform.localScale = Vector3.one;
+			obj.gameObject.transform.localScale = new Vector3(0.7f / gameObject.transform.localScale.x, 0.7f / gameObject.transform.localScale.y, 0.7f / gameObject.transform.localScale.z);
+			obj.GetComponent<FloatingDamage>().speed /= gameObject.transform.localScale.x;
 			yield return new WaitForSeconds(2f);
 			Destroy(obj);
 		}
