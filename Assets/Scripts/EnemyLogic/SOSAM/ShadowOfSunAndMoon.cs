@@ -45,6 +45,7 @@ public class ShadowOfSunAndMoon : Enemy
 			//20%之前的逻辑
 			if (BossState == SOSAMState.Tsuki)
 			{
+				TurnCount = 0;
 				if (givingData.tagList.FindAll(tag => tag.Effect == Tag.effect.bad).Count >= 3)
 				{
 					//去除buff并回血
@@ -108,7 +109,26 @@ public class ShadowOfSunAndMoon : Enemy
 			}
 			else
 			{
+				if (TurnCount == 0)
+				{
+					SoulAtkDown tag = SoulAtkDown.CreateInstance<SoulAtkDown>();
+					tag.TurnAdd++;
+					tag.TurnLast++;
+					foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+					{
+						player.GetComponent<GivingData>().AddTagToCharacter(tag);
+					}
+					SoulDfsUp tag0 = SoulDfsUp.CreateInstance<SoulDfsUp>();
+					tag0.TurnAdd = 4;
+					tag0.TurnLast = 4;
+					givingData.AddTagToCharacter(tag0);
+					yield return new WaitForSeconds(1f);
+					StartCoroutine(BattleSetting.Instance.ShowActionText("去除所有负面效果"));
+				}
+				else if (TurnCount == 1)
+				{
 
+				}
 			}
 		}
 		else
