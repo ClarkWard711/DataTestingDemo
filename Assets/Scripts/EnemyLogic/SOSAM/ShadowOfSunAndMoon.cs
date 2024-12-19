@@ -46,6 +46,7 @@ public class ShadowOfSunAndMoon : Enemy
 			if (BossState == SOSAMState.Tsuki)
 			{
 				TurnCount = 0;
+				((SOSAMTurnStartCheck)givingData.tagList.Find(tag => tag is SOSAMTurnStartCheck)).CounterMultiplier = 0.1f;
 				if (givingData.tagList.FindAll(tag => tag.Effect == Tag.effect.bad).Count >= 3)
 				{
 					//去除buff并回血
@@ -111,6 +112,7 @@ public class ShadowOfSunAndMoon : Enemy
 			{
 				if (TurnCount == 0)
 				{
+					TurnCount++;
 					SoulAtkDown tag = SoulAtkDown.CreateInstance<SoulAtkDown>();
 					tag.TurnAdd++;
 					tag.TurnLast++;
@@ -127,7 +129,18 @@ public class ShadowOfSunAndMoon : Enemy
 				}
 				else if (TurnCount == 1)
 				{
+					TurnCount++;
+					foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+					{
+						HitDown tag0 = HitDown.CreateInstance<HitDown>();
+						tag0.hit = -Mathf.CeilToInt(player.GetComponent<GivingData>().jobData.JobStatsList[player.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].hit * 0.05f);
+						CriDown tag1 = CriDown.CreateInstance<CriDown>();
+						tag1.cri = -Mathf.CeilToInt(player.GetComponent<GivingData>().jobData.JobStatsList[player.GetComponent<GivingData>().GetComponent<GivingData>().jobData.JobLevel - 1].critical * 0.05f);
+						player.GetComponent<GivingData>().AddTagToCharacter(tag0);
+						player.GetComponent<GivingData>().AddTagToCharacter(tag1);
+					}
 
+					((SOSAMTurnStartCheck)givingData.tagList.Find(tag => tag is SOSAMTurnStartCheck)).CounterMultiplier = 0.25f;
 				}
 			}
 		}

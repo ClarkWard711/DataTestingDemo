@@ -303,7 +303,7 @@ public class GivingData : MonoBehaviour
 			}
 			return;
 		}
-		if (tag is SpeedDown || tag is SpeedUp || tag is Poison)
+		if (tag is SpeedDown || tag is SpeedUp || tag is Poison || tag is HitDown || tag is HitUp || tag is CriDown || tag is CriUp || tag is NimDown || tag is NimUp)
 		{
 			Tag newTag0 = Instantiate(tag);
 			tagList.Add(newTag0);
