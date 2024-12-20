@@ -50,7 +50,7 @@ public class ShadowOfSunAndMoon : Enemy
 				if (givingData.tagList.FindAll(tag => tag.Effect == Tag.effect.bad).Count >= 3)
 				{
 					//去除buff并回血
-					givingData.CoroutineStart(givingData.FloatingHP(2000));
+					StartCoroutine(givingData.FloatingHP(2000));
 					foreach (var negative in givingData.tagList.FindAll(tag => tag.Effect == Tag.effect.bad))
 					{
 						givingData.tagList.Remove(negative);
@@ -125,7 +125,7 @@ public class ShadowOfSunAndMoon : Enemy
 					tag0.TurnLast = 4;
 					givingData.AddTagToCharacter(tag0);
 					yield return new WaitForSeconds(1f);
-					StartCoroutine(BattleSetting.Instance.ShowActionText("去除所有负面效果"));
+					StartCoroutine(BattleSetting.Instance.ShowActionText("魔法攻击下降，敌方魔法防御提升"));
 				}
 				else if (TurnCount == 1)
 				{
@@ -141,6 +141,42 @@ public class ShadowOfSunAndMoon : Enemy
 					}
 
 					((SOSAMTurnStartCheck)givingData.tagList.Find(tag => tag is SOSAMTurnStartCheck)).CounterMultiplier = 0.25f;
+					yield return new WaitForSeconds(1f);
+					StartCoroutine(BattleSetting.Instance.ShowActionText("命中暴击以及反击伤害提升"));
+				}
+				else if (TurnCount == 2)
+				{
+					TurnCount++;
+					PhysicalAtkUp tag = PhysicalAtkUp.CreateInstance<PhysicalAtkUp>();
+					tag.TurnAdd += 3;
+					tag.TurnLast += 3;
+					givingData.AddTagToCharacter(tag);
+					yield return new WaitForSeconds(1f);
+					StartCoroutine(BattleSetting.Instance.ShowActionText("物理伤害提升"));
+				}
+				else if (TurnCount == 3)
+				{
+					TurnCount++;
+					foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+					{
+						int damage = Mathf.CeilToInt(BattleSetting.Instance.DamageCountingByUnit(gameObject, player, AttackType.Physical) * 1.6f);
+						BattleSetting.Instance.DealDamageExtra(damage, gameObject, player, AttackType.Physical, false);
+					}
+				}
+				else if (TurnCount == 4)
+				{
+					for (int i = 0; i < 4; i++)
+					{
+						int randID = Random.Range(0, BattleSetting.Instance.RemainingPlayerUnits.Length);
+						int damage = Mathf.CeilToInt(BattleSetting.Instance.DamageCountingByUnit(gameObject, BattleSetting.Instance.RemainingPlayerUnits[randID], AttackType.Physical) * 0.6f);
+						BattleSetting.Instance.DealDamageExtra(damage, gameObject, BattleSetting.Instance.RemainingPlayerUnits[randID], AttackType.Physical, false);
+						yield return new WaitForSeconds(0.3f);
+					}
+				}
+				else if (TurnCount == 5)
+				{
+					StartCoroutine(givingData.FloatingHP(1000));
+					TurnCount = 0;
 				}
 			}
 		}
