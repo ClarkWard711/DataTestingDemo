@@ -9,6 +9,8 @@ public class ShadowOfSunAndMoon : Enemy
 	public Sprite HiMode;
 	public SOSAMState BossState = SOSAMState.Tsuki;
 	public int TurnCount;
+	public bool isFinal;
+	public bool canMove = true;
 
 	public override void Awake()
 	{
@@ -24,23 +26,27 @@ public class ShadowOfSunAndMoon : Enemy
 
 	IEnumerator BossLogic()
 	{
-		if (givingData.currentHP <= givingData.maxHP * 0.8f && givingData.currentHP > givingData.maxHP * 0.6f)
+		if (!isFinal)
 		{
-			gameObject.GetComponent<SpriteRenderer>().sprite = HiMode;
-			BossState = SOSAMState.Hi;
-		}
-		else if (givingData.currentHP <= givingData.maxHP * 0.6f && givingData.currentHP > givingData.maxHP * 0.4f)
-		{
-			gameObject.GetComponent<SpriteRenderer>().sprite = TsukiMode;
-			BossState = SOSAMState.Tsuki;
-		}
-		else if (givingData.currentHP <= givingData.maxHP * 0.4f && givingData.currentHP > givingData.maxHP * 0.2f)
-		{
-			gameObject.GetComponent<SpriteRenderer>().sprite = HiMode;
-			BossState = SOSAMState.Hi;
+			if (givingData.currentHP <= givingData.maxHP * 0.8f && givingData.currentHP > givingData.maxHP * 0.6f)
+			{
+				gameObject.GetComponent<SpriteRenderer>().sprite = HiMode;
+				BossState = SOSAMState.Hi;
+			}
+			else if (givingData.currentHP <= givingData.maxHP * 0.6f && givingData.currentHP > givingData.maxHP * 0.4f)
+			{
+				gameObject.GetComponent<SpriteRenderer>().sprite = TsukiMode;
+				BossState = SOSAMState.Tsuki;
+			}
+			else if (givingData.currentHP <= givingData.maxHP * 0.4f && givingData.currentHP > givingData.maxHP * 0.2f)
+			{
+				gameObject.GetComponent<SpriteRenderer>().sprite = HiMode;
+				BossState = SOSAMState.Hi;
+			}
 		}
 
-		if (givingData.currentHP > givingData.maxHP * 0.2f)
+
+		if (givingData.currentHP > givingData.maxHP * 0.2f && !isFinal)
 		{
 			//20%之前的逻辑
 			if (BossState == SOSAMState.Tsuki)
@@ -180,9 +186,32 @@ public class ShadowOfSunAndMoon : Enemy
 				}
 			}
 		}
-		else
+		else if (isFinal && canMove)
 		{
 			//小于20%的逻辑
+			canMove = false;
+			if (TurnCount == 0)
+			{
+				isFinal = true;
+			}
+			BattleSetting.Instance.BattleUnitsList.Insert(0, gameObject);
+			BattleSetting.Instance.BattleUnitsListToBeLaunched.RemoveAt(BattleSetting.Instance.BattleUnitsListToBeLaunched.FindIndex(obj => obj == gameObject));
+		}
+		else if (isFinal && !canMove)
+		{
+			//平a
+			canMove = true;
+			int TargetIndex = Random.Range(0, BattleSetting.Instance.RemainingPlayerUnits.Length);
+			BattleSetting.Instance.CurrentActUnitTarget = BattleSetting.Instance.RemainingPlayerUnits[TargetIndex];
+			if (BossState == SOSAMState.Tsuki)
+			{
+				BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Soul;
+			}
+			else
+			{
+				BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
+			}
+			StartCoroutine(BattleSetting.Instance.DealDamage(3f, false));
 		}
 		BattleSetting.Instance.ActionEnd();
 	}
