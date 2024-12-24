@@ -186,13 +186,52 @@ public class ShadowOfSunAndMoon : Enemy
 				}
 			}
 		}
-		else if (isFinal && canMove)
+		else if ((isFinal || givingData.currentHP < givingData.maxHP * 0.2f) && canMove)
 		{
 			//小于20%的逻辑
 			canMove = false;
 			if (TurnCount == 0)
 			{
 				isFinal = true;
+				TurnCount++;
+				gameObject.GetComponent<SpriteRenderer>().sprite = TsukiMode;
+				BossState = SOSAMState.Tsuki;
+			}
+			else if (TurnCount == 1)
+			{
+				gameObject.GetComponent<SpriteRenderer>().sprite = HiMode;
+				BossState = SOSAMState.Hi;
+				TurnCount++;
+				int recoverHp = 0;
+				foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+				{
+					int hpNum = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.1f);
+					recoverHp += hpNum;
+					player.GetComponent<GivingData>().takeDamage(hpNum, AttackType.Physical, false);
+				}
+				StartCoroutine(givingData.FloatingHP(recoverHp));
+			}
+			else if (TurnCount == 2)
+			{
+				gameObject.GetComponent<SpriteRenderer>().sprite = TsukiMode;
+				BossState = SOSAMState.Tsuki;
+				TurnCount++;
+				SoulAtkUp tag = SoulAtkUp.CreateInstance<SoulAtkUp>();
+				tag.TurnAdd += 2;
+				tag.TurnLast += 2;
+				givingData.AddTagToCharacter(tag);
+				PhysicalAtkUp tag0 = PhysicalAtkUp.CreateInstance<PhysicalAtkUp>();
+				tag0.TurnAdd += 2;
+				tag0.TurnLast += 2;
+				givingData.AddTagToCharacter(tag0);
+				yield return new WaitForSeconds(1f);
+				StartCoroutine(BattleSetting.Instance.ShowActionText("物理魔法伤害提升"));
+			}
+			else if (TurnCount == 3)
+			{
+				gameObject.GetComponent<SpriteRenderer>().sprite = HiMode;
+				BossState = SOSAMState.Hi;
+				TurnCount++;
 			}
 			BattleSetting.Instance.BattleUnitsList.Insert(0, gameObject);
 			BattleSetting.Instance.BattleUnitsListToBeLaunched.RemoveAt(BattleSetting.Instance.BattleUnitsListToBeLaunched.FindIndex(obj => obj == gameObject));
