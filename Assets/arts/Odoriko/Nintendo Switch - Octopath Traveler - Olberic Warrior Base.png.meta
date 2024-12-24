@@ -1,0 +1,4919 @@
+fileFormatVersion: 2
+guid: 698e6e2fed93245119bdaaaca28e5279
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 471
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92f9cb7f03d44e67a4310c8d411b848
+      internalID: 1479674215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 476
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329af11b31f6347b5a1bc887ab6e56a4
+      internalID: 1066430807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 478
+        width: 54
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bef9ab55546486caa1fe15a1f61012
+      internalID: 1979956021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 480
+        width: 51
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e3a2578167e49e4a6dcbca6e495260
+      internalID: 279348692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_4
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 481
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e948f065b6ebb46edacafb686ca6f8db
+      internalID: 448986258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 481
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69540546fb5846aaa8f7691ed506c7b
+      internalID: -605243512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_6
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 471
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075edd525b36740f984711d41b69d2db
+      internalID: 755488025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_7
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 476
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88cbefd1fef646a3b4d8771f4e321b2
+      internalID: -1070860729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_8
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 478
+        width: 54
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e458709666864d18a871b2984afc8a1
+      internalID: 2041229107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_9
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 480
+        width: 51
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baf9d7b760b84801a4451d55341240c
+      internalID: -732181528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_10
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 481
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a83085815c314c319df380ee072f6eb
+      internalID: 323866159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_11
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 481
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f9d6c87e9ac499cadf72d70196415d
+      internalID: -2080720401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 435
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92a595eece46846c8aa1ad327ed30f2e
+      internalID: -1770639410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_13
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 435
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d4b53cec4344af3b2706b056349de3
+      internalID: -895638685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_14
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 435
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4986354e5d2a5469fa6b7b02c17f03dc
+      internalID: 770063510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_15
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 435
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af3f339fd91f4c5380a32613053b838
+      internalID: -1272663905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_16
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80f6dfafdf2d4a3e8009fe6a8f061ae
+      internalID: -190884038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_17
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e22392e6b46948609cbec322975112b
+      internalID: -205370524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_18
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8044c3f0b165d40acae07375018c52d8
+      internalID: -330808529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_19
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eddcc636794a42a49c4230e03054cb7
+      internalID: -700998295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_20
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0088d98376f9b407aafcde1f4cb494fe
+      internalID: -1276219239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_21
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace682aefe23a4dbd889db71816b28b7
+      internalID: -176013588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_22
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39b5c77045e448c19f6bb7f71a28ddf
+      internalID: -441147266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_23
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 444
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe6f831fc66b4ef989f5787659611c7
+      internalID: -356610504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_24
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 435
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b369b94ae1ec44699b96128776ba22e
+      internalID: 922497492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_25
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 437
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67e7705466394a2c8eed37c0c7e5ece
+      internalID: -2126998322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 426
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a11fa56e12514cd79add8b92183af1c
+      internalID: 947732524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_27
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 439
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4279d3c658f084398a2336e3487bba6c
+      internalID: 626901429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_28
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 440
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee30759bbbba4d3cb272cef393a9281
+      internalID: -1884805636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_29
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 440
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbed4c35675424560aa530c4561caa9a
+      internalID: 1566113167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 394
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073efc8f59eb34ff4a52999492047f65
+      internalID: -1522305112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_31
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 392
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 849e58c39097f444788fa4b3af5fa9a1
+      internalID: 1796134616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_32
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 390
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f572e9ec589054b5fa84c3a7718af9a4
+      internalID: 256306474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_33
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 392
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490ab9850267c4fd4a7392fc23f61b92
+      internalID: 1982726402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_34
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 381
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1038b76dad65a48ae8c2edbc07ecf78d
+      internalID: 958173905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_35
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 394
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe10b0ed377a4a55a505c1b2976e27d
+      internalID: -1835379058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_36
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 395
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc25cf1853e9f446582399da82a1a34c
+      internalID: 1142113111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_37
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 395
+        width: 45
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe409562da8a45a4822556b34b20078
+      internalID: -1721645618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_38
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 394
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 996826140b73149ed935e67703b5f7ae
+      internalID: -646660020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_39
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 392
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b454fd5870bc4f7fb90fa8da01aa470
+      internalID: -1133438462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_40
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 390
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e6bb9d9cdf64de3a3b3dce0142f927
+      internalID: 28514062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_41
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 391
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97ab3928972b44c6a7845d71e2fabe4
+      internalID: -1300869899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_42
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 347
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f075fc9ea01fe4dc598f27c723a194fb
+      internalID: -764546542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_43
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 347
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d039b20acc04d6993324c2b2211e2a
+      internalID: -449061206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_44
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 346
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e13e469ac2464bbbaef27263a5afa93
+      internalID: 1195797437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_45
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 345
+        width: 48
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3959e742053ce477aa98dab56a2b2d4e
+      internalID: -1382890693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_46
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 346
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66261ffdcc024cc3be289fb51f98e1a
+      internalID: 1098064553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_47
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 347
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2754eb02a307245e6acc1aaca11033bd
+      internalID: -128184188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_48
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 347
+        width: 50
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bff585813aea4a5fbc012d2f0c89df5
+      internalID: -1390936282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_49
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 346
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0f108f932324d94a317786547368d6
+      internalID: -1483412563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_50
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 347
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628116d929a114b558e49402afcd724a
+      internalID: -1432741553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_51
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 347
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2819b0598b44c68a6618dd9989e512
+      internalID: 1894437257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_52
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 346
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c96b9cd247b849e69db75accf1c6609
+      internalID: 569809797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_53
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 346
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a58c34da9394471380534cf30c6fc7c
+      internalID: -356103101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_54
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa462ee9cec44feeb502687b345ec23
+      internalID: 894954731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_55
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a132e6b5d89124cd69eb567fdc78ede8
+      internalID: 606488524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_56
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d989a80c38e9543d8874dcfda76eb622
+      internalID: -292039032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_57
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de0e1830a5b042df994268a40426eeb
+      internalID: 464217663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_58
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a442c10b961848f7b40cc83fb473034
+      internalID: -114938345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_59
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2828f34342f57401b9292273369a4dcf
+      internalID: -938027014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_60
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d57e7110b9a24300b9a945a85aa9b62
+      internalID: 1038314807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_61
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7b6e1bff6ec042a5a5b31ac94aa5924
+      internalID: -2101030311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_62
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08dd78498b18416ab6c0613fae835d3
+      internalID: -1169458086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_63
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be5132fce6cd45debf5dc161f53cd44
+      internalID: -2099524496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_64
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf9c4a3456ec4fdf91bbba9b2ad8b5a
+      internalID: -677584815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_65
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbca23ab695d46d3915820172b51b79
+      internalID: -1646303563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_66
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a51f5c946d454ce8bfd2d90bd8fb4e5
+      internalID: 1056449455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_67
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9104809f61e4b6894042c27408a5a0
+      internalID: -1715594299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_68
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06a07b6d5cf546ef8ffcde280941f2e
+      internalID: 1678269906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_69
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97524b09a85cb4e7a9486e12111bf04e
+      internalID: 1111703988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_70
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcda2f06e226f4e22b33448a975e1c08
+      internalID: -183854100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_71
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc107188d28441f783b862620be5788
+      internalID: -760342224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_72
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34cae57b7ac44808aa97e384e9fff8c
+      internalID: 1222202120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_73
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a3ab8eef2034cb099db4d78e45ff81
+      internalID: 125215749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_74
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 310
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd70beb15ad14299893d8fa2e928e0a
+      internalID: -110379142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_75
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 275
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df642db81b20943f683468b55b4c33f7
+      internalID: -1265744829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_76
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 275
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268affb5b354b4cf2a51cb3f8e9a244a
+      internalID: 1113215819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_77
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 275
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ff0acb70a09491a8c0221993f45b3d
+      internalID: -1665818250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_78
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 274
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bb1e17b71c94b758268ae50fdb4700
+      internalID: -1945685550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_79
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 274
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0caedc0d119554dd38f084a56dcf58be
+      internalID: -1052074288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_80
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 274
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0810adee2684e2d9c8793200c3a149
+      internalID: -1576713366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_81
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 274
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a49bf1475456470ab7bbd1996768d41
+      internalID: -2053072240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_82
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 297
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743fc855ddc7e4d06a341a614f938497
+      internalID: -1894671748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_83
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 297
+        width: 34
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7114c4a6b0e84cff97d5602a3deefb7
+      internalID: 71744149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_84
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 278
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641191d58ace640bfb0bf06db5d6aebb
+      internalID: -2039856698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_85
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 278
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04e90a8b0af94ba6864a62988ee9df5
+      internalID: -1435768866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_86
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93a172f711e140eda060ede144e5456
+      internalID: -1337450453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_87
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9ff908e10764beba97e23ccdbf3744
+      internalID: 1249576963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_88
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be8746bf0c93482caf6e22d3376e34b
+      internalID: 1857516619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_89
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e49c9d27beb4c30961016faae6179d
+      internalID: -1323857825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_90
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d624bf71cf1904ed598126dfa153b7ee
+      internalID: -1507540722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_91
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 276
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91093e3f1665d4375af9b5f35092005a
+      internalID: 385166264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_92
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 274
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3a3edd815fc45919117f46eb0a782b
+      internalID: -537274650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_93
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 238
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d8abbf136c04603ba6064412ae91e8
+      internalID: 1193948462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_94
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e374e57347a745b891dcc0003da1ceb
+      internalID: 227789258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_95
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c85029015d94e9c8853cf1dab89269
+      internalID: 1310996918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_96
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148d9853c52104ed09d506b6313913bc
+      internalID: -2056219270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_97
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded567afdd3034f41bda516f73c9cb37
+      internalID: 358644678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_98
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2525542eec54866bd56355b7fda716
+      internalID: -1678433694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_99
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 239
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42446fc2802cd4e9a9a3425453a6ec89
+      internalID: 1054703627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_100
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 238
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f66f1366ad0b4c06931dd1c41291a1c
+      internalID: -1896802692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_101
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 238
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c186ecc7a05c4cb69f3cf16cf94de5f
+      internalID: 1468646965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_102
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 238
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ecac0c8568f4140b051e32ab4bcc22
+      internalID: -1231567367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_103
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 238
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4a530407b29423181233d681041653
+      internalID: 2135911335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_104
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 238
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b688222148343f58b8e1349c973a7d
+      internalID: -411971281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_105
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 238
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd15ffd2901f4c2f89584f995d7dd22
+      internalID: 1965526476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_106
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 238
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508c1d8c7d0ba4f16ace1517092bb9f9
+      internalID: 1962315976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_107
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 238
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab1966c8887349a2842c3d65c599f3c
+      internalID: 90202643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_108
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408d6ca672b574dc58afebb8cf9cd3f0
+      internalID: 1641702070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_109
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888c43e4a3cf946508c9f4ed4d8a1db7
+      internalID: 2010918134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_110
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f173bba750542c682ebfba14b33834
+      internalID: -1952435063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_111
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02da58c9ac42344d2bf70c10b9c41a4b
+      internalID: 531144459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_112
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 238
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7199938dbfc544bb58414c956d83080d
+      internalID: -1845447737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_113
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 238
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd636916d815e4c99b81db96c46c18b5
+      internalID: -1458873921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_114
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 202
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd304bd520694a58856dfa4c6c11254
+      internalID: 791438764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_115
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 202
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a5e6f73944541b787ccc6b5e26a8a3
+      internalID: 1854721657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_116
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 202
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a717e490e7a485f9153af5bac4cab1
+      internalID: -98291343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_117
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 202
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6c35da5ab5b4812aaba48afd89c403
+      internalID: -1594881092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_118
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 202
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6baf7a25beaab4f00bd12be896486d3c
+      internalID: 1703704964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_119
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 202
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9589c13a1d4884557be8899bb11218a9
+      internalID: 1790610252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_120
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 202
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fa07c06144864c0f855765bbba387cb
+      internalID: 889612977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_121
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 202
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5de06b73b984199bf7809314ace072
+      internalID: 1675986920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_122
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 202
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e65be1e48c644e5be3d3d2ee0666cb
+      internalID: -219202630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_123
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 202
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfb1588df2b74a24bb8c16b75453b54
+      internalID: 472789621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_124
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 202
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832f098116c79424fb0db1971380e154
+      internalID: 1275352483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_125
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 203
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76856abd1d1dc40269280b22d1383dc7
+      internalID: -1439274631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_126
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 203
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae7ca07092f64d58b9ab3c25e0044f0
+      internalID: 304270350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_127
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 203
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d75497597ad4a77a2461643786f764
+      internalID: 520357010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_128
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 203
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0b6dbf100d24e9099bb6baf5e04675
+      internalID: 2121194131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_129
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 202
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282cc84cb6fda404c9f10c0496dee018
+      internalID: 1173263428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_130
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 202
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97053284f804410ebdf1e561019061c
+      internalID: -1019710107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_131
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 202
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b701e7b5454a416a9130e2ee91cc235
+      internalID: 1822804164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_132
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 202
+        width: 27
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7577614fa45514d0ab72e706be6d0734
+      internalID: -1409273024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_133
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 202
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7553fdaa97cdf40739118c23ced43a37
+      internalID: 1917325257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_134
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 166
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc00004bd8cf4bc58bceaba3c9bef39
+      internalID: -26987565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_135
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 166
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d39ff35c4e54f18b6effdce1516b13
+      internalID: 1126570680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_136
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 166
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f50991df51bd4e9ea8790f66ced7588
+      internalID: -877381078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_137
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 185
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4708b931f80d34677a6596341991961c
+      internalID: -1666893767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_138
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 185
+        width: 34
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee06da7eb76d9403192b2b398a3e7ca1
+      internalID: 1915931152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_139
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 166
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fd0a6df3f6047bfa3eb54dac654856
+      internalID: -1533064805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_140
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 166
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55681c9ffc4494c37973064c3512a679
+      internalID: 493691662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_141
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 165
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0446006e6cd754d6db5ddc7042f71065
+      internalID: 523049331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_142
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 166
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f46f42759f7448afbabf0e37d4f10a8
+      internalID: 152444877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_143
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 166
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9680306eb46be4dcdb6bc6aafe28b407
+      internalID: -1450971632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_144
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 156
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abda9a9b953d04f978138742bb6b1fd9
+      internalID: -1053177421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_145
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 166
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d883e4ea5cf34f3aa8f380585bedeb8
+      internalID: -1394019100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_146
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 169
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952236151337441e9bf820b300e405de
+      internalID: -275611911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_147
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 167
+        width: 20
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d55d4703f1d345e888afccc26019e40
+      internalID: 2038795310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_148
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 166
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff1a7a4787604f29bccdb118d244fd6
+      internalID: 853244720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_149
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 169
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813559440f978450dbc519de97ae97c8
+      internalID: 1515838568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_150
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 168
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18eb6d348c99b4c469c7ed1a710024f1
+      internalID: 78209980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_151
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 166
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1bea26c27e4a4402ac558e239883f3c
+      internalID: -50297529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_152
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 169
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ead9b2b4e6b44e1fa32c7f85ee42fd8
+      internalID: 1773453677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_153
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 168
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2226af54d2e94621ad5d841d6cf9014
+      internalID: -1768681493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_154
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 167
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdd121e1064d447fb8a876acbf83e91
+      internalID: -997001396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_155
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 123
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2dcb506870840dcab45a04e91db2fd
+      internalID: -1680463523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_156
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 122
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe41f52f80e84d1e8bade36e45c50fe
+      internalID: -254454191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_157
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 121
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ec792c1602148b3a3eb6443043b267
+      internalID: 944142907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_158
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 121
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4829606aa194a28bd42b50134b4bd7
+      internalID: -1101656224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_159
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 120
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad39503da197e453a8d5cecbbd608ec9
+      internalID: 1962053025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_160
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 119
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347488c798c154719aac2e21d8f4a6de
+      internalID: -1919296450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_161
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 122
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4490039118aae466380cddfc1590472a
+      internalID: 1419430555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_162
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 121
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e3a9baeb80e4c3db067f38721d06d3
+      internalID: 75825619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_163
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 120
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf416adb65af458d8328c262cd7746c
+      internalID: -858443562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_164
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 121
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e674b845a318f4c4bb292b5a2e76426a
+      internalID: 1616404793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_165
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 120
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e1af737aad954bcbb3d1398dc62ff93
+      internalID: 351935623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_166
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 119
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef346926ec63401abe8771a7a03296f
+      internalID: 1332894063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_167
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 122
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8ce9369caa447cc97b5bbb542e7528
+      internalID: -397101477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_168
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 121
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a2f0840416a4a9aac7d8399744e28c
+      internalID: 523195147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_169
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 120
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea50bb1eb2ee04e06a5408b2caf0a0b6
+      internalID: -1154835489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_170
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 122
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad94a6ad9e5e467c9f8a3d607f6c2a7
+      internalID: 1069223308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_171
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 120
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40deda86299c944038fc73a6d42c8bc0
+      internalID: -555389500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_172
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 119
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d046211fe04274fd7ab936b582464386
+      internalID: 1662539780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_173
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 122
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853a8170a3f2c45deaa0114490b08fa0
+      internalID: 1037983085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_174
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 120
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65bbaf952637542938f04eeb9880f72d
+      internalID: -1031303094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_175
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 119
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8824524f2643349f894c2194fbedcddb
+      internalID: -2081821075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_176
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 122
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041f9b178daa24b909af333081f624d6
+      internalID: -1343650288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_177
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 84
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c65af88a92f4f3087c55e41665b6e2
+      internalID: 1623293256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_178
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7171fa2cb09e6444bb438fe2695e0217
+      internalID: -988746039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_179
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 85
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b4065e562157461f8826a00a351c509
+      internalID: 344315764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_180
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 84
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba08198f65094017be5008dc766ad01
+      internalID: -959408059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_181
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56dfd950635334cb98f57864781af03d
+      internalID: -1171501635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_182
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 84
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e8b366c169f400d8c4436ef73f838b
+      internalID: 493970929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_183
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 83
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a3ea3d77dc34e69b0b9177b62ff82e
+      internalID: -1258200763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_184
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 82
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d1b441b7b404ce0be570e467779dfd
+      internalID: 738153098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_185
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 85
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c0c9ab280544608a219187090e6ca4
+      internalID: -64224182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_186
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 84
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89fef83663ee4821a3713b944e30291
+      internalID: 179793209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_187
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 83
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa8d534a7143443dba9c320478f3a54
+      internalID: 870023688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_188
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 84
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a0cb4d7dd2c4845b478460e4740501
+      internalID: 749373905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_189
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 83
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ac75f08ad234c5d97a0594ab8002e8
+      internalID: 819930425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_190
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 82
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a764ec50599a74dcca042ef78a0da66b
+      internalID: 512770627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_191
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 85
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c900a281c464d34acd8602d3930a01
+      internalID: 1583600411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_192
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 84
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8c4b364fbc248d39c9f246727c00f7
+      internalID: 1548970275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_193
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 83
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2364f9f04c3a644b6ad7f9a585f58142
+      internalID: 1332238920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_194
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 83
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c7f4cb6aa9542dbb49d24d89fa5a2a
+      internalID: -1242349800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_195
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fad454aa9754957b00bac943fe0ded
+      internalID: 833054289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_196
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa7a656fae7840abaad5ec0126dfceb
+      internalID: -290372312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_197
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 83
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ed77ecb6a3e46b19c4c71cba8fc851
+      internalID: 170100838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_198
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e1bc1910d1c4948b42f2efed9b28c5
+      internalID: -1309525753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_199
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 83
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c7fd1b6325a4b6a9c7ed0256bb7d4f
+      internalID: 148207187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_200
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 46
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee80d3b88963f439c824b01b9fed73fb
+      internalID: 619800459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_201
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 46
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c037a5e159404608896d3a627417168
+      internalID: 606501936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_202
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 46
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9a253259ba74cb880de30074bb3ad3
+      internalID: -1769663666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_203
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 46
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915f177789cca4e23bb529f24a1dc1f9
+      internalID: 1820683174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_204
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 46
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4e90acba3d442d6938ff07d849f727
+      internalID: -1052564542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_205
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 46
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb0d3b37120a43118bfd02672ea3969
+      internalID: 1576916214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_206
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 47
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e275314a74f5d4d9582bb09223ae628b
+      internalID: 1276625354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_207
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 46
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbe356ce0ff948a19b9601b10d5aec2
+      internalID: -2000733396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_208
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 46
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae7692dfd50d477284ebe14c2b1768e
+      internalID: 1985742573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_209
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 47
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e322b63963c9f41598f0ec94461aa739
+      internalID: 1835236961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_210
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 46
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2fee28b2ab745c6be68ca2a8b3531b
+      internalID: 1772202313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_211
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 46
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1da48ee9849f4056b0feca88d68fb25
+      internalID: 1862659478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_212
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 47
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85833849079b449d8a68c0db8696e5e8
+      internalID: 1665449384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_213
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 46
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfcd34d10e6214f6ab16a232ee24895a
+      internalID: 1187283259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_214
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 46
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748eda0c9e7b94037a8cd624ebe71919
+      internalID: 1518482743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_215
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 47
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb40e04aac1454059b06c4912e05a26e
+      internalID: -1396480087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_216
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 46
+        width: 14
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686ed1f18d6074096a179c21073a4d2b
+      internalID: 1668730408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nintendo Switch - Octopath Traveler - Olberic Warrior Base_217
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 46
+        width: 16
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f77983c0d3a14fa684b1d3b9485b637
+      internalID: -1562610145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_129: 1173263428
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_89: -1323857825
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_123: 472789621
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_96: -2056219270
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_70: -183854100
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_159: 1962053025
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_145: -1394019100
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_25: -2126998322
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_27: 626901429
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_138: 1915931152
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_57: 464217663
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_188: 749373905
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_20: -1276219239
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_177: 1623293256
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_214: 1518482743
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_149: 1515838568
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_22: -441147266
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_88: 1857516619
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_63: -2099524496
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_81: -2053072240
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_213: 1187283259
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_117: -1594881092
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_147: 2038795310
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_21: -176013588
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_9: -732181528
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_12: -1770639410
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_29: 1566113167
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_49: -1483412563
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_80: -1576713366
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_217: -1562610145
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_174: -1031303094
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_65: -1646303563
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_172: 1662539780
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_179: 344315764
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_185: -64224182
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_211: 1862659478
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_101: 1468646965
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_16: -190884038
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_136: -877381078
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_132: -1409273024
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_55: 606488524
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_162: 75825619
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_94: 227789258
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_204: -1052564542
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_17: -205370524
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_198: -1309525753
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_161: 1419430555
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_163: -858443562
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_155: -1680463523
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_64: -677584815
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_84: -2039856698
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_67: -1715594299
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_150: 78209980
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_72: 1222202120
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_137: -1666893767
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_13: -895638685
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_114: 791438764
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_212: 1665449384
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_26: 947732524
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_181: -1171501635
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_69: 1111703988
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_77: -1665818250
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_122: -219202630
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_126: 304270350
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_140: 493691662
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_196: -290372312
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_108: 1641702070
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_48: -1390936282
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_209: 1835236961
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_191: 1583600411
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_28: -1884805636
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_178: -988746039
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_68: 1678269906
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_128: 2121194131
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_0: 1479674215
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_1: 1066430807
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_4: 448986258
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_24: 922497492
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_164: 1616404793
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_34: 958173905
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_60: 1038314807
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_190: 512770627
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_98: -1678433694
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_156: -254454191
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_135: 1126570680
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_153: -1768681493
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_157: 944142907
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_148: 853244720
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_167: -397101477
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_160: -1919296450
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_127: 520357010
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_3: 279348692
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_33: 1982726402
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_176: -1343650288
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_76: 1113215819
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_23: -356610504
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_31: 1796134616
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_109: 2010918134
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_141: 523049331
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_42: -764546542
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_113: -1458873921
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_151: -50297529
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_205: 1576916214
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_194: -1242349800
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_142: 152444877
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_14: 770063510
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_32: 256306474
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_103: 2135911335
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_58: -114938345
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_119: 1790610252
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_2: 1979956021
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_41: -1300869899
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_121: 1675986920
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_52: 569809797
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_44: 1195797437
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_152: 1773453677
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_43: -449061206
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_180: -959408059
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_187: 870023688
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_87: 1249576963
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_92: -537274650
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_197: 170100838
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_100: -1896802692
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_62: -1169458086
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_102: -1231567367
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_173: 1037983085
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_110: -1952435063
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_40: 28514062
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_66: 1056449455
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_168: 523195147
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_170: 1069223308
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_124: 1275352483
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_90: -1507540722
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_6: 755488025
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_201: 606501936
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_203: 1820683174
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_15: -1272663905
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_199: 148207187
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_105: 1965526476
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_30: -1522305112
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_37: -1721645618
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_18: -330808529
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_5: -605243512
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_46: 1098064553
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_85: -1435768866
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_143: -1450971632
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_165: 351935623
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_210: 1772202313
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_195: 833054289
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_154: -997001396
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_39: -1133438462
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_10: 323866159
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_19: -700998295
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_11: -2080720401
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_120: 889612977
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_35: -1835379058
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_130: -1019710107
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_36: 1142113111
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_133: 1917325257
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_115: 1854721657
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_104: -411971281
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_193: 1332238920
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_53: -356103101
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_215: -1396480087
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_183: -1258200763
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_112: -1845447737
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_79: -1052074288
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_116: -98291343
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_144: -1053177421
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_56: -292039032
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_8: 2041229107
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_134: -26987565
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_50: -1432741553
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_169: -1154835489
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_189: 819930425
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_51: 1894437257
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_207: -2000733396
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_47: -128184188
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_78: -1945685550
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_146: -275611911
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_111: 531144459
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_182: 493970929
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_38: -646660020
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_107: 90202643
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_45: -1382890693
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_86: -1337450453
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_158: -1101656224
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_202: -1769663666
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_97: 358644678
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_54: 894954731
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_95: 1310996918
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_93: 1193948462
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_184: 738153098
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_125: -1439274631
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_71: -760342224
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_192: 1548970275
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_216: 1668730408
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_208: 1985742573
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_75: -1265744829
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_200: 619800459
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_74: -110379142
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_186: 179793209
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_118: 1703704964
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_91: 385166264
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_106: 1962315976
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_61: -2101030311
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_131: 1822804164
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_175: -2081821075
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_7: -1070860729
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_82: -1894671748
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_139: -1533064805
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_206: 1276625354
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_59: -938027014
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_166: 1332894063
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_99: 1054703627
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_73: 125215749
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_83: 71744149
+      Nintendo Switch - Octopath Traveler - Olberic Warrior Base_171: -555389500
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

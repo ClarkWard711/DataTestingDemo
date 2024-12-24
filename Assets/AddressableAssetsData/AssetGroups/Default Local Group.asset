@@ -18,31 +18,27 @@ MonoBehaviour:
   m_GUID: 8b41fd17c5b2340a5b3feb0a576d250f
   m_SerializeEntries:
   - m_GUID: 335fa42c47359a54382ec2db3a044a0f
-    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RealLifeLevelGraph.asset
+    m_Address: RealLifeLevelGraph
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 34dc4295d40861a41b698208654b7812
-    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/BasicRoom.asset
+    m_Address: BasicRoom
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: bdeb842f30603f84bb24fc8ded30d651
-    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/Hor5x2.prefab
+    m_Address: Hor5x2
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 817d50d9241043d48b75ce90665cfd6f
-    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/Hor8x2.prefab
+    m_Address: Hor8x2
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4253f21fc42b6004b97c0af8f9637c7d
-    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/Ver2x6.prefab
+    m_Address: Ver2x6
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 40e7e2943e9246d4aae1a783d75b4213
-    m_Address: Assets/DungeonMap/Examples/Grid2D/Example1/RoomTemplate/Ver2x8.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 2cda990e2423bbf4892e6590ba056729
-    m_Address: Assets/Scenes/OuterScene.unity
+    m_Address: Ver2x8
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

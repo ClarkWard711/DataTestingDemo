@@ -196,6 +196,8 @@ public class ShadowOfSunAndMoon : Enemy
 				TurnCount++;
 				gameObject.GetComponent<SpriteRenderer>().sprite = TsukiMode;
 				BossState = SOSAMState.Tsuki;
+				yield return new WaitForSeconds(1f);
+				StartCoroutine(BattleSetting.Instance.ShowActionText("每回合行动次数增加"));
 			}
 			else if (TurnCount == 1)
 			{
@@ -210,6 +212,7 @@ public class ShadowOfSunAndMoon : Enemy
 					player.GetComponent<GivingData>().takeDamage(hpNum, AttackType.Physical, false);
 				}
 				StartCoroutine(givingData.FloatingHP(recoverHp));
+				yield return new WaitForSeconds(1f);
 			}
 			else if (TurnCount == 2)
 			{
@@ -232,6 +235,35 @@ public class ShadowOfSunAndMoon : Enemy
 				gameObject.GetComponent<SpriteRenderer>().sprite = HiMode;
 				BossState = SOSAMState.Hi;
 				TurnCount++;
+				foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+				{
+					int damage = Mathf.CeilToInt(BattleSetting.Instance.DamageCountingByUnit(gameObject, player, AttackType.Physical) * 0.6f);
+					BattleSetting.Instance.DealDamageExtra(damage, gameObject, player, AttackType.Physical, false);
+					int changedID;
+					if (player.GetComponent<GivingData>().positionID > 2)
+					{
+						changedID = player.GetComponent<GivingData>().positionID - 3;
+					}
+					else
+					{
+						changedID = player.GetComponent<GivingData>().positionID + 3;
+					}
+					if (BattleSetting.Instance.PlayerPositionsList[changedID].transform.childCount != 0)
+					{
+						BattleSetting.Instance.PlayerPositionsList[changedID].transform.GetChild(0).gameObject.transform.SetParent(player.transform.parent, false);
+						player.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[changedID].transform, false);
+					}
+					else
+					{
+						player.transform.SetParent(BattleSetting.Instance.PlayerPositionsList[changedID].transform, false);
+					}
+				}
+				BattleSetting.Instance.CheckPositionID();
+				BattleSetting.Instance.ComparePosition();
+			}
+			else if (TurnCount == 4)
+			{
+
 			}
 			BattleSetting.Instance.BattleUnitsList.Insert(0, gameObject);
 			BattleSetting.Instance.BattleUnitsListToBeLaunched.RemoveAt(BattleSetting.Instance.BattleUnitsListToBeLaunched.FindIndex(obj => obj == gameObject));
