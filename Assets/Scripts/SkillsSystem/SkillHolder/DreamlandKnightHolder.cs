@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class DreamlandKnightHolder : JobSkillHolder
 {
-
+    public int DreamCount;
 }
