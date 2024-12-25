@@ -543,7 +543,7 @@ public class BattleSetting : MonoBehaviour
 	/// 造成伤害时的回调 主要用于流血
 	/// </summary>
 	/// <returns></returns>
-	IEnumerator OnDealDamage()
+	public IEnumerator OnDealDamage()
 	{
 		foreach (Tag tag in CurrentActUnit.GetComponent<GivingData>().tagList)
 		{
