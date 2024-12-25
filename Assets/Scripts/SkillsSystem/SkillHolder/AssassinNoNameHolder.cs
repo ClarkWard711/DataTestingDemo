@@ -78,8 +78,9 @@ public class AssassinNoNameHolder : JobSkillHolder
 			damage = Mathf.CeilToInt(damage * 2f);
 		}
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-		var tag = SpeedDown.CreateInstance<SpeedDown>();
-		tag.spd = -Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().EnemyData.EnemyStatsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().GetComponent<GivingData>().EnemyData.EnemyLevel - 1].speed * 0.1f);
+        StartCoroutine(Battlesetting.Instance.OnDealDamage());
+        var tag = SpeedDown.CreateInstance<SpeedDown>();   
+        tag.spd = -Mathf.CeilToInt(BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().EnemyData.EnemyStatsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().GetComponent<GivingData>().EnemyData.EnemyLevel - 1].speed * 0.1f);
 		if (!gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
 			tag.TurnAdd++;
@@ -230,7 +231,8 @@ public class AssassinNoNameHolder : JobSkillHolder
 			damage = Mathf.CeilToInt(damage * 2f);
 		}
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-		StartCoroutine(BattleSetting.Instance.ShowActionText("闪袭"));
+        StartCoroutine(Battlesetting.Instance.OnDealDamage());
+        StartCoroutine(BattleSetting.Instance.ShowActionText("闪袭"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
@@ -358,7 +360,8 @@ public class AssassinNoNameHolder : JobSkillHolder
 			damage = Mathf.CeilToInt(damage * 2f);
 		}
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-		yield return new WaitForSeconds(0.3f);
+        StartCoroutine(Battlesetting.Instance.OnDealDamage());
+        yield return new WaitForSeconds(0.3f);
 		if (isCollaborateUsed)
 		{
 			int damage0 = BattleSetting.Instance.DamageCountingByUnit(CollaborateTarget, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
@@ -399,7 +402,8 @@ public class AssassinNoNameHolder : JobSkillHolder
 			damage = Mathf.CeilToInt(damage * 2f);
 		}
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
+        StartCoroutine(Battlesetting.Instance.OnDealDamage());
+        BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
 		yield return new WaitForSeconds(0.3f);
 		if (isRaidUsed)
 		{
@@ -476,7 +480,8 @@ public class AssassinNoNameHolder : JobSkillHolder
 					damage = Mathf.CeilToInt(damage * 0.7f);
 				}
 				BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-			}
+                StartCoroutine(Battlesetting.Instance.OnDealDamage());
+            }
 		}
 		StartCoroutine(BattleSetting.Instance.ShowActionText("挥刃"));
 		yield return new WaitForSeconds(1f);
@@ -504,7 +509,8 @@ public class AssassinNoNameHolder : JobSkillHolder
 			damage = Mathf.CeilToInt(damage * 0.8f);
 		}
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-		Poison tag = Poison.CreateInstance<Poison>();
+        StartCoroutine(Battlesetting.Instance.OnDealDamage());
+        Poison tag = Poison.CreateInstance<Poison>();
 		if (gameObject.gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Remote"))
 		{
 			tag.percentage = 0.02f;
@@ -546,7 +552,8 @@ public class AssassinNoNameHolder : JobSkillHolder
 			damage = Mathf.CeilToInt(damage * 0.4f);
 		}
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
-		StartCoroutine(BattleSetting.Instance.ShowActionText("佯装撤退"));
+        StartCoroutine(Battlesetting.Instance.OnDealDamage());
+        StartCoroutine(BattleSetting.Instance.ShowActionText("佯装撤退"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
