@@ -465,7 +465,7 @@ public class AssassinNoNameHolder : JobSkillHolder
 		BattleSetting.Instance.State = BattleState.Middle;
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 		foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
-		{
+        {
 			if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag is Melee))
 			{
 				BattleSetting.Instance.CurrentActUnitTarget = enemy;
@@ -483,7 +483,8 @@ public class AssassinNoNameHolder : JobSkillHolder
                 StartCoroutine(Battlesetting.Instance.OnDealDamage());
             }
 		}
-		StartCoroutine(BattleSetting.Instance.ShowActionText("挥刃"));
+        StartCoroutine(Battlesetting.Instance.OnDealDamage());
+        StartCoroutine(BattleSetting.Instance.ShowActionText("挥刃"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
