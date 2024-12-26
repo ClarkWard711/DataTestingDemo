@@ -301,7 +301,8 @@ public class BloodistHolder : JobSkillHolder
 			damage = Mathf.CeilToInt(damage * (1 + 0.2f * BloodAddictSelf));
 			BloodAddictSelf = 0;
 			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-			yield return new WaitForSeconds(0.5f);
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+            yield return new WaitForSeconds(0.5f);
 		}
 		else if (optionIndex == 2)
 		{
@@ -362,7 +363,8 @@ public class BloodistHolder : JobSkillHolder
 			int damage = BattleSetting.Instance.DamageCounting(AttackType.Physical);
 			damage = Mathf.CeilToInt(1.5f * damage);
 			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-			BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(1, AttackType.Physical, false);
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+            BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().takeDamage(1, AttackType.Physical, false);
 		}
 		StartCoroutine(BattleSetting.Instance.ShowActionText("血聚"));
 		yield return new WaitForSeconds(1f);
@@ -412,12 +414,14 @@ public class BloodistHolder : JobSkillHolder
 			yield return new WaitForSeconds(0.3f);
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnitTarget, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, false);
 		}
-		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
 			yield return new WaitForSeconds(0.3f);
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 		}
-		yield return new WaitForSeconds(0.3f);
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        yield return new WaitForSeconds(0.3f);
 		BattleSetting.Instance.CurrentActUnit = this.gameObject;
 		StartCoroutine(BattleSetting.Instance.ShowActionText("独斗"));
 		yield return new WaitForSeconds(1f);
@@ -434,7 +438,8 @@ public class BloodistHolder : JobSkillHolder
 			BloodAddict bloodTag = (BloodAddict)player.GetComponent<GivingData>().tagList.Find(tag => tag.TagName == "BloodAddict");
 			bloodTag.isNoSelf = true;
 		}
-		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
 			tag.TurnLast += 1;
 		}
@@ -458,7 +463,8 @@ public class BloodistHolder : JobSkillHolder
 			bleedTag.TurnLast += 2;
 			enemy.GetComponent<GivingData>().AddTagToCharacter(bleedTag);
 		}
-		foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
 		{
 			Bleed bleedTag = Bleed.CreateInstance<Bleed>();
 			bleedTag.unit = player;
@@ -471,8 +477,8 @@ public class BloodistHolder : JobSkillHolder
 			tag.TurnLast += 2;
 			player.GetComponent<GivingData>().AddTagToCharacter(tag);
 		}
-
-		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
 
 		}
@@ -511,7 +517,8 @@ public class BloodistHolder : JobSkillHolder
 			BattleSetting.Instance.DealDamageWithNoCallBack(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, true);
 			yield return new WaitForSeconds(0.2f);
 		}
-		int id = jobData.SkillsID.FindIndex(id => id == 7);
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        int id = jobData.SkillsID.FindIndex(id => id == 7);
 		coolDownList[id] = 2;
 		StartCoroutine(BattleSetting.Instance.ShowActionText("嗜血"));
 		yield return new WaitForSeconds(1f);
@@ -543,7 +550,7 @@ public class BloodistHolder : JobSkillHolder
 		BattleSetting.Instance.CurrentActUnitTarget.GetComponentsInChildren<SpriteRenderer>()[0].color = new Color(255, 255, 255, 1);
 		int damage = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.05f);
 		BattleSetting.Instance.DealDamageWithNoCallBack(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnit, AttackType.Physical, true);
-		yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.3f);
 		StartCoroutine(BattleSetting.Instance.ShowActionText("血盟"));
 		yield return new WaitForSeconds(0.6f);
 		BattleSetting.Instance.ActionEnd();
@@ -560,7 +567,8 @@ public class BloodistHolder : JobSkillHolder
 			damage = Mathf.CeilToInt(damage * 0.8f);
 			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 		}
-		yield return new WaitForSeconds(0.5f);
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        yield return new WaitForSeconds(0.5f);
 		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag.TagName == "Melee"))
 		{
 			int deltaTemp = Mathf.CeilToInt(gameObject.GetComponent<GivingData>().maxHP * 0.02f * BloodAddictSelf);
@@ -611,7 +619,8 @@ public class BloodistHolder : JobSkillHolder
 					damage = Mathf.CeilToInt(damage * 0.75f);
 					BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 				}
-			}
+                StartCoroutine(BattleSetting.Instance.OnDealDamage());
+            }
 			else if (randomNum == 2)
 			{
 				var enemy = BattleSetting.Instance.RemainingEnemyUnits[Random.Range(0, BattleSetting.Instance.RemainingEnemyUnits.Length)];
@@ -623,7 +632,8 @@ public class BloodistHolder : JobSkillHolder
 				var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, player, AttackType.Physical);
 				damage = Mathf.CeilToInt(damage * 0.5f);
 				BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, player, AttackType.Physical, true);
-			}
+                StartCoroutine(BattleSetting.Instance.OnDealDamage());
+            }
 			else if (randomNum == 4)
 			{
 				//int Sp = BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP <= 10 ? 10 : BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP;
@@ -680,7 +690,8 @@ public class BloodistHolder : JobSkillHolder
 		CheckBloodCurseSP(SpCost);
 		var damage = Mathf.CeilToInt(1.2f * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical));
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Locked.CreateInstance<Locked>());
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Locked.CreateInstance<Locked>());
 		yield return new WaitForSeconds(0.3f);
 		if (BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().tagList.Exists(tag => tag.name == "Melee"))
 		{
@@ -690,7 +701,8 @@ public class BloodistHolder : JobSkillHolder
 				BattleSetting.Instance.CurrentActUnitTarget = BattleSetting.Instance.EnemyPositionsList[BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().positionID - 3].transform.GetChild(0).gameObject;
 				var damage1 = Mathf.CeilToInt(1.2f * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical));
 				BattleSetting.Instance.DealDamageExtra(damage1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
-				BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Locked.CreateInstance<Locked>());
+                StartCoroutine(BattleSetting.Instance.OnDealDamage());
+                BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(Locked.CreateInstance<Locked>());
 			}
 		}
 		StartCoroutine(BattleSetting.Instance.ShowActionText("血刺"));
@@ -796,7 +808,8 @@ public class BloodistHolder : JobSkillHolder
 				BattleSetting.Instance.DealDamageWithNoCallBack(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
 			}
 		}
-		StartCoroutine(BattleSetting.Instance.ShowActionText("血染"));
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        StartCoroutine(BattleSetting.Instance.ShowActionText("血染"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}

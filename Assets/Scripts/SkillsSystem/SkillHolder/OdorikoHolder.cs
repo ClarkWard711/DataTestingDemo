@@ -203,7 +203,8 @@ public class OdorikoHolder : JobSkillHolder
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().attackType = AttackType.Physical;
 		StartCoroutine(BattleSetting.Instance.DealDamage(2f, false));
-	}
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+    }
 	#endregion
 
 	#region Advanced
@@ -267,7 +268,8 @@ public class OdorikoHolder : JobSkillHolder
 						}
 					}
 				}
-				StartCoroutine(BattleSetting.Instance.ShowActionText("绯色月夜"));
+                StartCoroutine(BattleSetting.Instance.OnDealDamage());
+                StartCoroutine(BattleSetting.Instance.ShowActionText("绯色月夜"));
 			}
 			else
 			{
@@ -306,7 +308,8 @@ public class OdorikoHolder : JobSkillHolder
 					}
 				}
 			}
-			StartCoroutine(BattleSetting.Instance.ShowActionText("盈月"));
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+            StartCoroutine(BattleSetting.Instance.ShowActionText("盈月"));
 			yield return new WaitForSeconds(1f);
 		}
 		else
@@ -339,7 +342,8 @@ public class OdorikoHolder : JobSkillHolder
 						}
 					}
 				}
-				StartCoroutine(BattleSetting.Instance.ShowActionText("盈月"));
+                StartCoroutine(BattleSetting.Instance.OnDealDamage());
+                StartCoroutine(BattleSetting.Instance.ShowActionText("盈月"));
 				yield return new WaitForSeconds(1f);
 			}
 			else
@@ -378,7 +382,8 @@ public class OdorikoHolder : JobSkillHolder
 					}
 				}
 			}
-			StartCoroutine(BattleSetting.Instance.ShowActionText("清月"));
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+            StartCoroutine(BattleSetting.Instance.ShowActionText("清月"));
 			yield return new WaitForSeconds(1f);
 		}
 		else
@@ -411,7 +416,8 @@ public class OdorikoHolder : JobSkillHolder
 						}
 					}
 				}
-				StartCoroutine(BattleSetting.Instance.ShowActionText("清月"));
+                StartCoroutine(BattleSetting.Instance.OnDealDamage());
+                StartCoroutine(BattleSetting.Instance.ShowActionText("清月"));
 				yield return new WaitForSeconds(1f);
 			}
 			else
@@ -451,7 +457,8 @@ public class OdorikoHolder : JobSkillHolder
 					}
 				}
 			}
-			StartCoroutine(BattleSetting.Instance.ShowActionText("月佑"));
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+            StartCoroutine(BattleSetting.Instance.ShowActionText("月佑"));
 			yield return new WaitForSeconds(1f);
 		}
 		else
@@ -484,7 +491,8 @@ public class OdorikoHolder : JobSkillHolder
 						}
 					}
 				}
-				StartCoroutine(BattleSetting.Instance.ShowActionText("月佑"));
+                StartCoroutine(BattleSetting.Instance.OnDealDamage());
+                StartCoroutine(BattleSetting.Instance.ShowActionText("月佑"));
 				yield return new WaitForSeconds(1f);
 			}
 			else
@@ -511,7 +519,8 @@ public class OdorikoHolder : JobSkillHolder
 			{
 				enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
 			}
-			StartCoroutine(BattleSetting.Instance.ShowActionText("月蚀"));
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+            StartCoroutine(BattleSetting.Instance.ShowActionText("月蚀"));
 			yield return new WaitForSeconds(1f);
 		}
 		else
@@ -533,7 +542,8 @@ public class OdorikoHolder : JobSkillHolder
 					}
 				}
 			}
-			StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月蚀"));
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+            StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月蚀"));
 			yield return new WaitForSeconds(1f);
 		}
 
@@ -547,7 +557,8 @@ public class OdorikoHolder : JobSkillHolder
 				{
 					enemy.GetComponent<GivingData>().AddTagToCharacter(MoonErodeTag.CreateInstance<MoonErodeTag>());
 				}
-				StartCoroutine(BattleSetting.Instance.ShowActionText("月蚀"));
+                StartCoroutine(BattleSetting.Instance.OnDealDamage());
+                StartCoroutine(BattleSetting.Instance.ShowActionText("月蚀"));
 				yield return new WaitForSeconds(1f);
 			}
 			else
@@ -569,7 +580,8 @@ public class OdorikoHolder : JobSkillHolder
 						}
 					}
 				}
-				StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月蚀"));
+                StartCoroutine(BattleSetting.Instance.OnDealDamage());
+                StartCoroutine(BattleSetting.Instance.ShowActionText("对" + BattleSetting.Instance.CurrentActUnitTarget.name + "释放月蚀"));
 				yield return new WaitForSeconds(1f);
 			}
 		}
@@ -603,7 +615,8 @@ public class OdorikoHolder : JobSkillHolder
 					}
 				}
 			}
-		}
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        }
 		else
 		{
 			foreach (GameObject enemy in BattleSetting.Instance.RemainingEnemyUnits)
@@ -623,7 +636,8 @@ public class OdorikoHolder : JobSkillHolder
 					}
 				}
 			}
-		}
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        }
 		StartCoroutine(BattleSetting.Instance.ShowActionText("月：序曲"));
 		yield return new WaitForSeconds(1f);
 
@@ -728,8 +742,8 @@ public class OdorikoHolder : JobSkillHolder
 				EnemiesToBeAttacked.Add(enemy);
 			}
 		}
-
-		foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
 		{
 			List<Tag> odorikoTags = player.GetComponent<GivingData>().tagList.FindAll(tag => tag is OdorikoTag && ((OdorikoTag)tag).odoTagKind == OdorikoTag.OdoTagKind.Moon);
 			foreach (var tag in odorikoTags)
@@ -744,8 +758,8 @@ public class OdorikoHolder : JobSkillHolder
 				}
 			}
 		}
-
-		foreach (var enemy in EnemiesToBeAttacked)
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        foreach (var enemy in EnemiesToBeAttacked)
 		{
 			var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical);
 
@@ -756,8 +770,8 @@ public class OdorikoHolder : JobSkillHolder
 
 			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Soul, false);
 		}
-
-		StartCoroutine(BattleSetting.Instance.ShowActionText("释放日溯"));
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        StartCoroutine(BattleSetting.Instance.ShowActionText("释放日溯"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
@@ -779,15 +793,17 @@ public class OdorikoHolder : JobSkillHolder
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Physical, false);
 			yield return new WaitForSeconds(0.4f);
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul, false);
-		}
-		else
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        }
+        else
 		{
 			var temp = BattleSetting.Instance.CurrentActUnitTarget;
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 			yield return new WaitForSeconds(0.4f);
 			BattleSetting.Instance.DealDamageExtra(-1, BattleSetting.Instance.CurrentActUnit, temp, AttackType.Soul, false);
 		}
-		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(SunProtectionTag.CreateInstance<SunProtectionTag>());
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().AddTagToCharacter(SunProtectionTag.CreateInstance<SunProtectionTag>());
 		StartCoroutine(BattleSetting.Instance.ShowActionText("释放日护"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
@@ -803,8 +819,8 @@ public class OdorikoHolder : JobSkillHolder
 		var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
 		damage = Mathf.CeilToInt(1.5f * damage);
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul, false);
-
-		var moonEnemyList = new List<GameObject>();
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        var moonEnemyList = new List<GameObject>();
 		foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
 		{
 			if (enemy.GetComponent<GivingData>().tagList.Exists(Tag => Tag is OdorikoTag && ((OdorikoTag)Tag).odoTagKind == OdorikoTag.OdoTagKind.Moon))
@@ -812,8 +828,8 @@ public class OdorikoHolder : JobSkillHolder
 				moonEnemyList.Add(enemy);
 			}
 		}
-
-		if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        if (BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().tagList.Exists(Tag => Tag.TagName == "Charging"))
 		{
 			if (moonEnemyList.Count > 1)
 			{
@@ -897,7 +913,8 @@ public class OdorikoHolder : JobSkillHolder
 				yield return new WaitForSeconds(0.2f);
 				BattleSetting.Instance.DealDamageExtra(soulDamage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul, false);
 			}
-		}
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        }
 		else
 		{
 			foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
@@ -906,7 +923,8 @@ public class OdorikoHolder : JobSkillHolder
 				var damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
 				BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 			}
-		}
+            StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        }
 
 		StartCoroutine(BattleSetting.Instance.ShowActionText("释放日轮"));
 		yield return new WaitForSeconds(1f);
@@ -951,8 +969,8 @@ public class OdorikoHolder : JobSkillHolder
 		int damage = BattleSetting.Instance.DamageCounting(AttackType.Soul);
 		damage = Mathf.CeilToInt(damage * 1.2f);
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul, false);
-
-		StartCoroutine(BattleSetting.Instance.ShowActionText("释放日瑰"));
+        StartCoroutine(BattleSetting.Instance.OnDealDamage());
+        StartCoroutine(BattleSetting.Instance.ShowActionText("释放日瑰"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
