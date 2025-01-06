@@ -59,13 +59,12 @@ public class DreamlandKnightHolder : JobSkillHolder
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 		foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
 		{
-			var tag = PhysicalAtkUp.CreateInstance<PhysicalAtkUp>();
-			tag.TurnAdd = DreamCount;
-			tag.TurnLast = DreamCount;
+			var tag = PhysicalDfsUp.CreateInstance<PhysicalDfsUp>();
+			tag.TurnAdd = 2;
+			tag.TurnLast = 2;
 			player.GetComponent<GivingData>().AddTagToCharacter(tag);
 		}
-		DreamCount = 0;
-		StartCoroutine(BattleSetting.Instance.ShowActionText("解梦"));
+		StartCoroutine(BattleSetting.Instance.ShowActionText("梦的庇护"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
