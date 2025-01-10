@@ -317,7 +317,7 @@ public class BattleSetting : MonoBehaviour
 			}
 			StartCoroutine(OnHit());
 			StartCoroutine(BeingHit());
-			StartCoroutine(OnDealDamage());
+			//StartCoroutine(OnDealDamage());
 		}
 		else
 		{
@@ -1606,7 +1606,7 @@ public class BattleSetting : MonoBehaviour
 			}
 			StartCoroutine(OnHit());
 			StartCoroutine(BeingHit());
-			StartCoroutine(OnDealDamage());
+			//StartCoroutine(OnDealDamage());
 		}
 		else
 		{
