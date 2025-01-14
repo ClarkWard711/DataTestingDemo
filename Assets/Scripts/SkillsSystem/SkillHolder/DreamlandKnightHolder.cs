@@ -137,5 +137,29 @@ public class DreamlandKnightHolder : JobSkillHolder
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
+
+	public IEnumerator dreamExtend(int SpCost)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
+		{
+			DreamExtendAdvanced tag = DreamExtendAdvanced.CreateInstance<DreamExtendAdvanced>();
+			tag.unit = gameObject;
+			gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+		}
+		else
+		{
+			DreamExtendTag tag = DreamExtendTag.CreateInstance<DreamExtendTag>();
+			tag.unit = gameObject;
+			gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+		}
+		StartCoroutine(BattleSetting.Instance.ShowActionText("梦的延伸"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
 	#endregion
 }
