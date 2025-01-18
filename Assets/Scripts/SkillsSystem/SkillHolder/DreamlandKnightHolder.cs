@@ -161,5 +161,34 @@ public class DreamlandKnightHolder : JobSkillHolder
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
+
+	public IEnumerator wakingIssue(int SpCost)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		for (int i = 0; i < DreamCount; i++)
+		{
+			var randomEnemy = BattleSetting.Instance.RemainingEnemyUnits[Random.Range(0, BattleSetting.Instance.RemainingEnemyUnits.Length)];
+			int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, randomEnemy, AttackType.Physical);
+
+			if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
+			{
+				damage = Mathf.CeilToInt(damage * 0.6f);
+			}
+			else
+			{
+				damage = Mathf.CeilToInt(damage * 0.4f);
+			}
+			BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, randomEnemy, AttackType.Physical, false);
+			yield return new WaitForSeconds(0.25f);
+		}
+		DreamCount = 0;
+		StartCoroutine(BattleSetting.Instance.OnDealDamage());
+		StartCoroutine(BattleSetting.Instance.ShowActionText("起床气"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
 	#endregion
 }
