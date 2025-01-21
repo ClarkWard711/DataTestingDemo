@@ -190,5 +190,47 @@ public class DreamlandKnightHolder : JobSkillHolder
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
+
+	public IEnumerator unwillingToWake(int SpCost)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
+		{
+
+		}
+		else
+		{
+			if (DreamCount >= 0)
+			{
+				DreamCount--;
+			}
+		}
+		DreamCount *= 2;
+		StartCoroutine(BattleSetting.Instance.ShowActionText("不愿苏醒"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator allDream(int SpCost)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
+		{
+
+		}
+		else
+		{
+
+		}
+		StartCoroutine(BattleSetting.Instance.ShowActionText("共梦"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
 	#endregion
 }
