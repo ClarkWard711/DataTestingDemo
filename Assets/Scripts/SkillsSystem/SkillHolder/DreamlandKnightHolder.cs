@@ -222,13 +222,78 @@ public class DreamlandKnightHolder : JobSkillHolder
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
 		{
-
+			foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+			{
+				AllDreamTag tag = AllDreamTag.CreateInstance<AllDreamTag>();
+				player.GetComponent<GivingData>().AddTagToCharacter(tag);
+			}
 		}
 		else
 		{
-
+			List<int> playerList = BattleSetting.Instance.CheckSurroundPosition(gameObject.GetComponent<GivingData>().positionID);
+			foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+			{
+				if (playerList.Exists(id => id == player.GetComponent<GivingData>().positionID))
+				{
+					AllDreamTag tag = AllDreamTag.CreateInstance<AllDreamTag>();
+					player.GetComponent<GivingData>().AddTagToCharacter(tag);
+				}
+			}
 		}
 		StartCoroutine(BattleSetting.Instance.ShowActionText("共梦"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator triumphalDream(int SpCost)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		float SkillMultiplier = 0.8f;
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
+		{
+			SkillMultiplier = 1.2f;
+		}
+		else
+		{
+			SkillMultiplier = 0.8f;
+		}
+		foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
+		{
+			if (enemy.GetComponent<GivingData>().tagList.Exists(tag => tag is Melee))
+			{
+				DreamCount++;
+				int damage = Mathf.CeilToInt(SkillMultiplier * BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical));
+				BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, enemy, AttackType.Physical, false);
+			}
+		}
+		StartCoroutine(BattleSetting.Instance.OnDealDamage());
+		StartCoroutine(BattleSetting.Instance.ShowActionText("“凯旋”之梦"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator inTheNameOfDream(int SpCost)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		float percentage = 1 - gameObject.GetComponent<GivingData>().currentHP / gameObject.GetComponent<GivingData>().maxHP;
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
+		{
+			int num = (int)(percentage / 0.07f);
+			DreamCount += num;
+		}
+		else
+		{
+			int num = (int)(percentage / 0.1f);
+			DreamCount += num;
+		}
+
+		StartCoroutine(BattleSetting.Instance.ShowActionText("以梦之名"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
