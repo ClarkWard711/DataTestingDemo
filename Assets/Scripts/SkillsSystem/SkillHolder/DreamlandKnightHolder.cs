@@ -99,7 +99,11 @@ public class DreamlandKnightHolder : JobSkillHolder
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 		DreamCount++;
 		int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
-
+		Fear tag = Fear.CreateInstance<Fear>();
+		tag.TurnAdd++;
+		tag.TurnLast++;
+		tag.unit = BattleSetting.Instance.CurrentActUnitTarget;
+		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
 		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
 		{
 			damage = Mathf.CeilToInt(damage * 2f);
@@ -111,10 +115,6 @@ public class DreamlandKnightHolder : JobSkillHolder
 		}
 		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
 		StartCoroutine(BattleSetting.Instance.OnDealDamage());
-		var tag = Fear.CreateInstance<Fear>();
-		tag.TurnAdd++;
-		tag.TurnLast++;
-		BattleSetting.Instance.CurrentActUnitTarget.GetComponent<GivingData>().AddTagToCharacter(tag);
 		StartCoroutine(BattleSetting.Instance.ShowActionText("噩梦缠绕"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();

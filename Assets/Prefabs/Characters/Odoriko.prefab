@@ -182,14 +182,22 @@ MonoBehaviour:
   jobData: {fileID: 0}
   BasicSkillButton: []
   AdvancedSkillButton: []
+  SpecialSkill: {fileID: 0}
+  SpecialButton: {fileID: 0}
   BasicSkillText: []
   AdvancedSkillText: []
+  coolDownList: 
   MoonSpReduce: 0
   SunSpReduce: 0
   SpCostMultiplier: 1
   LastTurnSun: 0
   LastTurnMoon: 0
   usedSkill: 0
+  isDanceStepTriggered: 0
+  canSpecialBeUsed: 0
+  isOnlyOnceUsed: 0
+  ignoreDanceStep: 0
+  MoonUsedAmount: 0
 --- !u!1 &2412899308788011300
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 1749416364117990524}
   HpSlider: {fileID: 6680877453532661345}
+  isDizzy: 0
 --- !u!1 &5748568071146163801
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +656,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8404568542263564128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.18, y: -1.76, z: 0}
+  m_LocalPosition: {x: 0, y: -1.68, z: 0}
   m_LocalScale: {x: 0.5725827, y: 0.5725827, z: 0.5725827}
   m_ConstrainProportionsScale: 0
   m_Children: []

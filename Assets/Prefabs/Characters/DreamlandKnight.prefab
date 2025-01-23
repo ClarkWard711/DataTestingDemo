@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b9b931f2e01484194a99cc777fe0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JobSkill: {fileID: 11400000, guid: 9ca2ed565e9a342cb9dacdd9487cdc68, type: 2}
+  JobSkill: {fileID: 11400000, guid: 7935f8aca46f74931ae16852949fe51c, type: 2}
   jobData: {fileID: 11400000, guid: 714e4a97a2dae46c59c663d7e7b1ba71, type: 2}
   BasicSkillButton: []
   AdvancedSkillButton: []
@@ -187,6 +187,8 @@ MonoBehaviour:
   BasicSkillText: []
   AdvancedSkillText: []
   coolDownList: 
+  DreamCount: 0
+  DreamFallenCount: 1
 --- !u!1 &2412899308788011300
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 1749416364117990524}
   HpSlider: {fileID: 6680877453532661345}
+  isDizzy: 0
 --- !u!1 &5748568071146163801
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e818acf822b424f3b96aa716c203038d, type: 3}
-  m_Name: ConnectDream
+  m_Script: {fileID: 11500000, guid: d1f0f585ae70846db974133898056737, type: 3}
+  m_Name: DreamProtect
   m_EditorClassIdentifier: 
   SkillID: 0
-  SpCost: 15
+  SpCost: 7
   TurnCooldown: 0
   DealMultiplier: 0
-  SkillName: "\u8FDE\u68A6"
+  SkillName: "\u68A6\u7684\u5E87\u62A4"
   Description: 
   HitRevise: 0

@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7e991e330fb432e9b1ddc44c0defa4, type: 3}
   m_Name: JobData_DreamlanKnight
   m_EditorClassIdentifier: 
-  jobAvatarImage: {fileID: -1878090278, guid: 90742bcb19097421797d229971621d60, type: 3}
+  jobAvatarImage: {fileID: -1576713366, guid: 698e6e2fed93245119bdaaaca28e5279, type: 3}
   jobName: DreamlandKnight
   jobInitialLevel: 1
   jobIndex: 1
-  currentHP: 302
-  currentSP: 54
+  currentHP: 335
+  currentSP: 50
   currentExp: 0
   jobLevel: 1
   JobID: 3
   Description: "\u68A6\u5883\u9A91\u58EB\u6BCF\u6709\u4E00\u5C42\u68A6\u5883\u4F1A\u63D0\u9AD8\u666E\u901A\u653B\u51FB10%\u7684\u4F24\u5BB3"
-  SkillsID: ffffffffffffffffffffffffffffffff
+  SkillsID: 02000000030000000400000005000000
   SpecialID: 0
   JobPrefab: {fileID: 1749416364117990524, guid: 8c1b21df4038149948aa41702e2ad880, type: 3}
   dataFile: {fileID: 4900000, guid: 71f59072f7f544c4898a639f959608c2, type: 3}

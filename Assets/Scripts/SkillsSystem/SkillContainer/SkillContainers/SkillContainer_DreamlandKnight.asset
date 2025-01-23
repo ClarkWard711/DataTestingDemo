@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cb1e3e7d387473ea7610f7bcee6133, type: 3}
   m_Name: SkillContainer_DreamlandKnight
   m_EditorClassIdentifier: 
-  SkillList: []
+  SkillList:
+  - {fileID: 11400000, guid: 9c8021d12148d4071904e1647ed1d8bd, type: 2}
+  - {fileID: 11400000, guid: 068cccef68b8e42abb3868fd9e196fea, type: 2}
+  - {fileID: 11400000, guid: 9ccc530984c05489d9fdd659869b1885, type: 2}
+  - {fileID: 11400000, guid: 1a834e75745a447c7879a2a7f8e9d9ea, type: 2}
+  - {fileID: 11400000, guid: 871e84cd52d0a43b9954e8116d66f305, type: 2}
+  - {fileID: 11400000, guid: c9cb3cf8c11ab4031a958992c1efc5c5, type: 2}
+  - {fileID: 11400000, guid: 2ff996a0a86d14d9abb18784b705df7f, type: 2}
+  - {fileID: 11400000, guid: ab429a0c0a0e5462dabcf16e27d6a7e8, type: 2}
+  - {fileID: 11400000, guid: 04e291e85e7a742b3ac43db8ef1d0779, type: 2}
+  - {fileID: 11400000, guid: 34dd5d824d2054066a4f43ea30344e9b, type: 2}
+  - {fileID: 11400000, guid: 1750809c4e6d14467bd345bb4898b46c, type: 2}
+  - {fileID: 11400000, guid: 62a29dacdc0544d4b9d26f0a8faf986e, type: 2}
+  - {fileID: 11400000, guid: 09e8bf243027144b58783c8209ea197b, type: 2}
+  - {fileID: 11400000, guid: b43ec9483a41d4590bca5686f2e5cdd2, type: 2}

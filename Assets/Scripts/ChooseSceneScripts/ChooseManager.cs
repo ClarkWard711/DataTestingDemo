@@ -46,7 +46,7 @@ public class ChooseManager : MonoBehaviour
 				randomIndex.Add(i);
 			}
 		}
-		int total = randomIndex.Count;
+		int total = randomIndex.Count >= 6 ? 6 : randomIndex.Count;
 		ChoosePanelChosen = ChoosePanel.GetComponentsInChildren<Button>();
 		for (int i = 0; i < total; i++)
 		{

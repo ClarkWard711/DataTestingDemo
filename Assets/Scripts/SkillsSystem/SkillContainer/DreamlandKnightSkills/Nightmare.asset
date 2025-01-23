@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e818acf822b424f3b96aa716c203038d, type: 3}
-  m_Name: ConnectDream
+  m_Script: {fileID: 11500000, guid: 872a62960bafb4bcf9a483bb558648fe, type: 3}
+  m_Name: Nightmare
   m_EditorClassIdentifier: 
   SkillID: 0
   SpCost: 15
   TurnCooldown: 0
   DealMultiplier: 0
-  SkillName: "\u8FDE\u68A6"
+  SkillName: "\u5669\u68A6\u7F20\u7ED5"
   Description: 
   HitRevise: 0

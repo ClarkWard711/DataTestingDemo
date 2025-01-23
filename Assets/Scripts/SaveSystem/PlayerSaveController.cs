@@ -16,7 +16,8 @@ public class PlayerSaveController : MonoBehaviour, ISaveable
 		playerSaveData.jobUnlockState.Add(0, true);
 		playerSaveData.jobUnlockState.Add(1, true);
 		playerSaveData.jobUnlockState.Add(2, true);
-		for (int i = 0; i < 3; i++)
+		playerSaveData.jobUnlockState.Add(3, true);
+		for (int i = 0; i < 4; i++)
 		{
 			List<bool> lockedState = new List<bool>();
 			for (int j = 0; j < AllJobs.CharacterList[i].JobPrefab.GetComponent<JobSkillHolder>().JobSkill.skillList.Count; j++)
