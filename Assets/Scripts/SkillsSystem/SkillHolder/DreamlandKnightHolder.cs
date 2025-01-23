@@ -209,6 +209,8 @@ public class DreamlandKnightHolder : JobSkillHolder
 			}
 		}
 		DreamCount *= 2;
+		int id = jobData.SkillsID.FindIndex(id => id == 7);
+		coolDownList[id] = 3;
 		StartCoroutine(BattleSetting.Instance.ShowActionText("不愿苏醒"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
@@ -240,6 +242,8 @@ public class DreamlandKnightHolder : JobSkillHolder
 				}
 			}
 		}
+		int id = jobData.SkillsID.FindIndex(id => id == 8);
+		coolDownList[id] = 2;
 		StartCoroutine(BattleSetting.Instance.ShowActionText("共梦"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
@@ -294,6 +298,81 @@ public class DreamlandKnightHolder : JobSkillHolder
 		}
 
 		StartCoroutine(BattleSetting.Instance.ShowActionText("以梦之名"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator dreamBack(int SpCost)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
+		{
+			DreamCount += 9;
+		}
+		else
+		{
+			DreamCount += 6;
+		}
+		DreamBackTag tag = DreamBackTag.CreateInstance<DreamBackTag>();
+		tag.unit = gameObject;
+		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+		int id = jobData.SkillsID.FindIndex(id => id == 11);
+		coolDownList[id] = 4;
+		StartCoroutine(BattleSetting.Instance.ShowActionText("梦回"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator connectDream(int SpCost)
+	{
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+		ConnectDreamTag tag = ConnectDreamTag.CreateInstance<ConnectDreamTag>();
+		tag.unit = BattleSetting.Instance.CurrentActUnitTarget;
+		if (gameObject.GetComponent<GivingData>().tagList.Exists(tag => tag is Charging))
+		{
+			tag.TurnAdd++;
+			tag.TurnLast++;
+		}
+		else
+		{
+			damage = Mathf.CeilToInt(damage * 0.8f);
+		}
+		gameObject.GetComponent<GivingData>().AddTagToCharacter(tag);
+		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		StartCoroutine(BattleSetting.Instance.OnDealDamage());
+		StartCoroutine(BattleSetting.Instance.ShowActionText("连梦"));
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
+
+	public IEnumerator dreamStart(int SpCost)
+	{
+		yield return new WaitUntil(() => BattleSetting.Instance.isChooseFinished);
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		int damage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical);
+		if (DreamCount == 0)
+		{
+			damage = Mathf.CeilToInt(damage * 1.1f);
+			DreamCount += 2;
+		}
+		else
+		{
+			damage = Mathf.CeilToInt(damage * 1.5f);
+		}
+		BattleSetting.Instance.DealDamageExtra(damage, BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Physical, false);
+		StartCoroutine(BattleSetting.Instance.OnDealDamage());
+		StartCoroutine(BattleSetting.Instance.ShowActionText("梦的起始"));
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
