@@ -83,5 +83,68 @@ public class ElementSorcererHolder : JobSkillHolder
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
 	}
+
+	public IEnumerator sorceryExplosion(int SpCost)
+	{
+		BattleSetting.Instance.canChangeAction = false;
+		BattleSetting.Instance.isChooseFinished = false;
+		BattleSetting.Instance.State = BattleState.Middle;
+		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
+		float ExplosionMultiplier = 1f;
+		for (int i = 0; i < ELementCountList.Count; i++)
+		{
+			ExplosionMultiplier += (0.5f * ELementCountList[i]);
+		}
+		if (ELementCountList[0] != 0)
+		{
+
+		}
+		if (ELementCountList[1] != 0)
+		{
+
+		}
+		if (ELementCountList[2] != 0)
+		{
+
+		}
+		if (ELementCountList[3] != 0)
+		{
+
+		}
+		if (ELementCountList[4] != 0)
+		{
+
+		}
+		if (ELementCountList[5] != 0)
+		{
+
+		}
+		if (ELementCountList[6] != 0)
+		{
+
+		}
+		if (ELementCountList[7] != 0)
+		{
+
+		}
+		if (ELementCountList[8] != 0)
+		{
+
+		}
+		if (ELementCountList[9] != 0)
+		{
+
+		}
+		if (ELementCountList[10] != 0)
+		{
+
+		}
+		if (ELementCountList[11] != 0)
+		{
+
+		}
+		yield return new WaitForSeconds(1f);
+		BattleSetting.Instance.ActionEnd();
+	}
 	#endregion
 }
