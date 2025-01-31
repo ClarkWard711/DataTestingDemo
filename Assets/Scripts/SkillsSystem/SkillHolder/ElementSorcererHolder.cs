@@ -91,57 +91,56 @@ public class ElementSorcererHolder : JobSkillHolder
 		BattleSetting.Instance.State = BattleState.Middle;
 		BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().currentSP -= SpCost;
 		float ExplosionMultiplier = 1f;
-		for (int i = 0; i < ELementCountList.Count; i++)
-		{
-			ExplosionMultiplier += (0.5f * ELementCountList[i]);
-		}
 		if (ELementCountList[0] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[0]);
+			Burn tag = Burn.CreateInstance<Burn>();
+			tag.TurnAdd = ELementCountList[0];
+			tag.TurnLast = ELementCountList[0];
 		}
 		if (ELementCountList[1] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[1]);
 		}
 		if (ELementCountList[2] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[2]);
 		}
 		if (ELementCountList[3] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[3]);
 		}
 		if (ELementCountList[4] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[4]);
 		}
 		if (ELementCountList[5] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[5]);
 		}
 		if (ELementCountList[6] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[6]);
 		}
 		if (ELementCountList[7] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[7]);
 		}
 		if (ELementCountList[8] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[8]);
 		}
 		if (ELementCountList[9] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[9]);
 		}
 		if (ELementCountList[10] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[10]);
 		}
 		if (ELementCountList[11] != 0)
 		{
-
+			ExplosionMultiplier += (0.5f * ELementCountList[11]);
 		}
 		yield return new WaitForSeconds(1f);
 		BattleSetting.Instance.ActionEnd();
