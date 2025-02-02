@@ -104,11 +104,24 @@ public class ElementSorcererHolder : JobSkillHolder
 		}
 		if (ELementCountList[2] != 0)
 		{
-			ExplosionMultiplier += (0.5f * ELementCountList[2]);
+			foreach (var player in BattleSetting.Instance.RemainingPlayerUnits)
+			{
+				int deltaTemp;
+				deltaTemp = Mathf.CeilToInt(player.GetComponent<GivingData>().maxHP * 0.05f * ELementCountList[2]);
+				BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().CoroutineStart(BattleSetting.Instance.CurrentActUnit.GetComponent<GivingData>().FloatingHP(deltaTemp));
+			}
 		}
 		if (ELementCountList[3] != 0)
 		{
 			ExplosionMultiplier += (0.5f * ELementCountList[3]);
+			foreach (var enemy in BattleSetting.Instance.RemainingEnemyUnits)
+			{
+				var debuff = SpeedDown.CreateInstance<SpeedDown>();
+				debuff.spd = -Mathf.CeilToInt(enemy.GetComponent<GivingData>().EnemyData.EnemyStatsList[enemy.GetComponent<GivingData>().EnemyData.EnemyLevel - 1].speed * 0.1f);
+				debuff.TurnLast = 1 + ELementCountList[3];
+				debuff.TurnAdd = 1 + ELementCountList[3];
+				enemy.GetComponent<GivingData>().AddTagToCharacter(debuff);
+			}
 		}
 		if (ELementCountList[4] != 0)
 		{
