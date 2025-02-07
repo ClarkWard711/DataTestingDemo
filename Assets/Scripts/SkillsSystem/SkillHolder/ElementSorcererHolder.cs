@@ -6,6 +6,8 @@ public class ElementSorcererHolder : JobSkillHolder
 {
 	public ElementSorcererHolder Instance;
 	public List<int> ELementCountList = new List<int>();
+	public bool isAOE;
+	public bool isColumn;
 	public override void Awake()
 	{
 		base.Awake();
@@ -94,13 +96,41 @@ public class ElementSorcererHolder : JobSkillHolder
 		if (ELementCountList[0] != 0)
 		{
 			ExplosionMultiplier += (0.5f * ELementCountList[0]);
-			Burn tag = Burn.CreateInstance<Burn>();
-			tag.TurnAdd = ELementCountList[0];
-			tag.TurnLast = ELementCountList[0];
+			//这里以及以后的buff添加要注意写一个检测是否为或者同排的判定
+			if (isColumn)
+			{
+
+			}
+			else if (isAOE)
+			{
+
+			}
+			else
+			{
+				Burn tag = Burn.CreateInstance<Burn>();
+				tag.TurnAdd = ELementCountList[0];
+				tag.TurnLast = ELementCountList[0];
+				//加入buff
+			}
 		}
 		if (ELementCountList[1] != 0)
 		{
 			ExplosionMultiplier += (0.5f * ELementCountList[1]);
+			if (isColumn)
+			{
+
+			}
+			else if (isAOE)
+			{
+
+			}
+			else
+			{
+				Electric tag = Electric.CreateInstance<Electric>();
+				tag.TurnAdd = ELementCountList[1];
+				tag.TurnLast = ELementCountList[1];
+				//加入buff
+			}
 		}
 		if (ELementCountList[2] != 0)
 		{
@@ -156,6 +186,7 @@ public class ElementSorcererHolder : JobSkillHolder
 			ExplosionMultiplier += (0.5f * ELementCountList[11]);
 		}
 		yield return new WaitForSeconds(1f);
+		//造成伤害的方法
 		BattleSetting.Instance.ActionEnd();
 	}
 	#endregion
