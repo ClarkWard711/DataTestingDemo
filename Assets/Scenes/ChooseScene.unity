@@ -303,7 +303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 212.52142, y: -60.72}
+  m_AnchoredPosition: {x: 212.52142, y: -60.720215}
   m_SizeDelta: {x: 412.7, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29864789
@@ -602,7 +602,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 212.52142, y: -175.72}
+  m_AnchoredPosition: {x: 212.52142, y: -175.72021}
   m_SizeDelta: {x: 412.7, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &121231958
@@ -1375,7 +1375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 625.22144, y: -60.72}
+  m_AnchoredPosition: {x: 625.22144, y: -60.720215}
   m_SizeDelta: {x: 412.7, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &535075333
@@ -1535,7 +1535,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 625.22144, y: -175.72}
+  m_AnchoredPosition: {x: 625.22144, y: -175.72021}
   m_SizeDelta: {x: 412.7, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570746018
@@ -2423,7 +2423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00030517578, y: 0.001159668}
+  m_AnchoredPosition: {x: 0.00024414062, y: 0.0009765625}
   m_SizeDelta: {x: -562.47, y: -316.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983666380
@@ -2828,7 +2828,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 259.89362, y: -67.85327}
+  m_AnchoredPosition: {x: 259.89362, y: -67.85303}
   m_SizeDelta: {x: -519.7872, y: -608.8765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054174810
@@ -3709,10 +3709,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
