@@ -354,13 +354,15 @@ public class ElementSorcererHolder : JobSkillHolder
 			BattleSetting.Instance.DealDamageBonus(bonusDamage, AttackType.Soul);
 		}
 		yield return new WaitForSeconds(0.3f);
-		for (int i = 0; i < ElementCountList[7]; i++)
+		if (ElementCountList[7] != 0)
 		{
-
-			int baseDamage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
-			int bonusDamage = Mathf.CeilToInt(baseDamage * 0.5f);
-			BattleSetting.Instance.DealDamageBonus(bonusDamage, AttackType.Soul);
-			yield return new WaitForSeconds(0.3f);
+			for (int i = 0; i < ElementCountList[7]; i++)
+			{
+				int baseDamage = BattleSetting.Instance.DamageCountingByUnit(BattleSetting.Instance.CurrentActUnit, BattleSetting.Instance.CurrentActUnitTarget, AttackType.Soul);
+				int bonusDamage = Mathf.CeilToInt(baseDamage * 0.5f);
+				BattleSetting.Instance.DealDamageBonus(bonusDamage, AttackType.Soul);
+				yield return new WaitForSeconds(0.3f);
+			}
 		}
 		StartCoroutine(BattleSetting.Instance.OnDealDamage());
 		isColumn = false;
