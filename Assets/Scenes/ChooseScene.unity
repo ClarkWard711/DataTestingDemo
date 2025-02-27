@@ -423,6 +423,7 @@ MonoBehaviour:
   buttonIndex: 0
   id: 0
   jobID: 0
+  posID: -1
   selectedJob: {fileID: 0}
 --- !u!1 &39051045
 GameObject:
@@ -562,6 +563,7 @@ MonoBehaviour:
   buttonIndex: 0
   id: 0
   jobID: 0
+  posID: -1
   selectedJob: {fileID: 0}
 --- !u!1 &121231956
 GameObject:
@@ -722,6 +724,7 @@ MonoBehaviour:
   buttonIndex: 0
   id: 0
   jobID: 0
+  posID: -1
   selectedJob: {fileID: 0}
 --- !u!1 &165666119
 GameObject:
@@ -1112,6 +1115,7 @@ MonoBehaviour:
   buttonIndex: 0
   id: 0
   jobID: 0
+  posID: -1
   selectedJob: {fileID: 0}
 --- !u!114 &471971360
 MonoBehaviour:
@@ -1495,6 +1499,7 @@ MonoBehaviour:
   buttonIndex: 0
   id: 0
   jobID: 0
+  posID: -1
   selectedJob: {fileID: 0}
 --- !u!1 &570746016
 GameObject:
@@ -1655,6 +1660,7 @@ MonoBehaviour:
   buttonIndex: 0
   id: 0
   jobID: 0
+  posID: -1
   selectedJob: {fileID: 0}
 --- !u!1 &571705306
 GameObject:
@@ -1927,7 +1933,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 205.8, y: 91.93}
+  m_CellSize: {x: 205.8, y: 130}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -4159,6 +4165,7 @@ MonoBehaviour:
   buttonIndex: 0
   id: 0
   jobID: 0
+  posID: -1
   selectedJob: {fileID: 0}
 --- !u!114 &1979886704
 MonoBehaviour:

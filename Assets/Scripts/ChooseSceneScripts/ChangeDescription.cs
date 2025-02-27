@@ -16,7 +16,7 @@ public class ChangeDescription : MonoBehaviour, IPointerEnterHandler
 	public string description = "";
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		if (!isSkill)
+		if (!isSkill && jobData != null)
 		{
 			text.text = jobData.Description;
 		}

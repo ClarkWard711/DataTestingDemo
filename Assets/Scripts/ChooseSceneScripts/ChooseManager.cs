@@ -190,6 +190,8 @@ public class ChooseManager : MonoBehaviour
 			{
 				Destroy(child.gameObject);
 			}
+			//此处为所有技能都放出来的情况
+			/*
 			for (int i = 2; i < PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().selectedJob.JobPrefab.GetComponent<JobSkillHolder>().JobSkill.skillList.Count; i++)
 			{
 				var Skill = Instantiate(SkillPrefab, SkillToBeChosen.transform);
@@ -200,10 +202,31 @@ public class ChooseManager : MonoBehaviour
 				int id = i;
 				Skill.GetComponent<Button>().onClick.AddListener(() => SkillChoose(id));
 			}
+			*/
+			//此处为只放出从所有技能随机选八个再挑选的情况
+			List<int> randomIndex = new List<int>();
+			for (int i = 2; i < PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().selectedJob.JobPrefab.GetComponent<JobSkillHolder>().JobSkill.skillList.Count; i++)
+			{
+				randomIndex.Add(i);
+			}
+			int total = randomIndex.Count >= 8 ? 8 : randomIndex.Count;
+			for (int i = 0; i < total; i++)
+			{
+				int index = randomIndex[Random.Range(0, randomIndex.Count)];
+				var Skill = Instantiate(SkillPrefab, SkillToBeChosen.transform);
+				Skill.GetComponent<ChangeDescription>().text = SkillDescription;
+				Skill.GetComponent<ChangeDescription>().isSkill = true;
+				Skill.GetComponentInChildren<Text>().text = PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().selectedJob.JobPrefab.GetComponent<JobSkillHolder>().JobSkill.skillList[index].SkillName;
+				Skill.GetComponent<ChangeDescription>().description = PlayerPanelChosen[num].gameObject.GetComponent<Chosen>().selectedJob.JobPrefab.GetComponent<JobSkillHolder>().JobSkill.skillList[index].Description;
+				int id = index;
+				int posID = i;
+				Skill.GetComponent<Button>().onClick.AddListener(() => SkillChoose(id, posID));
+				randomIndex.Remove(index);
+			}
 		}
 	}
 
-	public void SkillChoose(int id)
+	public void SkillChoose(int id, int posID)
 	{
 		for (int i = 0; i < 4; i++)
 		{
@@ -218,7 +241,10 @@ public class ChooseManager : MonoBehaviour
 					ContinueButton.interactable = true;
 					isChooseSkillFin = true;
 				}
-				SkillToBeChosen.GetComponentsInChildren<Button>()[id - 2].interactable = false;
+				Skillbuttons[i].gameObject.GetComponent<Chosen>().posID = posID;
+				Debug.Log(posID);
+				Debug.Log(SkillToBeChosen.GetComponentsInChildren<Button>().Length);
+				SkillToBeChosen.GetComponentsInChildren<Button>()[posID].interactable = false;
 				return;
 			}
 		}
@@ -230,8 +256,9 @@ public class ChooseManager : MonoBehaviour
 		{
 			Skillbuttons[index].gameObject.GetComponent<Chosen>().isChosen = false;
 			Skillbuttons[index].gameObject.GetComponentInChildren<Text>().text = "-";
-			SkillToBeChosen.GetComponentsInChildren<Button>()[Skillbuttons[index].gameObject.GetComponent<Chosen>().id - 2].interactable = true;
+			SkillToBeChosen.GetComponentsInChildren<Button>()[Skillbuttons[index].gameObject.GetComponent<Chosen>().posID].interactable = true;
 			Skillbuttons[index].gameObject.GetComponent<Chosen>().id = -1;
+			Skillbuttons[index].gameObject.GetComponent<Chosen>().posID = -1;
 			ContinueButton.interactable = false;
 			isChooseSkillFin = false;
 		}
